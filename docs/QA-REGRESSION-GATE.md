@@ -1,0 +1,12 @@
+# QA / Regression Gate
+- Fresh install in Foundry v14 + dnd5e v6
+- Repeat import creates no duplicates
+- Edited managed journal produces recovery copy on source update
+- Player/GM visibility reviewed before sharing journals
+- Native dnd5e roll enrichers resolve
+- Chat requestCheck/requestSave cards work
+- 24 missions / 13 corps / 68 franchises present
+- Brandmere scene loads
+- Receipt matrix contains 77-B + 1–12
+- Art registry paths resolve
+- Compare all counts and controls against last approved build before tagging

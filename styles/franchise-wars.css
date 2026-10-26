@@ -1,0 +1,21 @@
+
+:root{--fw-blue:#0b3a67;--fw-blue2:#1667b1;--fw-gold:#d8a82f;--fw-ink:#17191d;--fw-paper:#f3ead7;--fw-grey:#777;--fw-danger:#8b1e1e}
+.fw-chat-card,.fw-dashboard,.journal-entry-content .fw-contract{font-family:Signika,Roboto,sans-serif}
+.fw-chat-card{border:2px solid var(--fw-gold);background:linear-gradient(#fffdf8,var(--fw-paper));color:var(--fw-ink);box-shadow:0 2px 7px #0004}
+.fw-card-header{display:grid;grid-template-columns:auto 1fr;gap:.2rem .5rem;align-items:center;padding:.55rem .7rem;background:linear-gradient(135deg,var(--fw-blue),var(--fw-blue2));color:#fff;border-bottom:3px solid var(--fw-gold)}
+.fw-card-header small{grid-column:2;opacity:.8;font-family:monospace}.fw-grade{padding:.1rem .35rem;border:1px solid var(--fw-gold);background:#10283d;color:#ffe7a0;text-transform:uppercase;font-size:.72rem}.fw-card-body{padding:.65rem .75rem}.fw-roll-request{font-weight:700}
+.fw-visibility{display:inline-block;padding:.15rem .45rem;border:2px solid currentColor;font-weight:900;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-1deg)}.fw-player{color:#17633a}.fw-gm{color:#8b1e1e}
+.fw-hero{margin:0 0 1rem}.fw-hero img{display:block;max-height:360px;width:100%;object-fit:contain;background:#151515;border:2px solid var(--fw-gold)}
+.fw-dashboard h1{border-bottom:4px solid var(--fw-gold);padding-bottom:.35rem}.fw-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}.fw-grid>div{border:1px solid #8a7a5a;background:#f5eddd;padding:.6rem}.fw-dashboard pre{white-space:pre-wrap;background:#25282b;color:#eee;padding:.75rem;border-left:5px solid var(--fw-gold)}
+.journal-entry-content table{width:100%;border-collapse:collapse}.journal-entry-content th,.journal-entry-content td{border:1px solid #8f846f;padding:.35rem}.journal-entry-content th{background:#0b3a67;color:white}
+.franchise-wars-active .journal-entry-content h1,.franchise-wars-active .journal-entry-content h2{color:#0b3a67}.franchise-wars-active .journal-entry-content blockquote{border-left:4px solid var(--fw-gold);background:#f7f0df;padding:.5rem .75rem}
+
+/* Session 0 — Contractor Orientation */
+.fw-session0{font-family:Signika,Roboto,sans-serif;color:var(--fw-ink);line-height:1.48}
+.fw-s0-header{margin:-.25rem 0 1rem;padding:.8rem 1rem;background:linear-gradient(135deg,#0b3a67,#174f85);border:2px solid var(--fw-gold);border-radius:4px;color:#fff;box-shadow:0 2px 8px #0003}
+.franchise-wars-active .journal-entry-content .fw-s0-header h1{margin:.25rem 0 .1rem;color:#fff;border:0}.fw-s0-header p{margin:.2rem 0;opacity:.9}
+.fw-s0-callout,.fw-s0-warning,.fw-s0-question{margin:.75rem 0;padding:.75rem .9rem;border:1px solid #9b8a68;border-left:6px solid var(--fw-gold);background:#f7f0df;box-shadow:0 1px 3px #0002}
+.fw-s0-warning{border-left-color:var(--fw-danger);background:#f7e5df}.fw-s0-question{border-left-color:var(--fw-blue2);background:#eaf2f8}.fw-s0-question p{font-size:1.05em;margin:.35rem 0 0;font-style:italic}
+.fw-s0-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:.75rem 0}.fw-s0-grid>div{padding:.7rem;border:1px solid #9b8a68;background:#f7f0df}.fw-s0-grid h3{margin-top:0;color:var(--fw-blue)}
+.fw-checklist{list-style:none;padding-left:.2rem}.fw-checklist li{margin:.3rem 0;padding-left:1.6rem;position:relative}.fw-checklist li:before{content:"☐";position:absolute;left:.1rem;color:var(--fw-blue);font-weight:900}.fw-session0 ol>li,.fw-session0 ul>li{margin:.24rem 0}
+@media(max-width:700px){.fw-grid,.fw-s0-grid{grid-template-columns:1fr}}

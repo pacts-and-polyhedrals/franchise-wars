@@ -1,0 +1,26 @@
+# Changelog
+
+## 0.2.0 — Contractor Orientation
+
+- Adds a complete professional Session 0 journal suite under **00 — Command Centre → Session 0 — Contractor Orientation**.
+- Adds GM Run Sheet, player orientation, house rules/table policy, QuestRabbit specialist positions, communal backstory workshop, personnel file, and DM hook-integration journals.
+- Adapts the official Acquisitions Incorporated company-position subsystem to QuestRabbit while referencing rather than reproducing proprietary rules text.
+- Adds default observer access for the player-facing Session 0 journals while keeping campaign-spoiler integration journals GM-only.
+- Adds Open Door, campaign boundaries and Stars & Wishes directly to the module.
+- Adds the established critical-hit, natural-1, potion, inspiration and blind-death-save house rules.
+- Adds the three-job communal-history framework and character-to-character bond prompts.
+- Adds `game.franchiseWars.openSessionZero()` for quick GM access.
+- Adds Session 0 branding/layout styles.
+- Preserves the v0.1.0 campaign content, managed-journal recovery protection, state trackers, roll-request cards and art library.
+
+## 0.1.0 — First Playable Rendition
+
+- First packaged Franchise Wars campaign module for Foundry VTT v14 and dnd5e v6.
+- Imports the complete 24-session campaign spine as managed Journal Entries.
+- Adds 13 corporation dossiers, 68 franchise dossiers, Brandmere, campaign systems, GM tables, player handouts, bestiary/items, and the Final Contract.
+- Adds persistent campaign state for Rabbit Rating, Leverage, Commons Tally, Receipts, Board seats, mission state, clause state, current act, and Grey Creep.
+- Adds Franchise Wars-branded dnd5e v6 check/save request cards.
+- Adds managed-content recovery copies before source refreshes overwrite GM-edited generated Journals.
+- Adds Brandmere city overview Scene.
+- Packages the deduplicated Franchise Wars art library.
+- Removes one invalid zero-byte duplicate WebP discovered during pre-release validation.

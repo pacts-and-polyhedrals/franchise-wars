@@ -1,0 +1,18 @@
+[
+  {
+    "sourceId": "fw.scene.brandmere",
+    "name": "Brandmere — City Overview",
+    "img": "modules/franchise-wars/assets/art/library/brandmere-a-coastal-fantasy-city-map--224323bb.webp",
+    "width": 1536,
+    "height": 1024,
+    "padding": 0.05,
+    "navigation": true,
+    "active": false,
+    "grid": {
+      "type": 0,
+      "size": 100,
+      "distance": 5,
+      "units": "ft"
+    }
+  }
+]

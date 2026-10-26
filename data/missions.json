@@ -1,0 +1,242 @@
+[
+  {
+    "id": "fw.mission.S01",
+    "code": "S01",
+    "title": "The Wild Magic Burrito",
+    "act": "I",
+    "level": "1",
+    "grade": "Copper",
+    "client": "THAC0 Spell",
+    "receipt": "Incident Report 77-B (original)"
+  },
+  {
+    "id": "fw.mission.S02",
+    "code": "S02",
+    "title": "The King Is Dead",
+    "act": "I",
+    "level": "1–2",
+    "grade": "Copper",
+    "client": "Murder King",
+    "receipt": "Gideon Tumble's Notebook"
+  },
+  {
+    "id": "fw.mission.S03",
+    "code": "S03",
+    "title": "Gelli Goes Missing",
+    "act": "I",
+    "level": "2",
+    "grade": "Silver",
+    "client": "Gelatinous Cube",
+    "receipt": "The Retention Clauses"
+  },
+  {
+    "id": "fw.mission.S04",
+    "code": "S04",
+    "title": "Union of Unseen Servants",
+    "act": "I",
+    "level": "3",
+    "grade": "Silver",
+    "client": "Starkfucks",
+    "receipt": "The Loyalty Contracts"
+  },
+  {
+    "id": "fw.mission.S05",
+    "code": "S05",
+    "title": "The Crown Jewels",
+    "act": "I",
+    "level": "4",
+    "grade": "Silver",
+    "client": "Murder King",
+    "receipt": "The Vault Inventory"
+  },
+  {
+    "id": "fw.mission.S06",
+    "code": "S06",
+    "title": "The Missing Spice",
+    "act": "II",
+    "level": "5",
+    "grade": "Silver",
+    "client": "THAC0 Spell",
+    "receipt": "The Marchetti Memo"
+  },
+  {
+    "id": "fw.mission.S07",
+    "code": "S07",
+    "title": "Executive Plot Device",
+    "act": "II",
+    "level": "5–6",
+    "grade": "Silver",
+    "client": "Big McGuffin's",
+    "receipt": "Delivery Receipt"
+  },
+  {
+    "id": "fw.mission.S08",
+    "code": "S08",
+    "title": "Hostile Takeover",
+    "act": "II",
+    "level": "6",
+    "grade": "Silver",
+    "client": "Murder King",
+    "receipt": "The Unsigned Deeds"
+  },
+  {
+    "id": "fw.mission.S09",
+    "code": "S09",
+    "title": "Where's Number Four?",
+    "act": "II",
+    "level": "7",
+    "grade": "Silver",
+    "client": "Five Wights",
+    "receipt": "Four's Collateral Tag"
+  },
+  {
+    "id": "fw.mission.S10",
+    "code": "S10",
+    "title": "Always Low Prices",
+    "act": "II",
+    "level": "8",
+    "grade": "Silver",
+    "client": "Wand-Mart",
+    "receipt": "The Wand-Mart Cost Ledger"
+  },
+  {
+    "id": "fw.mission.S11",
+    "code": "S11",
+    "title": "The Beans of Pandemonium",
+    "act": "III",
+    "level": "9",
+    "grade": "Gold",
+    "client": "Starkfucks",
+    "receipt": "The Harvesters' Testimony"
+  },
+  {
+    "id": "fw.mission.S12",
+    "code": "S12",
+    "title": "All Rights Reserved",
+    "act": "III",
+    "level": "9–10",
+    "grade": "Gold",
+    "client": "Goodberry's",
+    "receipt": "The Healing Deed"
+  },
+  {
+    "id": "fw.mission.S13",
+    "code": "S13",
+    "title": "Pact of the Bucket",
+    "act": "III",
+    "level": "10",
+    "grade": "Gold",
+    "client": "Chick'n Familiar",
+    "receipt": "Infernal Due-Diligence Report"
+  },
+  {
+    "id": "fw.mission.S14",
+    "code": "S14",
+    "title": "The Franchise Below",
+    "act": "III",
+    "level": "11",
+    "grade": "Gold",
+    "client": "THAC0 Spell",
+    "receipt": "The First Entry"
+  },
+  {
+    "id": "fw.mission.S15",
+    "code": "S15",
+    "title": "Long Live the King",
+    "act": "III",
+    "level": "12",
+    "grade": "Platinum",
+    "client": "Murder King",
+    "receipt": "Aldric's Testimony"
+  },
+  {
+    "id": "fw.mission.S16",
+    "code": "S16",
+    "title": "Do Not Disturb",
+    "act": "IV",
+    "level": "13",
+    "grade": "Platinum",
+    "client": "Long Rest Inn",
+    "receipt": "The Five-Star Testimony"
+  },
+  {
+    "id": "fw.mission.S17",
+    "code": "S17",
+    "title": "The Third Place",
+    "act": "IV",
+    "level": "14",
+    "grade": "Platinum",
+    "client": "Starkfucks",
+    "receipt": "The Third Place Folio"
+  },
+  {
+    "id": "fw.mission.S18",
+    "code": "S18",
+    "title": "The Mother Culture",
+    "act": "IV",
+    "level": "14–15",
+    "grade": "Platinum",
+    "client": "Gelatinous Cube",
+    "receipt": "Sample Zero"
+  },
+  {
+    "id": "fw.mission.S19",
+    "code": "S19",
+    "title": "Executive Membership",
+    "act": "IV",
+    "level": "15",
+    "grade": "Platinum",
+    "client": "CostCo-op",
+    "receipt": "The Board Minutes"
+  },
+  {
+    "id": "fw.mission.S20",
+    "code": "S20",
+    "title": "The Annual General Meeting",
+    "act": "IV",
+    "level": "16",
+    "grade": "Platinum",
+    "client": "Creation & Company",
+    "receipt": "The Final Contract (Courtesy Copy)"
+  },
+  {
+    "id": "fw.mission.S21",
+    "code": "S21",
+    "title": "The Golden Tusks",
+    "act": "V",
+    "level": "17",
+    "grade": "Black Card",
+    "client": "The Golden Orcs",
+    "receipt": "The Broken Seal"
+  },
+  {
+    "id": "fw.mission.S22",
+    "code": "S22",
+    "title": "The Last Slice",
+    "act": "V",
+    "level": "18",
+    "grade": "Black Card",
+    "client": "Dominoancy",
+    "receipt": "The Undelivered Order"
+  },
+  {
+    "id": "fw.mission.S23",
+    "code": "S23",
+    "title": "The Shareholder Revolt",
+    "act": "V",
+    "level": "19",
+    "grade": "Black Card",
+    "client": "Creation & Company",
+    "receipt": "The Minutes of Removal"
+  },
+  {
+    "id": "fw.mission.S24",
+    "code": "S24",
+    "title": "Awaiting Signature",
+    "act": "V",
+    "level": "20",
+    "grade": "Black Card",
+    "client": "Creation & Company",
+    "receipt": null
+  }
+]
