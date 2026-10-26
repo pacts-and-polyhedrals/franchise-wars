@@ -1,0 +1,14 @@
+{
+  "version": "0.3.0",
+  "menuProducts": 337,
+  "magicItems": 12,
+  "receipts": 23,
+  "totalItems": 372,
+  "nativeActors": 92,
+  "compendiumCloneActors": 180,
+  "totalActorDefinitions": 272,
+  "runtimeArtFiles": 300,
+  "journals": 121,
+  "scenes": 1,
+  "canonicalMascotPerformer": "Mortimer Pell"
+}

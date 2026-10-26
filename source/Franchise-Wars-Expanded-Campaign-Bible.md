@@ -155,7 +155,7 @@ Creation & Company rules through a Board of ten directors, one per umbrella corp
 | MissionTitleLevelGradeClientReceipt                                                                       |                            |       |            |                                                                                                                                   |                                    |
 | --------------------------------------------------------------------------------------------------------- | -------------------------- | ----- | ---------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------- |
 | [S1](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S1)   | The Wild Magic Burrito     | 1     | Copper     | [THAC0 Spell](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-thac0)               | Incident Report 77-B (original)    |
-| [S2](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)   | The King Is Dead           | 1–2   | Copper     | [Murder King](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-murderking)          | Gideon Tumble's Notebook           |
+| [S2](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)   | The King Is Dead           | 1–2   | Copper     | [Murder King](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-murderking)          | Mortimer Pell's Notebook           |
 | [S3](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S3)   | Gelli Goes Missing         | 2     | Silver     | [Gelatinous Cube](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-gelcube)         | The Retention Clauses              |
 | [S4](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S4)   | Union of Unseen Servants   | 3     | Silver     | [Starkfucks](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-starkfucks)           | The Loyalty Contracts              |
 | [S5](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S5)   | The Crown Jewels           | 4     | Silver     | [Murder King](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-murderking)          | The Vault Inventory                |
@@ -342,7 +342,7 @@ Voids Clause 77-B — Signature Authority
 Copper Level 1–2 · Client: [Murder King](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#f-murderking)
 
 **MURDER KING BRAND CONTINUITY NOTICE**
-Mascot performer G. Tumble has experienced a permanent end-of-shift. The mascot continues after-hours community engagement. Contractor to facilitate ‘brand quietude’ before the Coronation Day promotion.
+Mascot performer M. Pell has experienced a permanent end-of-shift. The mascot continues after-hours community engagement. Contractor to facilitate ‘brand quietude’ before the Coronation Day promotion.
 
 *A murdered mascot performer and a costume that keeps walking. The party meets Veronique Salt and discovers that brands can be alive.*
 
@@ -354,10 +354,10 @@ Background — DM Only
 
 #### Scenes
 
-1. **The Grand Throne Restaurant.** Shift lead Duckworth Pym explains: Gideon died in the costume, the costume was put in storage, and now it isn't. Veronique Salt arrives in a black carriage, charming and chilly, and tells the party she wants the costume ‘retired with dignity’—and anything found inside it returned to her, unread.
+1. **The Grand Throne Restaurant.** Shift lead Duckworth Pym explains: Mortimer died in the costume, the costume was put in storage, and now it isn't. Veronique Salt arrives in a black carriage, charming and chilly, and tells the party she wants the costume ‘retired with dignity’—and anything found inside it returned to her, unread.
 2. **Night Sightings.** A night-hunt across Coronation Square. The costume appears at children's parties that aren't happening, waves at empty streets, and stands outside the newspaper office. Witnesses say it was ‘looking for something.’
-3. **Gideon's Flat.** Gideon's landlady lets the party in. His notebook contains a copy of the trademark deed (in his handwriting) and notes: ‘The King's not a mascot. He was real. Somebody killed him and bought the murder.’ There's also an appointment with a reporter at the Brandmere Crier, tonight.
-4. **The Newspaper Office.** The costume attacks the reporter at midnight. It fights like a king—proud, cruel, theatrical. Destroying it is hard; convincing it that Gideon's death harms the brand (Persuasion DC 14 with the notebook as evidence) makes it collapse like empty cloth.
+3. **Mortimer's Flat.** Mortimer's landlady lets the party in. His notebook contains a copy of the trademark deed (in his handwriting) and notes: ‘The King's not a mascot. He was real. Somebody killed him and bought the murder.’ There's also an appointment with a reporter at the Brandmere Crier, tonight.
+4. **The Newspaper Office.** The costume attacks the reporter at midnight. It fights like a king—proud, cruel, theatrical. Destroying it is hard; convincing it that Mortimer's death harms the brand (Persuasion DC 14 with the notebook as evidence) makes it collapse like empty cloth.
 5. **Veronique's Offer.** Veronique asks for the notebook. If the party gives it, she thanks them and burns it before their eyes (they may have copied it). If they refuse, she smiles and says, ‘Then keep it safe. You'll find it's worth more to you than to me.’ She doesn't mean it kindly.
 
 Opposition
@@ -378,7 +378,7 @@ Veronique becomes the recurring face of corporate opposition. The deed names Bar
 
 Receipt
 
-**Gideon Tumble's Notebook**
+**Mortimer Pell's Notebook**
 
 A copy of the four-hundred-year-old deed and a mascot performer's notes on the real King Aldric. Proof that Creation & Company concealed how it acquired its first kingdom.
 
@@ -9149,7 +9149,7 @@ On their turn in the Clause Debate, a character who holds the matching Receipt p
 | **8.** Collateral              | *All collateral pledged by subsidiaries in security of this acquisition is present, complete and accounted for.*                                     | Four's Collateral Tag           | [S9](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S9) (L7)       |
 | **9.** Non-Infringement        | *The Property does not infringe any mark, name, word or concept held under licence by the Purchaser.*                                                | The Healing Deed                | [S12](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S12) (L9–10)  |
 | **10.** Governing Law          | *This Instrument is governed exclusively by the Company's Articles, and no other jurisdiction—mortal, divine or infernal—shall apply.*               | Infernal Due-Diligence Report   | [S13](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S13) (L10)    |
-| **11.** Disclosure             | *All material facts concerning the Purchaser, its officers and its conduct have been disclosed to the Signatories.*                                  | Gideon Tumble's Notebook        | [S2](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2) (L1–2)     |
+| **11.** Disclosure             | *All material facts concerning the Purchaser, its officers and its conduct have been disclosed to the Signatories.*                                  | Mortimer Pell's Notebook        | [S2](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2) (L1–2)     |
 | **12.** Perpetuity             | *The Purchaser, its holdings and this Instrument shall endure in perpetuity, and no part shall be subject to expiry or decay.*                       | Sample Zero                     | [S18](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S18) (L14–15) |
 
 ### Other Receipts
@@ -9181,7 +9181,7 @@ Act I · Employee of the MonthLevels 1–4
 
 ▼
 
-[**S2**](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)[ The King Is DeadL1–2 · Murder King → Gideon Tumble's Notebook](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)
+[**S2**](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)[ The King Is DeadL1–2 · Murder King → Mortimer Pell's Notebook](https://a33f98a3-9e8c-4971-89d1-989c0440e385.frame.claudeusercontent.com/_f/1790063629-cf0a/#m-S2)
 
 ▼
 

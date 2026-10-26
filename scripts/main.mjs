@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.2.0";
+const VERSION = "0.3.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -60,8 +60,106 @@ async function importContent({force=false}={}){
     const ids=j.pages.map(p=>p.id); if(ids.length)await j.deleteEmbeddedDocuments("JournalEntryPage",ids);
     await j.createEmbeddedDocuments("JournalEntryPage",pageData);
   }
+  await importItems();
+  await importActors();
   await importScenes();
   await game.settings.set(MODULE_ID,IMPORT_KEY,VERSION);
+}
+
+
+
+async function ensureManagedFolders(type, defs){
+  const map=new Map();
+  for(const f of defs){
+    let folder=game.folders.find(x=>x.type===type&&x.getFlag(MODULE_ID,"sourceId")===f.sourceId);
+    if(!folder){const parent=f.parent?map.get(f.parent)?.id:null;folder=await Folder.create({name:f.name,type,folder:parent,flags:{[MODULE_ID]:{sourceId:f.sourceId,managed:true}}});}
+    else {const parent=f.parent?map.get(f.parent)?.id:null;if(folder.name!==f.name||folder.folder?.id!==parent)await folder.update({name:f.name,folder:parent});}
+    map.set(f.sourceId,folder);
+  }
+  return map;
+}
+
+function managedFlags(sourceId,hash,extra={}){return {[MODULE_ID]:{sourceId,managed:true,importedHash:hash,...extra}};}
+
+async function importItems(){
+  const data=await loadJSON("items.json");
+  const folders=await ensureManagedFolders("Item",data.folders);
+  for(const e of data.entries){
+    let item=game.items.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId);
+    const folder=folders.get(e.folder)?.id??null;
+    const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
+    if(!item){await Item.create(payload);continue;}
+    if(item.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue;
+    const update=foundry.utils.deepClone(payload); delete update._id; await item.update(update);
+  }
+}
+
+let _actorIndex=null;
+async function actorCompendiumIndex(){
+  if(_actorIndex)return _actorIndex;
+  _actorIndex=new Map();
+  for(const pack of game.packs.filter(p=>p.documentName==="Actor")){
+    try{
+      const idx=await pack.getIndex({fields:["name","type"]});
+      for(const r of idx){
+        const k=String(r.name??"").trim().toLowerCase(); if(!k)continue;
+        const hits=_actorIndex.get(k)??[]; hits.push({pack,id:r._id}); _actorIndex.set(k,hits);
+      }
+    }catch(err){console.warn("Franchise Wars | actor index",pack.collection,err);}
+  }
+  return _actorIndex;
+}
+function preferredActorHits(hits){
+  const modern=globalThis.dnd5e?.settings?.rulesVersion==="modern";
+  return [...hits].sort((a,b)=>{
+    const score=h=>{const c=String(h.pack.collection??"").toLowerCase();return modern?(c.includes("actors24")?0:c.includes("monsters")?1:2):(c.includes("monsters")?0:c.includes("actors24")?1:2);};
+    return score(a)-score(b);
+  });
+}
+async function coreActorSource(spec){
+  const index=await actorCompendiumIndex();
+  const candidates=[spec.baseName,...(spec.fallbackBaseNames??[])].filter(Boolean);
+  for(const name of candidates){
+    const hits=preferredActorHits(index.get(String(name).toLowerCase())??[]);
+    for(const hit of hits){const src=await hit.pack.getDocument(hit.id);if(src)return src;}
+  }
+  return null;
+}
+async function cloneCoreActor(spec,folder,existing=null){
+  const src=await coreActorSource(spec);
+  if(!src){console.warn(`Franchise Wars | Core actor not found: ${spec.baseName} (needed for ${spec.name})`);return null;}
+  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid}));
+  if(existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
+  const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
+  data.system??={}; data.system.details??={}; data.system.details.biography??={value:"",public:""}; data.system.details.biography.value=`${spec.description}${data.system.details.biography.value??""}`;
+  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid}),{inplace:false});
+  if(!existing)return Actor.create(data);
+  const embedded=data.items??[]; delete data.items; await existing.update(data);
+  const ids=existing.items.map(i=>i.id); if(ids.length)await existing.deleteEmbeddedDocuments("Item",ids);
+  if(embedded.length)await existing.createEmbeddedDocuments("Item",embedded);
+  return existing;
+}
+
+async function applyActorPayload(actor,payload,hash){
+  const update=foundry.utils.deepClone(payload); const embedded=update.items??[]; delete update.items; delete update._id;
+  update.flags=foundry.utils.mergeObject(update.flags??{},managedFlags(actor.getFlag(MODULE_ID,"sourceId"),hash),{inplace:false});
+  await actor.update(update);
+  const managed=actor.items.filter(i=>i.getFlag(MODULE_ID,"managed")); if(managed.length)await actor.deleteEmbeddedDocuments("Item",managed.map(i=>i.id));
+  if(embedded.length)await actor.createEmbeddedDocuments("Item",embedded);
+}
+
+async function importActors(){
+  const data=await loadJSON("actors.json");
+  const folders=await ensureManagedFolders("Actor",data.folders);
+  for(const e of data.entries){
+    let actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId); const folder=folders.get(e.folder)?.id??null;
+    const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
+    if(!actor){await Actor.create(payload);continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash);
+  }
+  for(const spec of data.clones??[]){
+    const actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===spec.sourceId);
+    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null);
+  }
 }
 
 async function importScenes(){const scenes=await loadJSON("scenes.json");for(const s of scenes){let scene=game.scenes.find(x=>x.getFlag(MODULE_ID,"sourceId")===s.sourceId);const data={name:s.name,img:s.img,width:s.width,height:s.height,padding:s.padding??0.05,navigation:s.navigation??true,active:false,grid:s.grid??{type:0},flags:{[MODULE_ID]:{sourceId:s.sourceId,managed:true}}};if(!scene)await Scene.create(data);else await scene.update(data);}}

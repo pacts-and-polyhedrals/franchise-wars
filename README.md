@@ -1,4 +1,4 @@
-# The Franchise Wars v0.2.0 — Contractor Orientation
+# The Franchise Wars v0.3.0 — Contractor Orientation
 
 Foundry VTT v14 / dnd5e v6 module.
 
@@ -27,3 +27,10 @@ The campaign prose contains dnd5e v6 check/save enrichers for explicit DCs found
 
 ## Release workflow
 Every published revision uses one synchronized semantic version across `module.json`, release notes, the GitHub ZIP filename, and the Google Drive archive. The canonical ZIP naming convention is `franchise-wars-vX.Y.Z.zip`.
+
+
+## v0.3.0 Native D&D5e Documents
+- 372 managed world Items generated from franchise menus/products, campaign magic merchandise, and mission receipts.
+- 89 managed native NPC Actors plus 134 installed-compendium Actor clones for Team Deliverables and core opposition.
+- Uses dnd5e v6 Item/Actor documents, consumable subtypes, item Uses and Activities, current NPC movement/senses fields, and embedded monster features.
+- Core-book opposition is materialised from the user's installed dnd5e Actor compendia at import time rather than bundling stale or third-party stat blocks.

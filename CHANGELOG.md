@@ -1,3 +1,16 @@
+# v0.3.0
+- Added recurring/mission NPC actors (Pip Ashworth, Ixabeth Vorr, the Last Five-Star Party, Aldric, Rook and others).
+- Expanded standard-opposition preload/fallback coverage for the full campaign.
+- Made compendium clone imports idempotent and resilient to missing optional actor packs.
+- Canonicalised Mortimer Pell across S02, Receipts and the Final Contract references.
+- Added repository, manifest, download, readme, changelog and issue URLs to module.json.
+- Converted all 337 franchise menu/product entries to native Foundry Items.
+- Converted campaign magic merchandise and mission Receipts to native Items.
+- Added native D&D5e NPC Actors for bespoke bestiary and recurring franchise/corporate cast.
+- Added Team Deliverables and all explicitly referenced core opposition as installed-compendium clones.
+- Added v6 Activities/Uses and correct current NPC movement/senses/type schema.
+- Added item/actor idempotent import paths.
+
 # Changelog
 
 ## 0.2.0 — Contractor Orientation

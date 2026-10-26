@@ -1,0 +1,81 @@
+name: Build Foundry Release
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag, e.g. v0.3.0'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Resolve release tag
+        id: version
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            TAG="${{ inputs.tag }}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+          VERSION="${TAG#v}"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble release tree and patch manifest
+        env:
+          TAG: ${{ steps.version.outputs.tag }}
+          VERSION: ${{ steps.version.outputs.version }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          rm -rf release-tree
+          mkdir release-tree
+          rsync -a ./ release-tree/ \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'release-tree/' \
+            --exclude '*.zip' \
+            --exclude '*.sha256'
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p=Path('release-tree/module.json')
+          m=json.loads(p.read_text(encoding='utf-8'))
+          repo=os.environ['REPOSITORY']
+          tag=os.environ['TAG']
+          version=os.environ['VERSION']
+          asset=f'franchise-wars-{tag}.zip'
+          m['version']=version
+          m['url']=f'https://github.com/{repo}'
+          m['manifest']=f'https://raw.githubusercontent.com/{repo}/main/module.json'
+          m['download']=f'https://github.com/{repo}/releases/download/{tag}/{asset}'
+          m['readme']=f'https://raw.githubusercontent.com/{repo}/main/README.md'
+          m['changelog']=f'https://raw.githubusercontent.com/{repo}/main/CHANGELOG.md'
+          m['bugs']=f'https://github.com/{repo}/issues'
+          p.write_text(json.dumps(m, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          Path('/tmp/module.json').write_text(p.read_text(encoding='utf-8'), encoding='utf-8')
+          PY
+          (cd release-tree && zip -r "../franchise-wars-${TAG}.zip" .)
+          sha256sum "franchise-wars-${TAG}.zip" > "franchise-wars-${TAG}.zip.sha256"
+
+      - name: Create or update GitHub release assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          generate_release_notes: true
+          files: |
+            /tmp/module.json
+            franchise-wars-${{ steps.version.outputs.tag }}.zip
+            franchise-wars-${{ steps.version.outputs.tag }}.zip.sha256
