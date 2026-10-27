@@ -1,4 +1,4 @@
-# The Franchise Wars v0.3.0 — Contractor Orientation
+# The Franchise Wars v0.4.0 — Contractor Orientation
 
 Foundry VTT v14 / dnd5e v6 module.
 
@@ -13,6 +13,7 @@ Imported content:
 - Campaign Flowchart
 - DM tables
 - Brandmere city overview scene
+- 124 top-down battlemap Scenes with walls, doors and lights (see the Battlemap Library journal)
 - 300 unique deduplicated runtime art files (336 source image files scanned)
 
 ## Install
@@ -39,3 +40,8 @@ Every published revision uses one synchronized semantic version across `module.j
 ## v0.3.1 art and journal correction
 
 This release replaces franchise-logo/storefront Actor substitutions with audited custom portraits, adds the four omitted franchise managers, hardens journal contrast for Foundry dark themes, and makes the user-approved labelled Brandmere map the canonical city scene. See `ACTOR-ART-AUDIT-v0.3.1.md` and `data/actor-art-map.json`.
+
+
+## v0.4.0 Battlemap Library
+
+124 tactical Scenes (100 px grid): 51 story maps across Acts I–V, a flagship venue for every remaining franchise (58), and 15 reusable side-contract environments. Walls, doors, windows and ambient lights are pre-placed. Re-import with `game.franchiseWars.importMaps({force:true})`. See `RELEASE-v0.4.0.md`.

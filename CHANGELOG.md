@@ -1,3 +1,10 @@
+# v0.4.0
+- Added 124 top-down battlemap Scenes: 51 campaign story maps (Acts I–V, incl. the Tallow Lane siege variant), 58 franchise flagship venues and 15 reusable side-contract environments.
+- All Scenes include pre-placed walls, doors, windows and ambient lights; dark locations start with global illumination off.
+- Added Scene folder tree, thumbnails and the Battlemap Library journal.
+- Scene importer now creates in batches, updates in place, and only replaces managed walls/lights when map geometry changes.
+- Added `game.franchiseWars.importMaps({force})`.
+
 # v0.3.0
 - Added recurring/mission NPC actors (Pip Ashworth, Ixabeth Vorr, the Last Five-Star Party, Aldric, Rook and others).
 - Expanded standard-opposition preload/fallback coverage for the full campaign.

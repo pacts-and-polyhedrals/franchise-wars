@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.3.1";
+const VERSION = "0.4.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -7,7 +7,7 @@ const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[
 Hooks.once("init",()=>{
   game.settings.register(MODULE_ID,STATE_KEY,{name:"Franchise Wars Campaign State",scope:"world",config:false,type:Object,default:foundry.utils.deepClone(DEFAULT_STATE)});
   game.settings.register(MODULE_ID,IMPORT_KEY,{name:"Franchise Wars Import Version",scope:"world",config:false,type:String,default:""});
-  game.franchiseWars={getState,patchState,importContent,requestCheck,requestSave,postContractBrief,awardReceipt,addLeverage,addCommonsAlly,setBoardSeat,setMissionState,voidClause,openCommandCentre,openSessionZero};
+  game.franchiseWars={getState,patchState,importContent,importMaps,requestCheck,requestSave,postContractBrief,awardReceipt,addLeverage,addCommonsAlly,setBoardSeat,setMissionState,voidClause,openCommandCentre,openSessionZero};
 });
 
 Hooks.once("ready",async()=>{
@@ -163,7 +163,37 @@ async function importActors(){
   }
 }
 
-async function importScenes(){const scenes=await loadJSON("scenes.json");for(const s of scenes){let scene=game.scenes.find(x=>x.getFlag(MODULE_ID,"sourceId")===s.sourceId);const data={name:s.name,img:s.img,width:s.width,height:s.height,padding:s.padding??0.05,navigation:s.navigation??true,active:false,grid:s.grid??{type:0},flags:{[MODULE_ID]:{sourceId:s.sourceId,managed:true}}};if(!scene)await Scene.create(data);else await scene.update(data);}}
+async function importScenes({force=false}={}){
+  const scenes=await loadJSON("scenes.json");
+  const folderNames=[...new Set(scenes.map(s=>s.folder).filter(Boolean))];
+  const defs=[{sourceId:"fw.sfolder.root",name:"The Franchise Wars",parent:null},...folderNames.map(n=>({sourceId:`fw.sfolder.${fnv(n)}`,name:n,parent:"fw.sfolder.root"}))];
+  const folders=await ensureManagedFolders("Scene",defs);
+  const folderId=n=>n?folders.get(`fw.sfolder.${fnv(n)}`)?.id??null:folders.get("fw.sfolder.root")?.id??null;
+  const tag=o=>({...o,flags:{...(o.flags??{}),[MODULE_ID]:{managed:true}}});
+  const toCreate=[];
+  for(const s of scenes){
+    const scene=game.scenes.find(x=>x.getFlag(MODULE_ID,"sourceId")===s.sourceId);
+    const data={name:s.name,img:s.img,background:{src:s.img},thumb:s.thumb??null,width:s.width,height:s.height,padding:s.padding??0,navigation:s.navigation??false,
+      grid:s.grid??{type:1,size:100,distance:5,units:"ft"},backgroundColor:s.backgroundColor??"#1b1410",tokenVision:s.tokenVision??true,
+      environment:s.environment??undefined,folder:folderId(s.folder),sort:s.sort??0,
+      flags:{[MODULE_ID]:{sourceId:s.sourceId,managed:true,mapHash:s.mapHash??"",notes:s.notes??""}}};
+    if(!scene){toCreate.push({...data,active:false,walls:(s.walls??[]).map(tag),lights:(s.lights??[]).map(tag)});continue;}
+    const sameHash=scene.getFlag(MODULE_ID,"mapHash")===(s.mapHash??"");
+    await scene.update(data);
+    if(sameHash&&!force)continue;
+    const wallIds=scene.walls.filter(w=>w.getFlag(MODULE_ID,"managed")).map(w=>w.id);
+    const lightIds=scene.lights.filter(l=>l.getFlag(MODULE_ID,"managed")).map(l=>l.id);
+    if(wallIds.length)await scene.deleteEmbeddedDocuments("Wall",wallIds);
+    if(lightIds.length)await scene.deleteEmbeddedDocuments("AmbientLight",lightIds);
+    if(s.walls?.length)await scene.createEmbeddedDocuments("Wall",s.walls.map(tag));
+    if(s.lights?.length)await scene.createEmbeddedDocuments("AmbientLight",s.lights.map(tag));
+  }
+  for(let i=0;i<toCreate.length;i+=10){
+    await Scene.createDocuments(toCreate.slice(i,i+10));
+    if(toCreate.length>10)ui.notifications.info(`Franchise Wars | importing battlemaps ${Math.min(i+10,toCreate.length)}/${toCreate.length}`);
+  }
+}
+async function importMaps({force=false}={}){if(!game.user.isGM)throw new Error("GM only");await importScenes({force});ui.notifications.info("Franchise Wars battlemaps imported/updated.");}
 
 async function enrich(content){const editor=foundry?.applications?.ux?.TextEditor?.implementation??globalThis.TextEditor;try{return editor?.enrichHTML?await editor.enrichHTML(content,{async:true}):content;}catch(e){console.warn("Franchise Wars | enrich fallback",e);return content;}}
 function shell({title,missionId,checkpointId,body,grade="Contract"}){const source=[missionId,checkpointId].filter(Boolean).join(" / ");return `<section class="fw-chat-card"><header class="fw-card-header"><span class="fw-grade">${grade}</span><strong>${title}</strong>${source?`<small>${source}</small>`:""}</header><div class="fw-card-body">${body}</div></section>`;}
