@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.4.0";
+const VERSION = "0.5.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -173,13 +173,14 @@ async function importScenes({force=false}={}){
   const toCreate=[];
   for(const s of scenes){
     const scene=game.scenes.find(x=>x.getFlag(MODULE_ID,"sourceId")===s.sourceId);
-    const data={name:s.name,img:s.img,background:{src:s.img},thumb:s.thumb??null,width:s.width,height:s.height,padding:s.padding??0,navigation:s.navigation??false,
+    const data={name:s.name,thumb:s.thumb??null,width:s.width,height:s.height,padding:s.padding??0,navigation:s.navigation??false,
       grid:s.grid??{type:1,size:100,distance:5,units:"ft"},backgroundColor:s.backgroundColor??"#1b1410",tokenVision:s.tokenVision??true,
       environment:s.environment??undefined,folder:folderId(s.folder),sort:s.sort??0,
       flags:{[MODULE_ID]:{sourceId:s.sourceId,managed:true,mapHash:s.mapHash??"",notes:s.notes??""}}};
     if(!scene){toCreate.push({...data,active:false,walls:(s.walls??[]).map(tag),lights:(s.lights??[]).map(tag)});continue;}
     const sameHash=scene.getFlag(MODULE_ID,"mapHash")===(s.mapHash??"");
     await scene.update(data);
+    await ensureLevelBackground(scene,s.img,s.backgroundColor);
     if(sameHash&&!force)continue;
     const wallIds=scene.walls.filter(w=>w.getFlag(MODULE_ID,"managed")).map(w=>w.id);
     const lightIds=scene.lights.filter(l=>l.getFlag(MODULE_ID,"managed")).map(l=>l.id);
@@ -188,10 +189,25 @@ async function importScenes({force=false}={}){
     if(s.walls?.length)await scene.createEmbeddedDocuments("Wall",s.walls.map(tag));
     if(s.lights?.length)await scene.createEmbeddedDocuments("AmbientLight",s.lights.map(tag));
   }
+  const imgBySource=new Map(scenes.map(s=>[s.sourceId,s]));
   for(let i=0;i<toCreate.length;i+=10){
-    await Scene.createDocuments(toCreate.slice(i,i+10));
+    const made=await Scene.createDocuments(toCreate.slice(i,i+10));
+    for(const sc of made){const src=imgBySource.get(sc.getFlag(MODULE_ID,"sourceId"));await ensureLevelBackground(sc,src?.img,src?.backgroundColor);}
     if(toCreate.length>10)ui.notifications.info(`Franchise Wars | importing battlemaps ${Math.min(i+10,toCreate.length)}/${toCreate.length}`);
   }
+}
+async function ensureLevelBackground(scene,src,color){
+  if(!scene||!src)return;
+  const levels=scene.levels;
+  if(!levels){if(scene.background?.src!==src)await scene.update({"background.src":src});return;}
+  const initId=scene._source?.initialLevel??null;
+  let lvl=(initId&&levels.get(initId))||levels.contents?.[0]||null;
+  if(!lvl){
+    const [made]=await scene.createEmbeddedDocuments("Level",[{name:"Ground",background:{src}}]);
+    if(made)await scene.update({initialLevel:made.id});
+    return;
+  }
+  if(lvl.background?.src!==src)await lvl.update({"background.src":src});
 }
 async function importMaps({force=false}={}){if(!game.user.isGM)throw new Error("GM only");await importScenes({force});ui.notifications.info("Franchise Wars battlemaps imported/updated.");}
 
@@ -209,3 +225,62 @@ async function voidClause(code,method="receipt"){const s=await getState(),clause
 function openCommandCentre(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sourceId")==="fw.command");return j?.sheet?.render(true);}
 
 function openSessionZero(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sourceId")==="fw.session0.gm");return j?.sheet?.render(true);}
+
+/* ---------------------------------------------------------------- v0.5 mission-guide enrichers
+   @FWLink[Type|sourceId(|pageName)]{label}  -> live link to the managed document (found by flag)
+   @FWCheck[S01|skill=inv dc=20|flavor]{label} / @FWSave[S01|ability=wis dc=13|flavor]{label}
+   @FWChat[narrate|cover]{label}  -> sends the surrounding read-aloud box / contract slip to chat
+   @FWShow[handoutSourceId|pageName]{label} -> reveals one handout page to all players
+   @FWReceipt[S01|itemSourceId]{label} -> records the Receipt and announces it */
+const FW_COLLECTIONS={Actor:()=>game.actors,Item:()=>game.items,Scene:()=>game.scenes,JournalEntry:()=>game.journal};
+function fwFind(type,sourceId){return FW_COLLECTIONS[type]?.()?.find(d=>d.getFlag(MODULE_ID,"sourceId")===sourceId)??null;}
+function fwMissing(label,why){const s=document.createElement("span");s.classList.add("fw-missing-link");s.dataset.tooltip=why;s.textContent=label;return s;}
+function fwButton(action,label,data){const a=document.createElement("a");a.classList.add("fw-action",`fw-action-${action}`);a.dataset.fwAction=action;for(const[k,v]of Object.entries(data))a.dataset[k]=v;const icon={check:"fa-dice-d20",save:"fa-shield-halved",chat:"fa-comment",show:"fa-eye",receipt:"fa-file-signature"}[action]??"fa-bolt";a.innerHTML=`<i class="fa-solid ${icon}"></i> ${label}`;return a;}
+Hooks.once("init",()=>{
+  const enrichers=CONFIG.TextEditor.enrichers;
+  enrichers.push({pattern:/@FWLink\[(Actor|Item|Scene|JournalEntry)\|([^\]|]+)(?:\|([^\]]+))?\]\{([^}]+)\}/g,enricher:async(m)=>{
+    const [,type,src,page,label]=m;const doc=fwFind(type,src);
+    if(!doc)return fwMissing(label,`Not imported yet: ${src}`);
+    let target=doc;
+    if(page&&type==="JournalEntry"){target=doc.pages.find(p=>p.name===page)??doc;}
+    try{return await target.toAnchor({name:label});}catch(e){const a=document.createElement("a");a.classList.add("content-link");a.dataset.uuid=target.uuid;a.textContent=label;return a;}
+  }});
+  enrichers.push({pattern:/@FW(Check|Save)\[([^\]|]+)\|([^\]|]+)\|?([^\]]*)\]\{([^}]+)\}/g,enricher:async(m)=>{
+    const [,kind,code,spec,flavor,label]=m;return fwButton(kind.toLowerCase(),label,{code,spec,flavor:flavor??""});
+  }});
+  enrichers.push({pattern:/@FWChat\[([^\]]*)\]\{([^}]+)\}/g,enricher:async(m)=>fwButton("chat",m[2],{mode:m[1]})});
+  enrichers.push({pattern:/@FWShow\[([^\]|]+)\|([^\]]+)\]\{([^}]+)\}/g,enricher:async(m)=>fwButton("show",m[3],{src:m[1],page:m[2]})});
+  enrichers.push({pattern:/@FWReceipt\[([^\]|]+)\|([^\]]+)\]\{([^}]+)\}/g,enricher:async(m)=>fwButton("receipt",m[3],{code:m[1],item:m[2]})});
+});
+function fwParseSpec(spec){const o={};for(const t of String(spec).trim().split(/\s+/)){const[k,v]=t.split("=");o[k]=v;}return o;}
+async function fwShowPage(src,pageName){
+  const entry=fwFind("JournalEntry",src);if(!entry)return ui.notifications.warn(`Handout journal not found: ${src}`);
+  const page=entry.pages.find(p=>p.name===pageName);if(!page)return ui.notifications.warn(`Handout page not found: ${pageName}`);
+  const LIMITED=CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED,OBSERVER=CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER;
+  if((entry.ownership.default??0)<LIMITED)await entry.update({"ownership.default":LIMITED});
+  if((page.ownership?.default??-1)<OBSERVER)await page.update({"ownership.default":OBSERVER});
+  const J=foundry.documents?.collections?.Journal??globalThis.Journal;
+  try{await J.show(page,{force:true});}catch(err){console.warn("Franchise Wars | show",err);await J.show(entry,{force:true});}
+  ui.notifications.info(`Shown to players: ${pageName}`);
+}
+document.addEventListener("click",async ev=>{
+  const a=ev.target.closest?.("a.fw-action[data-fw-action]");if(!a)return;
+  ev.preventDefault();ev.stopPropagation();
+  if(!game.user.isGM)return ui.notifications.warn("Only the GM can use mission-guide actions.");
+  const d=a.dataset;
+  try{
+    if(d.fwAction==="check"){const s=fwParseSpec(d.spec);await requestCheck({missionId:d.code,skill:s.skill,ability:s.ability,dc:s.dc,flavor:d.flavor||"Corporate requests verification."});}
+    else if(d.fwAction==="save"){const s=fwParseSpec(d.spec);await requestSave({missionId:d.code,ability:s.ability,dc:s.dc,flavor:d.flavor||"Compliance requires a saving throw."});}
+    else if(d.fwAction==="chat"){
+      const root=a.closest(".fw-readaloud")??a.closest(".journal-entry-page,.journal-page-content,article")?.querySelector(".fw-contract-slip")??null;
+      if(!root)return ui.notifications.warn("Nothing to send.");
+      const clone=root.cloneNode(true);clone.querySelectorAll("a.fw-action,header").forEach(n=>n.remove());
+      await ChatMessage.create({speaker:{alias:root.classList.contains("fw-readaloud")?"Narrator":"QuestRabbit Job Board"},content:`<div class="fw-chat-narration">${clone.innerHTML}</div>`});
+    }
+    else if(d.fwAction==="show")await fwShowPage(d.src,d.page);
+    else if(d.fwAction==="receipt"){
+      const item=fwFind("Item",d.item);await awardReceipt(d.code,{item:d.item,name:item?.name});
+      await postContractBrief({missionId:d.code,title:"RECEIPT ACQUIRED",html:`<p>The party has secured <strong>${item?item.link:d.item}</strong>.</p><p><em>Every Receipt can void a clause of the Final Contract.</em></p>`});
+    }
+  }catch(err){console.error("Franchise Wars | action",err);ui.notifications.error(err.message);}
+},true);

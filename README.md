@@ -1,4 +1,4 @@
-# The Franchise Wars v0.4.0 — Contractor Orientation
+# The Franchise Wars v0.5.0 — Contractor Orientation
 
 Foundry VTT v14 / dnd5e v6 module.
 

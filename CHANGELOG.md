@@ -1,3 +1,17 @@
+# v0.5.0 — Mission Guides
+- Rewrote all 24 mission journals (S01–S24) as full DM guides of about 84,000 words in total. Each has a Contract Cover, a DM Overview (synopsis, background, running notes, threads, hook) and five Scene pages. The guide closes with Opposition & Tactics, NPC Dossiers, a Handouts index and Twist, Rewards & Aftermath.
+- Every scene has boxed read-aloud text with a **Send to chat** button. It also has a DM description, area features, NPC play notes and a Checks & Roll Requests table, followed by lines to steal, developments, complications and scaling.
+- Roll prompts are native dnd5e enrichers (`[[/check]]`, `[[/save]]`, `[[/r]]`). Each one also has a GM **Request** button that posts the roll card to chat with the mission code.
+- Every NPC, creature, scene, item and journal mentioned links to its imported document (Actor, battlemap Scene, Receipt Item, franchise and corporation journals). Links resolve by module sourceId at render time.
+- Added 24 handout journals in the Handouts folder, one per mission, with more than 110 player handouts in total. They are hidden by default; **Show to players** reveals a single page to everyone.
+- Each Receipt box has an **Award Receipt & announce** button, which awards the Receipt Item and posts a "Receipt Acquired" card to chat.
+- New enrichers: `@FWLink`, `@FWCheck`, `@FWSave`, `@FWChat`, `@FWShow` and `@FWReceipt`, plus mission-guide CSS.
+- Updating re-imports the mission journals. Any of them you have edited are first copied to the Recovery folder.
+
+# v0.4.1
+- Fixed: battlemap Scenes imported with no background on Foundry v14. v14 stores the background image on the Scene's embedded Level; the importer now writes each map into the Scene's initial Level (creating a "Ground" Level if none exists).
+- Updating from v0.4.0 repairs every already-imported Scene in place; walls, lights, tokens and GM edits are untouched.
+
 # v0.4.0
 - Added 124 top-down battlemap Scenes: 51 campaign story maps (Acts I–V, incl. the Tallow Lane siege variant), 58 franchise flagship venues and 15 reusable side-contract environments.
 - All Scenes include pre-placed walls, doors, windows and ambient lights; dark locations start with global illumination off.

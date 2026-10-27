@@ -82,3 +82,46 @@
 .franchise-wars-active .journal-entry-content h6 strong {color:inherit !important}
 .franchise-wars-active .journal-entry-content th strong {color:#fff !important}
 
+
+/* ---- v0.5 mission guides */
+.journal-entry-content .fw-readaloud{margin:.8rem 0;padding:.2rem .95rem .6rem;background:linear-gradient(#fbf6ea,#f1e6cc);border:1px solid #b49a62;border-left:6px solid var(--fw-gold);box-shadow:inset 0 0 18px #c9a7591f,0 1px 4px #0002;color:#2b2418;font-family:"Palatino Linotype",Georgia,serif;font-size:1.04em;line-height:1.55}
+.journal-entry-content .fw-readaloud header{display:flex;justify-content:space-between;align-items:center;margin:.35rem 0 .2rem;font-family:Signika,Roboto,sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#7a5c1e;font-weight:900}
+.journal-entry-content .fw-readaloud p{margin:.45rem 0;font-style:italic}
+.journal-entry-content a.fw-action{display:inline-flex;align-items:center;gap:.3rem;margin:0 .15rem;padding:.08rem .5rem;border:1px solid #0b3a67;border-radius:3px;background:#0b3a67;color:#fff!important;font-family:Signika,Roboto,sans-serif;font-size:.78rem;font-style:normal;font-weight:700;letter-spacing:.02em;cursor:pointer;text-decoration:none;white-space:nowrap}
+.journal-entry-content a.fw-action:hover{background:#1667b1;box-shadow:0 0 6px var(--fw-gold)}
+.journal-entry-content a.fw-action-show{background:#17633a;border-color:#17633a}.journal-entry-content a.fw-action-receipt{background:#8b1e1e;border-color:#8b1e1e}
+.journal-entry-content a.fw-action-chat{background:#7a5c1e;border-color:#7a5c1e}
+.journal-entry-content .fw-missing-link{border-bottom:1px dashed #8b1e1e;color:#8b1e1e;font-weight:700}
+.journal-entry-content .fw-scene-meta{padding:.5rem .7rem;background:#eaf2f8;border:1px solid #9bb3c8;border-left:6px solid #1667b1;line-height:1.7}
+.journal-entry-content .fw-glance,.journal-entry-content .fw-secret,.journal-entry-content .fw-complication,.journal-entry-content .fw-scaling,.journal-entry-content .fw-twist,.journal-entry-content .fw-receipt,.journal-entry-content .fw-foe,.journal-entry-content .fw-npc-card{margin:.8rem 0;padding:.4rem .85rem .6rem;border:1px solid #9b8a68;background:#f7f0df;box-shadow:0 1px 3px #0002}
+.journal-entry-content .fw-glance h4,.journal-entry-content .fw-secret h4,.journal-entry-content .fw-complication h4,.journal-entry-content .fw-scaling h4,.journal-entry-content .fw-twist h4,.journal-entry-content .fw-receipt h4,.journal-entry-content .fw-foe h4{margin:.35rem 0;color:#0b3a67;font-size:1.05rem}
+.journal-entry-content .fw-secret{border-left:6px solid #8b1e1e;background:#f6e7e2}.journal-entry-content .fw-complication{border-left:6px solid #c46a1a}.journal-entry-content .fw-scaling{border-left:6px solid #5a6a7a;background:#eef0f2}
+.journal-entry-content .fw-twist{border-left:6px solid #6a2f8a;background:#f2eaf6}.journal-entry-content .fw-receipt{border-left:6px solid var(--fw-gold);background:#fbf3d9}
+.journal-entry-content .fw-foe{border-left:6px solid #8b1e1e}.journal-entry-content .fw-foe small{font-weight:400;color:#555}
+.journal-entry-content .fw-features dt{margin-top:.45rem;font-weight:800;color:#0b3a67}.journal-entry-content .fw-features dd{margin:.1rem 0 .2rem 1rem}
+.journal-entry-content .fw-npc-card{border-left:6px solid #1667b1}.journal-entry-content .fw-npc-card h3{margin:.3rem 0 0;border:0}.journal-entry-content .fw-npc-role{margin:.1rem 0 .4rem;font-style:italic;color:#555}
+.journal-entry-content .fw-npc-card dt{font-weight:800;color:#0b3a67;margin-top:.3rem}.journal-entry-content .fw-npc-card dd{margin:.05rem 0 .15rem 1rem}
+.journal-entry-content .fw-npc-quotes{font-family:Georgia,serif;font-style:italic;color:#4a3a20}
+.journal-entry-content .fw-npc-inline{margin:.35rem 0;padding:.35rem .6rem;border-left:3px solid #1667b1;background:#f4f7fa}
+.journal-entry-content .fw-checks td:nth-child(2){white-space:nowrap}
+.journal-entry-content .fw-quote{font-style:italic}
+.journal-entry-content .fw-nav{margin-top:1.2rem;padding-top:.5rem;border-top:2px solid var(--fw-gold);font-weight:700}
+.journal-entry-content .fw-contract-slip{padding:.6rem .9rem;border:2px dashed #8a7a5a;background:#fffdf6;box-shadow:0 2px 6px #0002}
+.journal-entry-content .fw-slip-head{display:grid;grid-template-columns:auto 1fr;gap:.15rem .6rem;align-items:center;padding:.45rem .6rem;background:linear-gradient(135deg,#0b3a67,#1667b1);color:#fff;border-bottom:3px solid var(--fw-gold);margin:-.6rem -.9rem .6rem}
+.journal-entry-content .fw-slip-head small{grid-column:2;opacity:.85;font-family:monospace}
+.journal-entry-content .fw-notice{font-family:"Courier New",monospace;background:#f3ead7;padding:.5rem .65rem;border-left:4px solid #8b1e1e}
+.journal-entry-content .fw-terms th{width:32%;text-align:left}
+/* handouts */
+.journal-entry-content .fw-handout{max-width:760px;margin:.5rem auto;padding:1.3rem 1.6rem;color:#2b2418;font-family:Georgia,"Palatino Linotype",serif;line-height:1.5;box-shadow:0 3px 12px #0005}
+.journal-entry-content .fw-handout-paper{background:linear-gradient(#fbf7ec,#efe4c8);border:1px solid #b8a274}
+.journal-entry-content .fw-handout-memo{background:#fdfdf8;border-top:10px solid #0b3a67;font-family:"Courier New",monospace}
+.journal-entry-content .fw-handout-parchment{background:radial-gradient(#f4e6c2,#dcc58e);border:2px solid #8a6a2a}
+.journal-entry-content .fw-handout-note{background:#fff6a8;transform:rotate(-.6deg);font-family:"Comic Sans MS","Segoe Print",cursive}
+.journal-entry-content .fw-handout-grey{background:linear-gradient(#e2e2e2,#c8c8c8);border:1px solid #888;color:#222;font-family:"Courier New",monospace}
+.journal-entry-content .fw-handout-infernal{background:linear-gradient(#2a0e0e,#4a1a14);color:#f2d8b0;border:2px solid #c0392b}
+.journal-entry-content .fw-handout h2,.journal-entry-content .fw-handout h3{border:0;color:inherit;text-align:center}
+.journal-entry-content .fw-handout .fw-stamp{display:inline-block;padding:.2rem .6rem;border:3px solid #8b1e1e;color:#8b1e1e;font-family:Signika,sans-serif;font-weight:900;letter-spacing:.1em;transform:rotate(-4deg)}
+.journal-entry-content .fw-handout .fw-fine{font-size:.8em;opacity:.8}
+.journal-entry-content .fw-handout .fw-sig{font-family:"Segoe Script","Brush Script MT",cursive;font-size:1.3em}
+.fw-chat-narration{padding:.55rem .7rem;background:linear-gradient(#fbf6ea,#f1e6cc);border:1px solid #b49a62;border-left:5px solid var(--fw-gold);font-family:Georgia,serif;font-style:italic;color:#2b2418}
+.fw-chat-narration .fw-contract-slip,.fw-chat-narration .fw-slip-head{font-style:normal}
