@@ -2,7 +2,7 @@
   "id": "franchise-wars",
   "title": "The Franchise Wars",
   "description": "A corporate fantasy campaign of questionable employment, hostile takeovers and heroic customer service. Managed journals, Brandmere, roll-request cards, Receipts, Leverage, Board control and the Final Acquisition.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     {
       "name": "Pacts & Polyhedrals"
@@ -33,7 +33,7 @@
   ],
   "url": "https://github.com/pacts-and-polyhedrals/franchise-wars",
   "manifest": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/module.json",
-  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v0.3.0/franchise-wars-v0.3.0.zip",
+  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v0.3.1/franchise-wars-v0.3.1.zip",
   "readme": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/README.md",
   "changelog": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/CHANGELOG.md",
   "bugs": "https://github.com/pacts-and-polyhedrals/franchise-wars/issues"

@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.3.0";
+const VERSION = "0.3.1";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -128,11 +128,12 @@ async function coreActorSource(spec){
 async function cloneCoreActor(spec,folder,existing=null){
   const src=await coreActorSource(spec);
   if(!src){console.warn(`Franchise Wars | Core actor not found: ${spec.baseName} (needed for ${spec.name})`);return null;}
-  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid}));
+  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid,img:spec.img??null,artAssetId:spec.artAssetId??null}));
   if(existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
   const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
+  if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.img;}
   data.system??={}; data.system.details??={}; data.system.details.biography??={value:"",public:""}; data.system.details.biography.value=`${spec.description}${data.system.details.biography.value??""}`;
-  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid}),{inplace:false});
+  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid,artAssetId:spec.artAssetId??null}),{inplace:false});
   if(!existing)return Actor.create(data);
   const embedded=data.items??[]; delete data.items; await existing.update(data);
   const ids=existing.items.map(i=>i.id); if(ids.length)await existing.deleteEmbeddedDocuments("Item",ids);

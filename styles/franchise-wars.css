@@ -19,3 +19,66 @@
 .fw-s0-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem;margin:.75rem 0}.fw-s0-grid>div{padding:.7rem;border:1px solid #9b8a68;background:#f7f0df}.fw-s0-grid h3{margin-top:0;color:var(--fw-blue)}
 .fw-checklist{list-style:none;padding-left:.2rem}.fw-checklist li{margin:.3rem 0;padding-left:1.6rem;position:relative}.fw-checklist li:before{content:"☐";position:absolute;left:.1rem;color:var(--fw-blue);font-weight:900}.fw-session0 ol>li,.fw-session0 ul>li{margin:.24rem 0}
 @media(max-width:700px){.fw-grid,.fw-s0-grid{grid-template-columns:1fr}}
+
+
+/* v0.3.1 — Foundry v14 journal contrast hardening.
+   Foundry dark-theme variables must never bleed into campaign page body text. */
+.franchise-wars-active .journal-sheet .journal-entry-content,
+.franchise-wars-active .journal-entry .journal-entry-content,
+.franchise-wars-active .journal-entry-content,
+.franchise-wars-active .journal-entry-pages,
+.franchise-wars-active article.journal-entry-page .journal-page-content,
+.franchise-wars-active .journal-page-content,
+.franchise-wars-active .journal-entry-content .editor-content,
+.franchise-wars-active .journal-entry-content .prosemirror,
+.franchise-wars-active .journal-entry-content .prosemirror .editor-content {
+  background: var(--fw-paper) !important;
+  color: var(--fw-ink) !important;
+}
+.franchise-wars-active .journal-entry-content article.journal-entry-page,
+.franchise-wars-active .journal-entry-content .journal-page-content,
+.franchise-wars-active .journal-entry-content .editor-content,
+.franchise-wars-active .journal-entry-content .prosemirror {
+  color: var(--fw-ink) !important;
+}
+.franchise-wars-active .journal-entry-content p,
+.franchise-wars-active .journal-entry-content li,
+.franchise-wars-active .journal-entry-content dd,
+.franchise-wars-active .journal-entry-content dt,
+.franchise-wars-active .journal-entry-content td,
+.franchise-wars-active .journal-entry-content blockquote,
+.franchise-wars-active .journal-entry-content figcaption,
+.franchise-wars-active .journal-entry-content .editor-content p,
+.franchise-wars-active .journal-entry-content .editor-content li {
+  color: var(--fw-ink) !important;
+}
+.franchise-wars-active .journal-entry-content h1,
+.franchise-wars-active .journal-entry-content h2,
+.franchise-wars-active .journal-entry-content h3,
+.franchise-wars-active .journal-entry-content h4,
+.franchise-wars-active .journal-entry-content h5,
+.franchise-wars-active .journal-entry-content h6 {
+  color: var(--fw-blue) !important;
+}
+.franchise-wars-active .journal-entry-content a {color:#075aa3 !important;text-decoration:underline;text-underline-offset:2px}
+.franchise-wars-active .journal-entry-content strong {color:#111820}
+.franchise-wars-active .journal-entry-content table {background:#fffaf0;color:var(--fw-ink)}
+.franchise-wars-active .journal-entry-content tbody tr:nth-child(even) {background:#eee3cf}
+.franchise-wars-active .journal-entry-content th {background:var(--fw-blue) !important;color:#fff !important}
+.franchise-wars-active .journal-entry-content blockquote {background:#f7f0df !important;color:var(--fw-ink) !important}
+.franchise-wars-active .journal-entry-content hr {border:0;border-top:2px solid #b49b69}
+.franchise-wars-active .journal-entry-content pre,
+.franchise-wars-active .journal-entry-content code {background:#25282b;color:#f5f5f5}
+.franchise-wars-active .journal-entry-content pre {padding:.65rem;white-space:pre-wrap}
+.franchise-wars-active .journal-entry-content .fw-s0-header,
+.franchise-wars-active .journal-entry-content .fw-s0-header p,
+.franchise-wars-active .journal-entry-content .fw-s0-header strong {color:#fff !important}
+/* Keep emphasis readable without overriding inverse-colour headings/table headers. */
+.franchise-wars-active .journal-entry-content h1 strong,
+.franchise-wars-active .journal-entry-content h2 strong,
+.franchise-wars-active .journal-entry-content h3 strong,
+.franchise-wars-active .journal-entry-content h4 strong,
+.franchise-wars-active .journal-entry-content h5 strong,
+.franchise-wars-active .journal-entry-content h6 strong {color:inherit !important}
+.franchise-wars-active .journal-entry-content th strong {color:#fff !important}
+

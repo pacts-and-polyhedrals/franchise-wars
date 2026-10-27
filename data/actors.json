@@ -49,7 +49,7 @@
       "data": {
         "name": "Hollis Quench",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/thaco-spell-1--e29d76f9.webp",
+        "img": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
         "system": {
           "identifier": "hollis-quench",
           "abilities": {
@@ -212,7 +212,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/thaco-spell-1--e29d76f9.webp",
+            "src": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -224,11 +224,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-01",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
           }
         }
       },
-      "contentHash": "aee1528d4d525d1143cdf703779f732529b1c410e6482df2d4a85be682193206"
+      "contentHash": "dd4e1c9d50e1bb81638dac4681b8133f04665555040bbb49029b0cbf9cbaa64f"
     },
     {
       "sourceId": "fw.actor.staff.FR-02",
@@ -236,7 +238,7 @@
       "data": {
         "name": "Duckworth Pym",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/murder-king-3--d8d97606.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-stylized-high-contrast-comic-illustration-scene--0cee7fd5.webp",
         "system": {
           "identifier": "duckworth-pym",
           "abilities": {
@@ -399,7 +401,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/murder-king-3--d8d97606.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-stylized-high-contrast-comic-illustration-scene--0cee7fd5.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -411,11 +413,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-02",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-02",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-stylized-high-contrast-comic-illustration-scene--0cee7fd5.webp"
           }
         }
       },
-      "contentHash": "38c61080853329b779ac73de29c9042fcbbf87c0441986c1f5d7a8c329765a2a"
+      "contentHash": "8979574221ba8cfdce57e24c905babfa207df7df966a257a86a50fc8377e2d39"
     },
     {
       "sourceId": "fw.actor.staff.FR-03",
@@ -423,7 +427,7 @@
       "data": {
         "name": "Saffron Mellow",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/starkfucks--11d978c7.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-richly-detailed-comic-illustration-style-high--7cb5348d.webp",
         "system": {
           "identifier": "saffron-mellow",
           "abilities": {
@@ -586,7 +590,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/starkfucks--11d978c7.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-richly-detailed-comic-illustration-style-high--7cb5348d.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -598,11 +602,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-03",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-03",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-richly-detailed-comic-illustration-style-high--7cb5348d.webp"
           }
         }
       },
-      "contentHash": "04e192797445db1594c88bfa38637eb29cd8dd684a3a3468aa371424dd672965"
+      "contentHash": "4b2502dffd25e79bfa99fb214bc26fc9c5d15b431bad0b1b8e9952a22608ef2b"
     },
     {
       "sourceId": "fw.actor.staff.FR-04",
@@ -610,7 +616,7 @@
       "data": {
         "name": "Bettina Soft",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/gelatinous-cube--52aaaf58.webp",
+        "img": "modules/franchise-wars/assets/art/library/creepy-cute-gelato-counter-attendant--cef27f77.webp",
         "system": {
           "identifier": "bettina-soft",
           "abilities": {
@@ -773,7 +779,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/gelatinous-cube--52aaaf58.webp",
+            "src": "modules/franchise-wars/assets/art/library/creepy-cute-gelato-counter-attendant--cef27f77.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -785,11 +791,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-04",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-04",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/creepy-cute-gelato-counter-attendant--cef27f77.webp"
           }
         }
       },
-      "contentHash": "60ef147ff6da415ffa9472cbf6b5cfd88143b21560f81470443cbfb0484f2293"
+      "contentHash": "baa59616f6680fb81a5cfaee9e008168cf0599232c8a078bbd69a725b450eda6"
     },
     {
       "sourceId": "fw.actor.staff.FR-05",
@@ -797,7 +805,7 @@
       "data": {
         "name": "Mortimer Pell",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
         "system": {
           "identifier": "mortimer-pell",
           "abilities": {
@@ -960,7 +968,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -972,11 +980,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-05",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-05",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
+            "artNote": "Source bible reuses the name Mortimer Pell for FR-05 and the Murder King performer; the only verified named Mortimer portrait binary in the runtime library is used."
           }
         }
       },
-      "contentHash": "a930c383ff6e82b27b32aa384d710d033db1bf4585a2f6388965c08eab3c6884"
+      "contentHash": "7b363d2a18d69482fc49ffc14fd95e1141fc30203de9245bbc986223f247f9c1"
     },
     {
       "sourceId": "fw.actor.staff.FR-06",
@@ -984,7 +995,7 @@
       "data": {
         "name": "One, Two, Three, Four and Five Harrow",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/5-wights--525a91d9.webp",
+        "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
         "system": {
           "identifier": "one-two-three-four-and-five-harrow",
           "abilities": {
@@ -1147,7 +1158,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/5-wights--525a91d9.webp",
+            "src": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -1159,11 +1170,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-06",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-06",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
           }
         }
       },
-      "contentHash": "d6c810b3bdfb2ed934afdf35fc1333cf06a90ee91f7bb9516036cc08410e6891"
+      "contentHash": "57990ee47dd4a237db0b392ecfb0b66c3ccdf0345c15ed54d2dd42abcb7f466d"
     },
     {
       "sourceId": "fw.actor.staff.FR-07",
@@ -1171,7 +1184,7 @@
       "data": {
         "name": "Don Pescatore Brine",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/codfather--d4ffd1fa.webp",
+        "img": "modules/franchise-wars/assets/art/library/the-codfather-fish-and-chips--716a49bf.webp",
         "system": {
           "identifier": "don-pescatore-brine",
           "abilities": {
@@ -1334,7 +1347,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/codfather--d4ffd1fa.webp",
+            "src": "modules/franchise-wars/assets/art/library/the-codfather-fish-and-chips--716a49bf.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -1346,11 +1359,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-07",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-07",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/the-codfather-fish-and-chips--716a49bf.webp"
           }
         }
       },
-      "contentHash": "5f890648cd851f5cf1192d72e08ec4b2b9a35f1fcc2859d61c77bc8fa450f8e4"
+      "contentHash": "c6c2abdfb62ee8ef4e0c030ff1325452770bea8807b3c923a103d14d019e0d33"
     },
     {
       "sourceId": "fw.actor.staff.FR-08",
@@ -1358,7 +1373,7 @@
       "data": {
         "name": "Skritch Twice-Fried",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-vivid-comic-book-cartoon-styled-illustration-wi--58b2fd95.webp",
         "system": {
           "identifier": "skritch-twice-fried",
           "abilities": {
@@ -1521,7 +1536,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-vivid-comic-book-cartoon-styled-illustration-wi--58b2fd95.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -1533,11 +1548,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-08",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-08",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-vivid-comic-book-cartoon-styled-illustration-wi--58b2fd95.webp"
           }
         }
       },
-      "contentHash": "3f3903b002526ff3ec077ce44ad84d8b0661fef90f78443e7a18cf9713879727"
+      "contentHash": "1e074d53f820afbbc9ba35c16c064d2bba8dccb057ef4044b1abbd435b6a9d36"
     },
     {
       "sourceId": "fw.actor.staff.FR-09",
@@ -1545,7 +1562,7 @@
       "data": {
         "name": "Colonel Ambrose Crane",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/colonels-familiar--d8c969d1.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-stylized-detailed-comic-illustration-scene-a-d--ef3f919e.webp",
         "system": {
           "identifier": "colonel-ambrose-crane",
           "abilities": {
@@ -1708,7 +1725,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/colonels-familiar--d8c969d1.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-stylized-detailed-comic-illustration-scene-a-d--ef3f919e.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -1720,11 +1737,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-09",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-09",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-stylized-detailed-comic-illustration-scene-a-d--ef3f919e.webp"
           }
         }
       },
-      "contentHash": "f87bfdc794573695b721daa585042443f8c071435eec742e7f8871c9563f351b"
+      "contentHash": "f41fb10a402467f44991ab59fba8fe1cda0ea624068eda2f1b73d543c6a4466e"
     },
     {
       "sourceId": "fw.actor.staff.FR-10",
@@ -1732,7 +1751,7 @@
       "data": {
         "name": "Scoopmaster Hollowell",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/baskin-liches--300c1943.webp",
+        "img": "modules/franchise-wars/assets/art/library/scoopmaster-hollowell-s-neon-dessert-counter--e215b3e2.webp",
         "system": {
           "identifier": "scoopmaster-hollowell",
           "abilities": {
@@ -1895,7 +1914,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/baskin-liches--300c1943.webp",
+            "src": "modules/franchise-wars/assets/art/library/scoopmaster-hollowell-s-neon-dessert-counter--e215b3e2.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -1907,11 +1926,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-10",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-10",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/scoopmaster-hollowell-s-neon-dessert-counter--e215b3e2.webp"
           }
         }
       },
-      "contentHash": "317881513287405c25e6ae68fca0c9a947e9fc771b824a58a6ee9e95337d6e8a"
+      "contentHash": "cc29d5b94e35f7e6cd8a0cdb038489a93ff8d316d37a31062c6cf0803b315c07"
     },
     {
       "sourceId": "fw.actor.staff.FR-11",
@@ -1919,7 +1940,7 @@
       "data": {
         "name": "Granny Quean",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/lairy-quean-1--c250d051.webp",
+        "img": "modules/franchise-wars/assets/art/library/granny-s-berry-swirl-showdown--3488e20e.webp",
         "system": {
           "identifier": "granny-quean",
           "abilities": {
@@ -2082,7 +2103,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/lairy-quean-1--c250d051.webp",
+            "src": "modules/franchise-wars/assets/art/library/granny-s-berry-swirl-showdown--3488e20e.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -2094,11 +2115,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-11",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-11",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/granny-s-berry-swirl-showdown--3488e20e.webp"
           }
         }
       },
-      "contentHash": "e3697069e8fdf6da7010f2859c8b35c3cdfd37ceb6a608368cb9e2c0a25a72fc"
+      "contentHash": "d08426153123ec01b6aa593b3fb8b28c796a2b2c4685bfe2af631b3d7b5661d0"
     },
     {
       "sourceId": "fw.actor.staff.FR-12",
@@ -2106,7 +2129,7 @@
       "data": {
         "name": "Duty Sergeant Maple",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/dungeon-donuts--bb421783.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-stylized-comic-book-cartoon-illustration-on-a--9adebe42.webp",
         "system": {
           "identifier": "duty-sergeant-maple",
           "abilities": {
@@ -2269,7 +2292,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/dungeon-donuts--bb421783.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-stylized-comic-book-cartoon-illustration-on-a--9adebe42.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -2281,11 +2304,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-12",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-12",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-stylized-comic-book-cartoon-illustration-on-a--9adebe42.webp"
           }
         }
       },
-      "contentHash": "1762f38f154d2d50d13d78aaf0e306df942f8e43784754b98d3db4b4fdcd7145"
+      "contentHash": "1c7bc318341b27b16814f9a09c37c9dec0e0ea3135a4435819bbe77d654ce9c0"
     },
     {
       "sourceId": "fw.actor.staff.FR-13",
@@ -2293,7 +2318,7 @@
       "data": {
         "name": "Tikka Glaze-Snout",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/krispy-kobold--25bed03a.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-highly-detailed-stylized-comic-illustration-of--91282b52.webp",
         "system": {
           "identifier": "tikka-glaze-snout",
           "abilities": {
@@ -2456,7 +2481,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/krispy-kobold--25bed03a.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-highly-detailed-stylized-comic-illustration-of--91282b52.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -2468,11 +2493,202 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-13",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-13",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-highly-detailed-stylized-comic-illustration-of--91282b52.webp"
           }
         }
       },
-      "contentHash": "c9a54e0efe494872ce22cab3129c830234330aca38a2ac51b21980580d6192da"
+      "contentHash": "ec09616e1d215a0a83d65b9ae40efba4af03b8dc20b17c19266ec0194cd4c751"
+    },
+    {
+      "sourceId": "fw.actor.staff.FR-14",
+      "folder": "fw.actor.staff",
+      "data": {
+        "name": "Xoribble",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/grotesque-pastry-monster-bakery-counter--52bbef2a.webp",
+        "system": {
+          "identifier": "xoribble",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Beholder baker and manager; apron, eye-pie counter, unsettlingly attentive service.</p><p>Source dossier: FR-14 — Dough & Beholder</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Xoribble",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/grotesque-pastry-monster-bakery-counter--52bbef2a.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.staff.FR-14",
+            "managed": true,
+            "artAssetId": "FR-14",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grotesque-pastry-monster-bakery-counter--52bbef2a.webp"
+          }
+        }
+      },
+      "contentHash": "2ae8e286f9507eb4be3c26d099538eb17288ac255c8a8060a439e2b5d94c9ee0"
     },
     {
       "sourceId": "fw.actor.staff.FR-15",
@@ -2480,7 +2696,7 @@
       "data": {
         "name": "Reliable Josef",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-comic-illustration-style-scene-a-clos--bc723d6c.webp",
         "system": {
           "identifier": "reliable-josef",
           "abilities": {
@@ -2643,7 +2859,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-comic-illustration-style-scene-a-clos--bc723d6c.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -2655,11 +2871,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-15",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-15",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-comic-illustration-style-scene-a-clos--bc723d6c.webp"
           }
         }
       },
-      "contentHash": "061570c7c9ffd389adc7b59a4b7af3f7e8149b494f2e8deb6c130a1b0fb4d79e"
+      "contentHash": "a39d1b2e525798559ce36737b94e9fcb2a7927008b872f3ef4b951ea67f7d3c6"
     },
     {
       "sourceId": "fw.actor.staff.FR-16",
@@ -2667,7 +2885,7 @@
       "data": {
         "name": "Grukka Sweetfang",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/the-golden-orcs--a4212d13.webp",
+        "img": "modules/franchise-wars/assets/art/library/golden-orcs-burger-counter--d161e9b0.webp",
         "system": {
           "identifier": "grukka-sweetfang",
           "abilities": {
@@ -2830,7 +3048,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/the-golden-orcs--a4212d13.webp",
+            "src": "modules/franchise-wars/assets/art/library/golden-orcs-burger-counter--d161e9b0.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -2842,11 +3060,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-16",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-16",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/golden-orcs-burger-counter--d161e9b0.webp"
           }
         }
       },
-      "contentHash": "9790c8ac0da5f2894a472b32953b21be8ce9ecef995ffd12a912dbfcea4277be"
+      "contentHash": "789f2e2d6b86f1c5d0ac691a499f16fde2b178e6ab0761be7595dcc7f5b66138"
     },
     {
       "sourceId": "fw.actor.staff.FR-17",
@@ -2854,7 +3074,7 @@
       "data": {
         "name": "Serena Foreshaw",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/mcguffins--100adb56.webp",
+        "img": "modules/franchise-wars/assets/art/library/quest-meal-at-the-fast-food-counter--43f9d553.webp",
         "system": {
           "identifier": "serena-foreshaw",
           "abilities": {
@@ -3017,7 +3237,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/mcguffins--100adb56.webp",
+            "src": "modules/franchise-wars/assets/art/library/quest-meal-at-the-fast-food-counter--43f9d553.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3029,11 +3249,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-17",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-17",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/quest-meal-at-the-fast-food-counter--43f9d553.webp"
           }
         }
       },
-      "contentHash": "273f6d56e02be3f4480ecb1e8fcde0afa41b06faaef690c9ba03fbedd3847445"
+      "contentHash": "0e96f8176969781ca61da367f8d766b66e59910028266efef4ff72529edd686b"
     },
     {
       "sourceId": "fw.actor.staff.FR-18",
@@ -3041,7 +3263,7 @@
       "data": {
         "name": "Maxim Knell",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/big-mcguffins--3c8217ae.webp",
+        "img": "modules/franchise-wars/assets/art/library/demon-manager-serves-a-towering-burger--e40b62a9.webp",
         "system": {
           "identifier": "maxim-knell",
           "abilities": {
@@ -3204,7 +3426,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/big-mcguffins--3c8217ae.webp",
+            "src": "modules/franchise-wars/assets/art/library/demon-manager-serves-a-towering-burger--e40b62a9.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3216,11 +3438,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-18",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-18",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/demon-manager-serves-a-towering-burger--e40b62a9.webp"
           }
         }
       },
-      "contentHash": "a68ad9b43fd46e909c9cb1a4a4b40dd05548ca63006c4376b89d93c602284b62"
+      "contentHash": "ef8f62ad03b35693ddfc533d08b686b33acc3463047bb1153edf530e5983ef22"
     },
     {
       "sourceId": "fw.actor.staff.FR-19",
@@ -3228,7 +3452,7 @@
       "data": {
         "name": "Ma Lin Tsao",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/owlbear-express--6f3214ed.webp",
+        "img": "modules/franchise-wars/assets/art/library/cheerful-owlbear-express-server--18c7623d.webp",
         "system": {
           "identifier": "ma-lin-tsao",
           "abilities": {
@@ -3391,7 +3615,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/owlbear-express--6f3214ed.webp",
+            "src": "modules/franchise-wars/assets/art/library/cheerful-owlbear-express-server--18c7623d.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3403,11 +3627,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-19",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-19",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/cheerful-owlbear-express-server--18c7623d.webp"
           }
         }
       },
-      "contentHash": "189fdfe5453620f9074ec6a1964c15e6daac8e79f4d78195d98e05a564a14572"
+      "contentHash": "a135fb9f9379456bb5883eff751329d57ea7d0ad3475310ffc7ded669095b83c"
     },
     {
       "sourceId": "fw.actor.staff.FR-20",
@@ -3415,7 +3641,7 @@
       "data": {
         "name": "Vessk",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/dragon-express--f21bb58d.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-vivid-highly-detailed-comic-illustration-style--1be1247d.webp",
         "system": {
           "identifier": "vessk",
           "abilities": {
@@ -3578,7 +3804,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/dragon-express--f21bb58d.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-vivid-highly-detailed-comic-illustration-style--1be1247d.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3590,11 +3816,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-20",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-20",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-vivid-highly-detailed-comic-illustration-style--1be1247d.webp"
           }
         }
       },
-      "contentHash": "e000dd903b7cd94c2a14cda217277fa3e02557e29ef5bb1c15c1e05f6abf9dbd"
+      "contentHash": "85618c1dc5d1a149714e1659108ca2548b53545f5880df313ee77128be72e20d"
     },
     {
       "sourceId": "fw.actor.staff.FR-21",
@@ -3602,7 +3830,7 @@
       "data": {
         "name": "Jin Stagecraft",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/roll-initiative--6aadf8a0.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-book-cell-shaded-illu--7ed6eb0f.webp",
         "system": {
           "identifier": "jin-stagecraft",
           "abilities": {
@@ -3765,7 +3993,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/roll-initiative--6aadf8a0.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-book-cell-shaded-illu--7ed6eb0f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3777,11 +4005,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-21",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-21",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-book-cell-shaded-illu--7ed6eb0f.webp"
           }
         }
       },
-      "contentHash": "88d34d591dbf20ef91638f328a1c021897c3accabfd841c7fdb771ad60061fa3"
+      "contentHash": "a1665cc17fe2ed24a9872ac485f3d6bf8c2cf0ecb006072980bfe6c713468463"
     },
     {
       "sourceId": "fw.actor.staff.FR-22",
@@ -3789,7 +4019,7 @@
       "data": {
         "name": "Lucky Oyelaran",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/critical-wok--adfe00f6.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-dynamic-stylized-comic-illustration-scene-close--53740c7f.webp",
         "system": {
           "identifier": "lucky-oyelaran",
           "abilities": {
@@ -3952,7 +4182,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/critical-wok--adfe00f6.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-dynamic-stylized-comic-illustration-scene-close--53740c7f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -3964,11 +4194,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-22",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-22",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-dynamic-stylized-comic-illustration-scene-close--53740c7f.webp"
           }
         }
       },
-      "contentHash": "a09952d60b32492bc4ebf95fd2a853ed45e9acc3803a09dc19f56a973c3f8e91"
+      "contentHash": "c29b5ae3f0af81db814879a09e17285e2b9cf69228e1b3154b4829704ddbb397"
     },
     {
       "sourceId": "fw.actor.staff.FR-23",
@@ -3976,7 +4208,7 @@
       "data": {
         "name": "Deacon Hobb",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/saving-throw-subs--abc41b10.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-cl--e6cc21dd.webp",
         "system": {
           "identifier": "deacon-hobb",
           "abilities": {
@@ -4139,7 +4371,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/saving-throw-subs--abc41b10.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-cl--e6cc21dd.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -4151,11 +4383,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-23",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-23",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-cl--e6cc21dd.webp"
           }
         }
       },
-      "contentHash": "de551b1e1e159397634ee2815fc67055a0466f398d3212a2b807a2708face4cf"
+      "contentHash": "17cb5ad66fc53e0da6a737fa792279b4ce7bdae68711d2f6115b3e2f13b2d11a"
     },
     {
       "sourceId": "fw.actor.staff.FR-24",
@@ -4163,7 +4397,7 @@
       "data": {
         "name": "Sir Crustin Leaf",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/hero-s-roll--a2d2624b.webp",
+        "img": "modules/franchise-wars/assets/art/library/hero-s-roll-paladin-baker--92e28477.webp",
         "system": {
           "identifier": "sir-crustin-leaf",
           "abilities": {
@@ -4326,7 +4560,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/hero-s-roll--a2d2624b.webp",
+            "src": "modules/franchise-wars/assets/art/library/hero-s-roll-paladin-baker--92e28477.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -4338,11 +4572,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-24",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-24",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/hero-s-roll-paladin-baker--92e28477.webp"
           }
         }
       },
-      "contentHash": "b0497bf4476033efbd830e14585823fdd9844a9bff6fed7cbbdf39eb59c4815d"
+      "contentHash": "dd2b1f1a7a10e1535230f762507bfa615979a55dca1711613a5be08bb8ce3809"
     },
     {
       "sourceId": "fw.actor.staff.FR-25",
@@ -4350,7 +4586,7 @@
       "data": {
         "name": "Dicey Jen",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-vibrant-detailed-comic-illustration-scene-with--fd1b43c1.webp",
         "system": {
           "identifier": "dicey-jen",
           "abilities": {
@@ -4513,7 +4749,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-vibrant-detailed-comic-illustration-scene-with--fd1b43c1.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -4525,11 +4761,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-25",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-25",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-vibrant-detailed-comic-illustration-scene-with--fd1b43c1.webp"
           }
         }
       },
-      "contentHash": "eb12f0d45bfd23b1a452e9382f86323e723e0cd5f5a44be93f09ef9d6a1036ad"
+      "contentHash": "474465904fb538e2f904f4644db4dd371736ad106f6fba720aea7b47563e53cb"
     },
     {
       "sourceId": "fw.actor.staff.FR-26",
@@ -4537,7 +4775,7 @@
       "data": {
         "name": "Anselm Grue",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/sub-class--4d92f4a2.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-in-a--dd2dddd4.webp",
         "system": {
           "identifier": "anselm-grue",
           "abilities": {
@@ -4700,7 +4938,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/sub-class--4d92f4a2.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-in-a--dd2dddd4.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -4712,11 +4950,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-26",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-26",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-in-a--dd2dddd4.webp"
           }
         }
       },
-      "contentHash": "161b76922b697d19e1298736cdcbd570439b9a6055f5be71ab0e6c77c56cefac"
+      "contentHash": "53b8815ece3858e7f9f522d2cf612b4d6eec0be247279b71def569bd0f26c8e2"
     },
     {
       "sourceId": "fw.actor.staff.FR-27",
@@ -4724,7 +4964,7 @@
       "data": {
         "name": "Mother Hessa",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/footlong-rest--7aec2692.webp",
+        "img": "modules/franchise-wars/assets/art/library/sleepy-orc-sandwich-shopkeeper--6a210dd6.webp",
         "system": {
           "identifier": "mother-hessa",
           "abilities": {
@@ -4887,7 +5127,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/footlong-rest--7aec2692.webp",
+            "src": "modules/franchise-wars/assets/art/library/sleepy-orc-sandwich-shopkeeper--6a210dd6.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -4899,11 +5139,202 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-27",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-27",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/sleepy-orc-sandwich-shopkeeper--6a210dd6.webp"
           }
         }
       },
-      "contentHash": "f4fe1e98d37d3d6a8384f8b009749a5ffed6ea3012ef4d22e59c47ae81aba397"
+      "contentHash": "da4695ccd43db0a32d47618ca2de66e90592e6c212ada3d8710ec2c76a55f2f6"
+    },
+    {
+      "sourceId": "fw.actor.staff.FR-28",
+      "folder": "fw.actor.staff",
+      "data": {
+        "name": "Kaito Rain",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/critical-rolls-sushi-showdown--98875f21.webp",
+        "system": {
+          "identifier": "kaito-rain",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Sushi manager; precision knife work, dice-themed plating, Critical Rolls uniform.</p><p>Source dossier: FR-28 — Critical Rolls</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Kaito Rain",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/critical-rolls-sushi-showdown--98875f21.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.staff.FR-28",
+            "managed": true,
+            "artAssetId": "FR-28",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/critical-rolls-sushi-showdown--98875f21.webp"
+          }
+        }
+      },
+      "contentHash": "e11786a2c4d7df597274a8a662f094ea2b4c714bfdf6563713cc1cd81b5b4b0c"
     },
     {
       "sourceId": "fw.actor.staff.FR-29",
@@ -4911,7 +5342,7 @@
       "data": {
         "name": "Grand Chef Ivo Bladesworth",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/roll-initiative--6aadf8a0.webp",
+        "img": "modules/franchise-wars/assets/art/library/warrior-chef-s-surprise-roll--7e6e17fa.webp",
         "system": {
           "identifier": "grand-chef-ivo-bladesworth",
           "abilities": {
@@ -5074,7 +5505,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/roll-initiative--6aadf8a0.webp",
+            "src": "modules/franchise-wars/assets/art/library/warrior-chef-s-surprise-roll--7e6e17fa.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -5086,11 +5517,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-29",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-29",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/warrior-chef-s-surprise-roll--7e6e17fa.webp"
           }
         }
       },
-      "contentHash": "db8e5024cce9e5b9fdf1c3b37b39c5db1ff6fe368a1f51dc4bc916aa26dc03e0"
+      "contentHash": "520d3bfc69c9aed790de0a4119a94583aed6922c4c097924bd66c597e4288edf"
     },
     {
       "sourceId": "fw.actor.staff.FR-30",
@@ -5098,7 +5531,7 @@
       "data": {
         "name": "Barnaby Fowl",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/natural-twenty-pieces--f55e7298.webp",
+        "img": "modules/franchise-wars/assets/art/library/barnaby-fowl-s-fried-chicken-shift--4cfa1169.webp",
         "system": {
           "identifier": "barnaby-fowl",
           "abilities": {
@@ -5261,7 +5694,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/natural-twenty-pieces--f55e7298.webp",
+            "src": "modules/franchise-wars/assets/art/library/barnaby-fowl-s-fried-chicken-shift--4cfa1169.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -5273,11 +5706,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-30",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-30",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/barnaby-fowl-s-fried-chicken-shift--4cfa1169.webp"
           }
         }
       },
-      "contentHash": "9fa7db84e2c980557fa30e5ded2e42b19fc39a01d6096d47003874e77a919b3e"
+      "contentHash": "6e37b218413696b3ff4d5663e52597633f84418c23c45f5d4bc3d24e0e2449ad"
     },
     {
       "sourceId": "fw.actor.staff.FR-31",
@@ -5285,7 +5720,7 @@
       "data": {
         "name": "Wendel Clasp",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/chick-n-familiar--7ceb7d7b.webp",
+        "img": "modules/franchise-wars/assets/art/library/vibrant-stylized-cartoon-illustration-fantasy-fa--04f05d45.webp",
         "system": {
           "identifier": "wendel-clasp",
           "abilities": {
@@ -5448,7 +5883,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/chick-n-familiar--7ceb7d7b.webp",
+            "src": "modules/franchise-wars/assets/art/library/vibrant-stylized-cartoon-illustration-fantasy-fa--04f05d45.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -5460,11 +5895,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-31",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-31",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/vibrant-stylized-cartoon-illustration-fantasy-fa--04f05d45.webp"
           }
         }
       },
-      "contentHash": "b91099e72a6299fc2f032d95ced3015d5037737bd6e09d344f7beccfb5c28ccb"
+      "contentHash": "737134128ddac09dcdf0c827febf294164ed02b1b6bbafe007bf762b167a0ee4"
     },
     {
       "sourceId": "fw.actor.staff.FR-32",
@@ -5472,7 +5909,7 @@
       "data": {
         "name": "Big Tam Grudge",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/cockatrice-chips--b05ee771.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-colorful-comic-cartoon-illustration-s--914d35c2.webp",
         "system": {
           "identifier": "big-tam-grudge",
           "abilities": {
@@ -5635,7 +6072,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/cockatrice-chips--b05ee771.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-colorful-comic-cartoon-illustration-s--914d35c2.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -5647,11 +6084,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-32",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-32",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-colorful-comic-cartoon-illustration-s--914d35c2.webp"
           }
         }
       },
-      "contentHash": "873874c3ae7ca81e34df629aef8abc82671b14c287e119e13c65ed2cd84e3e85"
+      "contentHash": "c4b22a05d83b126f5ed277720417f7ed6430583da61990fc14146c4a10ccf159"
     },
     {
       "sourceId": "fw.actor.staff.FR-33",
@@ -5659,7 +6098,7 @@
       "data": {
         "name": "Grimbal Oakshank",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/rusty-bucket--6c50d2c7.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-graphic-novel-sty--f06d21e7.webp",
         "system": {
           "identifier": "grimbal-oakshank",
           "abilities": {
@@ -5822,7 +6261,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/rusty-bucket--6c50d2c7.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-graphic-novel-sty--f06d21e7.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -5834,11 +6273,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-33",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-33",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-graphic-novel-sty--f06d21e7.webp"
           }
         }
       },
-      "contentHash": "4fe9eef1f592db5aa366e7733a99fb69a798451724cfe8e9cd5445e67dfbc780"
+      "contentHash": "4c2d6d8a57d906a8b4be7760700a806633d7c415d73590c657f20c0de826b7e3"
     },
     {
       "sourceId": "fw.actor.staff.FR-34",
@@ -5846,7 +6287,7 @@
       "data": {
         "name": "Bramble Sunwhistle",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/goodberry-s--b6aa2f67.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-stylized-high-detail-comic-cartoon-illustration--6b0a0655.webp",
         "system": {
           "identifier": "bramble-sunwhistle",
           "abilities": {
@@ -6009,7 +6450,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/goodberry-s--b6aa2f67.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-stylized-high-detail-comic-cartoon-illustration--6b0a0655.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6021,11 +6462,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-34",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-34",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-stylized-high-detail-comic-cartoon-illustration--6b0a0655.webp"
           }
         }
       },
-      "contentHash": "295955c0a9031ef363e09a03025652120a7738a58f5c5cc65864e3c6f2c14e81"
+      "contentHash": "4c309fab9e09d153d80563244a015338cc6839b58237e24070d951cfcf00baaf"
     },
     {
       "sourceId": "fw.actor.staff.FR-35",
@@ -6033,7 +6476,7 @@
       "data": {
         "name": "Tansy Oakes-Whitlow",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-fantasy-illustration-scene-a--e9551753.webp",
         "system": {
           "identifier": "tansy-oakes-whitlow",
           "abilities": {
@@ -6196,7 +6639,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-fantasy-illustration-scene-a--e9551753.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6208,11 +6651,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-35",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-35",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-fantasy-illustration-scene-a--e9551753.webp"
           }
         }
       },
-      "contentHash": "4709fb4f985ed343814ad699b3d380b3453cc7d16f8453ff1303fc1880a9d6f1"
+      "contentHash": "16068280ef29af145c533668f0e002a02f9d9ac63f58352b97a70903dfa5a0b6"
     },
     {
       "sourceId": "fw.actor.staff.FR-36",
@@ -6220,7 +6665,7 @@
       "data": {
         "name": "Mister Hamza Bright",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/trader-djinns--5f26ce92.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-colorful-detailed-fantasy-comic-cartoon-style-i--a598dcdd.webp",
         "system": {
           "identifier": "mister-hamza-bright",
           "abilities": {
@@ -6383,7 +6828,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/trader-djinns--5f26ce92.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-colorful-detailed-fantasy-comic-cartoon-style-i--a598dcdd.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6395,11 +6840,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-36",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-36",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-colorful-detailed-fantasy-comic-cartoon-style-i--a598dcdd.webp"
           }
         }
       },
-      "contentHash": "8dc62b97c6f29f28e14bfdd4e7fdc590e2060f5a40ed5c4817b8085a6905a0e2"
+      "contentHash": "1c7b840d4d7d10fc3290c65fa8b111f4baf53602edfbc88b5bc584d22d7f8a12"
     },
     {
       "sourceId": "fw.actor.staff.FR-37",
@@ -6407,7 +6854,7 @@
       "data": {
         "name": "Del",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/seven-eleven-hells--c38abe8d.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-highly-detailed-comic-illustration-style-bold--71a3a317.webp",
         "system": {
           "identifier": "del",
           "abilities": {
@@ -6570,7 +7017,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/seven-eleven-hells--c38abe8d.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-highly-detailed-comic-illustration-style-bold--71a3a317.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6582,11 +7029,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-37",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-37",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-highly-detailed-comic-illustration-style-bold--71a3a317.webp"
           }
         }
       },
-      "contentHash": "88fa9e228beb0fb889007a45da31a22b4dcdeb75a80915cc825b6aa1774ff2fd"
+      "contentHash": "7bb75ed63d95687b2cdd916a6097c6876f140b6958b97dc480f1c115f643046b"
     },
     {
       "sourceId": "fw.actor.staff.FR-38",
@@ -6594,7 +7043,7 @@
       "data": {
         "name": "Sister Maud Circlet",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/circle-k-of-protection--34dada15.webp",
+        "img": "modules/franchise-wars/assets/art/library/convenience-store-cleric-serving-k-sigil-elixir--96251a50.webp",
         "system": {
           "identifier": "sister-maud-circlet",
           "abilities": {
@@ -6757,7 +7206,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/circle-k-of-protection--34dada15.webp",
+            "src": "modules/franchise-wars/assets/art/library/convenience-store-cleric-serving-k-sigil-elixir--96251a50.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6769,11 +7218,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-38",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-38",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/convenience-store-cleric-serving-k-sigil-elixir--96251a50.webp"
           }
         }
       },
-      "contentHash": "52e7bde79efb6ae9bd3535ba8c928178cf9db2ffe1b59454699c7046eae2dba5"
+      "contentHash": "f48df84b3bd544f0412747b8319c121d8998ec32514b0a3724200f7120b286d8"
     },
     {
       "sourceId": "fw.actor.staff.FR-39",
@@ -6781,7 +7232,7 @@
       "data": {
         "name": "Zip-Zip Nettleblur",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/quickling-mart--a78837b9.webp",
+        "img": "modules/franchise-wars/assets/art/library/frenzied-quickling-pastry-rush--dbbe4747.webp",
         "system": {
           "identifier": "zip-zip-nettleblur",
           "abilities": {
@@ -6944,7 +7395,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/quickling-mart--a78837b9.webp",
+            "src": "modules/franchise-wars/assets/art/library/frenzied-quickling-pastry-rush--dbbe4747.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -6956,11 +7407,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-39",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-39",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/frenzied-quickling-pastry-rush--dbbe4747.webp"
           }
         }
       },
-      "contentHash": "f08979a61df2fe3b31adec80c20f154cf5650e27cbd6fe4db0680eea29cab993"
+      "contentHash": "eea7e55688f5fa41143014b05ee9892915e2c8f957ae2e49f34c792b701b7846"
     },
     {
       "sourceId": "fw.actor.staff.FR-40",
@@ -6968,7 +7421,7 @@
       "data": {
         "name": "Oliver Crust",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/potion-hut--8fa35796.webp",
+        "img": "modules/franchise-wars/assets/art/library/magical-pizza-alchemist-at-work--7278bfd9.webp",
         "system": {
           "identifier": "oliver-crust",
           "abilities": {
@@ -7131,7 +7584,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/potion-hut--8fa35796.webp",
+            "src": "modules/franchise-wars/assets/art/library/magical-pizza-alchemist-at-work--7278bfd9.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -7143,11 +7596,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-40",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-40",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/magical-pizza-alchemist-at-work--7278bfd9.webp"
           }
         }
       },
-      "contentHash": "a60ef306a5f7c0316e561fe29fb310d0fcec6dcc243bc5ea15520eea87ddba5a"
+      "contentHash": "522ec61a9154bf03252dc7ebe78d1d7b4d0e4fc47f7dd3316cb752886bf6a9e3"
     },
     {
       "sourceId": "fw.actor.staff.FR-41",
@@ -7155,7 +7610,7 @@
       "data": {
         "name": "Gino",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/papa-lich-s--b258b910.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-comic-graphic-illustration-scene-a-sty--df109053.webp",
         "system": {
           "identifier": "gino",
           "abilities": {
@@ -7318,7 +7773,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/papa-lich-s--b258b910.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-comic-graphic-illustration-scene-a-sty--df109053.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -7330,11 +7785,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-41",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-41",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-comic-graphic-illustration-scene-a-sty--df109053.webp"
           }
         }
       },
-      "contentHash": "b557f59fc3adf5b6dca7f78a1dc81f829bf719ada46a3f922d83108bbfcf8881"
+      "contentHash": "f9c5be6a62240887750736acf4ba5838bdd2641eac5d346c34c0fe776aea975d"
     },
     {
       "sourceId": "fw.actor.staff.FR-42",
@@ -7342,7 +7799,7 @@
       "data": {
         "name": "Madame Olive Aspire",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/dominoancy--acf3fb7a.webp",
+        "img": "modules/franchise-wars/assets/art/library/madame-olive-aspire--07e66f2c.webp",
         "system": {
           "identifier": "madame-olive-aspire",
           "abilities": {
@@ -7505,7 +7962,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/dominoancy--acf3fb7a.webp",
+            "src": "modules/franchise-wars/assets/art/library/madame-olive-aspire--07e66f2c.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -7517,11 +7974,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-42",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-42",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/madame-olive-aspire--07e66f2c.webp"
           }
         }
       },
-      "contentHash": "b84867c730ce7cf2fbded8def0550e97415602f4ad01c1478272f1c93035fdbe"
+      "contentHash": "3ee6408b4d7269cbbdc8cf8f560c38f379150e50f2e149781c5d339202cdf6e9"
     },
     {
       "sourceId": "fw.actor.staff.FR-43",
@@ -7529,7 +7988,7 @@
       "data": {
         "name": "Centurion Marcus Crustus",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/little-caesars-legion--38270490.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-bold-comic-cartoon-style-illustration-with-heav--25c50c85.webp",
         "system": {
           "identifier": "centurion-marcus-crustus",
           "abilities": {
@@ -7692,7 +8151,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/little-caesars-legion--38270490.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-bold-comic-cartoon-style-illustration-with-heav--25c50c85.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -7704,11 +8163,202 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-43",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-43",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-bold-comic-cartoon-style-illustration-with-heav--25c50c85.webp"
           }
         }
       },
-      "contentHash": "c12a64a1490e2447c9a281e850d8f57dd89258b25c5d96bfba344a7e48c26e26"
+      "contentHash": "9ad9d82128b1f4bb56f8b959a84f58b40bdd71235404cead4a54b737c9849097"
+    },
+    {
+      "sourceId": "fw.actor.staff.FR-44",
+      "folder": "fw.actor.staff",
+      "data": {
+        "name": "Grubbo",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/grotesque-pizza-hutt-manager-serving-pizza--e55dc8fb.webp",
+        "system": {
+          "identifier": "grubbo",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Career franchise manager; Hutt-themed pizza counter and Carbonite Crust service.</p><p>Source dossier: FR-44 — Pizza the Hutt</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Grubbo",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/grotesque-pizza-hutt-manager-serving-pizza--e55dc8fb.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.staff.FR-44",
+            "managed": true,
+            "artAssetId": "FR-44",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grotesque-pizza-hutt-manager-serving-pizza--e55dc8fb.webp"
+          }
+        }
+      },
+      "contentHash": "1227518a1096f366590f7348645248b241b317974f6bf267ffd9dce3ca8be222"
     },
     {
       "sourceId": "fw.actor.staff.FR-45",
@@ -7716,7 +8366,7 @@
       "data": {
         "name": "Matteo Scorch",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/crusty-dragon--b278b515.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-c--66773d27.webp",
         "system": {
           "identifier": "matteo-scorch",
           "abilities": {
@@ -7879,7 +8529,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/crusty-dragon--b278b515.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-c--66773d27.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -7891,11 +8541,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-45",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-45",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-c--66773d27.webp"
           }
         }
       },
-      "contentHash": "bd746bfd2b0606ecca8b844aa7b61b071a83d076d0533f3d23507e17753a2411"
+      "contentHash": "f92597a36449244ad47dd5f649b3877655ce5b9deac155731d68b0c511186846"
     },
     {
       "sourceId": "fw.actor.staff.FR-46",
@@ -7903,7 +8555,7 @@
       "data": {
         "name": "Petronella Fizzwick",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/ale-error--685db2a0.webp",
+        "img": "modules/franchise-wars/assets/art/library/chaotic-gnome-brewer-s-foam-frenzy--cdefab04.webp",
         "system": {
           "identifier": "petronella-fizzwick",
           "abilities": {
@@ -8066,7 +8718,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/ale-error--685db2a0.webp",
+            "src": "modules/franchise-wars/assets/art/library/chaotic-gnome-brewer-s-foam-frenzy--cdefab04.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -8078,11 +8730,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-46",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-46",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/chaotic-gnome-brewer-s-foam-frenzy--cdefab04.webp"
           }
         }
       },
-      "contentHash": "933555419acff883be815cca41f8089c4a0940a2771d1f5edfb1302f34395add"
+      "contentHash": "60cdbc7b2c92bd7f95937364a7b8ff637296ae8f35c3c86473422eac9f4e68d4"
     },
     {
       "sourceId": "fw.actor.staff.FR-47",
@@ -8090,7 +8744,7 @@
       "data": {
         "name": "Burt Gauntlet",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/critical-pint--edb2f95e.webp",
+        "img": "modules/franchise-wars/assets/art/library/winking-gladiator-barkeep-with-frothy-pint--9cbb259f.webp",
         "system": {
           "identifier": "burt-gauntlet",
           "abilities": {
@@ -8253,7 +8907,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/critical-pint--edb2f95e.webp",
+            "src": "modules/franchise-wars/assets/art/library/winking-gladiator-barkeep-with-frothy-pint--9cbb259f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -8265,11 +8919,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-47",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-47",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/winking-gladiator-barkeep-with-frothy-pint--9cbb259f.webp"
           }
         }
       },
-      "contentHash": "2535c5bf1c82cc882985b48016ddbf4d333895ca5aa520098921a4b45224d571"
+      "contentHash": "790d6aa24cc8f932df752c745793685a465ad354456907321ae39d9717e69a88"
     },
     {
       "sourceId": "fw.actor.staff.FR-48",
@@ -8277,7 +8933,7 @@
       "data": {
         "name": "Old Moss Crabtree",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/tipsy-mimic--4383cbca.webp",
+        "img": "modules/franchise-wars/assets/art/library/old-moss-at-the-tipsy-mimic--a033df7e.webp",
         "system": {
           "identifier": "old-moss-crabtree",
           "abilities": {
@@ -8440,7 +9096,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/tipsy-mimic--4383cbca.webp",
+            "src": "modules/franchise-wars/assets/art/library/old-moss-at-the-tipsy-mimic--a033df7e.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -8452,11 +9108,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-48",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-48",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/old-moss-at-the-tipsy-mimic--a033df7e.webp"
           }
         }
       },
-      "contentHash": "545fd53f0b99d0b39b2117cd9cbadbfd9360d9665408b23b92affd6d99b06835"
+      "contentHash": "71e24a7329a2314a5867b03f0e9b5a1d513864142b44276584b96acf06b799ac"
     },
     {
       "sourceId": "fw.actor.staff.FR-49",
@@ -8464,7 +9122,7 @@
       "data": {
         "name": "Hrothga the Mild",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/barbarians-barrel--d24e14d2.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-fantasy-tavern-bar-scene-illustration-i--b2c7b115.webp",
         "system": {
           "identifier": "hrothga-the-mild",
           "abilities": {
@@ -8627,7 +9285,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/barbarians-barrel--d24e14d2.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-fantasy-tavern-bar-scene-illustration-i--b2c7b115.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -8639,11 +9297,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-49",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-49",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-fantasy-tavern-bar-scene-illustration-i--b2c7b115.webp"
           }
         }
       },
-      "contentHash": "520b8d0817e2cabff18f938c2393559f63b116dca40ce22fe60bce322d6e8105"
+      "contentHash": "9c9d055f72d7a846d3bf43075d4c85022377e777a1182716cae9ca672ad3e918"
     },
     {
       "sourceId": "fw.actor.staff.FR-50",
@@ -8651,7 +9311,7 @@
       "data": {
         "name": "Tamsin Blaze",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-bold-high-energy-comic-cartoon-illustration-sce--e6c341b8.webp",
         "system": {
           "identifier": "tamsin-blaze",
           "abilities": {
@@ -8814,7 +9474,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-bold-high-energy-comic-cartoon-illustration-sce--e6c341b8.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -8826,11 +9486,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-50",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-50",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-bold-high-energy-comic-cartoon-illustration-sce--e6c341b8.webp"
           }
         }
       },
-      "contentHash": "3aaa5ba01a405d725c73f3de1f1a2bed62018368dfd5ab2fea9fa5c7380c5003"
+      "contentHash": "2e69ad558fc77c6be4c6b33ba6f178ae3d490ff3300c9a7906b5d4065b5671a8"
     },
     {
       "sourceId": "fw.actor.staff.FR-51",
@@ -8838,7 +9500,7 @@
       "data": {
         "name": "Candy Plume",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/hoots-owlbears--43745ab4.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-vibrant-high-contrast-cartoon-comic-illustratio--1f546765.webp",
         "system": {
           "identifier": "candy-plume",
           "abilities": {
@@ -9001,7 +9663,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/hoots-owlbears--43745ab4.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-vibrant-high-contrast-cartoon-comic-illustratio--1f546765.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9013,11 +9675,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-51",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-51",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-vibrant-high-contrast-cartoon-comic-illustratio--1f546765.webp"
           }
         }
       },
-      "contentHash": "69b81d99d334ad0a666c1aaa19a92a27d25e94b30646274206bcd2d52083eb89"
+      "contentHash": "fd3ba707b8a8c08672ba64e62bfe215ce4d599dfc05488b25c8b189198928a71"
     },
     {
       "sourceId": "fw.actor.staff.FR-52",
@@ -9025,7 +9689,7 @@
       "data": {
         "name": "Tony Riffs",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/hard-bard-cafe--ef8055af.webp",
+        "img": "modules/franchise-wars/assets/art/library/stylized-high-contrast-comic-illustration-scene--4efa922f.webp",
         "system": {
           "identifier": "tony-riffs",
           "abilities": {
@@ -9188,7 +9852,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/hard-bard-cafe--ef8055af.webp",
+            "src": "modules/franchise-wars/assets/art/library/stylized-high-contrast-comic-illustration-scene--4efa922f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9200,11 +9864,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-52",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-52",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/stylized-high-contrast-comic-illustration-scene--4efa922f.webp"
           }
         }
       },
-      "contentHash": "6d0a5e37c69f5344a2ccd33986ae2a52372787c6707237b15c9ce0407183aa98"
+      "contentHash": "ed5c05617717bbfab9ffa1b6cd403aa76437ba58ea1ac4b28303c1ddfb0c5532"
     },
     {
       "sourceId": "fw.actor.staff.FR-53",
@@ -9212,7 +9878,7 @@
       "data": {
         "name": "Skully Marrow",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/bard-to-the-bone--861fa273.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-high-contrast-comic-book-vector-illustration--50fc2ea5.webp",
         "system": {
           "identifier": "skully-marrow",
           "abilities": {
@@ -9375,7 +10041,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/bard-to-the-bone--861fa273.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-high-contrast-comic-book-vector-illustration--50fc2ea5.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9387,11 +10053,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-53",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-53",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-high-contrast-comic-book-vector-illustration--50fc2ea5.webp"
           }
         }
       },
-      "contentHash": "19ca9d9bebdf0453d84d8ddcf1da0a3ae89e135ee799e7cbd9db4fcf6381919d"
+      "contentHash": "cd50de3e6941f8059dd6ab6897eb994c2b1c29dfe00077596f568e98df604942"
     },
     {
       "sourceId": "fw.actor.staff.FR-54",
@@ -9399,7 +10067,7 @@
       "data": {
         "name": "Countess Mira Dusk",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/necrobucks--2047eb56.webp",
+        "img": "modules/franchise-wars/assets/art/library/gothic-vampire-barista-serving-blood-latte--f6e2e611.webp",
         "system": {
           "identifier": "countess-mira-dusk",
           "abilities": {
@@ -9562,7 +10230,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/necrobucks--2047eb56.webp",
+            "src": "modules/franchise-wars/assets/art/library/gothic-vampire-barista-serving-blood-latte--f6e2e611.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9574,11 +10242,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-54",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-54",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/gothic-vampire-barista-serving-blood-latte--f6e2e611.webp"
           }
         }
       },
-      "contentHash": "d18e7b920432e9de756e713c9c9d55f131abb070c841a27344885f22b6479119"
+      "contentHash": "86a0efa925c72ceb03c9a8a74813de1cba6aca67a5e0f46b1a7bcfa105aad758"
     },
     {
       "sourceId": "fw.actor.staff.FR-55",
@@ -9586,7 +10256,7 @@
       "data": {
         "name": "Madam Evangeline Coin",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/costa-fortune--7b80e5af.webp",
+        "img": "modules/franchise-wars/assets/art/library/madam-evangeline-s-enchanted-cappuccino--0468463f.webp",
         "system": {
           "identifier": "madam-evangeline-coin",
           "abilities": {
@@ -9749,7 +10419,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/costa-fortune--7b80e5af.webp",
+            "src": "modules/franchise-wars/assets/art/library/madam-evangeline-s-enchanted-cappuccino--0468463f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9761,11 +10431,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-55",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-55",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/madam-evangeline-s-enchanted-cappuccino--0468463f.webp"
           }
         }
       },
-      "contentHash": "7e0f7f1ba144a560eeab6e98879c98cb2344c9924d51e9ef3aabd2b6cf1b9b4f"
+      "contentHash": "2c9dd7a3f38aaf745b96b4564ad8a6955a4d53c7719dbacdfb83267596afbff1"
     },
     {
       "sourceId": "fw.actor.staff.FR-56",
@@ -9773,7 +10445,7 @@
       "data": {
         "name": "Fen Oilyhand",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/daily-grindstone--40e5c257.webp",
+        "img": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp",
         "system": {
           "identifier": "fen-oilyhand",
           "abilities": {
@@ -9936,7 +10608,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/daily-grindstone--40e5c257.webp",
+            "src": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -9948,11 +10620,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-56",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-56",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp"
           }
         }
       },
-      "contentHash": "0d78f49deda8d35787bd910deda28ccdeb51d87e4ac03dcd1d63ff68ac78c07b"
+      "contentHash": "65259c2eba964868a3612dfe956e8e8087c9b4dd4097089b2e72123e9b00816d"
     },
     {
       "sourceId": "fw.actor.staff.FR-57",
@@ -9960,7 +10634,7 @@
       "data": {
         "name": "Magister Pim Oddroast",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/bean-there-summoned-that--d2a013db.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-vibrant-stylized-comic-illustration-scene-a-c--834b5b2b.webp",
         "system": {
           "identifier": "magister-pim-oddroast",
           "abilities": {
@@ -10123,7 +10797,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/bean-there-summoned-that--d2a013db.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-vibrant-stylized-comic-illustration-scene-a-c--834b5b2b.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -10135,11 +10809,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-57",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-57",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-vibrant-stylized-comic-illustration-scene-a-c--834b5b2b.webp"
           }
         }
       },
-      "contentHash": "71b030b154f9ff0dabb3000c7695ac63d7a48f27e115ae4ffea19757f21b7996"
+      "contentHash": "37844937af5de1a9a1cf169361388f13bfd2dec5571952fc38fa30e77d7f0c2c"
     },
     {
       "sourceId": "fw.actor.staff.FR-58",
@@ -10147,7 +10823,7 @@
       "data": {
         "name": "Bea Hollowleaf",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/espresso-patronum--909648d5.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-vibrant-stylized-cartoon-comic-illust--906c3fe3.webp",
         "system": {
           "identifier": "bea-hollowleaf",
           "abilities": {
@@ -10310,7 +10986,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/espresso-patronum--909648d5.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-vibrant-stylized-cartoon-comic-illust--906c3fe3.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -10322,11 +10998,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-58",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-58",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-vibrant-stylized-cartoon-comic-illust--906c3fe3.webp"
           }
         }
       },
-      "contentHash": "303e2f5103eaa08534c7015334d5be3760fa95b4fdd103af1ab100a5a1d60498"
+      "contentHash": "5d37df6b809e473935c8f5f3fabf38b800454aaa53520203f76fdf45b9fe7feb"
     },
     {
       "sourceId": "fw.actor.staff.FR-59",
@@ -10334,7 +11012,7 @@
       "data": {
         "name": "Innkeeper Gregory Latch",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/long-rest-inn--80dc0f74.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
         "system": {
           "identifier": "innkeeper-gregory-latch",
           "abilities": {
@@ -10497,7 +11175,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/long-rest-inn--80dc0f74.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -10509,11 +11187,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-59",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-59",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp"
           }
         }
       },
-      "contentHash": "17de9a1b73980d8661e48601f0d91aac71d0a9d59bf67b5531bfafa7c36a6532"
+      "contentHash": "04eac3db7222c5893c5ddacd9c74639b954739074e141adc2ff894c59b9e5d72"
     },
     {
       "sourceId": "fw.actor.staff.FR-60",
@@ -10521,7 +11201,7 @@
       "data": {
         "name": "Ruth Callow",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/best-western-marches--2b4e7160.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-cartoon-illustration-of--aea1a01b.webp",
         "system": {
           "identifier": "ruth-callow",
           "abilities": {
@@ -10684,7 +11364,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/best-western-marches--2b4e7160.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-cartoon-illustration-of--aea1a01b.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -10696,11 +11376,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-60",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-60",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-cartoon-illustration-of--aea1a01b.webp"
           }
         }
       },
-      "contentHash": "8fd4cdb88618a46f3865e7d7e20c5dbaaf10303a8902246bad14fde85abe55ea"
+      "contentHash": "3575996380ca55bbfcd9362f9e5f16f1697647833aeaddf687ab520a4e513312"
     },
     {
       "sourceId": "fw.actor.staff.FR-61",
@@ -10708,7 +11390,7 @@
       "data": {
         "name": "Tariq Gatewright",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-colorful-fantasy-cartoon-illustration--81522c80.webp",
         "system": {
           "identifier": "tariq-gatewright",
           "abilities": {
@@ -10871,7 +11553,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-colorful-fantasy-cartoon-illustration--81522c80.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -10883,11 +11565,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-61",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-61",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-colorful-fantasy-cartoon-illustration--81522c80.webp"
           }
         }
       },
-      "contentHash": "37a2d2429e3944a066d06b45b31549f806455a3c3343cf76c323ee1abe62212a"
+      "contentHash": "8c93436e8537b3796eb393535d16dd03dc907b89d6e983daea5c25174a74d471"
     },
     {
       "sourceId": "fw.actor.staff.FR-62",
@@ -10895,7 +11579,7 @@
       "data": {
         "name": "Madam Ossifer",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/bed-breakfast-beholders-crest--e9d26105.webp",
+        "img": "modules/franchise-wars/assets/art/library/beholder-innkeeper-s-breakfast-rush--d3afea9f.webp",
         "system": {
           "identifier": "madam-ossifer",
           "abilities": {
@@ -11058,7 +11742,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/bed-breakfast-beholders-crest--e9d26105.webp",
+            "src": "modules/franchise-wars/assets/art/library/beholder-innkeeper-s-breakfast-rush--d3afea9f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -11070,11 +11754,202 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-62",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-62",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/beholder-innkeeper-s-breakfast-rush--d3afea9f.webp"
           }
         }
       },
-      "contentHash": "bd0cb9e57b54534f25b78063e5c335e9da5512f0a782867f4e7ac3d7143a842c"
+      "contentHash": "3cec3b7010ba1195760475cd1137bf90011d186b1cccde1eafdd7eb4a0c9bba6"
+    },
+    {
+      "sourceId": "fw.actor.staff.FR-63",
+      "folder": "fw.actor.staff",
+      "data": {
+        "name": "Bellamy Quill",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/chibi-fantasy-receptionist-at-work--79f98963.webp",
+        "system": {
+          "identifier": "bellamy-quill",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Superhost Relations Manager; branded reception desk and five-star dungeon review card.</p><p>Source dossier: FR-63 — Air B&B&E</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Bellamy Quill",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/chibi-fantasy-receptionist-at-work--79f98963.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.staff.FR-63",
+            "managed": true,
+            "artAssetId": "FR-63",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/chibi-fantasy-receptionist-at-work--79f98963.webp"
+          }
+        }
+      },
+      "contentHash": "fc606bfa13a9b421b7a498035179085ea64465343933db8787f16b5f2da87e4d"
     },
     {
       "sourceId": "fw.actor.staff.FR-64",
@@ -11082,7 +11957,7 @@
       "data": {
         "name": "Store Manager Blix",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/quest-buy--5d00416d.webp",
+        "img": "modules/franchise-wars/assets/art/library/gnome-manager-s-chaotic-checkout--a5922a55.webp",
         "system": {
           "identifier": "store-manager-blix",
           "abilities": {
@@ -11245,7 +12120,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/quest-buy--5d00416d.webp",
+            "src": "modules/franchise-wars/assets/art/library/gnome-manager-s-chaotic-checkout--a5922a55.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -11257,11 +12132,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-64",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-64",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/gnome-manager-s-chaotic-checkout--a5922a55.webp"
           }
         }
       },
-      "contentHash": "695c694ffeb9c1d1902580e01a0e3f17429ba6e5845d659cdc3fe2e4bfbe9f12"
+      "contentHash": "9daa4bdd563a890224dca4cf6483e2691e3949c54ed8f2a5d7868f077e34963f"
     },
     {
       "sourceId": "fw.actor.staff.FR-65",
@@ -11269,7 +12146,7 @@
       "data": {
         "name": "General Manager Doris Plank",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/wand-mart-1--0e3070a3.webp",
+        "img": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
         "system": {
           "identifier": "general-manager-doris-plank",
           "abilities": {
@@ -11432,7 +12309,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/wand-mart-1--0e3070a3.webp",
+            "src": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -11444,11 +12321,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-65",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-65",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp"
           }
         }
       },
-      "contentHash": "3c21ff9c7fe404f66a7eaa7895d0a49bfab26363bb6a603ff7a21598b53f2469"
+      "contentHash": "c52e110673ff6fd83efa447442bbbe595850ed3d145ece9e10ec1c11383ea5bd"
     },
     {
       "sourceId": "fw.actor.staff.FR-66",
@@ -11456,7 +12335,7 @@
       "data": {
         "name": "Department Head Vera Bullock",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/target-acquired--6c9668a2.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-stylized-comic-cartoon-illus--69569862.webp",
         "system": {
           "identifier": "department-head-vera-bullock",
           "abilities": {
@@ -11619,7 +12498,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/target-acquired--6c9668a2.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-stylized-comic-cartoon-illus--69569862.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -11631,11 +12510,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-66",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-66",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-stylized-comic-cartoon-illus--69569862.webp"
           }
         }
       },
-      "contentHash": "d78e950928b247b0fc3532938676472a72fbe4105ada9c13a1205e185ee8a367"
+      "contentHash": "a8afc77dc63c6e5d7eb03f83650a73363ee59df79b196b972deb043d3b6b5ac4"
     },
     {
       "sourceId": "fw.actor.staff.FR-67",
@@ -11643,7 +12524,7 @@
       "data": {
         "name": "Membership Manager Hal Grundy",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/costco-op--f9e3886f.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
         "system": {
           "identifier": "membership-manager-hal-grundy",
           "abilities": {
@@ -11806,7 +12687,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/costco-op--f9e3886f.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -11818,11 +12699,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-67",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-67",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp"
           }
         }
       },
-      "contentHash": "6e539a5070d36f08bbe32e175b34d5d8fa3dc88fd9ef2440b788528a467ce93c"
+      "contentHash": "c6228735c328c73874bf0598b8ae8e0068b6b8f1bdf4734ea0ef8af47bacf09b"
     },
     {
       "sourceId": "fw.actor.staff.FR-68",
@@ -11830,7 +12713,7 @@
       "data": {
         "name": "Store Manager Björn Flatt",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/ikea-mimic-assembly-awaits--0e2e0ad5.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-scene-a-close-dyna--79b26cbc.webp",
         "system": {
           "identifier": "store-manager-bjorn-flatt",
           "abilities": {
@@ -11993,7 +12876,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/ikea-mimic-assembly-awaits--0e2e0ad5.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-scene-a-close-dyna--79b26cbc.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12005,11 +12888,13 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.staff.FR-68",
-            "managed": true
+            "managed": true,
+            "artAssetId": "FR-68",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-scene-a-close-dyna--79b26cbc.webp"
           }
         }
       },
-      "contentHash": "920c1b61ee883d9e29318fd6c7ef4f68af0267afde37a29660e28ab6a08a7bae"
+      "contentHash": "4347a40f1917b4923a1eb6eca90b8a47f049881c8b9de22bd2b372b1a80b046c"
     },
     {
       "sourceId": "fw.actor.corporate.CO-01.controlled-by",
@@ -12017,7 +12902,7 @@
       "data": {
         "name": "Tallis Vend",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/creation-company--69cbeb14.webp",
+        "img": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
         "system": {
           "identifier": "tallis-vend",
           "abilities": {
@@ -12180,7 +13065,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/creation-company--69cbeb14.webp",
+            "src": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12192,11 +13077,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-01.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-133",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "59ee1fb334a0f93a8b900baaf81654061951dc4a2acd7c43052a7b8dcce389a5"
+      "contentHash": "4d3bc677a6fe655375303cf14a5e9dc7e03b09d83ee6de4f04db4ae1e182a0a2"
     },
     {
       "sourceId": "fw.actor.corporate.CO-02.public-face",
@@ -12204,7 +13092,7 @@
       "data": {
         "name": "Harriet Hopwell",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/questrabbit-7--ca9ec608.webp",
+        "img": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
         "system": {
           "identifier": "harriet-hopwell",
           "abilities": {
@@ -12367,7 +13255,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/questrabbit-7--ca9ec608.webp",
+            "src": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12379,11 +13267,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-02.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-174",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "7a214ac00b9cff918ae8f14181e9cef1fe401970a165da901bdba6147a2ee1f6"
+      "contentHash": "2ed4f595ad89eec6090af6e52a55218b53f281c599791a0a68993c84eb3ff251"
     },
     {
       "sourceId": "fw.actor.corporate.CO-03.controlled-by",
@@ -12391,7 +13282,7 @@
       "data": {
         "name": "Baron Ossian Cleave",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/crown-cleaver--ae46b3c8.webp",
+        "img": "modules/franchise-wars/assets/art/library/undead-aristocrat-with-ceremonial-cleaver--1afab502.webp",
         "system": {
           "identifier": "baron-ossian-cleave",
           "abilities": {
@@ -12554,7 +13445,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/crown-cleaver--ae46b3c8.webp",
+            "src": "modules/franchise-wars/assets/art/library/undead-aristocrat-with-ceremonial-cleaver--1afab502.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12566,11 +13457,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-03.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-283",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/undead-aristocrat-with-ceremonial-cleaver--1afab502.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "ceed5a0db3431efcf79050c9ef99c363edc75dff0367257a3e3a1378d1a332c9"
+      "contentHash": "bc5f050eff3a092f1c16ba653866b9282d3cbb9e1db4a1e1c2792a77d391f7a4"
     },
     {
       "sourceId": "fw.actor.corporate.CO-04.public-face",
@@ -12578,7 +13472,7 @@
       "data": {
         "name": "Sebastian Brew-Hartley",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/arcane-beverage-international-1--c65ea001.webp",
+        "img": "icons/svg/mystery-man.svg",
         "system": {
           "identifier": "sebastian-brew-hartley",
           "abilities": {
@@ -12741,7 +13635,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/arcane-beverage-international-1--c65ea001.webp",
+            "src": "icons/svg/mystery-man.svg",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12753,11 +13647,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-04.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "99a7e6756bbc130b61612df61eaa19eb88a70aad665376a05b35c496274a7adf"
+      "contentHash": "7cf32ff01060d153c83c11d81a9483214ac8abc84e30d36d39da7adf173b9d7f"
     },
     {
       "sourceId": "fw.actor.corporate.CO-04.controlled-by",
@@ -12765,7 +13662,7 @@
       "data": {
         "name": "Ulth'Arabica",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/arcane-beverage-international-1--c65ea001.webp",
+        "img": "modules/franchise-wars/assets/art/library/aboleth-ceo-in-the-executive-aquarium--309e0edd.webp",
         "system": {
           "identifier": "ulth-arabica",
           "abilities": {
@@ -12928,7 +13825,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/arcane-beverage-international-1--c65ea001.webp",
+            "src": "modules/franchise-wars/assets/art/library/aboleth-ceo-in-the-executive-aquarium--309e0edd.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -12940,11 +13837,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-04.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-107",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/aboleth-ceo-in-the-executive-aquarium--309e0edd.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "5c017ca73dcdc3239bdd44dc727b345056c49389b932af7ce820c951360ac83f"
+      "contentHash": "ac695587c40bb72e5df517a8df6b053e5b8c2a592bd8d5d64367dba4deefc3f9"
     },
     {
       "sourceId": "fw.actor.corporate.CO-05.public-face",
@@ -12952,7 +13852,7 @@
       "data": {
         "name": "Papa Morvhal",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/restaurant-necromancy-group--278f1aa5.webp",
+        "img": "modules/franchise-wars/assets/art/library/lich-chef-ceo-at-the-desk--124c3631.webp",
         "system": {
           "identifier": "papa-morvhal",
           "abilities": {
@@ -13115,7 +14015,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/restaurant-necromancy-group--278f1aa5.webp",
+            "src": "modules/franchise-wars/assets/art/library/lich-chef-ceo-at-the-desk--124c3631.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13127,11 +14027,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-05.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-210",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/lich-chef-ceo-at-the-desk--124c3631.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "6659bb10a4ddbaf086ac46192551b2d89e7135d7c16196faab04fcb5d7a7f556"
+      "contentHash": "21d36070a6efae300119049554e9348c151f3d9c90038c6290bb6490947a0152"
     },
     {
       "sourceId": "fw.actor.corporate.CO-06.public-face",
@@ -13139,7 +14042,7 @@
       "data": {
         "name": "Doris Plank",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/adventure-retail-consortium--0d1bbcfa.webp",
+        "img": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
         "system": {
           "identifier": "doris-plank",
           "abilities": {
@@ -13302,7 +14205,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/adventure-retail-consortium--0d1bbcfa.webp",
+            "src": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13314,11 +14217,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-06.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-172",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "2112ff37025dd131f279b9c77aad135e33d424b7447391ed6ae39f83b98689f3"
+      "contentHash": "ab5fbf2a656f0a189c3e4afed9d64464737fbe2d1b92d66c4837deb807b7f399"
     },
     {
       "sourceId": "fw.actor.corporate.CO-06.controlled-by",
@@ -13326,7 +14232,7 @@
       "data": {
         "name": "SKÜ, the Warehouse Mind",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/adventure-retail-consortium--0d1bbcfa.webp",
+        "img": "modules/franchise-wars/assets/art/library/sinister-executive-desk-mascot--9d88f68a.webp",
         "system": {
           "identifier": "sku-the-warehouse-mind",
           "abilities": {
@@ -13489,7 +14395,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/adventure-retail-consortium--0d1bbcfa.webp",
+            "src": "modules/franchise-wars/assets/art/library/sinister-executive-desk-mascot--9d88f68a.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13501,11 +14407,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-06.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-257",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/sinister-executive-desk-mascot--9d88f68a.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "712decf287561c7e4da738e210412565ac256e8dc9fb441d758ec95373fc28fc"
+      "contentHash": "43e19a0d60098e93a96bf2c727be8aa194be0207c2351019898e982f1b3a21be"
     },
     {
       "sourceId": "fw.actor.corporate.CO-07.public-face",
@@ -13513,7 +14422,7 @@
       "data": {
         "name": "Deuce Marchetti",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/probability-brands-group--6cdd30e3.webp",
+        "img": "icons/svg/mystery-man.svg",
         "system": {
           "identifier": "deuce-marchetti",
           "abilities": {
@@ -13676,7 +14585,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/probability-brands-group--6cdd30e3.webp",
+            "src": "icons/svg/mystery-man.svg",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13688,11 +14597,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-07.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "1ec84a5e5e6c5ba25eaff39a4d17ffd3004f5e1f435f7d937c158dee917a909d"
+      "contentHash": "7809452ae9074a702926db0117f9ea08b619cbecc0504bda8bb80a52506529ab"
     },
     {
       "sourceId": "fw.actor.corporate.CO-07.controlled-by",
@@ -13700,7 +14612,7 @@
       "data": {
         "name": "Lady Crit",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/probability-brands-group--6cdd30e3.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-bold-high-detail-cartoon-comic-style-illustrati--e50e7168.webp",
         "system": {
           "identifier": "lady-crit",
           "abilities": {
@@ -13863,7 +14775,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/probability-brands-group--6cdd30e3.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-bold-high-detail-cartoon-comic-style-illustrati--e50e7168.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13875,11 +14787,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-07.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-015",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-bold-high-detail-cartoon-comic-style-illustrati--e50e7168.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "9eb1144781f089ab61ac0a26ee459cc9b97e616b531c642c8c57d12deb712401"
+      "contentHash": "aa8cfd596a4d16c99499163245ee667694b3cedc5f93f416e616e3a9102553d5"
     },
     {
       "sourceId": "fw.actor.corporate.CO-08.public-face",
@@ -13887,7 +14802,7 @@
       "data": {
         "name": "Mr. Gregory Latch",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/nine-circles-hospitality-1--01b09434.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
         "system": {
           "identifier": "mr-gregory-latch",
           "abilities": {
@@ -14050,7 +14965,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/nine-circles-hospitality-1--01b09434.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14062,11 +14977,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-08.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-046",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "9c46bc73b948e0031f728c7214f6e4ea4673a77395702c52abd0944eed1f5990"
+      "contentHash": "8b97952a45dbd227525e12980c8ef8b241c4af742ce474d043bb883c3fca4070"
     },
     {
       "sourceId": "fw.actor.corporate.CO-08.controlled-by",
@@ -14074,7 +14992,7 @@
       "data": {
         "name": "Duke Malphas Vellichor",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/nine-circles-hospitality-1--01b09434.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-dramatic-high-contrast-comic-illustration-styl--9f819ce2.webp",
         "system": {
           "identifier": "duke-malphas-vellichor",
           "abilities": {
@@ -14237,7 +15155,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/nine-circles-hospitality-1--01b09434.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-dramatic-high-contrast-comic-illustration-styl--9f819ce2.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14249,11 +15167,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-08.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-063",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-dramatic-high-contrast-comic-illustration-styl--9f819ce2.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "14a8fba9615c39b5f636023b79af07b97a349e99a8c11c007b99ed8b3d0d65cf"
+      "contentHash": "3848dcdca6248f0cce305ad2c4e4325e34f57471c6ccf183cddc3076af39b43d"
     },
     {
       "sourceId": "fw.actor.corporate.CO-09.controlled-by",
@@ -14261,7 +15182,7 @@
       "data": {
         "name": "Zafirah of the Brass Keys",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/planar-hospitality-group-1--9684990b.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-fantasy-illustration-portrait--29ea1efb.webp",
         "system": {
           "identifier": "zafirah-of-the-brass-keys",
           "abilities": {
@@ -14424,7 +15345,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/planar-hospitality-group-1--9684990b.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-fantasy-illustration-portrait--29ea1efb.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14436,11 +15357,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-09.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-066",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-fantasy-illustration-portrait--29ea1efb.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "d1c4884c9af53707508660d8c088c4c6cb179347a015525ddde5188f34ab09e0"
+      "contentHash": "bb5bea70510541608af6ba7cea679d91f17b618188f815ef99a1a2aecbadfe85"
     },
     {
       "sourceId": "fw.actor.corporate.CO-10.controlled-by",
@@ -14448,7 +15372,7 @@
       "data": {
         "name": "Auntie Vermillia",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/hoard-syndicate--208f66af.webp",
+        "img": "icons/svg/mystery-man.svg",
         "system": {
           "identifier": "auntie-vermillia",
           "abilities": {
@@ -14611,7 +15535,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/hoard-syndicate--208f66af.webp",
+            "src": "icons/svg/mystery-man.svg",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14623,11 +15547,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-10.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "9f140075d8fb7e945ab067fb5cc04c8c8e205e21424bc70b20716b2b56b7b946"
+      "contentHash": "8521a1ef943c0a0a886f6f86f1b6857960b34f3dec7d822b3f82614a65a9d2f4"
     },
     {
       "sourceId": "fw.actor.corporate.CO-11.controlled-by",
@@ -14635,7 +15562,7 @@
       "data": {
         "name": "Deus Maxwell",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/mcguffin-narrative-holdings-1--b7f58cef.webp",
+        "img": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-comic-illustration-portrait-s--b87e5abe.webp",
         "system": {
           "identifier": "deus-maxwell",
           "abilities": {
@@ -14798,7 +15725,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/mcguffin-narrative-holdings-1--b7f58cef.webp",
+            "src": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-comic-illustration-portrait-s--b87e5abe.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14810,11 +15737,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-11.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-065",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-dramatic-stylized-comic-illustration-portrait-s--b87e5abe.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "c9cbd87cca942c9c1ca12831c09789ce0f750c5981cb0cc78d3f6432a7cf09f4"
+      "contentHash": "c69350676b9f0f09c574c52a7b204b62e2292c508a7a45430bf9a392c568bf16"
     },
     {
       "sourceId": "fw.actor.corporate.CO-12.controlled-by",
@@ -14997,11 +15927,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-12.controlled-by",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "442296beea6bc2ded7854b4a52912aa6355687f56f91453acfd0cf4949d868c2"
+      "contentHash": "335a506020b2d211aca3a72308f7488a7de0301cb788e30c5c89693ba33ec1a9"
     },
     {
       "sourceId": "fw.actor.corporate.CO-13.public-face",
@@ -15009,7 +15942,7 @@
       "data": {
         "name": "Marda Hobb",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/last-independants-3--fd85668b.webp",
+        "img": "modules/franchise-wars/assets/art/library/grumpy-tavern-baker-at-the-bar--5355e3d2.webp",
         "system": {
           "identifier": "marda-hobb",
           "abilities": {
@@ -15172,7 +16105,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/last-independants-3--fd85668b.webp",
+            "src": "modules/franchise-wars/assets/art/library/grumpy-tavern-baker-at-the-bar--5355e3d2.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -15184,11 +16117,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-13.public-face",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-192",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-tavern-baker-at-the-bar--5355e3d2.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "11d8e1be09c95f671b72b9adbd8a988aff0f31af041e3ed87fffef7c2f6e9f64"
+      "contentHash": "3d70c6cad76e8157ee864236ea306c2b14d84ca00b0f3af7d40e4fe473a0c367"
     },
     {
       "sourceId": "fw.actor.bestiary.compliance-officer",
@@ -16013,11 +16949,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.compliance-officer",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "38bfe45a65c157dcbaa19ed0329a630d86e503c54c4ad65151163228dd4abb25"
+      "contentHash": "7a52b2a6c40796668d3fddef6e36a9796dc8f420280471aaae2095dc6059e46a"
     },
     {
       "sourceId": "fw.actor.bestiary.senior-auditor",
@@ -17087,11 +18026,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.senior-auditor",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "1780c6464dcb77245962683f1a11d73057f94261921e48ab6fa0c689dcab731c"
+      "contentHash": "b6c99abbc0d476241ad560c5d2005cd237d7a5302a14a814049a396bc38a1464"
     },
     {
       "sourceId": "fw.actor.bestiary.veronique-salt",
@@ -18168,11 +19110,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.veronique-salt",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-280",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/tiefling-executive-with-pen-and-dossier--0dd777c0.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "ec37bcee6bfb8820f0160ff80c39cd4aeb4eab4dc5352249a816367345537235"
+      "contentHash": "2927a1f44549109cc83678e2a0f5a482dd70e99227d8977f55744b47621846ce"
     },
     {
       "sourceId": "fw.actor.bestiary.the-mother-culture",
@@ -18180,7 +19125,7 @@
       "data": {
         "name": "The Mother Culture",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/gelatinous-cube--52aaaf58.webp",
+        "img": "icons/svg/mystery-man.svg",
         "system": {
           "identifier": "the-mother-culture",
           "abilities": {
@@ -19243,7 +20188,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/gelatinous-cube--52aaaf58.webp",
+            "src": "icons/svg/mystery-man.svg",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -19255,11 +20200,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.the-mother-culture",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "bfae524327ece8374aa8f1e969225eaf9fbc879defff60aeca485c827cc92c98"
+      "contentHash": "fd078cb0564ed669b61e465013c3355ede03a4f905875c2e27daa3bdc9ed3434"
     },
     {
       "sourceId": "fw.actor.bestiary.golden-tusk-construct",
@@ -19267,7 +20215,7 @@
       "data": {
         "name": "Golden Tusk Construct",
         "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/the-golden-orcs--a4212d13.webp",
+        "img": "icons/svg/mystery-man.svg",
         "system": {
           "identifier": "golden-tusk-construct",
           "abilities": {
@@ -19956,7 +20904,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "modules/franchise-wars/assets/art/library/the-golden-orcs--a4212d13.webp",
+            "src": "icons/svg/mystery-man.svg",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -19968,11 +20916,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.golden-tusk-construct",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "6a922db448271c34069562f15aa221f6c4f39c2ca0e824c3a3c97d93da061f0b"
+      "contentHash": "83524b221d55d51bdc08b1524fa2f7f133adca9bf545655f3ad13d1536cb1469"
     },
     {
       "sourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
@@ -20640,11 +21591,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-288",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "8bea559a41a530f3f632ebffa23e22bfe393198073fcc4a87e0ab316f92e2914"
+      "contentHash": "99a7af2957f29935947c977e525268a1e34b6e43b3b6dc9687e48bdbc116f17b"
     },
     {
       "sourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
@@ -21197,11 +22151,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
-            "managed": true
+            "managed": true,
+            "artAssetId": "UNVERIFIED",
+            "artRuntimePath": "icons/svg/mystery-man.svg",
+            "artVerified": false
           }
         }
       },
-      "contentHash": "1f6fdc0a14f2afa46024b259d9e8146fdf3f3e9c086de3b52a56a0b75ae76a20"
+      "contentHash": "80c6fa1b153b3a0f6fa5ba1b16df0e5a54337d3ca83957e5ec3743d4d9a64973"
     },
     {
       "sourceId": "fw.actor.bestiary.tallis-vend-chairman",
@@ -22511,11 +23468,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.tallis-vend-chairman",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-133",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "eb179cc42f81f9626a49fd62b56909d166765fbf73daceb1d4e8c63f54581dd5"
+      "contentHash": "e13ecd01c20babc2ce7a460bc25192d27144603a51607eb819c33e09ea2523d3"
     },
     {
       "sourceId": "fw.actor.recurring.pip-ashworth",
@@ -22523,7 +23483,7 @@
       "data": {
         "name": "Pip Ashworth",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-high-quality-stylized-digital-illustration-char--bf12c0d0.webp",
         "system": {
           "identifier": "pip-ashworth",
           "abilities": {
@@ -22688,7 +23648,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-high-quality-stylized-digital-illustration-char--bf12c0d0.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -22700,11 +23660,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.recurring.pip-ashworth",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-070",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-high-quality-stylized-digital-illustration-char--bf12c0d0.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "cd52c0c9292f8b96eb8af803bf123db2176a6330cd80c38e9364609b65350c1e"
+      "contentHash": "67a53cb4773a2fa666aef6db10ce2d768f0ef23d37eb26a2ab08ddd12efafdb4"
     },
     {
       "sourceId": "fw.actor.recurring.dobbs",
@@ -22712,7 +23675,7 @@
       "data": {
         "name": "Dobbs",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/haunted-diner-cook-taking-orders--2793a586.webp",
         "system": {
           "identifier": "dobbs",
           "abilities": {
@@ -22877,7 +23840,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/haunted-diner-cook-taking-orders--2793a586.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -22889,11 +23852,14 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.recurring.dobbs",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-195",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/haunted-diner-cook-taking-orders--2793a586.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "53ec14a1abc2634aa62a969b33942e41f0f1c588376fb5e176f371fe8dfb632b"
+      "contentHash": "8780fa901f077f97f6af80f29aae685582904ecdb6b765b33c8d6639ae4107f3"
     },
     {
       "sourceId": "fw.actor.recurring.hal-grundy",
@@ -22901,7 +23867,7 @@
       "data": {
         "name": "Hal Grundy",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
         "system": {
           "identifier": "hal-grundy",
           "abilities": {
@@ -23066,7 +24032,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -23078,11 +24044,584 @@
         "flags": {
           "franchise-wars": {
             "sourceId": "fw.actor.recurring.hal-grundy",
-            "managed": true
+            "managed": true,
+            "artAssetId": "raw-030",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
+            "artVerified": true
           }
         }
       },
-      "contentHash": "c3b6d643200bf8a638b4ae296c1ad5cc172a1d6eb8df5b0b2f5482f4edd68e18"
+      "contentHash": "1b27dce9185b76b4d2739c3aab01fa23415ba7fff655e4ff5052f20cf2322b7e"
+    },
+    {
+      "sourceId": "fw.actor.recurring.gideon-tumble",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Gideon Tumble",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/frightened-murder-king-worker--0760027d.webp",
+        "system": {
+          "identifier": "gideon-tumble",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>PT-07 — Murder King witness.</strong> Nervous employee with a notebook; a key witness to S2 and Mortimer Pell's death.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Gideon Tumble",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/frightened-murder-king-worker--0760027d.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.gideon-tumble",
+            "managed": true,
+            "artAssetId": "raw-178",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/frightened-murder-king-worker--0760027d.webp",
+            "artVerified": true
+          }
+        }
+      },
+      "contentHash": "34b521dc30fc5af92ba51a068913bbf9b6587acd3e8ac3883e9b6d06f072266e"
+    },
+    {
+      "sourceId": "fw.actor.recurring.last-five-star-party",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "The Last Five-Star Party",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/sleeping-adventurers-in-room-303--6eb7d531.webp",
+        "system": {
+          "identifier": "the-last-five-star-party",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>PT-11 — Room 303.</strong> Four legendary heroes asleep in dusty gear for decades. This sheet is a roleplay/group reference actor rather than a single combatant.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "The Last Five-Star Party",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/sleeping-adventurers-in-room-303--6eb7d531.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.last-five-star-party",
+            "managed": true,
+            "artAssetId": "raw-258",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/sleeping-adventurers-in-room-303--6eb7d531.webp",
+            "artVerified": true
+          }
+        }
+      },
+      "contentHash": "32ba18be5539d8bff9693d76416cf32e4e3bc0ab2d505dbc0820f92f8e3565ca"
+    },
+    {
+      "sourceId": "fw.actor.recurring.esmond-tallow-pryce",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Esmond Tallow-Pryce",
+        "type": "npc",
+        "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-illustration-character-portrai--3a76f11b.webp",
+        "system": {
+          "identifier": "esmond-tallow-pryce",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>PT-18 — Lord Mayor of Brandmere.</strong> Chain of office, small ™ mark, and complete confidence that civic branding is governance.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Esmond Tallow-Pryce",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "modules/franchise-wars/assets/art/library/a-detailed-stylized-illustration-character-portrai--3a76f11b.webp",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.esmond-tallow-pryce",
+            "managed": true,
+            "artAssetId": "raw-061",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-illustration-character-portrai--3a76f11b.webp",
+            "artVerified": true
+          }
+        }
+      },
+      "contentHash": "a1b2596e6b30865e1c283b803eca4b700b47f24ae0c35411cd526cc1812f5b98"
     }
   ],
   "clones": [
@@ -23091,28 +24630,36 @@
       "folder": "fw.actor.rivals",
       "name": "Brixley Synergy",
       "baseName": "Spy",
-      "description": "<p><strong>Team Deliverables.</strong> Goblin team lead; says “circle back”. Scale to Master Thief in Act III and Assassin in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>"
+      "description": "<p><strong>Team Deliverables.</strong> Goblin team lead; says “circle back”. Scale to Master Thief in Act III and Assassin in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>",
+      "img": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-illustration-style-po--59a9f307.webp",
+      "artAssetId": "raw-010"
     },
     {
       "sourceId": "fw.actor.rival.thorne-actionable",
       "folder": "fw.actor.rivals",
       "name": "Thorne Actionable",
       "baseName": "Veteran",
-      "description": "<p><strong>Team Deliverables.</strong> Human fighter; owns six identical swords. Scale to Gladiator in Act III and Champion in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>"
+      "description": "<p><strong>Team Deliverables.</strong> Human fighter; owns six identical swords. Scale to Gladiator in Act III and Champion in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>",
+      "img": "modules/franchise-wars/assets/art/library/stylized-comic-illustration-scene-a-bold-high-co--2b00c3a6.webp",
+      "artAssetId": "raw-263"
     },
     {
       "sourceId": "fw.actor.rival.luma-brightstack",
       "folder": "fw.actor.rivals",
       "name": "Luma Brightstack",
       "baseName": "Apprentice Wizard",
-      "description": "<p><strong>Team Deliverables.</strong> Elf wizard; bills by the spell slot. Scale to Mage in Act III and Archmage in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>"
+      "description": "<p><strong>Team Deliverables.</strong> Elf wizard; bills by the spell slot. Scale to Mage in Act III and Archmage in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>",
+      "img": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-portrait-scene-a-co--1fc7c7d5.webp",
+      "artAssetId": "raw-082"
     },
     {
       "sourceId": "fw.actor.rival.oggo",
       "folder": "fw.actor.rivals",
       "name": "Oggo",
       "baseName": "Acolyte",
-      "description": "<p><strong>Team Deliverables.</strong> Half-orc cleric of a god she found in a brochure. Scale to Priest in Act III and War Priest in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>"
+      "description": "<p><strong>Team Deliverables.</strong> Half-orc cleric of a god she found in a brochure. Scale to Priest in Act III and War Priest in Act V.</p><p>Credit Theft: if Team Deliverables are present when a mission ends, the party loses Rabbit Rating progress unless they publicly prove who did the work.</p>",
+      "img": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-portrait-scene-a-cl--a7494b13.webp",
+      "artAssetId": "raw-081"
     },
     {
       "sourceId": "fw.actor.core.acolyte",
@@ -24032,17 +25579,21 @@
       "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Erinyes attorney for Nine Circles Hospitality; becomes an uneasy legal ally after Pact of the Bucket.</p>",
       "fallbackBaseNames": [
         "Erinyes"
-      ]
+      ],
+      "img": "modules/franchise-wars/assets/art/library/a-dramatic-highly-stylized-comic-cartoon-illustra--cd618970.webp",
+      "artAssetId": "raw-064"
     },
     {
       "sourceId": "fw.actor.recurring.aldric-the-unkind",
       "folder": "fw.actor.recurring",
-      "name": "Aldric the Unkind",
+      "name": "King Aldric the Unkind (revenant)",
       "baseName": "Death Knight",
-      "description": "<p><strong>Franchise Wars NPC / opposition.</strong> The historical Murder King returned as a revenant using Death Knight combat statistics.</p>",
+      "description": "<p><strong>Franchise Wars recurring NPC / opposition.</strong> The original Murder King, crowned revenant and historical ruler, returned four centuries after death. Uses Death Knight combat statistics.</p>",
       "fallbackBaseNames": [
         "Death Knight"
-      ]
+      ],
+      "img": "modules/franchise-wars/assets/art/library/undead-king-s-crimson-coronation--b58f076b.webp",
+      "artAssetId": "raw-284"
     },
     {
       "sourceId": "fw.actor.recurring.auntie-curdle",

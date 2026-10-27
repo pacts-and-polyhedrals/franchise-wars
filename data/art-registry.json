@@ -1399,8 +1399,8 @@
     "runtimePath": "modules/franchise-wars/assets/art/library/brandmere-1--48d6dd1d.webp",
     "width": 1160,
     "height": 1160,
-    "status": "INGESTED",
-    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented."
+    "status": "SUPERSEDED",
+    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented. Superseded by MAP-BRANDMERE final official map; retained only as historical/reference art."
   },
   {
     "assetKey": "raw-128",
@@ -1410,8 +1410,8 @@
     "runtimePath": "modules/franchise-wars/assets/art/library/brandmere-labeled--1396e7ff.webp",
     "width": 1312,
     "height": 1199,
-    "status": "INGESTED",
-    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented."
+    "status": "SUPERSEDED",
+    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented. Superseded by MAP-BRANDMERE final official map; retained only as historical/reference art."
   },
   {
     "assetKey": "raw-129",
@@ -1421,8 +1421,8 @@
     "runtimePath": "modules/franchise-wars/assets/art/library/brandmere-a-coastal-fantasy-city-map--224323bb.webp",
     "width": 1536,
     "height": 1024,
-    "status": "INGESTED",
-    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented."
+    "status": "SUPERSEDED",
+    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented. Superseded by MAP-BRANDMERE final official map; retained only as historical/reference art."
   },
   {
     "assetKey": "raw-130",
@@ -1432,8 +1432,8 @@
     "runtimePath": "modules/franchise-wars/assets/art/library/brandmere-a-fantasy-city-map--23704bef.webp",
     "width": 1448,
     "height": 1086,
-    "status": "INGESTED",
-    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented."
+    "status": "SUPERSEDED",
+    "notes": "Auto-deduplicated runtime copy. Canonical art-bible IDs should be retained where explicitly documented. Superseded by MAP-BRANDMERE final official map; retained only as historical/reference art."
   },
   {
     "assetKey": "raw-131",
@@ -3434,8 +3434,24 @@
     "status": "INGESTED"
   },
   {
+    "assetKey": "MAP-BRANDMERE-OFFICIAL",
     "assetId": "MAP-BRANDMERE",
-    "runtimePath": "modules/franchise-wars/assets/art/library/brandmere-a-coastal-fantasy-city-map--224323bb.webp",
-    "status": "INGESTED"
+    "title": "Brandmere — Official City Map",
+    "family": "MAPS",
+    "subject": "Brandmere",
+    "sourceFilename": "Brandmere.webp",
+    "runtimePath": "modules/franchise-wars/assets/art/maps/MAP-BRANDMERE__brandmere-official-city-map.webp",
+    "sha256": "90430b148a9f22d06c3cb844fa43aab075a080a6a7f31ded05ceccb9c6119a1f",
+    "width": 2048,
+    "height": 1536,
+    "mime": "image/webp",
+    "status": "APPROVED",
+    "approved": true,
+    "usedBy": [
+      "fw.scene.brandmere",
+      "fw.brandmere"
+    ],
+    "notes": "Exact final Brandmere.webp supplied and designated canonical by the campaign author on 2026-10-26. Earlier Brandmere maps remain archive/reference copies.",
+    "canonicalSource": "Brandmere.webp"
   }
 ]

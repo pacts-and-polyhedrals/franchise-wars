@@ -1,11 +1,11 @@
 [
   {
     "sourceId": "fw.scene.brandmere",
-    "name": "Brandmere — City Overview",
-    "img": "modules/franchise-wars/assets/art/library/brandmere-a-coastal-fantasy-city-map--224323bb.webp",
-    "width": 1536,
-    "height": 1024,
-    "padding": 0.05,
+    "name": "Brandmere — Official City Map",
+    "img": "modules/franchise-wars/assets/art/maps/MAP-BRANDMERE__brandmere-official-city-map.webp",
+    "width": 2048,
+    "height": 1536,
+    "padding": 0.02,
     "navigation": true,
     "active": false,
     "grid": {

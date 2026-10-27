@@ -34,3 +34,8 @@ Every published revision uses one synchronized semantic version across `module.j
 - 89 managed native NPC Actors plus 134 installed-compendium Actor clones for Team Deliverables and core opposition.
 - Uses dnd5e v6 Item/Actor documents, consumable subtypes, item Uses and Activities, current NPC movement/senses fields, and embedded monster features.
 - Core-book opposition is materialised from the user's installed dnd5e Actor compendia at import time rather than bundling stale or third-party stat blocks.
+
+
+## v0.3.1 art and journal correction
+
+This release replaces franchise-logo/storefront Actor substitutions with audited custom portraits, adds the four omitted franchise managers, hardens journal contrast for Foundry dark themes, and makes the user-approved labelled Brandmere map the canonical city scene. See `ACTOR-ART-AUDIT-v0.3.1.md` and `data/actor-art-map.json`.

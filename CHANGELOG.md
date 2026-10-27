@@ -13,6 +13,19 @@
 
 # Changelog
 
+## 0.3.1 — Actor Art / Journal Contrast / Official Brandmere Map
+
+- Rebuilt franchise staff art mapping from the Art Asset Bible and production briefs.
+- Added Xoribble (FR-14), Kaito Rain (FR-28), Grubbo (FR-44), and Bellamy Quill (FR-63) as native NPC Actors.
+- Assigned verified custom portrait/token art to all 68 franchise manager Actors.
+- Assigned verified recurring-cast art and core-clone overrides for Team Deliverables, Ixabeth Vorr and Aldric.
+- Canonicalised PT-10 as King Aldric the Unkind (revenant).
+- Removed logo/storefront/headquarters substitutions from corporate/bestiary Actors where no exact portrait binary could be verified.
+- Added actor-art audit data and a human-readable audit report.
+- Fixed journal dark-theme contrast across page view and ProseMirror edit surfaces.
+- Set the exact author-supplied 2048×1536 `MAP-BRANDMERE__brandmere-official-city-map.webp` as the canonical Brandmere city Scene and Gazetteer hero image; previous maps remain superseded reference copies.
+
+
 ## 0.2.0 — Contractor Orientation
 
 - Adds a complete professional Session 0 journal suite under **00 — Command Centre → Session 0 — Contractor Orientation**.
