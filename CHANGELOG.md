@@ -1,6 +1,65 @@
-## 0.6.0 — 2026-10-28
+# v1.0.0 — The Full Campaign
+The first complete release: every actor has art, every map is staged, and the GM has live tools for the finale.
 
-See [RELEASE-v0.6.0.md](RELEASE-v0.6.0.md).
+**Art and opposition**
+- All art from the Drive folder is now on the actors and journals that use it: 182 portraits and 182 tokens.
+- The 165 core-opposition actors are renamed and reskinned as Franchise Wars creatures, with their own art and a reskin note. The D&D 5e stat block stays underneath as the hidden mechanical source.
+- New core opposition to cover the whole campaign: Store Security Guard, Gelato-Soaked Rat Swarm, Display-Case Cube, Quarterly Storm Hatchling and Legion Siege Ballista (crew).
+- The new **Core Opposition Directory** journal lists every reskinned creature by faction (24 pages).
+- Boss and corporate sheets are complete stat blocks. Duplicates are resolved: the four superseded actors move to *Retired Duplicates (safe to delete)*.
+- Every invented NPC has a sheet: 23 mission-guide NPCs and 45 side-contract NPCs.
+- Mission and contract guides show NPC portraits and foe tokens.
+
+**Content**
+- 146 side contracts, each with a full guide: player contract slip, DM briefing, three scenes, opposition and payoff, and handouts. This includes the Platinum board-seat contracts.
+- 6 new lair battlemaps for S19 (the seven dragons). S23 gains a holdout table and S24 gains epilogue vignettes.
+- New **Player Handbook** journal (player-visible): Brandmere for contractors, how the work works, evidence and Leverage, house rules, safety.
+- 5 pregenerated level-1 contractors with original ID-badge portraits. Class, species, background, gear, features and spells are pulled from your dnd5e compendiums.
+- 8 roll tables: contract types, euphemisms, McGuffin toys, franchise complications, a random Final Contract clause, QuestRabbit reviews, a slogan generator and memos from Head Office.
+
+**Battlemaps**
+- 397 encounter tokens are pre-placed hidden on their maps. They are only placed if the scene has none.
+- 114 map pins open the matching guide scene.
+- 60 Scenes link to their guide page.
+- 114 maps have ambient sound.
+- New playlist: *The Franchise Wars — Ambience*, 9 original seamless loops.
+
+**GM tools**
+- **Campaign Tracker** window: Act, Rabbit Rating, the QuestRabbit cut, Grey Creep, Leverage and seat for each corporation, Final Contract clauses, and the Commons Tally.
+- **Clause Debate** window, run by the S24 rules: DC 18 with the Receipt, DC 25 without; three Tally witnesses can void a clause; failure triggers a Ledger Entry; Vend stands at six voided clauses.
+- **Board Vote** window, run by the S23 rules: the motion needs six seats flipped or removed. You can demand a proxy for 2 Leverage, and the Tally applies disadvantage.
+- Buttons for all three in the Journals sidebar, plus macros in a *The Franchise Wars* macro folder.
+- New `@FWLev` journal button that records Leverage and announces it.
+- Actor recovery: a GM-edited managed actor is copied to *Recovery* before an update overwrites it.
+- `game.franchiseWars.exportToCompendiums()` copies all managed documents into world compendiums.
+
+**Package**
+- Art re-encoded to cut the download size.
+- GitHub release workflow added (`.github/workflows/release.yml`).
+- Printable handouts PDF and GM sourcebook PDF published alongside the release.
+
+# v0.5.1 — Actor Quick References
+- Any ability that relies on outside detail now carries that detail on the sheet. Each one has a gold reference box under its description, and the actor's Biography ends with a **GM Quick Reference** section.
+  - **Mascot Revenant (Mortimer Pell):** the full d12 Murder King slogan list and what each slogan means (Have It Our Way). How to lay him to rest and the killer's name (Unfinished Shift). Big Wave lines.
+  - **Compliance Officer:** d8 breaches to read aloud for Citation, plus lines and behaviour.
+  - **Veronique Salt:** d6 Folio sentences (Always Has a Contract), d6 prices (Counteroffer), Hostile Negotiation lines, linked bodyguard stat blocks, and her arc by mission.
+  - **Tallis Vend:** true facts for Quill Strike, example Ledger Entry sentences, how to end him (Entry 1), and the Clause Debate rules.
+  - **Golden Tusk Construct:** the Notarial Oath text and how to use it against the construct.
+  - **Shop Steward:** the six strike demands and what counts as "heard" (Walkout), plus how it spells words.
+  - **Mother Culture and Senior Auditor:** voice lines and what calms or drives them.
+- Gave 22 franchise staff and corporate NPCs a signature-quirk reference with ready-made lines. Examples: Saffron's affirmations, the Harrow brothers' one-word-each speech, Zip-Zip's thirty-words-a-second patter, Maxim Knell's self-narration, Skritch's letter to the dragon, Tamsin's birthday song and the Gelatinous Cube freezer lullaby.
+- Cloned NPCs now get real feature items for traits that existed only as description text:
+  - Team Deliverables: Credit Theft.
+  - Rook: Foresight and Compelled Courier.
+  - Aldric: Vengeful Revenant and Eat the Fallen.
+  - Ixabeth Vorr: Objection, Sustained.
+- Clones also got reference boxes:
+  - Brixley's d12 corporate jargon.
+  - Thorne's six named swords.
+  - Luma's rate card.
+  - Oggo's brochure god.
+  - Cadwyn's song for Room 303.
+  - The dragons' board grievances.
 
 # v0.5.0 — Mission Guides
 - Rewrote all 24 mission journals (S01–S24) as full DM guides of about 84,000 words in total. Each has a Contract Cover, a DM Overview (synopsis, background, running notes, threads, hook) and five Scene pages. The guide closes with Opposition & Tactics, NPC Dossiers, a Handouts index and Twist, Rewards & Aftermath.

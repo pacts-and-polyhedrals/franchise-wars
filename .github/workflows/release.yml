@@ -1,81 +1,33 @@
-name: Build Foundry Release
-
+name: Release
+# Push a tag like v1.0.0 (matching module.json "version") to build and publish the Foundry package.
 on:
   push:
-    tags:
-      - 'v*.*.*'
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Existing release tag, e.g. v0.3.0'
-        required: true
-
+    tags: ["v*"]
 permissions:
   contents: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Resolve release tag
-        id: version
-        shell: bash
+      - uses: actions/checkout@v4
+      - name: Check version matches tag
         run: |
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            TAG="${{ inputs.tag }}"
-          else
-            TAG="${GITHUB_REF_NAME}"
-          fi
-          VERSION="${TAG#v}"
-          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
-          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
-
-      - name: Assemble release tree and patch manifest
-        env:
-          TAG: ${{ steps.version.outputs.tag }}
-          VERSION: ${{ steps.version.outputs.version }}
-          REPOSITORY: ${{ github.repository }}
-        shell: bash
+          V=$(jq -r .version module.json)
+          [ "v$V" = "${GITHUB_REF_NAME}" ] || { echo "module.json version $V does not match tag ${GITHUB_REF_NAME}"; exit 1; }
+          grep -q "const VERSION = \"$V\"" scripts/main.mjs || { echo "scripts/main.mjs VERSION is not $V"; exit 1; }
+      - name: Validate JSON and script
         run: |
-          rm -rf release-tree
-          mkdir release-tree
-          rsync -a ./ release-tree/ \
-            --exclude '.git/' \
-            --exclude '.github/' \
-            --exclude 'release-tree/' \
-            --exclude '*.zip' \
-            --exclude '*.sha256'
-          python - <<'PY'
-          import json, os
-          from pathlib import Path
-          p=Path('release-tree/module.json')
-          m=json.loads(p.read_text(encoding='utf-8'))
-          repo=os.environ['REPOSITORY']
-          tag=os.environ['TAG']
-          version=os.environ['VERSION']
-          asset=f'franchise-wars-{tag}.zip'
-          m['version']=version
-          m['url']=f'https://github.com/{repo}'
-          m['manifest']=f'https://raw.githubusercontent.com/{repo}/main/module.json'
-          m['download']=f'https://github.com/{repo}/releases/download/{tag}/{asset}'
-          m['readme']=f'https://raw.githubusercontent.com/{repo}/main/README.md'
-          m['changelog']=f'https://raw.githubusercontent.com/{repo}/main/CHANGELOG.md'
-          m['bugs']=f'https://github.com/{repo}/issues'
-          p.write_text(json.dumps(m, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
-          Path('/tmp/module.json').write_text(p.read_text(encoding='utf-8'), encoding='utf-8')
-          PY
-          (cd release-tree && zip -r "../franchise-wars-${TAG}.zip" .)
-          sha256sum "franchise-wars-${TAG}.zip" > "franchise-wars-${TAG}.zip.sha256"
-
-      - name: Create or update GitHub release assets
+          for f in module.json data/*.json; do jq empty "$f"; done
+          node --check scripts/main.mjs
+      - name: Build zip (module.json at zip root)
+        run: |
+          zip -qr -9 "franchise-wars-${GITHUB_REF_NAME}.zip" . -x '.git/*' '.github/*' 'source/*' '*.md' 'SOURCE-CHECKSUMS.sha256'
+          zip -q "franchise-wars-${GITHUB_REF_NAME}.zip" README.md CHANGELOG.md
+      - name: Publish release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.version.outputs.tag }}
-          generate_release_notes: true
+          name: The Franchise Wars ${{ github.ref_name }}
+          body_path: RELEASE-${{ github.ref_name }}.md
           files: |
-            /tmp/module.json
-            franchise-wars-${{ steps.version.outputs.tag }}.zip
-            franchise-wars-${{ steps.version.outputs.tag }}.zip.sha256
+            franchise-wars-${{ github.ref_name }}.zip
+            module.json

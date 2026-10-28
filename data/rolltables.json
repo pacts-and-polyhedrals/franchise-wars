@@ -1,0 +1,160 @@
+[
+ {
+  "sourceId": "fw.table.recurring-corporate-contract-types",
+  "name": "FW — Recurring Corporate Contract Types",
+  "results": [
+   "Pest Control — The pest is never what Corporate originally described. — It's a former employee.",
+   "Delivery — The destination is always considerably more dangerous than stated. — The recipient doesn't know they ordered it.",
+   "Loss Prevention — Recover stolen goods without discussing why they were stolen. — The thief was the rightful owner.",
+   "Employee Wellness — Locate employees who disappeared after raising workplace concerns. — They're still working, somewhere.",
+   "Competitive Research — Corporate espionage. — The rival shares your client's parent company.",
+   "Brand Protection — Stop embarrassing information becoming public. — The information is a Receipt.",
+   "Procurement — Retrieve magical ingredients from somewhere extremely dangerous. — The ingredient is sentient and has opinions.",
+   "Customer Service — Deal with customers employees cannot legally kill. — The customer is right.",
+   "Franchise Expansion — Clear whatever occupies desirable commercial property. — The occupant has a lease older than the city.",
+   "Product Recall — Recover an item before customers discover what it does. — Someone already has, and they're organising.",
+   "Quality Assurance — Consume something nobody at Head Office was willing to test. — It tests you back.",
+   "Executive Protection — Protect somebody whose decisions caused the current problem. — The assassin is a Tally ally.",
+   "Hostile Acquisition — Acquire a rival company. 'Hostile' may be interpreted flexibly. — The rival would rather join the Last Independents."
+  ]
+ },
+ {
+  "sourceId": "fw.table.corporate-euphemisms",
+  "name": "FW — Corporate Euphemisms",
+  "results": [
+   "Unscheduled personnel reassignment — Someone was eaten.",
+   "Customer retention event — The customers can't leave.",
+   "Executive continuity initiative — The CEO is undead.",
+   "Accelerated reduction in competitor market presence — Murder.",
+   "Inventory shrinkage — Something is eating the stock.",
+   "Legacy premises — A haunted building.",
+   "Supply continuity alert — A planar war.",
+   "Brand family — A cult.",
+   "Growth opportunity — You will probably die.",
+   "Voluntary overtime — Binding infernal clause.",
+   "Rightsizing — A cursed wish.",
+   "Synergy — Two monsters merged."
+  ]
+ },
+ {
+  "sourceId": "fw.table.mcguffin-s-happy-quest-toys",
+  "name": "FW — McGuffin's Happy Quest Toys",
+  "results": [
+   "A small brass key to a door that hasn't been built yet",
+   "A plastic knight with a real knight's soul inside",
+   "Half of a treasure map; the other half is in a different kids' meal",
+   "A spinning top that points at whoever is lying",
+   "A tin crown stamped 'Rightful Heir'",
+   "A figurine of a Five Wights brother (collect all five; there is a sixth)",
+   "A folded paper fortune that is always correct and always useless",
+   "A bouncy ball that bounces one second into the past",
+   "A toy briefcase that must not be opened",
+   "A sticker of the C&C sigil that can't be peeled off anything",
+   "A tiny rabbit that stamps one star on anything",
+   "A whistle only dragons can hear",
+   "A marble with a storm in it",
+   "A decoder ring that decodes corporate memos into plain speech",
+   "A wind-up gelatinous cube that absorbs one small object",
+   "A toy sword that is Chekhov's (it will matter later)",
+   "A pocket-size copy of the Contractor Agreement",
+   "A ring that makes you the protagonist for 1 minute",
+   "A snow globe of Brandmere with a figure in it that moves",
+   "A coupon for 'One (1) Destiny, Redeemable Once'"
+  ]
+ },
+ {
+  "sourceId": "fw.table.franchise-complications",
+  "name": "FW — Franchise Complications",
+  "results": [
+   "Team Deliverables arrive and claim the job",
+   "A Compliance Officer is taking notes in the corner",
+   "The client's parent company is also the villain's parent company",
+   "Corporate sends a 'motivational' memo mid-fight",
+   "It's the lunch rush",
+   "A health inspector (lawful neutral, CR 1) arrives",
+   "The manager is covering for Head Office",
+   "The monster has a union rep",
+   "All payment is in loyalty points",
+   "Veronique Salt is watching",
+   "A rival franchise offers double to fail",
+   "The contract was already completed—by the party—tomorrow",
+   "A Brandmere Crier reporter wants a quote",
+   "The only witness is a mascot",
+   "The job board updates: the pay has been halved",
+   "A customer loudly asks for the manager (it's the boss monster)",
+   "Wild magic surge (THAC0 leakage)",
+   "The building is being rebranded mid-mission",
+   "Everything on the premises is a mimic",
+   "Someone mentions the C&C sigil"
+  ]
+ },
+ {
+  "sourceId": "fw.table.final-contract-clauses",
+  "name": "FW — Final Contract Clause (random)",
+  "results": [
+   "Clause 77-B — Signature Authority (void with: Incident Report 77-B (original), S01)",
+   "Clause 1 — Identity of Purchaser (void with: The First Entry, S14)",
+   "Clause 2 — Consideration (void with: The Wand-Mart Cost Ledger, S10)",
+   "Clause 3 — Free Consent (void with: The Loyalty Contracts, S04)",
+   "Clause 4 — Capacity of Signatories (void with: The Five-Star Testimony, S16)",
+   "Clause 5 — Title to Subsidiaries (void with: The Unsigned Deeds, S08)",
+   "Clause 6 — Notarisation (void with: The Broken Seal, S21)",
+   "Clause 7 — Delivery (void with: The Undelivered Order, S22)",
+   "Clause 8 — Collateral (void with: Four's Collateral Tag, S09)",
+   "Clause 9 — Non-Infringement (void with: The Healing Deed, S12)",
+   "Clause 10 — Governing Law (void with: Infernal Due-Diligence Report, S13)",
+   "Clause 11 — Disclosure (void with: Gideon Tumble's Notebook, S02)",
+   "Clause 12 — Perpetuity (void with: Sample Zero, S18)"
+  ]
+ },
+ {
+  "sourceId": "fw.table.questrabbit-review",
+  "name": "FW — QuestRabbit Customer Review",
+  "results": [
+   "★☆☆☆☆ “Adventurers arrived on time. Unacceptable. I had not finished hiding the evidence.”",
+   "★★☆☆☆ “Dragon slain as requested. Dragon was my landlord. Now I have no landlord. Very confusing.”",
+   "★★★★★ “The bard sang my complaint back to me as a ballad. I withdrew the complaint and bought the album.”",
+   "★☆☆☆☆ “They asked questions. Lots of questions. Who trained these people?”",
+   "★★★☆☆ “Rats removed. Rats replaced with one (1) much larger rat, who says he is ‘management’.”",
+   "★★★★☆ “Took four stars off because the wizard read the contract. Nobody reads the contract.”",
+   "★★★★★ “Saved my village. Also unionised my village. Mixed feelings.”",
+   "★★☆☆☆ “Delivery arrived. So did the thing that was chasing the delivery.”",
+   "★☆☆☆☆ “The paladin refused the bribe and then reported the bribe. Who does that?”",
+   "★★★★★ “Ten out of ten. Would hire again if they were not currently suing me.”"
+  ]
+ },
+ {
+  "sourceId": "fw.table.corporate-slogan",
+  "name": "FW — Corporate Slogan Generator",
+  "results": [
+   "“Your Dreams. Our Intellectual Property.”",
+   "“Synergy Is Not Optional.”",
+   "“Have You Considered: Yes?”",
+   "“Now With 12% Less Screaming.”",
+   "“We Put the ‘Fun’ in ‘Non-Refundable’.”",
+   "“Every Soul a Valued Customer.”",
+   "“Proudly Serving Since Before the Lawsuit.”",
+   "“Loyalty Rewarded. Disloyalty Recorded.”",
+   "“Fresh Today. Binding Forever.”",
+   "“Bigger Portions, Smaller Print.”",
+   "“You’re Family Now. Read Clause 9.”",
+   "“Think Global. Acquire Local.”"
+  ]
+ },
+ {
+  "sourceId": "fw.table.hr-memo",
+  "name": "FW — Memo from Head Office",
+  "results": [
+   "All staff must smile. Smiling will be measured in teeth.",
+   "The break room has been reclassified as a ‘motivation chamber’. Please do not ask what that means.",
+   "Reminder: hauntings are not a valid reason to miss a shift.",
+   "Congratulations to Dave on twenty years of service. Dave cannot leave.",
+   "Effective immediately, the word ‘union’ is a trademark of Head Office.",
+   "Please return all borrowed souls to the Accounts department by Friday.",
+   "The new uniform is mandatory, flame-retardant and slightly cursed.",
+   "Mandatory fun is now mandatory-er.",
+   "If you see the Founder, no you did not.",
+   "Thank you for your feedback. Your feedback has been shredded."
+  ]
+ }
+]

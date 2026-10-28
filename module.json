@@ -1,8 +1,8 @@
 {
   "id": "franchise-wars",
   "title": "The Franchise Wars",
-  "description": "A corporate fantasy campaign of questionable employment, hostile takeovers and heroic customer service. Managed journals, Brandmere, roll-request cards, Receipts, Leverage, Board control and the Final Acquisition.",
-  "version": "0.6.0",
+  "description": "A complete corporate fantasy campaign for levels 1–20: 24 mission guides, 146 side contracts, 131 battlemaps with staged encounters, reskinned opposition with full art, ambience, roll tables, pregens and live GM tools for Leverage, the Board Vote and the Clause Debate.",
+  "version": "1.0.0",
   "authors": [
     {
       "name": "Pacts & Polyhedrals"
@@ -33,7 +33,7 @@
   ],
   "url": "https://github.com/pacts-and-polyhedrals/franchise-wars",
   "manifest": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/module.json",
-  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v0.6.0/franchise-wars-v0.6.0.zip",
+  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v1.0.0/franchise-wars-v1.0.0.zip",
   "readme": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/README.md",
   "changelog": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/CHANGELOG.md",
   "bugs": "https://github.com/pacts-and-polyhedrals/franchise-wars/issues"

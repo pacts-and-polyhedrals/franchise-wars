@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.6.0";
+const VERSION = "1.0.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -63,6 +63,9 @@ async function importContent({force=false}={}){
   await importItems();
   await importActors();
   await importScenes();
+  await importPlaylists();
+  await importRollTables();
+  await importMacros();
   await game.settings.set(MODULE_ID,IMPORT_KEY,VERSION);
 }
 
@@ -80,34 +83,6 @@ async function ensureManagedFolders(type, defs){
 }
 
 function managedFlags(sourceId,hash,extra={}){return {[MODULE_ID]:{sourceId,managed:true,importedHash:hash,...extra}};}
-
-function actorSnapshotHash(actor){
-  const data=foundry.utils.deepClone(actor.toObject());
-  const clean=value=>{
-    if(Array.isArray(value))return value.map(clean);
-    if(!value||typeof value!=="object")return value;
-    const out={};
-    for(const [key,item] of Object.entries(value)){
-      if(["_id","id","folder","sort"].includes(key))continue;
-      if(key==="flags"&&item?.[MODULE_ID]){
-        const flags=foundry.utils.deepClone(item);delete flags[MODULE_ID].importedHash;delete flags[MODULE_ID].snapshotHash;
-        out[key]=clean(flags);continue;
-      }
-      out[key]=clean(item);
-    }
-    return out;
-  };
-  return fnv(JSON.stringify(clean(data)));
-}
-
-async function preserveActorRecovery(actor,recoveryFolder,reason="update"){
-  if(!actor||!recoveryFolder)return null;
-  const data=actor.toObject();delete data._id;
-  data.name=`${actor.name} — Recovery ${new Date().toISOString()}`;data.folder=recoveryFolder;
-  data.flags=foundry.utils.deepClone(data.flags??{});
-  data.flags[MODULE_ID]={...(data.flags[MODULE_ID]??{}),managed:false,recoveryOf:actor.getFlag(MODULE_ID,"sourceId")??actor.id,recoveryReason:reason};
-  return Actor.create(data);
-}
 
 async function importItems(){
   const data=await loadJSON("items.json");
@@ -153,65 +128,88 @@ async function coreActorSource(spec){
   }
   return null;
 }
-async function cloneCoreActor(spec,folder,existing=null,overrides=null,recoveryFolder=null){
+async function cloneCoreActor(spec,folder,existing=null){
   const src=await coreActorSource(spec);
   if(!src){console.warn(`Franchise Wars | Core actor not found: ${spec.baseName} (needed for ${spec.name})`);return null;}
-  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid,img:spec.img??null,artAssetId:spec.artAssetId??null,combatOverrides:spec.combatOverrides??null,overrides:overrides??null}));
+  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,extraItems:spec.extraItems??[],extraSpells:spec.extraSpells??[],overrides:spec.overrides??{},removeItems:spec.removeItems??[],source:src.uuid,img:spec.img??null,token:spec.token??null,artAssetId:spec.artAssetId??null,v:2}));
   if(existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
-  if(existing&&existing.getFlag(MODULE_ID,"importedHash")!==specHash)await preserveActorRecovery(existing,recoveryFolder,"combat-template update");
   const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
-  if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.img;}
+  if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.token??spec.img;}
+  if(spec.name){data.prototypeToken??={};data.prototypeToken.name=spec.name;}
   data.system??={}; data.system.details??={}; data.system.details.biography??={value:"",public:""}; data.system.details.biography.value=`${spec.description}${data.system.details.biography.value??""}`;
-  if(overrides?.system?.details?.biography)data.system.details.biography=foundry.utils.deepClone(overrides.system.details.biography);
-  if(overrides?.prototypeToken)data.prototypeToken=foundry.utils.mergeObject(data.prototypeToken??{},overrides.prototypeToken,{inplace:false,overwrite:true});
-  if(Number.isFinite(spec.combatOverrides?.hp)){data.system.attributes??={};data.system.attributes.hp??={};data.system.attributes.hp.value=spec.combatOverrides.hp;data.system.attributes.hp.max=spec.combatOverrides.hp;}
-  if(spec.combatOverrides?.cr!=null)data.system.details.cr=spec.combatOverrides.cr;
-  if(spec.combatOverrides?.ac!=null)data.system.attributes.ac.override=spec.combatOverrides.ac;
-  if(spec.combatOverrides?.legact!=null){data.system.resources??={};data.system.resources.legact={max:spec.combatOverrides.legact,spent:0};}
-  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid,artAssetId:spec.artAssetId??null,artStatus:spec.artStatus??null}),{inplace:false});
-  if(overrides?.flags)data.flags=foundry.utils.mergeObject(data.flags??{},overrides.flags,{inplace:false,overwrite:true});
-  if(!existing){const created=await Actor.create(data);await created.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(created));return created;}
+  if(spec.extraItems?.length){const extra=foundry.utils.deepClone(spec.extraItems); for(const it of extra){it.system??={}; it.system.source=foundry.utils.mergeObject(it.system.source??{},{custom:"Franchise Wars",rules:"2014"},{inplace:false});} const names=new Set(extra.map(i=>i.name)); data.items=[...(data.items??[]).filter(i=>!names.has(i.name)),...extra];}
+  if(spec.removeItems?.length){const rm=new Set(spec.removeItems.map(n=>n.toLowerCase()));data.items=(data.items??[]).filter(i=>!rm.has(String(i.name).toLowerCase()));}
+  if(spec.extraSpells?.length){for(const sp of spec.extraSpells){const it=await coreItemSource(sp.name,"spell");if(!it){console.warn(`Franchise Wars | spell not found: ${sp.name}`);continue;}const o=it.toObject();delete o._id;if(sp.method)foundry.utils.setProperty(o,"system.method",sp.method);if(sp.uses){o.system.uses={max:String(sp.uses),spent:0,recovery:[{period:"lr",type:"recoverAll"}]};}o.flags=foundry.utils.mergeObject(o.flags??{},{[MODULE_ID]:{managed:true}},{inplace:false});data.items=[...(data.items??[]).filter(i=>i.name!==o.name),o];}}
+  for(const[k,v]of Object.entries(spec.overrides??{}))foundry.utils.setProperty(data,k,v);
+  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid,artAssetId:spec.artAssetId??null}),{inplace:false});
+  if(!existing){const made=await Actor.create(data);await stampActorState(made);return made;}
+  await actorRecovery(existing);
   const embedded=data.items??[]; delete data.items; await existing.update(data);
   const ids=existing.items.map(i=>i.id); if(ids.length)await existing.deleteEmbeddedDocuments("Item",ids);
   if(embedded.length)await existing.createEmbeddedDocuments("Item",embedded);
-  await existing.setFlag(MODULE_ID,"importedHash",specHash);await existing.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(existing));
+  await stampActorState(existing);
   return existing;
 }
 
+function actorStateHash(a){return fnv(JSON.stringify({n:a.name,img:a._source.img,s:a._source.system,i:a.items.map(i=>[i.name,i._source.system?.description?.value??"",i._source.system?.activities??{}])}));}
+async function stampActorState(a){if(a)await a.setFlag(MODULE_ID,"stateHash",actorStateHash(a));}
+async function actorRecovery(a){
+  const stamp=a.getFlag(MODULE_ID,"stateHash");if(!stamp||stamp===actorStateHash(a))return;
+  const folder=game.folders.find(f=>f.type==="Actor"&&f.getFlag(MODULE_ID,"sourceId")==="fw.actor.recovery");
+  const clone=a.toObject();delete clone._id;clone.name=`${a.name} — Recovery ${new Date().toISOString().slice(0,16)}`;clone.folder=folder?.id??null;
+  clone.flags={...(clone.flags??{}),[MODULE_ID]:{managed:false,recoveryOf:a.getFlag(MODULE_ID,"sourceId")}};
+  await Actor.create(clone);
+}
+let _itemIndex=null;
+async function grantItems(actor,grants){
+  const add=[];const missing=[];
+  for(const g of grants){
+    if(actor.items.some(i=>i.type===g.type&&i.name.toLowerCase()===g.name.toLowerCase()))continue;
+    const src=await coreItemSource(g.name,g.type);if(!src){missing.push(`${g.type}: ${g.name}`);continue;}
+    const o=src.toObject();delete o._id;if(g.levels)o.system.levels=g.levels;
+    if(["weapon","equipment"].includes(o.type))foundry.utils.setProperty(o,"system.equipped",true);
+    if(o.type==="spell")foundry.utils.setProperty(o,"system.prepared",o.system.level===0?0:1);
+    o.flags=foundry.utils.mergeObject(o.flags??{},{[MODULE_ID]:{managed:true,granted:true}},{inplace:false});add.push(o);
+  }
+  if(add.length)await actor.createEmbeddedDocuments("Item",add,{keepId:false});
+  if(missing.length)console.info(`Franchise Wars | ${actor.name}: not found in compendiums (add by hand if wanted)`,missing);
+}
+async function coreItemSource(name,type){
+  if(!_itemIndex){_itemIndex=new Map();for(const pack of game.packs.filter(p=>p.documentName==="Item")){try{const idx=await pack.getIndex({fields:["name","type"]});for(const r of idx){const k=`${r.type}|${String(r.name).toLowerCase()}`;const h=_itemIndex.get(k)??[];h.push({pack,id:r._id});_itemIndex.set(k,h);}}catch(e){}}}
+  const modern=globalThis.dnd5e?.settings?.rulesVersion==="modern";
+  const hits=[...(_itemIndex.get(`${type}|${String(name).toLowerCase()}`)??[])].sort((a,b)=>{const sc=h=>{const c=h.pack.collection.toLowerCase();return c.startsWith("dnd5e.")?(modern?(c.includes("24")?0:1):(c.includes("24")?1:0)):2;};return sc(a)-sc(b);});
+  for(const h of hits){const d=await h.pack.getDocument(h.id);if(d)return d;}
+  return null;
+}
 async function applyActorPayload(actor,payload,hash){
-  const recovery=game.folders.find(f=>f.type==="Actor"&&f.getFlag(MODULE_ID,"sourceId")==="fw.actor.recovery");
-  if(actor.getFlag(MODULE_ID,"importedHash")!==hash)await preserveActorRecovery(actor,recovery?.id,"managed actor update");
+  await actorRecovery(actor);
   const update=foundry.utils.deepClone(payload); const embedded=update.items??[]; delete update.items; delete update._id;
   update.flags=foundry.utils.mergeObject(update.flags??{},managedFlags(actor.getFlag(MODULE_ID,"sourceId"),hash),{inplace:false});
   await actor.update(update);
   const managed=actor.items.filter(i=>i.getFlag(MODULE_ID,"managed")); if(managed.length)await actor.deleteEmbeddedDocuments("Item",managed.map(i=>i.id));
   if(embedded.length)await actor.createEmbeddedDocuments("Item",embedded);
-  await actor.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(actor));
+  await stampActorState(actor);
 }
 
 async function importActors(){
   const data=await loadJSON("actors.json");
   const folders=await ensureManagedFolders("Actor",data.folders);
-  const recoveryFolder=folders.get("fw.actor.recovery")?.id??null;
   for(const e of data.entries){
     let actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId); const folder=folders.get(e.folder)?.id??null;
-    if(e.combatBaseName){
-      const spec={sourceId:e.sourceId,name:e.data.name,baseName:e.combatBaseName,fallbackBaseNames:e.fallbackBaseNames??[],description:e.combatDescription??"",img:e.data.img,artAssetId:e.data.flags?.[MODULE_ID]?.artAssetId??null,combatOverrides:e.combatOverrides??{}};
-      await cloneCoreActor(spec,folder,actor,e.data,recoveryFolder);continue;
-    }
     const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
-    if(!actor){const created=await Actor.create(payload);await created.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(created));continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash);
+    if(!actor){const made=await Actor.create(payload);if(e.grants)await grantItems(made,e.grants);await stampActorState(made);continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash); if(e.grants)await grantItems(actor,e.grants);
   }
   for(const spec of data.clones??[]){
     const actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===spec.sourceId);
-    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null,null,recoveryFolder);
+    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null);
   }
-  for(const alias of data.actorAliases??[]){
-    const old=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===alias.from);
-    const canonical=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===alias.to);
-    if(!old||!canonical)continue;
-    await preserveActorRecovery(old,recoveryFolder,`merged into ${alias.to}`);
-    await old.delete();
+  if(data.retired?.length){
+    let rf=game.folders.find(f=>f.type==="Actor"&&f.getFlag(MODULE_ID,"sourceId")==="fw.actor.retired");
+    if(!rf)rf=await Folder.create({name:"Retired Duplicates (safe to delete)",type:"Actor",folder:folders.get("fw.actor.root")?.id??null,flags:{[MODULE_ID]:{sourceId:"fw.actor.retired",managed:true}}});
+    for(const r of data.retired){
+      const a=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===r.sourceId&&x.getFlag(MODULE_ID,"managed"));if(!a)continue;
+      await a.update({folder:rf.id,name:`${a.name} (retired — use ${r.name})`,flags:{[MODULE_ID]:{managed:false,retiredInFavourOf:r.replacedBy}}});
+    }
   }
 }
 
@@ -246,6 +244,40 @@ async function importScenes({force=false}={}){
     const made=await Scene.createDocuments(toCreate.slice(i,i+10));
     for(const sc of made){const src=imgBySource.get(sc.getFlag(MODULE_ID,"sourceId"));await ensureLevelBackground(sc,src?.img,src?.backgroundColor);}
     if(toCreate.length>10)ui.notifications.info(`Franchise Wars | importing battlemaps ${Math.min(i+10,toCreate.length)}/${toCreate.length}`);
+  }
+  for(const s of scenes){const sc=game.scenes.find(x=>x.getFlag(MODULE_ID,"sourceId")===s.sourceId);if(sc){try{await applySceneExtras(sc,s,force);}catch(err){console.warn("Franchise Wars | scene extras",s.sourceId,err);}}}
+}
+async function applySceneExtras(sc,s,force=false){
+  const mflag=d=>d.getFlag(MODULE_ID,"managed");
+  const hash=fnv(JSON.stringify([s.fwTokens??[],s.fwNotes??[],s.fwJournal??null,s.fwSound??null]));
+  if(!force&&sc.getFlag(MODULE_ID,"extrasHash")===hash)return;
+  const tagged=o=>({...o,flags:{...(o.flags??{}),[MODULE_ID]:{managed:true}}});
+  // Scene -> guide page
+  if(s.fwJournal){const j=fwFind("JournalEntry",s.fwJournal.entry);const pg=fwPage(j,s.fwJournal.page);if(j)await sc.update({journal:j.id,journalEntryPage:pg?.id??null});}
+  // pins
+  const oldNotes=sc.notes.filter(mflag).map(n=>n.id);if(oldNotes.length)await sc.deleteEmbeddedDocuments("Note",oldNotes);
+  const notes=[];for(const n of s.fwNotes??[]){const j=fwFind("JournalEntry",n.entry);if(!j)continue;const pg=fwPage(j,n.page);notes.push(tagged({entryId:j.id,pageId:pg?.id??null,x:n.x,y:n.y,text:n.label,texture:{src:"icons/svg/book.svg"},iconSize:48,fontSize:22,textAnchor:1}));}
+  if(notes.length)await sc.createEmbeddedDocuments("Note",notes);
+  // ambience
+  const oldS=sc.sounds.filter(mflag).map(n=>n.id);if(oldS.length)await sc.deleteEmbeddedDocuments("AmbientSound",oldS);
+  if(s.fwSound)await sc.createEmbeddedDocuments("AmbientSound",[tagged({path:s.fwSound.path,x:s.fwSound.x,y:s.fwSound.y,radius:s.fwSound.radius,volume:s.fwSound.volume,repeat:true,easing:true,walls:false})]);
+  // hidden encounter tokens: only placed while the GM has not placed/kept their own managed set
+  const managedTokens=sc.tokens.filter(mflag);
+  if(!managedTokens.length||force){
+    if(managedTokens.length)await sc.deleteEmbeddedDocuments("Token",managedTokens.map(t=>t.id));
+    const toks=[];for(const t of s.fwTokens??[]){const a=fwFind("Actor",t.actor);if(!a)continue;const td=await a.getTokenDocument({x:t.x,y:t.y,hidden:!!t.hidden});const o=td.toObject();o.flags=foundry.utils.mergeObject(o.flags??{},{[MODULE_ID]:{managed:true,group:t.group}},{inplace:false});toks.push(o);}
+    for(let i=0;i<toks.length;i+=25)await sc.createEmbeddedDocuments("Token",toks.slice(i,i+25));
+  }
+  await sc.setFlag(MODULE_ID,"extrasHash",hash);
+}
+async function importPlaylists(){
+  let data;try{data=await loadJSON("playlists.json");}catch(e){return;}
+  for(const p of data){
+    let pl=game.playlists.find(x=>x.getFlag(MODULE_ID,"sourceId")===p.sourceId);
+    const sounds=p.sounds.map(s=>({name:s.name,path:s.path,repeat:s.repeat,volume:s.volume,flags:{[MODULE_ID]:{managed:true}}}));
+    if(!pl){await Playlist.create({name:p.name,mode:p.mode??0,sounds,flags:{[MODULE_ID]:{sourceId:p.sourceId,managed:true}}});continue;}
+    const ids=pl.sounds.filter(x=>x.getFlag(MODULE_ID,"managed")).map(x=>x.id);if(ids.length)await pl.deleteEmbeddedDocuments("PlaylistSound",ids);
+    await pl.createEmbeddedDocuments("PlaylistSound",sounds);
   }
 }
 async function ensureLevelBackground(scene,src,color){
@@ -285,6 +317,8 @@ function openSessionZero(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sou
    @FWShow[handoutSourceId|pageName]{label} -> reveals one handout page to all players
    @FWReceipt[S01|itemSourceId]{label} -> records the Receipt and announces it */
 const FW_COLLECTIONS={Actor:()=>game.actors,Item:()=>game.items,Scene:()=>game.scenes,JournalEntry:()=>game.journal};
+const fwUnesc=t=>{const d=document.createElement("textarea");d.innerHTML=String(t??"");return d.value.trim();};
+function fwPage(entry,name){const n=fwUnesc(name);return entry?.pages.find(p=>fwUnesc(p.name)===n)??null;}
 function fwFind(type,sourceId){return FW_COLLECTIONS[type]?.()?.find(d=>d.getFlag(MODULE_ID,"sourceId")===sourceId)??null;}
 function fwMissing(label,why){const s=document.createElement("span");s.classList.add("fw-missing-link");s.dataset.tooltip=why;s.textContent=label;return s;}
 function fwButton(action,label,data){const a=document.createElement("a");a.classList.add("fw-action",`fw-action-${action}`);a.dataset.fwAction=action;for(const[k,v]of Object.entries(data))a.dataset[k]=v;const icon={check:"fa-dice-d20",save:"fa-shield-halved",chat:"fa-comment",show:"fa-eye",receipt:"fa-file-signature"}[action]??"fa-bolt";a.innerHTML=`<i class="fa-solid ${icon}"></i> ${label}`;return a;}
@@ -294,7 +328,7 @@ Hooks.once("init",()=>{
     const [,type,src,page,label]=m;const doc=fwFind(type,src);
     if(!doc)return fwMissing(label,`Not imported yet: ${src}`);
     let target=doc;
-    if(page&&type==="JournalEntry"){target=doc.pages.find(p=>p.name===page)??doc;}
+    if(page&&type==="JournalEntry"){target=fwPage(doc,page)??doc;}
     try{return await target.toAnchor({name:label});}catch(e){const a=document.createElement("a");a.classList.add("content-link");a.dataset.uuid=target.uuid;a.textContent=label;return a;}
   }});
   enrichers.push({pattern:/@FW(Check|Save)\[([^\]|]+)\|([^\]|]+)\|?([^\]]*)\]\{([^}]+)\}/g,enricher:async(m)=>{
@@ -307,7 +341,7 @@ Hooks.once("init",()=>{
 function fwParseSpec(spec){const o={};for(const t of String(spec).trim().split(/\s+/)){const[k,v]=t.split("=");o[k]=v;}return o;}
 async function fwShowPage(src,pageName){
   const entry=fwFind("JournalEntry",src);if(!entry)return ui.notifications.warn(`Handout journal not found: ${src}`);
-  const page=entry.pages.find(p=>p.name===pageName);if(!page)return ui.notifications.warn(`Handout page not found: ${pageName}`);
+  const page=fwPage(entry,pageName);if(!page)return ui.notifications.warn(`Handout page not found: ${pageName}`);
   const LIMITED=CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED,OBSERVER=CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER;
   if((entry.ownership.default??0)<LIMITED)await entry.update({"ownership.default":LIMITED});
   if((page.ownership?.default??-1)<OBSERVER)await page.update({"ownership.default":OBSERVER});
@@ -336,3 +370,183 @@ document.addEventListener("click",async ev=>{
     }
   }catch(err){console.error("Franchise Wars | action",err);ui.notifications.error(err.message);}
 },true);
+
+/* ---------------------------------------------------------------- v1.0 additions
+   @FWLev[CO-01|1|source]{label} -> adds Leverage against a corporation and announces it
+   Roll tables, and three GM windows: Campaign Tracker, Clause Debate, Board Vote. */
+Hooks.once("init",()=>{
+  CONFIG.TextEditor.enrichers.push({pattern:/@FWLev\[([^\]|]+)\|(-?\d+)\|?([^\]]*)\]\{([^}]+)\}/g,enricher:async(m)=>fwButton("lev",m[4],{corp:m[1],amount:m[2],source:m[3]??""})});
+  game.franchiseWars=Object.assign(game.franchiseWars??{}, {openTracker:()=>new FWTracker().render(true),openClauseDebate:()=>new FWClauseDebate().render(true),openBoardVote:()=>new FWBoardVote().render(true)});
+});
+let FW_CORPS=null,FW_CLAUSES=null;
+async function fwCorps(){return FW_CORPS??=await loadJSON("corporations.json").catch(()=>({}));}
+async function fwClauses(){return FW_CLAUSES??=await loadJSON("final-contract.json").catch(()=>[]);}
+document.addEventListener("click",async ev=>{
+  const a=ev.target.closest?.("a.fw-action[data-fw-action='lev']");if(!a)return;
+  ev.preventDefault();ev.stopPropagation();
+  if(!game.user.isGM)return ui.notifications.warn("Only the GM can record Leverage.");
+  const d=a.dataset,corps=await fwCorps(),n=Number(d.amount||1);
+  const s=await addLeverage(d.corp,n);
+  await postContractBrief({missionId:d.source||d.corp,title:"LEVERAGE RECORDED",html:`<p><strong>${n>0?"+":""}${n} Leverage</strong> against <strong>${corps[d.corp]??d.corp}</strong>.</p><p>Total now: <strong>${s.leverage[d.corp]}</strong>.</p>`});
+},true);
+
+async function importRollTables(){
+  let data;try{data=await loadJSON("rolltables.json");}catch(e){return;}
+  let folder=game.folders.find(f=>f.type==="RollTable"&&f.getFlag(MODULE_ID,"sourceId")==="fw.folder.tables");
+  if(!folder)folder=await Folder.create({name:"The Franchise Wars — Tables",type:"RollTable",color:"#7a1f2b",flags:{[MODULE_ID]:{sourceId:"fw.folder.tables"}}});
+  for(const t of data){
+    const results=t.results.map((r,i)=>({type:CONST.TABLE_RESULT_TYPES?.TEXT??"text",description:r,name:r.slice(0,60),range:[i+1,i+1],weight:1,img:"icons/svg/d20-black.svg"}));
+    const doc={name:t.name,formula:`1d${results.length}`,replacement:true,displayRoll:true,folder:folder.id,img:"icons/svg/d20-grey.svg",results,flags:{[MODULE_ID]:{sourceId:t.sourceId,managed:true,hash:fnv(JSON.stringify(t))}}};
+    const old=game.tables.find(x=>x.getFlag(MODULE_ID,"sourceId")===t.sourceId);
+    if(old){if(old.getFlag(MODULE_ID,"hash")===doc.flags[MODULE_ID].hash)continue;await old.delete();}
+    try{await RollTable.create(doc);}catch(err){delete doc.img;await RollTable.create(doc);}
+  }
+}
+
+/* ----- small ApplicationV2 base that renders a plain HTML string */
+const FWAppBase=foundry.applications.api.ApplicationV2;
+class FWWindow extends FWAppBase{
+  static DEFAULT_OPTIONS={classes:["franchise-wars","fw-window"],window:{resizable:true},position:{width:560,height:"auto"}};
+  async _renderHTML(){return await this.html();}
+  _replaceHTML(result,content){content.innerHTML=result;content.querySelectorAll("[data-act]").forEach(el=>el.addEventListener(el.tagName==="SELECT"||el.tagName==="INPUT"?"change":"click",ev=>{ev.preventDefault();this.act(el.dataset.act,el,ev);}));}
+  async act(){}
+}
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+class FWTracker extends FWWindow{
+  static DEFAULT_OPTIONS={id:"fw-tracker",window:{title:"Franchise Wars — Campaign Tracker",icon:"fa-solid fa-chart-line"},position:{width:640,height:720}};
+  constructor(...a){super(...a);this._hook=Hooks.on("franchiseWarsStateChanged",()=>this.rendered&&this.render());}
+  async close(o){Hooks.off("franchiseWarsStateChanged",this._hook);return super.close(o);}
+  async html(){
+    const s=await getState(),corps=await fwCorps(),clauses=await fwClauses();
+    const stat=(k,label)=>`<div class="fw-stat"><span>${label}</span><a data-act="dec" data-k="${k}">−</a><b>${esc(s[k])}</b><a data-act="inc" data-k="${k}">+</a></div>`;
+    const corpRows=Object.entries(corps).map(([id,n])=>`<tr><td>${id}</td><td>${esc(n)}</td><td class="c"><a data-act="lev" data-id="${id}" data-n="-1">−</a> <b>${s.leverage?.[id]??0}</b> <a data-act="lev" data-id="${id}" data-n="1">+</a></td><td>${["CO-01","CO-02","CO-13"].includes(id)?"—":`<select data-act="seat" data-id="${id}">${Object.entries(SEAT_LABEL).map(([k,l])=>`<option value="${k}" ${((s.board?.[id]?.state??s.board?.[id])||"active")===k?"selected":""}>${l}</option>`).join("")}</select>`}</td></tr>`).join("");
+    const voided=clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;
+    const clauseRows=clauses.map(c=>{const v=s.clauses?.[c.code]?.status==="voided",r=s.receipts?.[c.mission]?.status==="acquired";return `<tr class="${v?"fw-voided":""}"><td>${esc(c.code)}</td><td>${esc(c.title)}</td><td>${esc(c.receipt)} <small>(${c.mission})</small> ${r?"✔":""}</td><td class="c">${v?"VOID":`<a data-act="void" data-code="${esc(c.code)}">void</a>`}</td></tr>`;}).join("");
+    const tally=(s.commonsTally??[]).map(x=>`<li>${esc(typeof x==="string"?x:x.name)} <a data-act="untally" data-name="${esc(typeof x==="string"?x:x.name)}">×</a></li>`).join("");
+    return `<div class="fw-tracker">
+      <div class="fw-stats">${stat("currentAct","Act")}${stat("rabbitRating",esc(s.mandateName||"Rabbit Rating"))}${stat("questRabbitCut","QuestRabbit cut %")}${stat("greyCreep","Grey Creep")}</div>
+      <h3>Leverage & Board</h3><table class="fw-table"><thead><tr><th>ID</th><th>Corporation</th><th>Leverage</th><th>Seat</th></tr></thead><tbody>${corpRows}</tbody></table>
+      <h3>Final Contract — ${voided}/${clauses.length} clauses voided</h3><table class="fw-table"><thead><tr><th>Clause</th><th>Title</th><th>Receipt</th><th></th></tr></thead><tbody>${clauseRows}</tbody></table>
+      <h3>Commons Tally (${(s.commonsTally??[]).length})</h3><ul class="fw-tally">${tally}</ul>
+      <div class="fw-row"><input type="text" placeholder="New ally…" class="fw-new-ally"><button data-act="tally">Add ally</button></div>
+      <div class="fw-row"><button data-act="debate"><i class="fa-solid fa-scale-balanced"></i> Clause Debate</button><button data-act="vote"><i class="fa-solid fa-check-to-slot"></i> Board Vote</button><button data-act="post"><i class="fa-solid fa-comment"></i> Post summary to chat</button></div>
+    </div>`;
+  }
+  async act(a,el){
+    const s=await getState(),d=el.dataset;
+    if(a==="inc"||a==="dec"){const v=Number(s[d.k]??0)+(a==="inc"?1:-1);await patchState({[d.k]:Math.max(0,v)});}
+    else if(a==="lev")await addLeverage(d.id,Number(d.n));
+    else if(a==="seat")await setBoardSeat(d.id,{state:el.value,changedAt:Date.now()});
+    else if(a==="void"){await voidClause(d.code,"tracker");}
+    else if(a==="tally"){const v=el.closest(".fw-tracker").querySelector(".fw-new-ally").value.trim();if(v)await addCommonsAlly(v);}
+    else if(a==="untally"){await game.settings.set(MODULE_ID,STATE_KEY,{...s,commonsTally:(s.commonsTally??[]).filter(x=>(typeof x==="string"?x:x.name)!==d.name)});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});}
+    else if(a==="debate")new FWClauseDebate().render(true);
+    else if(a==="vote")new FWBoardVote().render(true);
+    else if(a==="post"){const clauses=await fwClauses();const v=clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;await postContractBrief({title:"CAMPAIGN STATUS",html:`<p>Act <b>${s.currentAct}</b> · ${esc(s.mandateName)} <b>${s.rabbitRating}</b> · QuestRabbit cut <b>${s.questRabbitCut}%</b></p><p>Final Contract: <b>${v}/${clauses.length}</b> clauses voided · Commons allies: <b>${(s.commonsTally??[]).length}</b></p>`});}
+  }
+}
+
+/* Clause Debate (S24): Vend reads one clause per round (77-B, then 1–12). A character presents the Receipt and argues:
+   DC 18 (Persuasion, Insight, History, Religion or Investigation). No Receipt: DC 25, or three Commons Tally witnesses.
+   Success burns the clause; failure lets Vend make a Ledger Entry. When six clauses are void, Vend stands. */
+const DEBATE_SKILLS=[["per","Persuasion"],["ins","Insight"],["his","History"],["rel","Religion"],["inv","Investigation"]];
+class FWClauseDebate extends FWWindow{
+  static DEFAULT_OPTIONS={id:"fw-clause-debate",window:{title:"Franchise Wars — Clause Debate",icon:"fa-solid fa-scale-balanced"},position:{width:560}};
+  code=null;
+  async html(){
+    const s=await getState(),all=await fwClauses(),open=all.filter(c=>s.clauses?.[c.code]?.status!=="voided"),voided=all.length-open.length;
+    if(!open.length)return `<p class="fw-note">All ${all.length} clauses are void. The Final Contract is blank paper.</p>`;
+    const c=open.find(x=>x.code===this.code)??open[0];this.code=c.code;
+    const has=s.receipts?.[c.mission]?.status==="acquired",dc=has?18:25,tally=(s.commonsTally??[]).length;
+    return `<div class="fw-debate">
+      <p><b>${voided}/${all.length}</b> clauses void${voided>=6?` — <span class="fw-bad">Vend stands (Scene 3)</span>`:` — Vend stands at six`}.</p>
+      <label>Clause being read <select data-act="pick">${open.map(x=>`<option value="${esc(x.code)}" ${x.code===c.code?"selected":""}>${esc(x.code)} — ${esc(x.title)}</option>`).join("")}</select></label>
+      <p>Receipt: <b>${esc(c.receipt)}</b> (${c.mission}) — ${has?`<span class="fw-ok">recorded as acquired</span>`:`<span class="fw-bad">not recorded</span>`} · Argument DC <b>${dc}</b></p>
+      <p class="fw-note">Advantage: Leverage against the umbrella involved, an allied witness, or a relevant boon. Each flipped director grants an advantage die.</p>
+      <div class="fw-row">${DEBATE_SKILLS.map(([k,n])=>`<button data-act="ask" data-skill="${k}" data-dc="${dc}">${n}</button>`).join("")}</div>
+      <div class="fw-row"><button data-act="win"><i class="fa-solid fa-fire"></i> Argument succeeds — burn clause</button><button data-act="witness" ${tally<3?"disabled":""}><i class="fa-solid fa-people-group"></i> Three Tally witnesses (${tally} allies)</button><button data-act="lose"><i class="fa-solid fa-feather"></i> Fails — Ledger Entry</button></div>
+      <div class="fw-row"><label><input type="checkbox" data-act="rcpt" ${has?"checked":""}> Party holds this Receipt</label></div>
+    </div>`;
+  }
+  async act(a,el){
+    const all=await fwClauses(),c=all.find(x=>x.code===this.code);
+    if(a==="pick")this.code=el.value;
+    else if(a==="rcpt"){if(el.checked)await awardReceipt(c.mission,{name:c.receipt});else{const s=await getState(),r=foundry.utils.deepClone(s.receipts??{});delete r[c.mission];await game.settings.set(MODULE_ID,STATE_KEY,{...s,receipts:r});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});}}
+    else if(a==="ask"){await requestCheck({missionId:`S24 · Clause ${this.code}`,skill:el.dataset.skill,dc:Number(el.dataset.dc),flavor:`Vend reads Clause ${esc(this.code)}, ${esc(c?.title)}. Make your case, then roll.`,grade:"Clause Debate"});return;}
+    else if(a==="win"||a==="witness"){await voidClause(this.code,a==="witness"?"witnesses":"debate");await postContractBrief({title:"CLAUSE VOIDED",grade:"Final Contract",html:`<p>Clause <b>${esc(this.code)} — ${esc(c?.title)}</b> burns off the page${a==="witness"?", witnessed by three members of the Commons":""}.</p>`});this.code=null;}
+    else if(a==="lose"){await ChatMessage.create({speaker:{alias:"Tallis Vend"},content:shell({title:"LEDGER ENTRY",grade:"Final Contract",body:`<p>The clause holds. Vend dips the Quill and writes one sentence that becomes true (see his stat block: Ledger Entry).</p>`}),whisper:ChatMessage.getWhisperRecipients("GM").map(u=>u.id)});}
+    this.render();
+  }
+}
+
+/* Board Vote (S23): ten directors, one per umbrella. Vend holds 51% through their proxies.
+   The motion to remove him carries when six seats are flipped (voting against him) or removed (proxy void).
+   2 Leverage against an umbrella lets the party demand its director's proxy. */
+const SEAT_LABEL={active:"with Vend",leaning:"wavering",allied:"flipped",removed:"removed"};
+class FWBoardVote extends FWWindow{
+  static DEFAULT_OPTIONS={id:"fw-board-vote",window:{title:"Franchise Wars — Board Vote",icon:"fa-solid fa-check-to-slot"},position:{width:600}};
+  async html(){
+    const s=await getState(),corps=await fwCorps(),tally=(s.commonsTally??[]).length;
+    const seats=Object.entries(corps).filter(([id])=>!["CO-01","CO-02","CO-13"].includes(id));
+    const st=id=>(s.board?.[id]?.state??s.board?.[id])||"active";
+    const against=seats.filter(([id])=>["allied","removed"].includes(st(id))).length;
+    const rows=seats.map(([id,n])=>{const lev=s.leverage?.[id]??0,cur=st(id);return `<tr><td>${esc(n)}</td><td class="c">${lev}</td><td><select data-act="seat" data-id="${id}">${Object.entries(SEAT_LABEL).map(([k,l])=>`<option value="${k}" ${cur===k?"selected":""}>${l}</option>`).join("")}</select></td><td>${lev>=2&&cur!=="allied"&&cur!=="removed"?`<a data-act="proxy" data-id="${id}" title="Spend 2 Leverage to demand this director's proxy">demand proxy (−2)</a>`:""}</td></tr>`;}).join("");
+    return `<div class="fw-vote"><p><b>Motion:</b> that Tallis Vend be removed as Chairman of Creation &amp; Company.</p>
+      <table class="fw-table"><thead><tr><th>Director’s umbrella</th><th>Leverage</th><th>Seat</th><th></th></tr></thead><tbody>${rows}</tbody></table>
+      <p class="fw-result">Flipped or removed: <b>${against}</b>/6 needed → <b class="${against>=6?"fw-ok":"fw-bad"}">${against>=6?"MOTION CARRIES":"VEND HOLDS THE BOARD"}</b></p>
+      <p class="fw-note">Commons Tally: ${tally} allies observing — ${Math.floor(tally/5)} wavering director(s) have disadvantage to refuse the party.</p>
+      <div class="fw-row"><button data-act="post"><i class="fa-solid fa-gavel"></i> Announce result</button></div></div>`;
+  }
+  async act(a,el){
+    const d=el.dataset,corps=await fwCorps();
+    if(a==="seat")await setBoardSeat(d.id,{state:el.value,changedAt:Date.now()});
+    else if(a==="proxy"){const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Demand proxy"},content:`<p>Spend 2 Leverage against ${esc(corps[d.id])}? If the director refuses, they must be dealt with in person.</p>`});if(!ok)return;await addLeverage(d.id,-2);await setBoardSeat(d.id,{state:"leaning",proxyDemanded:true,changedAt:Date.now()});}
+    else if(a==="post"){const s=await getState();const g={};for(const id of Object.keys(corps).filter(i=>!["CO-01","CO-02","CO-13"].includes(i))){const k=(s.board?.[id]?.state??s.board?.[id])||"active";(g[k]??=[]).push(corps[id]);}const n=(g.allied?.length??0)+(g.removed?.length??0);
+      await postContractBrief({title:n>=6?"MOTION CARRIES":"MOTION FAILS",grade:"Board Vote",html:`<p><em>That Tallis Vend be removed as Chairman.</em></p>${Object.entries(SEAT_LABEL).map(([k,l])=>`<p><b>${l[0].toUpperCase()+l.slice(1)} (${g[k]?.length??0}):</b> ${g[k]?.join(", ")||"—"}</p>`).join("")}`});return;}
+    this.render();
+  }
+}
+
+/* GM buttons in the Journal sidebar */
+Hooks.on("renderJournalDirectory",(app,html)=>{
+  if(!game.user.isGM)return;const root=html instanceof HTMLElement?html:html[0];if(!root||root.querySelector(".fw-gm-tools"))return;
+  const bar=document.createElement("div");bar.className="fw-gm-tools";
+  bar.innerHTML=`<button type="button" data-t="tracker"><i class="fa-solid fa-chart-line"></i> Tracker</button><button type="button" data-t="debate"><i class="fa-solid fa-scale-balanced"></i> Clauses</button><button type="button" data-t="vote"><i class="fa-solid fa-check-to-slot"></i> Board</button>`;
+  bar.addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b)return;({tracker:()=>new FWTracker().render(true),debate:()=>new FWClauseDebate().render(true),vote:()=>new FWBoardVote().render(true)})[b.dataset.t]?.();});
+  (root.querySelector(".directory-header")??root).prepend(bar);
+});
+
+async function importMacros(){
+  const list=[["fw.macro.tracker","FW: Campaign Tracker","game.franchiseWars.openTracker();","icons/svg/book.svg"],
+    ["fw.macro.debate","FW: Clause Debate","game.franchiseWars.openClauseDebate();","icons/svg/combat.svg"],
+    ["fw.macro.vote","FW: Board Vote","game.franchiseWars.openBoardVote();","icons/svg/hanging-sign.svg"],
+    ["fw.macro.command","FW: Command Centre","game.franchiseWars.openCommandCentre();","icons/svg/castle.svg"],
+    ["fw.macro.maps","FW: Re-import Battlemaps (force)","game.franchiseWars.importMaps({force:true});","icons/svg/village.svg"],
+    ["fw.macro.export","FW: Export to Compendiums","game.franchiseWars.exportToCompendiums();","icons/svg/chest.svg"]];
+  let folder=game.folders.find(f=>f.type==="Macro"&&f.getFlag(MODULE_ID,"sourceId")==="fw.folder.macros");
+  if(!folder)folder=await Folder.create({name:"The Franchise Wars",type:"Macro",color:"#7a1f2b",flags:{[MODULE_ID]:{sourceId:"fw.folder.macros"}}});
+  for(const[sid,name,command,img]of list){
+    const old=game.macros.find(m=>m.getFlag(MODULE_ID,"sourceId")===sid);
+    if(old){if(old.command!==command)await old.update({command,name});continue;}
+    await Macro.create({name,type:"script",command,img,folder:folder.id,flags:{[MODULE_ID]:{sourceId:sid,managed:true}}});
+  }
+}
+
+/* Compendium export: copies every managed Franchise Wars document into world compendiums
+   ("Franchise Wars — Actors/Journals/Items/Scenes/Tables") so they can be moved between worlds or into a shared module. */
+async function exportToCompendiums(){
+  if(!game.user.isGM)throw new Error("GM only");
+  const defs=[["Actor","actors",game.actors],["JournalEntry","journals",game.journal],["Item","items",game.items],["Scene","scenes",game.scenes],["RollTable","tables",game.tables],["Playlist","playlists",game.playlists]];
+  for(const[type,key,coll]of defs){
+    const docs=coll.filter(d=>d.getFlag(MODULE_ID,"sourceId"));if(!docs.length)continue;
+    const name=`franchise-wars-${key}`;let pack=game.packs.get(`world.${name}`);
+    if(!pack)pack=await foundry.documents.collections.CompendiumCollection.createCompendium({type,label:`Franchise Wars — ${key[0].toUpperCase()+key.slice(1)}`,name,package:"world"});
+    const existing=await pack.getIndex({fields:[`flags.${MODULE_ID}.sourceId`]});
+    const del=existing.filter(e=>foundry.utils.getProperty(e,`flags.${MODULE_ID}.sourceId`)).map(e=>e._id);
+    if(del.length)await pack.documentClass.deleteDocuments(del,{pack:pack.collection});
+    for(let i=0;i<docs.length;i+=50){await pack.documentClass.createDocuments(docs.slice(i,i+50).map(d=>d.toCompendium(pack)),{pack:pack.collection});}
+    ui.notifications.info(`Franchise Wars | exported ${docs.length} ${type} documents to ${pack.title}`);
+  }
+}
+Hooks.once("init",()=>{game.franchiseWars.exportToCompendiums=exportToCompendiums;});

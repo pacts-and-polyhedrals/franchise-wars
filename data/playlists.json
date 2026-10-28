@@ -1,0 +1,63 @@
+[
+ {
+  "sourceId": "fw.playlist.ambience",
+  "name": "The Franchise Wars — Ambience",
+  "mode": 0,
+  "sounds": [
+   {
+    "name": "Pandemonium Wind",
+    "path": "modules/franchise-wars/assets/audio/pandemonium-wind.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "The Freezer Lullaby",
+    "path": "modules/franchise-wars/assets/audio/freezer-lullaby.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Golden Orcs Jingle (distant)",
+    "path": "modules/franchise-wars/assets/audio/golden-orcs-jingle.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Tavern Hearth",
+    "path": "modules/franchise-wars/assets/audio/tavern-hearth.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Counting House Quills",
+    "path": "modules/franchise-wars/assets/audio/counting-house.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Drowned Harbour",
+    "path": "modules/franchise-wars/assets/audio/drowned-harbour.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Dragon Lair Rumble",
+    "path": "modules/franchise-wars/assets/audio/dragon-lair.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Shop Floor Bustle",
+    "path": "modules/franchise-wars/assets/audio/shop-floor.ogg",
+    "repeat": true,
+    "volume": 0.5
+   },
+   {
+    "name": "Graveyard Night",
+    "path": "modules/franchise-wars/assets/audio/graveyard-night.ogg",
+    "repeat": true,
+    "volume": 0.5
+   }
+  ]
+ }
+]

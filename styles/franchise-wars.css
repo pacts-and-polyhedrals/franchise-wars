@@ -125,3 +125,40 @@
 .journal-entry-content .fw-handout .fw-sig{font-family:"Segoe Script","Brush Script MT",cursive;font-size:1.3em}
 .fw-chat-narration{padding:.55rem .7rem;background:linear-gradient(#fbf6ea,#f1e6cc);border:1px solid #b49a62;border-left:5px solid var(--fw-gold);font-family:Georgia,serif;font-style:italic;color:#2b2418}
 .fw-chat-narration .fw-contract-slip,.fw-chat-narration .fw-slip-head{font-style:normal}
+
+/* v0.5.1 actor quick-reference blocks (sheets) */
+.fw-ref{margin:.5rem 0;padding:.45rem .6rem;border-left:3px solid #d8a82f;background:rgba(216,168,47,.08);border-radius:3px}
+.fw-ref h3,.fw-ref h4{margin:.2rem 0 .35rem;font-size:1em;color:#d8a82f;border:none;text-transform:uppercase;letter-spacing:.04em}
+.fw-ref table{width:100%;border-collapse:collapse;margin:.3rem 0;font-size:.92em}
+.fw-ref th{background:rgba(11,58,103,.55);color:#fff;padding:.2rem .35rem;text-align:left}
+.fw-ref td{padding:.2rem .35rem;border-bottom:1px solid rgba(128,128,128,.3);vertical-align:top}
+.fw-ref blockquote{margin:.3rem .5rem;font-style:italic}
+
+/* v1.0 portraits in guides */
+.fw-npc-card{overflow:hidden}
+.fw-npc-card .fw-npc-portrait{float:right;width:140px;height:auto;margin:0 0 .5rem .75rem;border:none;filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+.fw-foe{overflow:hidden}
+.fw-foe .fw-foe-token{float:left;width:72px;height:72px;margin:0 .6rem .3rem 0;border:none;object-fit:contain}
+.fw-npc-inline .fw-portrait-sm{float:left;width:44px;height:44px;margin:0 .5rem .2rem 0;border:none;object-fit:contain}
+.fw-npc-inline{overflow:hidden}
+.fw-portrait{float:right;width:180px;margin:0 0 .5rem 1rem;text-align:center}
+.fw-portrait img{width:100%;border:none}
+.fw-directory td{vertical-align:middle}
+.fw-reskin{border-left:3px solid #d8a82f;padding:.3rem .6rem;margin-bottom:.5rem}
+
+/* v1.0 GM tools */
+.fw-window .window-content{background:#f6f1e7;color:#221a14;font-size:13px}
+.fw-window .fw-table{width:100%;border-collapse:collapse;margin:.3em 0 .8em}
+.fw-window .fw-table th,.fw-window .fw-table td{border-bottom:1px solid #d8cdb8;padding:3px 5px;text-align:left}
+.fw-window .fw-table td.c{text-align:center;white-space:nowrap}
+.fw-window a[data-act]{cursor:pointer;color:#7a1f2b;font-weight:700;padding:0 4px}
+.fw-window .fw-stats{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.fw-window .fw-stat{background:#fff;border:1px solid #d8cdb8;border-radius:6px;padding:4px 8px;display:flex;gap:4px;align-items:center}
+.fw-window .fw-stat span{font-size:11px;text-transform:uppercase;color:#6a5a48;margin-right:4px}
+.fw-window .fw-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:.5em 0}
+.fw-window .fw-row button{flex:0 0 auto;width:auto}
+.fw-window tr.fw-voided td{text-decoration:line-through;opacity:.6}
+.fw-window .fw-ok{color:#2a6a2a;font-weight:700}.fw-window .fw-bad{color:#9a1f1f;font-weight:700}
+.fw-window .fw-tally{columns:2;margin:.3em 0}
+.fw-gm-tools{display:flex;gap:4px;padding:4px 6px;flex-wrap:wrap}
+.fw-gm-tools button{flex:1 1 0;font-size:11px;line-height:22px;padding:0 4px;white-space:nowrap}
