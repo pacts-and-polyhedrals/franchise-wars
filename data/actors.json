@@ -16238,6 +16238,22 @@
     "system.attributes.hp.value": 60
    },
    "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
+  },
+  {
+   "sourceId": "fw.actor.core.patron",
+   "folder": "fw.actor.core",
+   "name": "Franchise Patron",
+   "baseName": "Commoner",
+   "fallbackBaseNames": [],
+   "description": "<section class=\"fw-reskin\"><p><strong>Franchise Patron</strong> — Franchise Wars reskin</p><p><strong>Faction:</strong> the public · <strong>Mechanical source:</strong> Commoner (hidden from players)</p><p><em>An ordinary Brandmere customer: hungry, impatient, loyal to whichever chain is nearest. Placed on every franchise map; drag more from the Actors sidebar. Each new token picks a random face.</em></p></section>",
+   "img": "modules/franchise-wars/assets/art/patrons/patron-01.webp",
+   "token": "modules/franchise-wars/assets/art/patrons/patron-*.webp",
+   "overrides": {
+    "prototypeToken.randomImg": true,
+    "prototypeToken.disposition": 0,
+    "prototypeToken.displayName": 0,
+    "prototypeToken.name": "Patron"
+   }
   }
  ],
  "retired": [

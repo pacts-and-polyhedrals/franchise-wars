@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "1.1.0";
+const VERSION = "1.1.1";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -76,8 +76,9 @@ async function ensureManagedFolders(type, defs){
   const map=new Map();
   for(const f of defs){
     let folder=game.folders.find(x=>x.type===type&&x.getFlag(MODULE_ID,"sourceId")===f.sourceId);
-    if(!folder){const parent=f.parent?map.get(f.parent)?.id:null;folder=await Folder.create({name:f.name,type,folder:parent,flags:{[MODULE_ID]:{sourceId:f.sourceId,managed:true}}});}
-    else {const parent=f.parent?map.get(f.parent)?.id:null;if(folder.name!==f.name||folder.folder?.id!==parent)await folder.update({name:f.name,folder:parent});}
+    const sorting=f.sorting??(type==="Scene"?"m":undefined),sort=f.sort??undefined;
+    if(!folder){const parent=f.parent?map.get(f.parent)?.id:null;folder=await Folder.create({name:f.name,type,folder:parent,...(sorting?{sorting}:{}),...(sort!=null?{sort}:{}),flags:{[MODULE_ID]:{sourceId:f.sourceId,managed:true}}});}
+    else {const parent=f.parent?map.get(f.parent)?.id:null;const upd={};if(folder.name!==f.name)upd.name=f.name;if(folder.folder?.id!==parent)upd.folder=parent;if(sorting&&folder.sorting!==sorting)upd.sorting=sorting;if(sort!=null&&folder.sort!==sort)upd.sort=sort;if(Object.keys(upd).length)await folder.update(upd);}
     map.set(f.sourceId,folder);
   }
   return map;
@@ -91,7 +92,7 @@ async function importItems({force=false}={}){
   for(const e of data.entries){
     let item=game.items.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId);
     const folder=folders.get(e.folder)?.id??null;
-    const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
+    const payload=foundry.utils.deepClone(e.data); payload.folder=folder; if(payload.prototypeToken?.texture){Object.assign(payload.prototypeToken.texture,{scaleX:1,scaleY:1,fit:"contain"});} payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
     if(!item){await Item.create(payload);continue;}
     if(!force&&item.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue;
     const update=foundry.utils.deepClone(payload); delete update._id; await item.update(update);
@@ -133,10 +134,10 @@ async function cloneCoreActor(spec,folder,existing=null,force=false){
   const src=await coreActorSource(spec);
   if(!src){console.warn(`Franchise Wars | No compendium actor found for ${spec.name} (tried ${[spec.baseName,...(spec.fallbackBaseNames??[])].join(", ")})`);return null;}
   if(src.name.toLowerCase()!==String(spec.baseName).toLowerCase())console.info(`Franchise Wars | ${spec.name}: ${spec.baseName} not installed, using ${src.name} from ${src.pack}`);
-  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,extraItems:spec.extraItems??[],extraSpells:spec.extraSpells??[],overrides:spec.overrides??{},removeItems:spec.removeItems??[],source:src.uuid,img:spec.img??null,token:spec.token??null,artAssetId:spec.artAssetId??null,v:2}));
+  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,extraItems:spec.extraItems??[],extraSpells:spec.extraSpells??[],overrides:spec.overrides??{},removeItems:spec.removeItems??[],source:src.uuid,img:spec.img??null,token:spec.token??null,artAssetId:spec.artAssetId??null,v:3}));
   if(!force&&existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
   const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
-  if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.token??spec.img;}
+  if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.token??spec.img;Object.assign(data.prototypeToken.texture,{scaleX:1,scaleY:1,fit:"contain",anchorX:0.5,anchorY:0.5,offsetX:0,offsetY:0});data.prototypeToken.ring={...(data.prototypeToken.ring??{}),enabled:false};}
   if(spec.name){data.prototypeToken??={};data.prototypeToken.name=spec.name;}
   data.system??={}; data.system.details??={}; data.system.details.biography??={value:"",public:""}; data.system.details.biography.value=`${spec.description}${data.system.details.biography.value??""}`;
   if(spec.extraItems?.length){const extra=foundry.utils.deepClone(spec.extraItems); for(const it of extra){it.system??={}; it.system.source=foundry.utils.mergeObject(it.system.source??{},{custom:"Franchise Wars",rules:"2014"},{inplace:false});} const names=new Set(extra.map(i=>i.name)); data.items=[...(data.items??[]).filter(i=>!names.has(i.name)),...extra];}
@@ -221,7 +222,8 @@ async function importActors({force=false}={}){
 async function importScenes({force=false}={}){
   const scenes=await loadJSON("scenes.json");
   const folderNames=[...new Set(scenes.map(s=>s.folder).filter(Boolean))];
-  const defs=[{sourceId:"fw.sfolder.root",name:"The Franchise Wars",parent:null},...folderNames.map(n=>({sourceId:`fw.sfolder.${fnv(n)}`,name:n,parent:"fw.sfolder.root"}))];
+  const firstSort=n=>Math.min(...scenes.filter(s=>s.folder===n).map(s=>Number(s.sort??0)));
+  const defs=[{sourceId:"fw.sfolder.root",name:"The Franchise Wars",parent:null},...folderNames.map(n=>({sourceId:`fw.sfolder.${fnv(n)}`,name:n,parent:"fw.sfolder.root",sort:folderNames.indexOf(n)*100000}))];
   const folders=await ensureManagedFolders("Scene",defs);
   const folderId=n=>n?folders.get(`fw.sfolder.${fnv(n)}`)?.id??null:folders.get("fw.sfolder.root")?.id??null;
   const tag=o=>({...o,flags:{...(o.flags??{}),[MODULE_ID]:{managed:true}}});
@@ -268,10 +270,14 @@ async function applySceneExtras(sc,s,force=false){
   if(s.fwSound)await sc.createEmbeddedDocuments("AmbientSound",[tagged({path:s.fwSound.path,x:s.fwSound.x,y:s.fwSound.y,radius:s.fwSound.radius,volume:s.fwSound.volume,repeat:true,easing:true,walls:false})]);
   // hidden encounter tokens: only placed while the GM has not placed/kept their own managed set
   const managedTokens=sc.tokens.filter(mflag);
-  if(!managedTokens.length||force){
+  const posHash=ts=>fnv(JSON.stringify(ts.map(t=>[t.getFlag(MODULE_ID,"group")??"",t.x,t.y,t.actorId]).sort()));
+  const untouched=managedTokens.length&&sc.getFlag(MODULE_ID,"tokenPosHash")===posHash(managedTokens);
+  const legacy=managedTokens.length&&!sc.getFlag(MODULE_ID,"tokenPosHash")&&sc.getFlag(MODULE_ID,"extrasHash")&&sc.getFlag(MODULE_ID,"extrasHash")!==hash&&!managedTokens.some(t=>t.getFlag(MODULE_ID,"group")==="Patrons");
+  if(!managedTokens.length||force||untouched||legacy){
     if(managedTokens.length)await sc.deleteEmbeddedDocuments("Token",managedTokens.map(t=>t.id));
-    const toks=[];for(const t of s.fwTokens??[]){const a=fwFind("Actor",t.actor);if(!a)continue;const td=await a.getTokenDocument({x:t.x,y:t.y,hidden:!!t.hidden});const o=td.toObject();o.flags=foundry.utils.mergeObject(o.flags??{},{[MODULE_ID]:{managed:true,group:t.group}},{inplace:false});toks.push(o);}
+    const toks=[];for(const t of s.fwTokens??[]){const a=fwFind("Actor",t.actor);if(!a)continue;const td=await a.getTokenDocument({x:t.x,y:t.y,hidden:!!t.hidden,...(t.img?{texture:{...a.prototypeToken.texture.toObject?.()??{},src:t.img}}:{})});const o=td.toObject();o.flags=foundry.utils.mergeObject(o.flags??{},{[MODULE_ID]:{managed:true,group:t.group}},{inplace:false});toks.push(o);}
     for(let i=0;i<toks.length;i+=25)await sc.createEmbeddedDocuments("Token",toks.slice(i,i+25));
+    await sc.setFlag(MODULE_ID,"tokenPosHash",posHash(sc.tokens.filter(mflag)));
   }
   await sc.setFlag(MODULE_ID,"extrasHash",hash);
 }
