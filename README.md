@@ -1,10 +1,11 @@
-# The Franchise Wars v0.5.0 — Contractor Orientation
+# The Franchise Wars v0.6.0 — Contractor Orientation
 
 Foundry VTT v14 / dnd5e v6 module.
 
 Imported content:
 - Professional Session 0 contractor-orientation suite
 - 24 spine missions
+- 8 expanded route-changing side-contract guides
 - 13 corporate dossiers
 - 68 franchise dossiers
 - Bestiary
@@ -14,13 +15,13 @@ Imported content:
 - DM tables
 - Brandmere city overview scene
 - 124 top-down battlemap Scenes with walls, doors and lights (see the Battlemap Library journal)
-- 300 unique deduplicated runtime art files (336 source image files scanned)
+- 300 unique deduplicated runtime art files, plus 10 portrait-batch drafts in the GM art-review journal
 
 ## Install
 Extract the `franchise-wars` folder into Foundry Data/modules, restart Foundry, enable the module in a dnd5e v6 world on Foundry v14. The first GM load imports/updates managed journals. Session 0 includes GM-only and player-facing journals with the player orientation, table policy, specialist positions, communal backstory workshop and personnel file ready to use.
 
 ## Safety of GM edits
-Managed documents use stable source IDs and content hashes. If an update finds that a GM changed a managed journal, it creates a recovery copy before refreshing the generated version.
+Managed documents use stable source IDs and content hashes. If an update changes a managed journal or actor, it creates a recovery copy before refreshing the generated version. Actors that merge into a canonical sheet are also copied into Actor Recovery.
 
 ## Roll requests
 The campaign prose contains dnd5e v6 check/save enrichers for explicit DCs found in the source. The GM API also exposes requestCheck/requestSave methods that post Franchise Wars-branded chat cards.

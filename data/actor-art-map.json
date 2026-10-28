@@ -1,5 +1,5 @@
 {
-  "version": "0.3.1",
+  "version": "0.3.2",
   "policy": "Never substitute franchise logos, storefronts, or headquarters art for Actor portrait/token art. Only verified named custom art may be assigned.",
   "officialBrandmereScene": "modules/franchise-wars/assets/art/maps/MAP-BRANDMERE__brandmere-official-city-map.webp",
   "mappings": [
@@ -58,7 +58,7 @@
     {
       "artId": "PM-05",
       "subject": "Mortimer Pell",
-      "actorSourceId": "fw.actor.staff.FR-05",
+      "actorSourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
       "franchiseId": "FR-05",
       "rawAsset": "raw-288",
       "runtimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
@@ -759,8 +759,8 @@
     },
     {
       "artId": "PM-56",
-      "subject": "Innkeeper Gregory Latch",
-      "actorSourceId": "fw.actor.staff.FR-59",
+      "subject": "Gregory Latch",
+      "actorSourceId": "fw.actor.corporate.CO-08.public-face",
       "franchiseId": "FR-59",
       "rawAsset": "raw-046",
       "runtimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
@@ -837,8 +837,8 @@
     },
     {
       "artId": "PM-61",
-      "subject": "General Manager Doris Plank",
-      "actorSourceId": "fw.actor.staff.FR-65",
+      "subject": "Doris Plank",
+      "actorSourceId": "fw.actor.corporate.CO-06.public-face",
       "franchiseId": "FR-65",
       "rawAsset": "raw-172",
       "runtimePath": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
@@ -863,8 +863,8 @@
     },
     {
       "artId": "PM-63",
-      "subject": "Membership Manager Hal Grundy",
-      "actorSourceId": "fw.actor.staff.FR-67",
+      "subject": "Hal Grundy",
+      "actorSourceId": "fw.actor.recurring.hal-grundy",
       "franchiseId": "FR-67",
       "rawAsset": "raw-030",
       "runtimePath": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
@@ -1141,30 +1141,8 @@
       "canonicalSource": "a_detailed_stylized_illustration_character_portrai.png",
       "sha256": "3a76f11b4785883a479151e188480b829cb97b223e97e1ca327c4a512e6d449f"
     },
-    {
-      "artId": "TK-01",
-      "subject": "Compliance Officer",
-      "actorSourceId": "fw.actor.bestiary.compliance-officer",
-      "rawAsset": null,
-      "runtimePath": "icons/svg/mystery-man.svg",
-      "status": "BINARY_NOT_IDENTIFIED",
-      "confidence": "documented-created-chat-binary-not-identifiable",
-      "notes": "Art Bible and production history say this custom art was created, but no matching standalone binary can be identified in the current 300-file runtime library. Neutral placeholder used deliberately; no logo/storefront substitution.",
-      "canonicalSource": null,
-      "sha256": null
-    },
-    {
-      "artId": "TK-02",
-      "subject": "Senior Auditor",
-      "actorSourceId": "fw.actor.bestiary.senior-auditor",
-      "rawAsset": null,
-      "runtimePath": "icons/svg/mystery-man.svg",
-      "status": "BINARY_NOT_IDENTIFIED",
-      "confidence": "documented-created-chat-binary-not-identifiable",
-      "notes": "Art Bible and production history say this custom art was created, but no matching standalone binary can be identified in the current 300-file runtime library. Neutral placeholder used deliberately; no logo/storefront substitution.",
-      "canonicalSource": null,
-      "sha256": null
-    },
+    {},
+    {},
     {
       "artId": "TK-03",
       "subject": "Veronique Salt",
@@ -1177,33 +1155,11 @@
       "canonicalSource": "tiefling_executive_with_pen_and_dossier.png",
       "sha256": "0dd777c0b540e6e964b77929e9cb1d0bb42ad56f691eb9953df50429e2eddc34"
     },
-    {
-      "artId": "TK-04",
-      "subject": "The Mother Culture",
-      "actorSourceId": "fw.actor.bestiary.the-mother-culture",
-      "rawAsset": null,
-      "runtimePath": "icons/svg/mystery-man.svg",
-      "status": "BINARY_NOT_IDENTIFIED",
-      "confidence": "documented-created-chat-binary-not-identifiable",
-      "notes": "Art Bible and production history say this custom art was created, but no matching standalone binary can be identified in the current 300-file runtime library. Neutral placeholder used deliberately; no logo/storefront substitution.",
-      "canonicalSource": null,
-      "sha256": null
-    },
-    {
-      "artId": "TK-05",
-      "subject": "Golden Tusk Construct",
-      "actorSourceId": "fw.actor.bestiary.golden-tusk-construct",
-      "rawAsset": null,
-      "runtimePath": "icons/svg/mystery-man.svg",
-      "status": "BINARY_NOT_IDENTIFIED",
-      "confidence": "documented-created-chat-binary-not-identifiable",
-      "notes": "Art Bible and production history say this custom art was created, but no matching standalone binary can be identified in the current 300-file runtime library. Neutral placeholder used deliberately; no logo/storefront substitution.",
-      "canonicalSource": null,
-      "sha256": null
-    },
+    {},
+    {},
     {
       "artId": "TK-06",
-      "subject": "Mascot Revenant (Mortimer Pell)",
+      "subject": "Mortimer Pell",
       "actorSourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
       "rawAsset": "raw-288",
       "runtimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
@@ -1213,18 +1169,7 @@
       "canonicalSource": "weary_murder_king_mascot_portrait.png",
       "sha256": "620e9d7547c5d723c084c8f6eb5f30d1c8b8722bce5d657e78cd66b55215d7ab"
     },
-    {
-      "artId": "TK-07",
-      "subject": "Shop Steward (Unseen Servant Collective)",
-      "actorSourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
-      "rawAsset": null,
-      "runtimePath": "icons/svg/mystery-man.svg",
-      "status": "BINARY_NOT_IDENTIFIED",
-      "confidence": "documented-created-chat-binary-not-identifiable",
-      "notes": "Art Bible and production history say this custom art was created, but no matching standalone binary can be identified in the current 300-file runtime library. Neutral placeholder used deliberately; no logo/storefront substitution.",
-      "canonicalSource": null,
-      "sha256": null
-    },
+    {},
     {
       "artId": "CO-ACTOR",
       "subject": "Tallis Vend",
@@ -1349,7 +1294,7 @@
     },
     {
       "artId": "CO-ACTOR",
-      "subject": "Mr. Gregory Latch",
+      "subject": "Gregory Latch",
       "actorSourceId": "fw.actor.corporate.CO-08.public-face",
       "rawAsset": "raw-046",
       "runtimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
@@ -1452,7 +1397,72 @@
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring Actor reuses Hal Grundy’s verified manager portrait."
-    }
+    },
+    {
+      "artId": "TK-01",
+      "subject": "Compliance Officer",
+      "actorSourceId": "fw.actor.bestiary.compliance-officer",
+      "runtimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-01_compliance-officer_v01.webp",
+      "status": "DRAFT_NOT_APPROVED",
+      "confidence": "draft",
+      "notes": "review required: human look; character should read as grey-faced construct",
+      "canonicalSource": "FW_TK-01_compliance-officer_v01.webp",
+      "sha256": "90e98794555328863f27b51deb6229d427bca1e11509b0cc7b9afa56b468a022",
+      "sourceSha256": "ed5370c912caf251bf9ca7866b3d4554a2fd6ceaa40505cb2584bf8275cb4beb"
+    },
+    {
+      "artId": "TK-02",
+      "subject": "Senior Auditor",
+      "actorSourceId": "fw.actor.bestiary.senior-auditor",
+      "runtimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-02_senior-auditor_v01.webp",
+      "status": "DRAFT_NOT_APPROVED",
+      "confidence": "draft",
+      "notes": "review required: verify ledger-grey palette and abacus spine",
+      "canonicalSource": "FW_TK-02_senior-auditor_v01.webp",
+      "sha256": "ea4caf7269e6e6e23106ec06b2567ef07489219c9f3cf21a5f632052a4f2df0c",
+      "sourceSha256": "ceafb9a846e9e2e46f62ed910ecde8858d0c512a87a3d9c4a8bef9ca6ef5e402"
+    },
+    {},
+    {
+      "artId": "TK-04",
+      "subject": "The Mother Culture",
+      "actorSourceId": null,
+      "runtimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-04_the-mother-culture_v01.webp",
+      "status": "DRAFT_NOT_APPROVED",
+      "confidence": "draft",
+      "notes": "RECREATE: mushroom humanoid instead of primordial custard/gelato ooze",
+      "canonicalSource": "FW_TK-04_the-mother-culture_v01.webp",
+      "sha256": "48dd63c8ba0f4b86219c32668620d1a5b4bab8247b48ba405c8d5dc8f02e64df",
+      "sourceSha256": "b1ee014241f4d4bd055e44338c98a4b0dbc2097281d08f91139a23e0197f0ae5"
+    },
+    {
+      "artId": "TK-05",
+      "subject": "Golden Tusk Construct",
+      "actorSourceId": null,
+      "runtimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-05_golden-tusk-construct_v01.webp",
+      "status": "DRAFT_NOT_APPROVED",
+      "confidence": "draft",
+      "notes": "RECREATE: elephant machine instead of animated pair of giant gilded franchise tusks",
+      "canonicalSource": "FW_TK-05_golden-tusk-construct_v01.webp",
+      "sha256": "4f6bc43fbe0848a50c7e4114706d348e598b27b4054d98b8deae9a0c4f2f3f3d",
+      "sourceSha256": "c8fcbc0a3c879040ec4809a6337fa2c815fbf4af33dcf52b1828a12b7cd50e1c"
+    },
+    {
+      "artId": "TK-07",
+      "subject": "Shop Steward (Unseen Servant Collective)",
+      "actorSourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
+      "runtimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-07_shop-steward_v01.webp",
+      "status": "DRAFT_NOT_APPROVED",
+      "confidence": "draft",
+      "notes": "review required: invisible servants indicated by floating objects; corporate markings unapproved",
+      "canonicalSource": "FW_TK-07_shop-steward_v01.webp",
+      "sha256": "bff774592921a19db46f4f2a4d0f66365e8344666abc74f8b7de1be4466074cd",
+      "sourceSha256": "e7746d3cba002f6b01eec7cc01074ad219c5fdf6f1effff8738b19715c43ff28"
+    },
+    {},
+    {},
+    {},
+    {}
   ],
   "officialBrandmereMap": {
     "assetId": "MAP-BRANDMERE",

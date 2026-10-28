@@ -230,7 +230,7 @@
           }
         }
       },
-      "contentHash": "dd4e1c9d50e1bb81638dac4681b8133f04665555040bbb49029b0cbf9cbaa64f"
+      "contentHash": "6503a6db"
     },
     {
       "sourceId": "fw.actor.staff.FR-02",
@@ -419,7 +419,7 @@
           }
         }
       },
-      "contentHash": "8979574221ba8cfdce57e24c905babfa207df7df966a257a86a50fc8377e2d39"
+      "contentHash": "5b643bde"
     },
     {
       "sourceId": "fw.actor.staff.FR-03",
@@ -608,7 +608,7 @@
           }
         }
       },
-      "contentHash": "4b2502dffd25e79bfa99fb214bc26fc9c5d15b431bad0b1b8e9952a22608ef2b"
+      "contentHash": "cb64e614"
     },
     {
       "sourceId": "fw.actor.staff.FR-04",
@@ -797,197 +797,7 @@
           }
         }
       },
-      "contentHash": "baa59616f6680fb81a5cfaee9e008168cf0599232c8a078bbd69a725b450eda6"
-    },
-    {
-      "sourceId": "fw.actor.staff.FR-05",
-      "folder": "fw.actor.staff",
-      "data": {
-        "name": "Mortimer Pell",
-        "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
-        "system": {
-          "identifier": "mortimer-pell",
-          "abilities": {
-            "str": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "dex": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "con": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "int": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "wis": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "cha": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            }
-          },
-          "attributes": {
-            "ac": {
-              "override": 10
-            },
-            "hp": {
-              "value": 4,
-              "max": 4,
-              "temp": 0,
-              "tempmax": 0,
-              "formula": "1d8"
-            },
-            "movement": {
-              "speeds": {
-                "walk": 30,
-                "burrow": 0,
-                "climb": 0,
-                "fly": 0,
-                "jump": 0,
-                "swim": 0
-              },
-              "units": "ft",
-              "hover": false
-            },
-            "senses": {
-              "ranges": {
-                "darkvision": null,
-                "blindsight": null,
-                "tremorsense": null,
-                "truesight": null
-              },
-              "units": "ft",
-              "special": ""
-            },
-            "spellcasting": "",
-            "exhaustion": 0,
-            "hd": {
-              "spent": 0
-            }
-          },
-          "details": {
-            "biography": {
-              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Old Gate Castle, a squat white keep of a restaurant. Night manager <strong>Mortimer Pell</strong> has been Employee of the Month for 143 consecutive years and has the plaques to prove it.</td></p><p>Source dossier: FR-05 — Wight Castle</p>",
-              "public": ""
-            },
-            "alignment": "",
-            "type": {
-              "value": "humanoid",
-              "subtype": "",
-              "swarm": "",
-              "custom": ""
-            },
-            "cr": 0,
-            "ideal": "",
-            "bond": "",
-            "flaw": "",
-            "race": null
-          },
-          "traits": {
-            "size": "med",
-            "di": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dr": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dv": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "ci": {
-              "value": [],
-              "custom": ""
-            },
-            "languages": {
-              "value": [],
-              "custom": "",
-              "communication": {}
-            },
-            "dm": {
-              "amount": {},
-              "bypasses": []
-            }
-          },
-          "skills": {},
-          "tools": {},
-          "resources": {
-            "legact": {
-              "max": 0,
-              "spent": 0
-            },
-            "legres": {
-              "max": 0,
-              "spent": 0
-            },
-            "lair": {
-              "value": false,
-              "initiative": null,
-              "inside": false
-            }
-          },
-          "source": {
-            "custom": "Franchise Wars",
-            "book": "",
-            "page": "",
-            "license": "",
-            "revision": 1,
-            "rules": "2014"
-          }
-        },
-        "items": [],
-        "effects": [],
-        "prototypeToken": {
-          "name": "Mortimer Pell",
-          "actorLink": false,
-          "displayName": 20,
-          "displayBars": 20,
-          "bar1": {
-            "attribute": "attributes.hp"
-          },
-          "bar2": {
-            "attribute": null
-          },
-          "texture": {
-            "src": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
-            "scaleX": 1,
-            "scaleY": 1,
-            "tint": "#ffffff"
-          }
-        },
-        "ownership": {
-          "default": 0
-        },
-        "flags": {
-          "franchise-wars": {
-            "sourceId": "fw.actor.staff.FR-05",
-            "managed": true,
-            "artAssetId": "FR-05",
-            "artRuntimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
-            "artNote": "Source bible reuses the name Mortimer Pell for FR-05 and the Murder King performer; the only verified named Mortimer portrait binary in the runtime library is used."
-          }
-        }
-      },
-      "contentHash": "7b363d2a18d69482fc49ffc14fd95e1141fc30203de9245bbc986223f247f9c1"
+      "contentHash": "218037d8"
     },
     {
       "sourceId": "fw.actor.staff.FR-06",
@@ -1176,7 +986,10 @@
           }
         }
       },
-      "contentHash": "57990ee47dd4a237db0b392ecfb0b66c3ccdf0345c15ed54d2dd42abcb7f466d"
+      "contentHash": "53e8eac7",
+      "combatBaseName": "Wight",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Encounter reference.</strong> This collective sheet uses one Wight stat block; place five brothers on the map for the S09/S23 encounter.</p>"
     },
     {
       "sourceId": "fw.actor.staff.FR-07",
@@ -1365,7 +1178,7 @@
           }
         }
       },
-      "contentHash": "c6c2abdfb62ee8ef4e0c030ff1325452770bea8807b3c923a103d14d019e0d33"
+      "contentHash": "4ec7de1b"
     },
     {
       "sourceId": "fw.actor.staff.FR-08",
@@ -1554,7 +1367,7 @@
           }
         }
       },
-      "contentHash": "1e074d53f820afbbc9ba35c16c064d2bba8dccb057ef4044b1abbd435b6a9d36"
+      "contentHash": "55ad9060"
     },
     {
       "sourceId": "fw.actor.staff.FR-09",
@@ -1743,7 +1556,7 @@
           }
         }
       },
-      "contentHash": "f41fb10a402467f44991ab59fba8fe1cda0ea624068eda2f1b73d543c6a4466e"
+      "contentHash": "c977485b"
     },
     {
       "sourceId": "fw.actor.staff.FR-10",
@@ -1932,7 +1745,7 @@
           }
         }
       },
-      "contentHash": "cc29d5b94e35f7e6cd8a0cdb038489a93ff8d316d37a31062c6cf0803b315c07"
+      "contentHash": "4fabe261"
     },
     {
       "sourceId": "fw.actor.staff.FR-11",
@@ -2121,7 +1934,13 @@
           }
         }
       },
-      "contentHash": "d08426153123ec01b6aa593b3fb8b28c796a2b2c4685bfe2af631b3d7b5661d0"
+      "contentHash": "f885da2b",
+      "combatBaseName": "Night Hag",
+      "combatOverrides": {
+        "hp": 150,
+        "cr": 9
+      },
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Night Hag stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.staff.FR-12",
@@ -2310,7 +2129,7 @@
           }
         }
       },
-      "contentHash": "1c7bc318341b27b16814f9a09c37c9dec0e0ea3135a4435819bbe77d654ce9c0"
+      "contentHash": "ef559fe9"
     },
     {
       "sourceId": "fw.actor.staff.FR-13",
@@ -2499,7 +2318,7 @@
           }
         }
       },
-      "contentHash": "ec09616e1d215a0a83d65b9ae40efba4af03b8dc20b17c19266ec0194cd4c751"
+      "contentHash": "a646b8f8"
     },
     {
       "sourceId": "fw.actor.staff.FR-14",
@@ -2688,7 +2507,7 @@
           }
         }
       },
-      "contentHash": "2ae8e286f9507eb4be3c26d099538eb17288ac255c8a8060a439e2b5d94c9ee0"
+      "contentHash": "a1c9f786"
     },
     {
       "sourceId": "fw.actor.staff.FR-15",
@@ -2877,7 +2696,7 @@
           }
         }
       },
-      "contentHash": "a39d1b2e525798559ce36737b94e9fcb2a7927008b872f3ef4b951ea67f7d3c6"
+      "contentHash": "53c39759"
     },
     {
       "sourceId": "fw.actor.staff.FR-16",
@@ -3066,7 +2885,7 @@
           }
         }
       },
-      "contentHash": "789f2e2d6b86f1c5d0ac691a499f16fde2b178e6ab0761be7595dcc7f5b66138"
+      "contentHash": "f142f159"
     },
     {
       "sourceId": "fw.actor.staff.FR-17",
@@ -3255,7 +3074,7 @@
           }
         }
       },
-      "contentHash": "0e96f8176969781ca61da367f8d766b66e59910028266efef4ff72529edd686b"
+      "contentHash": "0d7cd758"
     },
     {
       "sourceId": "fw.actor.staff.FR-18",
@@ -3444,7 +3263,7 @@
           }
         }
       },
-      "contentHash": "ef8f62ad03b35693ddfc533d08b686b33acc3463047bb1153edf530e5983ef22"
+      "contentHash": "c3d9ab7e"
     },
     {
       "sourceId": "fw.actor.staff.FR-19",
@@ -3633,7 +3452,7 @@
           }
         }
       },
-      "contentHash": "a135fb9f9379456bb5883eff751329d57ea7d0ad3475310ffc7ded669095b83c"
+      "contentHash": "42ad7db2"
     },
     {
       "sourceId": "fw.actor.staff.FR-20",
@@ -3822,7 +3641,7 @@
           }
         }
       },
-      "contentHash": "85618c1dc5d1a149714e1659108ca2548b53545f5880df313ee77128be72e20d"
+      "contentHash": "2bffe3e6"
     },
     {
       "sourceId": "fw.actor.staff.FR-21",
@@ -4011,7 +3830,7 @@
           }
         }
       },
-      "contentHash": "a1665cc17fe2ed24a9872ac485f3d6bf8c2cf0ecb006072980bfe6c713468463"
+      "contentHash": "55b8f384"
     },
     {
       "sourceId": "fw.actor.staff.FR-22",
@@ -4200,7 +4019,7 @@
           }
         }
       },
-      "contentHash": "c29b5ae3f0af81db814879a09e17285e2b9cf69228e1b3154b4829704ddbb397"
+      "contentHash": "6b8677db"
     },
     {
       "sourceId": "fw.actor.staff.FR-23",
@@ -4389,7 +4208,7 @@
           }
         }
       },
-      "contentHash": "17cb5ad66fc53e0da6a737fa792279b4ce7bdae68711d2f6115b3e2f13b2d11a"
+      "contentHash": "3a8c650b"
     },
     {
       "sourceId": "fw.actor.staff.FR-24",
@@ -4578,7 +4397,7 @@
           }
         }
       },
-      "contentHash": "dd2b1f1a7a10e1535230f762507bfa615979a55dca1711613a5be08bb8ce3809"
+      "contentHash": "60ec7440"
     },
     {
       "sourceId": "fw.actor.staff.FR-25",
@@ -4767,7 +4586,7 @@
           }
         }
       },
-      "contentHash": "474465904fb538e2f904f4644db4dd371736ad106f6fba720aea7b47563e53cb"
+      "contentHash": "3b06c6e8"
     },
     {
       "sourceId": "fw.actor.staff.FR-26",
@@ -4956,7 +4775,7 @@
           }
         }
       },
-      "contentHash": "53b8815ece3858e7f9f522d2cf612b4d6eec0be247279b71def569bd0f26c8e2"
+      "contentHash": "12049dcb"
     },
     {
       "sourceId": "fw.actor.staff.FR-27",
@@ -5145,7 +4964,7 @@
           }
         }
       },
-      "contentHash": "da4695ccd43db0a32d47618ca2de66e90592e6c212ada3d8710ec2c76a55f2f6"
+      "contentHash": "e4fe155e"
     },
     {
       "sourceId": "fw.actor.staff.FR-28",
@@ -5334,7 +5153,7 @@
           }
         }
       },
-      "contentHash": "e11786a2c4d7df597274a8a662f094ea2b4c714bfdf6563713cc1cd81b5b4b0c"
+      "contentHash": "38b07e31"
     },
     {
       "sourceId": "fw.actor.staff.FR-29",
@@ -5523,7 +5342,7 @@
           }
         }
       },
-      "contentHash": "520d3bfc69c9aed790de0a4119a94583aed6922c4c097924bd66c597e4288edf"
+      "contentHash": "c6ed1e81"
     },
     {
       "sourceId": "fw.actor.staff.FR-30",
@@ -5712,7 +5531,7 @@
           }
         }
       },
-      "contentHash": "6e37b218413696b3ff4d5663e52597633f84418c23c45f5d4bc3d24e0e2449ad"
+      "contentHash": "c218bbef"
     },
     {
       "sourceId": "fw.actor.staff.FR-31",
@@ -5901,7 +5720,7 @@
           }
         }
       },
-      "contentHash": "737134128ddac09dcdf0c827febf294164ed02b1b6bbafe007bf762b167a0ee4"
+      "contentHash": "dd496193"
     },
     {
       "sourceId": "fw.actor.staff.FR-32",
@@ -6090,7 +5909,7 @@
           }
         }
       },
-      "contentHash": "c4b22a05d83b126f5ed277720417f7ed6430583da61990fc14146c4a10ccf159"
+      "contentHash": "0c5d162e"
     },
     {
       "sourceId": "fw.actor.staff.FR-33",
@@ -6279,7 +6098,7 @@
           }
         }
       },
-      "contentHash": "4c2d6d8a57d906a8b4be7760700a806633d7c415d73590c657f20c0de826b7e3"
+      "contentHash": "6e887901"
     },
     {
       "sourceId": "fw.actor.staff.FR-34",
@@ -6468,7 +6287,7 @@
           }
         }
       },
-      "contentHash": "4c309fab9e09d153d80563244a015338cc6839b58237e24070d951cfcf00baaf"
+      "contentHash": "fcf46887"
     },
     {
       "sourceId": "fw.actor.staff.FR-35",
@@ -6657,7 +6476,7 @@
           }
         }
       },
-      "contentHash": "16068280ef29af145c533668f0e002a02f9d9ac63f58352b97a70903dfa5a0b6"
+      "contentHash": "4f8300c9"
     },
     {
       "sourceId": "fw.actor.staff.FR-36",
@@ -6846,7 +6665,7 @@
           }
         }
       },
-      "contentHash": "1c7b840d4d7d10fc3290c65fa8b111f4baf53602edfbc88b5bc584d22d7f8a12"
+      "contentHash": "3f8f4fd7"
     },
     {
       "sourceId": "fw.actor.staff.FR-37",
@@ -7035,7 +6854,7 @@
           }
         }
       },
-      "contentHash": "7bb75ed63d95687b2cdd916a6097c6876f140b6958b97dc480f1c115f643046b"
+      "contentHash": "3852c3b2"
     },
     {
       "sourceId": "fw.actor.staff.FR-38",
@@ -7224,7 +7043,7 @@
           }
         }
       },
-      "contentHash": "f48df84b3bd544f0412747b8319c121d8998ec32514b0a3724200f7120b286d8"
+      "contentHash": "10ad75f9"
     },
     {
       "sourceId": "fw.actor.staff.FR-39",
@@ -7413,7 +7232,7 @@
           }
         }
       },
-      "contentHash": "eea7e55688f5fa41143014b05ee9892915e2c8f957ae2e49f34c792b701b7846"
+      "contentHash": "e4415e18"
     },
     {
       "sourceId": "fw.actor.staff.FR-40",
@@ -7602,7 +7421,7 @@
           }
         }
       },
-      "contentHash": "522ec61a9154bf03252dc7ebe78d1d7b4d0e4fc47f7dd3316cb752886bf6a9e3"
+      "contentHash": "7c66d906"
     },
     {
       "sourceId": "fw.actor.staff.FR-41",
@@ -7791,7 +7610,7 @@
           }
         }
       },
-      "contentHash": "f9c5be6a62240887750736acf4ba5838bdd2641eac5d346c34c0fe776aea975d"
+      "contentHash": "abd4f507"
     },
     {
       "sourceId": "fw.actor.staff.FR-42",
@@ -7980,7 +7799,7 @@
           }
         }
       },
-      "contentHash": "3ee6408b4d7269cbbdc8cf8f560c38f379150e50f2e149781c5d339202cdf6e9"
+      "contentHash": "a844db45"
     },
     {
       "sourceId": "fw.actor.staff.FR-43",
@@ -8169,7 +7988,10 @@
           }
         }
       },
-      "contentHash": "9ad9d82128b1f4bb56f8b959a84f58b40bdd71235404cead4a54b737c9849097"
+      "contentHash": "7c7447d7",
+      "combatBaseName": "Gladiator",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Gladiator stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.staff.FR-44",
@@ -8358,7 +8180,7 @@
           }
         }
       },
-      "contentHash": "1227518a1096f366590f7348645248b241b317974f6bf267ffd9dce3ca8be222"
+      "contentHash": "206e9933"
     },
     {
       "sourceId": "fw.actor.staff.FR-45",
@@ -8547,7 +8369,7 @@
           }
         }
       },
-      "contentHash": "f92597a36449244ad47dd5f649b3877655ce5b9deac155731d68b0c511186846"
+      "contentHash": "429aebe9"
     },
     {
       "sourceId": "fw.actor.staff.FR-46",
@@ -8736,7 +8558,7 @@
           }
         }
       },
-      "contentHash": "60cdbc7b2c92bd7f95937364a7b8ff637296ae8f35c3c86473422eac9f4e68d4"
+      "contentHash": "e543a279"
     },
     {
       "sourceId": "fw.actor.staff.FR-47",
@@ -8925,7 +8747,7 @@
           }
         }
       },
-      "contentHash": "790d6aa24cc8f932df752c745793685a465ad354456907321ae39d9717e69a88"
+      "contentHash": "0e875759"
     },
     {
       "sourceId": "fw.actor.staff.FR-48",
@@ -9114,7 +8936,7 @@
           }
         }
       },
-      "contentHash": "71e24a7329a2314a5867b03f0e9b5a1d513864142b44276584b96acf06b799ac"
+      "contentHash": "83f83395"
     },
     {
       "sourceId": "fw.actor.staff.FR-49",
@@ -9303,7 +9125,7 @@
           }
         }
       },
-      "contentHash": "9c9d055f72d7a846d3bf43075d4c85022377e777a1182716cae9ca672ad3e918"
+      "contentHash": "0200e5da"
     },
     {
       "sourceId": "fw.actor.staff.FR-50",
@@ -9492,7 +9314,7 @@
           }
         }
       },
-      "contentHash": "2e69ad558fc77c6be4c6b33ba6f178ae3d490ff3300c9a7906b5d4065b5671a8"
+      "contentHash": "3d5b57e0"
     },
     {
       "sourceId": "fw.actor.staff.FR-51",
@@ -9681,7 +9503,7 @@
           }
         }
       },
-      "contentHash": "fd3ba707b8a8c08672ba64e62bfe215ce4d599dfc05488b25c8b189198928a71"
+      "contentHash": "a05868f9"
     },
     {
       "sourceId": "fw.actor.staff.FR-52",
@@ -9870,7 +9692,7 @@
           }
         }
       },
-      "contentHash": "ed5c05617717bbfab9ffa1b6cd403aa76437ba58ea1ac4b28303c1ddfb0c5532"
+      "contentHash": "a7c4073f"
     },
     {
       "sourceId": "fw.actor.staff.FR-53",
@@ -10059,7 +9881,7 @@
           }
         }
       },
-      "contentHash": "cd50de3e6941f8059dd6ab6897eb994c2b1c29dfe00077596f568e98df604942"
+      "contentHash": "f47edd97"
     },
     {
       "sourceId": "fw.actor.staff.FR-54",
@@ -10248,7 +10070,7 @@
           }
         }
       },
-      "contentHash": "86a0efa925c72ceb03c9a8a74813de1cba6aca67a5e0f46b1a7bcfa105aad758"
+      "contentHash": "dde2f57a"
     },
     {
       "sourceId": "fw.actor.staff.FR-55",
@@ -10437,7 +10259,7 @@
           }
         }
       },
-      "contentHash": "2c9dd7a3f38aaf745b96b4564ad8a6955a4d53c7719dbacdfb83267596afbff1"
+      "contentHash": "78bf0210"
     },
     {
       "sourceId": "fw.actor.staff.FR-56",
@@ -10626,7 +10448,7 @@
           }
         }
       },
-      "contentHash": "65259c2eba964868a3612dfe956e8e8087c9b4dd4097089b2e72123e9b00816d"
+      "contentHash": "9f5be5e3"
     },
     {
       "sourceId": "fw.actor.staff.FR-57",
@@ -10815,7 +10637,7 @@
           }
         }
       },
-      "contentHash": "37844937af5de1a9a1cf169361388f13bfd2dec5571952fc38fa30e77d7f0c2c"
+      "contentHash": "2199bfc0"
     },
     {
       "sourceId": "fw.actor.staff.FR-58",
@@ -11004,196 +10826,7 @@
           }
         }
       },
-      "contentHash": "5d37df6b809e473935c8f5f3fabf38b800454aaa53520203f76fdf45b9fe7feb"
-    },
-    {
-      "sourceId": "fw.actor.staff.FR-59",
-      "folder": "fw.actor.staff",
-      "data": {
-        "name": "Innkeeper Gregory Latch",
-        "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
-        "system": {
-          "identifier": "innkeeper-gregory-latch",
-          "abilities": {
-            "str": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "dex": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "con": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "int": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "wis": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "cha": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            }
-          },
-          "attributes": {
-            "ac": {
-              "override": 10
-            },
-            "hp": {
-              "value": 4,
-              "max": 4,
-              "temp": 0,
-              "tempmax": 0,
-              "formula": "1d8"
-            },
-            "movement": {
-              "speeds": {
-                "walk": 30,
-                "burrow": 0,
-                "climb": 0,
-                "fly": 0,
-                "jump": 0,
-                "swim": 0
-              },
-              "units": "ft",
-              "hover": false
-            },
-            "senses": {
-              "ranges": {
-                "darkvision": null,
-                "blindsight": null,
-                "tremorsense": null,
-                "truesight": null
-              },
-              "units": "ft",
-              "special": ""
-            },
-            "spellcasting": "",
-            "exhaustion": 0,
-            "hd": {
-              "spent": 0
-            }
-          },
-          "details": {
-            "biography": {
-              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Great Road Inn, run by <strong>Innkeeper Gregory Latch</strong>, cheerful and sleepless.</td></p><p>Source dossier: FR-59 — Long Rest Inn</p>",
-              "public": ""
-            },
-            "alignment": "",
-            "type": {
-              "value": "humanoid",
-              "subtype": "",
-              "swarm": "",
-              "custom": ""
-            },
-            "cr": 0,
-            "ideal": "",
-            "bond": "",
-            "flaw": "",
-            "race": null
-          },
-          "traits": {
-            "size": "med",
-            "di": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dr": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dv": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "ci": {
-              "value": [],
-              "custom": ""
-            },
-            "languages": {
-              "value": [],
-              "custom": "",
-              "communication": {}
-            },
-            "dm": {
-              "amount": {},
-              "bypasses": []
-            }
-          },
-          "skills": {},
-          "tools": {},
-          "resources": {
-            "legact": {
-              "max": 0,
-              "spent": 0
-            },
-            "legres": {
-              "max": 0,
-              "spent": 0
-            },
-            "lair": {
-              "value": false,
-              "initiative": null,
-              "inside": false
-            }
-          },
-          "source": {
-            "custom": "Franchise Wars",
-            "book": "",
-            "page": "",
-            "license": "",
-            "revision": 1,
-            "rules": "2014"
-          }
-        },
-        "items": [],
-        "effects": [],
-        "prototypeToken": {
-          "name": "Innkeeper Gregory Latch",
-          "actorLink": false,
-          "displayName": 20,
-          "displayBars": 20,
-          "bar1": {
-            "attribute": "attributes.hp"
-          },
-          "bar2": {
-            "attribute": null
-          },
-          "texture": {
-            "src": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
-            "scaleX": 1,
-            "scaleY": 1,
-            "tint": "#ffffff"
-          }
-        },
-        "ownership": {
-          "default": 0
-        },
-        "flags": {
-          "franchise-wars": {
-            "sourceId": "fw.actor.staff.FR-59",
-            "managed": true,
-            "artAssetId": "FR-59",
-            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp"
-          }
-        }
-      },
-      "contentHash": "04eac3db7222c5893c5ddacd9c74639b954739074e141adc2ff894c59b9e5d72"
+      "contentHash": "e4f4cba5"
     },
     {
       "sourceId": "fw.actor.staff.FR-60",
@@ -11382,7 +11015,7 @@
           }
         }
       },
-      "contentHash": "3575996380ca55bbfcd9362f9e5f16f1697647833aeaddf687ab520a4e513312"
+      "contentHash": "ef35b88d"
     },
     {
       "sourceId": "fw.actor.staff.FR-61",
@@ -11571,7 +11204,7 @@
           }
         }
       },
-      "contentHash": "8c93436e8537b3796eb393535d16dd03dc907b89d6e983daea5c25174a74d471"
+      "contentHash": "ab69a520"
     },
     {
       "sourceId": "fw.actor.staff.FR-62",
@@ -11760,7 +11393,7 @@
           }
         }
       },
-      "contentHash": "3cec3b7010ba1195760475cd1137bf90011d186b1cccde1eafdd7eb4a0c9bba6"
+      "contentHash": "26039f5c"
     },
     {
       "sourceId": "fw.actor.staff.FR-63",
@@ -11949,7 +11582,7 @@
           }
         }
       },
-      "contentHash": "fc606bfa13a9b421b7a498035179085ea64465343933db8787f16b5f2da87e4d"
+      "contentHash": "caba9a6f"
     },
     {
       "sourceId": "fw.actor.staff.FR-64",
@@ -12138,196 +11771,7 @@
           }
         }
       },
-      "contentHash": "9daa4bdd563a890224dca4cf6483e2691e3949c54ed8f2a5d7868f077e34963f"
-    },
-    {
-      "sourceId": "fw.actor.staff.FR-65",
-      "folder": "fw.actor.staff",
-      "data": {
-        "name": "General Manager Doris Plank",
-        "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
-        "system": {
-          "identifier": "general-manager-doris-plank",
-          "abilities": {
-            "str": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "dex": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "con": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "int": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "wis": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "cha": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            }
-          },
-          "attributes": {
-            "ac": {
-              "override": 10
-            },
-            "hp": {
-              "value": 4,
-              "max": 4,
-              "temp": 0,
-              "tempmax": 0,
-              "formula": "1d8"
-            },
-            "movement": {
-              "speeds": {
-                "walk": 30,
-                "burrow": 0,
-                "climb": 0,
-                "fly": 0,
-                "jump": 0,
-                "swim": 0
-              },
-              "units": "ft",
-              "hover": false
-            },
-            "senses": {
-              "ranges": {
-                "darkvision": null,
-                "blindsight": null,
-                "tremorsense": null,
-                "truesight": null
-              },
-              "units": "ft",
-              "special": ""
-            },
-            "spellcasting": "",
-            "exhaustion": 0,
-            "hd": {
-              "spent": 0
-            }
-          },
-          "details": {
-            "biography": {
-              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Supercentre on the city's edge, run by <strong>General Manager Doris Plank</strong>.</td></p><p>Source dossier: FR-65 — Wand-Mart</p>",
-              "public": ""
-            },
-            "alignment": "",
-            "type": {
-              "value": "humanoid",
-              "subtype": "",
-              "swarm": "",
-              "custom": ""
-            },
-            "cr": 0,
-            "ideal": "",
-            "bond": "",
-            "flaw": "",
-            "race": null
-          },
-          "traits": {
-            "size": "med",
-            "di": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dr": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dv": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "ci": {
-              "value": [],
-              "custom": ""
-            },
-            "languages": {
-              "value": [],
-              "custom": "",
-              "communication": {}
-            },
-            "dm": {
-              "amount": {},
-              "bypasses": []
-            }
-          },
-          "skills": {},
-          "tools": {},
-          "resources": {
-            "legact": {
-              "max": 0,
-              "spent": 0
-            },
-            "legres": {
-              "max": 0,
-              "spent": 0
-            },
-            "lair": {
-              "value": false,
-              "initiative": null,
-              "inside": false
-            }
-          },
-          "source": {
-            "custom": "Franchise Wars",
-            "book": "",
-            "page": "",
-            "license": "",
-            "revision": 1,
-            "rules": "2014"
-          }
-        },
-        "items": [],
-        "effects": [],
-        "prototypeToken": {
-          "name": "General Manager Doris Plank",
-          "actorLink": false,
-          "displayName": 20,
-          "displayBars": 20,
-          "bar1": {
-            "attribute": "attributes.hp"
-          },
-          "bar2": {
-            "attribute": null
-          },
-          "texture": {
-            "src": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp",
-            "scaleX": 1,
-            "scaleY": 1,
-            "tint": "#ffffff"
-          }
-        },
-        "ownership": {
-          "default": 0
-        },
-        "flags": {
-          "franchise-wars": {
-            "sourceId": "fw.actor.staff.FR-65",
-            "managed": true,
-            "artAssetId": "FR-65",
-            "artRuntimePath": "modules/franchise-wars/assets/art/library/exhausted-wand-mart-potion-counter-manager--7eaea3ef.webp"
-          }
-        }
-      },
-      "contentHash": "c52e110673ff6fd83efa447442bbbe595850ed3d145ece9e10ec1c11383ea5bd"
+      "contentHash": "499a8bb6"
     },
     {
       "sourceId": "fw.actor.staff.FR-66",
@@ -12516,196 +11960,7 @@
           }
         }
       },
-      "contentHash": "a8afc77dc63c6e5d7eb03f83650a73363ee59df79b196b972deb043d3b6b5ac4"
-    },
-    {
-      "sourceId": "fw.actor.staff.FR-67",
-      "folder": "fw.actor.staff",
-      "data": {
-        "name": "Membership Manager Hal Grundy",
-        "type": "npc",
-        "img": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
-        "system": {
-          "identifier": "membership-manager-hal-grundy",
-          "abilities": {
-            "str": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "dex": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "con": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "int": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "wis": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            },
-            "cha": {
-              "value": 10,
-              "proficient": 0,
-              "max": null
-            }
-          },
-          "attributes": {
-            "ac": {
-              "override": 10
-            },
-            "hp": {
-              "value": 4,
-              "max": 4,
-              "temp": 0,
-              "tempmax": 0,
-              "formula": "1d8"
-            },
-            "movement": {
-              "speeds": {
-                "walk": 30,
-                "burrow": 0,
-                "climb": 0,
-                "fly": 0,
-                "jump": 0,
-                "swim": 0
-              },
-              "units": "ft",
-              "hover": false
-            },
-            "senses": {
-              "ranges": {
-                "darkvision": null,
-                "blindsight": null,
-                "tremorsense": null,
-                "truesight": null
-              },
-              "units": "ft",
-              "special": ""
-            },
-            "spellcasting": "",
-            "exhaustion": 0,
-            "hd": {
-              "spent": 0
-            }
-          },
-          "details": {
-            "biography": {
-              "value": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Warehouse District depot, run by <strong>Membership Manager Hal Grundy</strong>.</td></p><p>Source dossier: FR-67 — CostCo-op</p>",
-              "public": ""
-            },
-            "alignment": "",
-            "type": {
-              "value": "humanoid",
-              "subtype": "",
-              "swarm": "",
-              "custom": ""
-            },
-            "cr": 0,
-            "ideal": "",
-            "bond": "",
-            "flaw": "",
-            "race": null
-          },
-          "traits": {
-            "size": "med",
-            "di": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dr": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "dv": {
-              "value": [],
-              "bypasses": [],
-              "custom": ""
-            },
-            "ci": {
-              "value": [],
-              "custom": ""
-            },
-            "languages": {
-              "value": [],
-              "custom": "",
-              "communication": {}
-            },
-            "dm": {
-              "amount": {},
-              "bypasses": []
-            }
-          },
-          "skills": {},
-          "tools": {},
-          "resources": {
-            "legact": {
-              "max": 0,
-              "spent": 0
-            },
-            "legres": {
-              "max": 0,
-              "spent": 0
-            },
-            "lair": {
-              "value": false,
-              "initiative": null,
-              "inside": false
-            }
-          },
-          "source": {
-            "custom": "Franchise Wars",
-            "book": "",
-            "page": "",
-            "license": "",
-            "revision": 1,
-            "rules": "2014"
-          }
-        },
-        "items": [],
-        "effects": [],
-        "prototypeToken": {
-          "name": "Membership Manager Hal Grundy",
-          "actorLink": false,
-          "displayName": 20,
-          "displayBars": 20,
-          "bar1": {
-            "attribute": "attributes.hp"
-          },
-          "bar2": {
-            "attribute": null
-          },
-          "texture": {
-            "src": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
-            "scaleX": 1,
-            "scaleY": 1,
-            "tint": "#ffffff"
-          }
-        },
-        "ownership": {
-          "default": 0
-        },
-        "flags": {
-          "franchise-wars": {
-            "sourceId": "fw.actor.staff.FR-67",
-            "managed": true,
-            "artAssetId": "FR-67",
-            "artRuntimePath": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp"
-          }
-        }
-      },
-      "contentHash": "c6228735c328c73874bf0598b8ae8e0068b6b8f1bdf4734ea0ef8af47bacf09b"
+      "contentHash": "825d9cee"
     },
     {
       "sourceId": "fw.actor.staff.FR-68",
@@ -12894,7 +12149,7 @@
           }
         }
       },
-      "contentHash": "4347a40f1917b4923a1eb6eca90b8a47f049881c8b9de22bd2b372b1a80b046c"
+      "contentHash": "0757c266"
     },
     {
       "sourceId": "fw.actor.corporate.CO-01.controlled-by",
@@ -13084,7 +12339,7 @@
           }
         }
       },
-      "contentHash": "4d3bc677a6fe655375303cf14a5e9dc7e03b09d83ee6de4f04db4ae1e182a0a2"
+      "contentHash": "e681b038"
     },
     {
       "sourceId": "fw.actor.corporate.CO-02.public-face",
@@ -13274,7 +12529,7 @@
           }
         }
       },
-      "contentHash": "2ed4f595ad89eec6090af6e52a55218b53f281c599791a0a68993c84eb3ff251"
+      "contentHash": "d6f6ed4c"
     },
     {
       "sourceId": "fw.actor.corporate.CO-03.controlled-by",
@@ -13464,7 +12719,10 @@
           }
         }
       },
-      "contentHash": "bc5f050eff3a092f1c16ba653866b9282d3cbb9e1db4a1e1c2792a77d391f7a4"
+      "contentHash": "6cf7f1d8",
+      "combatBaseName": "Death Knight",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Death Knight stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.corporate.CO-04.public-face",
@@ -13472,7 +12730,7 @@
       "data": {
         "name": "Sebastian Brew-Hartley",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/production-drafts/FW_PT-19_sebastian-brew-hartley_v01.webp",
         "system": {
           "identifier": "sebastian-brew-hartley",
           "abilities": {
@@ -13635,7 +12893,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/production-drafts/FW_PT-19_sebastian-brew-hartley_v01.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -13648,13 +12906,14 @@
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-04.public-face",
             "managed": true,
-            "artAssetId": "UNVERIFIED",
-            "artRuntimePath": "icons/svg/mystery-man.svg",
-            "artVerified": false
+            "artAssetId": "PT-19",
+            "artRuntimePath": "modules/franchise-wars/assets/art/production-drafts/FW_PT-19_sebastian-brew-hartley_v01.webp",
+            "artVerified": false,
+            "artStatus": "DRAFT_NOT_APPROVED"
           }
         }
       },
-      "contentHash": "7cf32ff01060d153c83c11d81a9483214ac8abc84e30d36d39da7adf173b9d7f"
+      "contentHash": "b1e81ef9"
     },
     {
       "sourceId": "fw.actor.corporate.CO-04.controlled-by",
@@ -13844,7 +13103,10 @@
           }
         }
       },
-      "contentHash": "ac695587c40bb72e5df517a8df6b053e5b8c2a592bd8d5d64367dba4deefc3f9"
+      "contentHash": "b3cba703",
+      "combatBaseName": "Aboleth",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Aboleth stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.corporate.CO-05.public-face",
@@ -14034,7 +13296,7 @@
           }
         }
       },
-      "contentHash": "21d36070a6efae300119049554e9348c151f3d9c90038c6290bb6490947a0152"
+      "contentHash": "cf277159"
     },
     {
       "sourceId": "fw.actor.corporate.CO-06.public-face",
@@ -14118,7 +13380,7 @@
           },
           "details": {
             "biography": {
-              "value": "<p><strong>Public Face</strong> — CO-06 — The Adventure Retail Consortium</p><p><td><strong>Doris Plank</strong>, General Manager of Wand-Mart and ARC spokesperson (human, silver hair, killer smile).</td></p>",
+              "value": "<p><strong>Canonical identity: Doris Plank.</strong> General Manager of Wand-Mart and the Adventure Retail Consortium's public face. A silver-haired human with a killer smile, she runs the Supercentre on the city's edge. On Rollback Day she remains unmoved while the Cost Ledger rewrites itself.</p>",
               "public": ""
             },
             "alignment": "",
@@ -14224,7 +13486,12 @@
           }
         }
       },
-      "contentHash": "ab5fbf2a656f0a189c3e4afed9d64464737fbe2d1b92d66c4837deb807b7f399"
+      "contentHash": "30793a15",
+      "combatBaseName": "Mage",
+      "combatOverrides": {
+        "cr": 6
+      },
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Mage stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.corporate.CO-06.controlled-by",
@@ -14414,7 +13681,7 @@
           }
         }
       },
-      "contentHash": "43e19a0d60098e93a96bf2c727be8aa194be0207c2351019898e982f1b3a21be"
+      "contentHash": "1d675cc4"
     },
     {
       "sourceId": "fw.actor.corporate.CO-07.public-face",
@@ -14422,7 +13689,7 @@
       "data": {
         "name": "Deuce Marchetti",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/production-drafts/FW_PT-20_deuce-marchetti_v01.webp",
         "system": {
           "identifier": "deuce-marchetti",
           "abilities": {
@@ -14585,7 +13852,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/production-drafts/FW_PT-20_deuce-marchetti_v01.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -14598,13 +13865,14 @@
           "franchise-wars": {
             "sourceId": "fw.actor.corporate.CO-07.public-face",
             "managed": true,
-            "artAssetId": "UNVERIFIED",
-            "artRuntimePath": "icons/svg/mystery-man.svg",
-            "artVerified": false
+            "artAssetId": "PT-20",
+            "artRuntimePath": "modules/franchise-wars/assets/art/production-drafts/FW_PT-20_deuce-marchetti_v01.webp",
+            "artVerified": false,
+            "artStatus": "DRAFT_NOT_APPROVED"
           }
         }
       },
-      "contentHash": "7809452ae9074a702926db0117f9ea08b619cbecc0504bda8bb80a52506529ab"
+      "contentHash": "6138e7c5"
     },
     {
       "sourceId": "fw.actor.corporate.CO-07.controlled-by",
@@ -14794,13 +14062,13 @@
           }
         }
       },
-      "contentHash": "aa8cfd596a4d16c99499163245ee667694b3cedc5f93f416e616e3a9102553d5"
+      "contentHash": "b1dd6369"
     },
     {
       "sourceId": "fw.actor.corporate.CO-08.public-face",
       "folder": "fw.actor.corporate",
       "data": {
-        "name": "Mr. Gregory Latch",
+        "name": "Gregory Latch",
         "type": "npc",
         "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
         "system": {
@@ -14878,7 +14146,7 @@
           },
           "details": {
             "biography": {
-              "value": "<p><strong>Public Face</strong> — CO-08 — Nine Circles Hospitality</p><p><td><strong>Mr. Gregory Latch</strong>, Managing Director (tiefling, doorman's gloves, perfectly polite).</td></p>",
+              "value": "<p><strong>Canonical identity: Gregory Latch.</strong> Tiefling Managing Director of Nine Circles Hospitality, perfectly polite in doorman's gloves. Before the promotion he ran the Great Road Inn: cheerful, sleepless, and still inclined to greet guests as if they have just arrived for a quiet night.</p>",
               "public": ""
             },
             "alignment": "",
@@ -14954,7 +14222,7 @@
         "items": [],
         "effects": [],
         "prototypeToken": {
-          "name": "Mr. Gregory Latch",
+          "name": "Gregory Latch",
           "actorLink": false,
           "displayName": 20,
           "displayBars": 20,
@@ -14984,7 +14252,7 @@
           }
         }
       },
-      "contentHash": "8b97952a45dbd227525e12980c8ef8b241c4af742ce474d043bb883c3fca4070"
+      "contentHash": "58762a44"
     },
     {
       "sourceId": "fw.actor.corporate.CO-08.controlled-by",
@@ -15174,7 +14442,10 @@
           }
         }
       },
-      "contentHash": "3848dcdca6248f0cce305ad2c4e4325e34f57471c6ccf183cddc3076af39b43d"
+      "contentHash": "c61cd2a8",
+      "combatBaseName": "Pit Fiend",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Pit Fiend stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.corporate.CO-09.controlled-by",
@@ -15364,7 +14635,7 @@
           }
         }
       },
-      "contentHash": "bb5bea70510541608af6ba7cea679d91f17b618188f815ef99a1a2aecbadfe85"
+      "contentHash": "baf89f22"
     },
     {
       "sourceId": "fw.actor.corporate.CO-10.controlled-by",
@@ -15554,7 +14825,10 @@
           }
         }
       },
-      "contentHash": "8521a1ef943c0a0a886f6f86f1b6857960b34f3dec7d822b3f82614a65a9d2f4"
+      "contentHash": "007c4e83",
+      "combatBaseName": "Ancient Red Dragon",
+      "combatOverrides": {},
+      "combatDescription": "<p><strong>Campaign combat profile.</strong> Uses the native dnd5e Ancient Red Dragon stat block and embedded actions; Franchise Wars identity and biography are retained.</p>"
     },
     {
       "sourceId": "fw.actor.corporate.CO-11.controlled-by",
@@ -15744,7 +15018,7 @@
           }
         }
       },
-      "contentHash": "c69350676b9f0f09c574c52a7b204b62e2292c508a7a45430bf9a392c568bf16"
+      "contentHash": "8820d554"
     },
     {
       "sourceId": "fw.actor.corporate.CO-12.controlled-by",
@@ -15934,7 +15208,7 @@
           }
         }
       },
-      "contentHash": "335a506020b2d211aca3a72308f7488a7de0301cb788e30c5c89693ba33ec1a9"
+      "contentHash": "c3f7d12d"
     },
     {
       "sourceId": "fw.actor.corporate.CO-13.public-face",
@@ -16124,7 +15398,7 @@
           }
         }
       },
-      "contentHash": "3d70c6cad76e8157ee864236ea306c2b14d84ca00b0f3af7d40e4fe473a0c367"
+      "contentHash": "1b86c8ad"
     },
     {
       "sourceId": "fw.actor.bestiary.compliance-officer",
@@ -16132,7 +15406,7 @@
       "data": {
         "name": "Compliance Officer",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/production-drafts/FW_TK-01_compliance-officer_v01.webp",
         "system": {
           "identifier": "compliance-officer",
           "abilities": {
@@ -16937,7 +16211,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/production-drafts/FW_TK-01_compliance-officer_v01.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -16950,13 +16224,14 @@
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.compliance-officer",
             "managed": true,
-            "artAssetId": "UNVERIFIED",
-            "artRuntimePath": "icons/svg/mystery-man.svg",
-            "artVerified": false
+            "artAssetId": "TK-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-01_compliance-officer_v01.webp",
+            "artVerified": false,
+            "artStatus": "DRAFT_NOT_APPROVED"
           }
         }
       },
-      "contentHash": "7a52b2a6c40796668d3fddef6e36a9796dc8f420280471aaae2095dc6059e46a"
+      "contentHash": "3d005806"
     },
     {
       "sourceId": "fw.actor.bestiary.senior-auditor",
@@ -16964,7 +16239,7 @@
       "data": {
         "name": "Senior Auditor",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/production-drafts/FW_TK-02_senior-auditor_v01.webp",
         "system": {
           "identifier": "senior-auditor",
           "abilities": {
@@ -18014,7 +17289,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/production-drafts/FW_TK-02_senior-auditor_v01.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -18027,13 +17302,14 @@
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.senior-auditor",
             "managed": true,
-            "artAssetId": "UNVERIFIED",
-            "artRuntimePath": "icons/svg/mystery-man.svg",
-            "artVerified": false
+            "artAssetId": "TK-02",
+            "artRuntimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-02_senior-auditor_v01.webp",
+            "artVerified": false,
+            "artStatus": "DRAFT_NOT_APPROVED"
           }
         }
       },
-      "contentHash": "b6c99abbc0d476241ad560c5d2005cd237d7a5302a14a814049a396bc38a1464"
+      "contentHash": "17bd98b0"
     },
     {
       "sourceId": "fw.actor.bestiary.veronique-salt",
@@ -19117,7 +18393,7 @@
           }
         }
       },
-      "contentHash": "2927a1f44549109cc83678e2a0f5a482dd70e99227d8977f55744b47621846ce"
+      "contentHash": "ee866e0f"
     },
     {
       "sourceId": "fw.actor.bestiary.the-mother-culture",
@@ -20207,7 +19483,7 @@
           }
         }
       },
-      "contentHash": "fd078cb0564ed669b61e465013c3355ede03a4f905875c2e27daa3bdc9ed3434"
+      "contentHash": "2d0a1283"
     },
     {
       "sourceId": "fw.actor.bestiary.golden-tusk-construct",
@@ -20923,17 +20199,17 @@
           }
         }
       },
-      "contentHash": "83524b221d55d51bdc08b1524fa2f7f133adca9bf545655f3ad13d1536cb1469"
+      "contentHash": "5064c20e"
     },
     {
       "sourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
       "folder": "fw.actor.bestiary",
       "data": {
-        "name": "Mascot Revenant (Mortimer Pell)",
+        "name": "Mortimer Pell",
         "type": "npc",
         "img": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
         "system": {
-          "identifier": "mascot-revenant-mortimer-pell",
+          "identifier": "mortimer-pell",
           "abilities": {
             "str": {
               "value": 16,
@@ -21007,7 +20283,7 @@
           },
           "details": {
             "biography": {
-              "value": "<p>Mortimer Pell wore the Murder King suit for twenty-two years. Someone killed him in it. Now the King walks the dining room after closing, waving at nobody, trying to point at the door marked STAFF ONLY.</p>",
+              "value": "<p><strong>Canonical identity: Mortimer Pell.</strong> Night manager of Wight Castle for 143 consecutive years; he wore the Murder King suit for twenty-two years. Someone killed him in it. The mascot now walks the dining room after closing, waving at nobody and trying to point at the door marked STAFF ONLY.</p>",
               "public": ""
             },
             "alignment": "Neutral",
@@ -21568,7 +20844,7 @@
         ],
         "effects": [],
         "prototypeToken": {
-          "name": "Mascot Revenant (Mortimer Pell)",
+          "name": "Mortimer Pell",
           "actorLink": false,
           "displayName": 20,
           "displayBars": 20,
@@ -21592,13 +20868,13 @@
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
             "managed": true,
-            "artAssetId": "raw-288",
+            "artAssetId": "FR-05",
             "artRuntimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
             "artVerified": true
           }
         }
       },
-      "contentHash": "99a7af2957f29935947c977e525268a1e34b6e43b3b6dc9687e48bdbc116f17b"
+      "contentHash": "f296a0a5"
     },
     {
       "sourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
@@ -21606,7 +20882,7 @@
       "data": {
         "name": "Shop Steward (Unseen Servant Collective)",
         "type": "npc",
-        "img": "icons/svg/mystery-man.svg",
+        "img": "modules/franchise-wars/assets/art/production-drafts/FW_TK-07_shop-steward_v01.webp",
         "system": {
           "identifier": "shop-steward-unseen-servant-collective",
           "abilities": {
@@ -22139,7 +21415,7 @@
             "attribute": null
           },
           "texture": {
-            "src": "icons/svg/mystery-man.svg",
+            "src": "modules/franchise-wars/assets/art/production-drafts/FW_TK-07_shop-steward_v01.webp",
             "scaleX": 1,
             "scaleY": 1,
             "tint": "#ffffff"
@@ -22152,13 +21428,14 @@
           "franchise-wars": {
             "sourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
             "managed": true,
-            "artAssetId": "UNVERIFIED",
-            "artRuntimePath": "icons/svg/mystery-man.svg",
-            "artVerified": false
+            "artAssetId": "TK-07",
+            "artRuntimePath": "modules/franchise-wars/assets/art/production-drafts/FW_TK-07_shop-steward_v01.webp",
+            "artVerified": false,
+            "artStatus": "DRAFT_NOT_APPROVED"
           }
         }
       },
-      "contentHash": "80c6fa1b153b3a0f6fa5ba1b16df0e5a54337d3ca83957e5ec3743d4d9a64973"
+      "contentHash": "a3480722"
     },
     {
       "sourceId": "fw.actor.bestiary.tallis-vend-chairman",
@@ -23475,7 +22752,7 @@
           }
         }
       },
-      "contentHash": "e13ecd01c20babc2ce7a460bc25192d27144603a51607eb819c33e09ea2523d3"
+      "contentHash": "b274a06c"
     },
     {
       "sourceId": "fw.actor.recurring.pip-ashworth",
@@ -23667,7 +22944,7 @@
           }
         }
       },
-      "contentHash": "67a53cb4773a2fa666aef6db10ce2d768f0ef23d37eb26a2ab08ddd12efafdb4"
+      "contentHash": "46a2412f"
     },
     {
       "sourceId": "fw.actor.recurring.dobbs",
@@ -23859,7 +23136,7 @@
           }
         }
       },
-      "contentHash": "8780fa901f077f97f6af80f29aae685582904ecdb6b765b33c8d6639ae4107f3"
+      "contentHash": "005c3b05"
     },
     {
       "sourceId": "fw.actor.recurring.hal-grundy",
@@ -23943,7 +23220,7 @@
           },
           "details": {
             "biography": {
-              "value": "<p><strong>Recurring / mission NPC.</strong></p><p>Membership Manager at CostCo-op who calls the extraordinary dragon board meeting.</p>",
+              "value": "<p><strong>Canonical identity: Hal Grundy.</strong> Membership Manager at the CostCo-op warehouse depot. He calls the extraordinary dragon board meeting, keeps a careful count of votes, and can still be persuaded by evidence that the membership system has hurt the people it claims to serve.</p>",
               "public": ""
             },
             "alignment": "",
@@ -24051,7 +23328,7 @@
           }
         }
       },
-      "contentHash": "1b27dce9185b76b4d2739c3aab01fa23415ba7fff655e4ff5052f20cf2322b7e"
+      "contentHash": "4d5d7309"
     },
     {
       "sourceId": "fw.actor.recurring.gideon-tumble",
@@ -24241,7 +23518,7 @@
           }
         }
       },
-      "contentHash": "34b521dc30fc5af92ba51a068913bbf9b6587acd3e8ac3883e9b6d06f072266e"
+      "contentHash": "648b7635"
     },
     {
       "sourceId": "fw.actor.recurring.last-five-star-party",
@@ -24431,7 +23708,7 @@
           }
         }
       },
-      "contentHash": "32ba18be5539d8bff9693d76416cf32e4e3bc0ab2d505dbc0820f92f8e3565ca"
+      "contentHash": "6be8b8f7"
     },
     {
       "sourceId": "fw.actor.recurring.esmond-tallow-pryce",
@@ -24621,7 +23898,952 @@
           }
         }
       },
-      "contentHash": "a1b2596e6b30865e1c283b803eca4b700b47f24ae0c35411cd526cc1812f5b98"
+      "contentHash": "151ba869"
+    },
+    {
+      "sourceId": "fw.actor.recurring.ada-fairweather",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Ada Fairweather",
+        "type": "npc",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+          "identifier": "ada-fairweather",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>S11 — The Beans of Pandemonium.</strong> A harvest worker who remembers the life she had before ABI's retention contract. She is practical, alert, and can lead the party through the wind-carved tunnels to the other workers.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Ada Fairweather",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.ada-fairweather",
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+          }
+        }
+      },
+      "contentHash": "8c947f05"
+    },
+    {
+      "sourceId": "fw.actor.recurring.foreman-hask",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Foreman Hask",
+        "type": "npc",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+          "identifier": "foreman-hask",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Campaign guide NPC.</strong> Site foreman whose crew knows the dangerous shortcuts, shift changes, and maintenance routes. Treat him as a roleplay NPC unless the table makes the dispute violent.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Foreman Hask",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.foreman-hask",
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+          }
+        }
+      },
+      "contentHash": "2c33327a"
+    },
+    {
+      "sourceId": "fw.actor.recurring.arbiter-penhallow",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Arbiter Penhallow",
+        "type": "npc",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+          "identifier": "arbiter-penhallow",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>Campaign guide NPC.</strong> A procedural-minded arbiter called when a contract dispute reaches formal review. The guide does not define a combat role.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Arbiter Penhallow",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.arbiter-penhallow",
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+          }
+        }
+      },
+      "contentHash": "d8cf7e46"
+    },
+    {
+      "sourceId": "fw.actor.recurring.fennel",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Fennel",
+        "type": "npc",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+          "identifier": "fennel",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>S12 — All Rights Reserved.</strong> A cheerful druid at Goodberry's licensing booth who honestly believes spell licences are a sound wellness policy.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Fennel",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.fennel",
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+          }
+        }
+      },
+      "contentHash": "a62d5337"
+    },
+    {
+      "sourceId": "fw.actor.recurring.tobin",
+      "folder": "fw.actor.recurring",
+      "data": {
+        "name": "Tobin",
+        "type": "npc",
+        "img": "icons/svg/mystery-man.svg",
+        "system": {
+          "identifier": "tobin",
+          "abilities": {
+            "str": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "dex": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "con": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "int": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "wis": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            },
+            "cha": {
+              "value": 10,
+              "proficient": 0,
+              "max": null
+            }
+          },
+          "attributes": {
+            "ac": {
+              "override": 10
+            },
+            "hp": {
+              "value": 4,
+              "max": 4,
+              "temp": 0,
+              "tempmax": 0,
+              "formula": "1d8"
+            },
+            "movement": {
+              "speeds": {
+                "walk": 30,
+                "burrow": 0,
+                "climb": 0,
+                "fly": 0,
+                "jump": 0,
+                "swim": 0
+              },
+              "units": "ft",
+              "hover": false
+            },
+            "senses": {
+              "ranges": {
+                "darkvision": null,
+                "blindsight": null,
+                "tremorsense": null,
+                "truesight": null
+              },
+              "units": "ft",
+              "special": ""
+            },
+            "spellcasting": "",
+            "exhaustion": 0,
+            "hd": {
+              "spent": 0
+            }
+          },
+          "details": {
+            "biography": {
+              "value": "<p><strong>S12 — All Rights Reserved.</strong> Sister Wren's son. He survived the grey fever after his mother signed the licensing agreement that transferred ownership of Healing.</p>",
+              "public": ""
+            },
+            "alignment": "",
+            "type": {
+              "value": "humanoid",
+              "subtype": "",
+              "swarm": "",
+              "custom": ""
+            },
+            "cr": 0,
+            "ideal": "",
+            "bond": "",
+            "flaw": "",
+            "race": null
+          },
+          "traits": {
+            "size": "med",
+            "di": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dr": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "dv": {
+              "value": [],
+              "bypasses": [],
+              "custom": ""
+            },
+            "ci": {
+              "value": [],
+              "custom": ""
+            },
+            "languages": {
+              "value": [],
+              "custom": "",
+              "communication": {}
+            },
+            "dm": {
+              "amount": {},
+              "bypasses": []
+            }
+          },
+          "skills": {},
+          "tools": {},
+          "resources": {
+            "legact": {
+              "max": 0,
+              "spent": 0
+            },
+            "legres": {
+              "max": 0,
+              "spent": 0
+            },
+            "lair": {
+              "value": false,
+              "initiative": null,
+              "inside": false
+            }
+          },
+          "source": {
+            "custom": "Franchise Wars",
+            "book": "",
+            "page": "",
+            "license": "",
+            "revision": 1,
+            "rules": "2014"
+          }
+        },
+        "items": [],
+        "effects": [],
+        "prototypeToken": {
+          "name": "Tobin",
+          "actorLink": false,
+          "displayName": 20,
+          "displayBars": 20,
+          "bar1": {
+            "attribute": "attributes.hp"
+          },
+          "bar2": {
+            "attribute": null
+          },
+          "texture": {
+            "src": "icons/svg/mystery-man.svg",
+            "scaleX": 1,
+            "scaleY": 1,
+            "tint": "#ffffff"
+          }
+        },
+        "ownership": {
+          "default": 0
+        },
+        "flags": {
+          "franchise-wars": {
+            "sourceId": "fw.actor.recurring.tobin",
+            "managed": true,
+            "artAssetId": "FR-01",
+            "artRuntimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+          }
+        }
+      },
+      "contentHash": "7e9dddec"
     }
   ],
   "clones": [
@@ -25603,7 +25825,10 @@
       "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Sweet Covenant hag who may side with Granny Quean.</p>",
       "fallbackBaseNames": [
         "Green Hag"
-      ]
+      ],
+      "img": "modules/franchise-wars/assets/art/production-drafts/FW_PT-21_auntie-curdle_v01.webp",
+      "artAssetId": "PT-21",
+      "artStatus": "DRAFT_NOT_APPROVED"
     },
     {
       "sourceId": "fw.actor.recurring.brother-allard",
@@ -25614,7 +25839,10 @@
       "fallbackBaseNames": [
         "Priest",
         "Acolyte"
-      ]
+      ],
+      "img": "modules/franchise-wars/assets/art/production-drafts/FW_PT-22_brother-allard_v01.webp",
+      "artAssetId": "PT-22",
+      "artStatus": "DRAFT_NOT_APPROVED"
     },
     {
       "sourceId": "fw.actor.recurring.sister-wren",
@@ -26036,6 +26264,108 @@
         "Dust Mephit"
       ],
       "description": "<p><strong>Franchise Wars core opposition reference.</strong> Materialised from the installed D&amp;D5e Actor compendia so native sheets, actions and activities remain system-correct.</p>"
+    },
+    {
+      "sourceId": "fw.actor.harrow.one",
+      "folder": "fw.actor.bestiary",
+      "name": "One Harrow",
+      "baseName": "Wight",
+      "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the native D&amp;D 5e Wight stat block. The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+      "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+      "artAssetId": "FR-06"
+    },
+    {
+      "sourceId": "fw.actor.harrow.two",
+      "folder": "fw.actor.bestiary",
+      "name": "Two Harrow",
+      "baseName": "Wight",
+      "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the native D&amp;D 5e Wight stat block. The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+      "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+      "artAssetId": "FR-06"
+    },
+    {
+      "sourceId": "fw.actor.harrow.three",
+      "folder": "fw.actor.bestiary",
+      "name": "Three Harrow",
+      "baseName": "Wight",
+      "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the native D&amp;D 5e Wight stat block. The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+      "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+      "artAssetId": "FR-06"
+    },
+    {
+      "sourceId": "fw.actor.harrow.four",
+      "folder": "fw.actor.bestiary",
+      "name": "Four Harrow",
+      "baseName": "Wight",
+      "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the native D&amp;D 5e Wight stat block. The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+      "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+      "artAssetId": "FR-06"
+    },
+    {
+      "sourceId": "fw.actor.harrow.five",
+      "folder": "fw.actor.bestiary",
+      "name": "Five Harrow",
+      "baseName": "Wight",
+      "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the native D&amp;D 5e Wight stat block. The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+      "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+      "artAssetId": "FR-06"
+    },
+    {
+      "sourceId": "fw.actor.recurring.skarrow-vane",
+      "folder": "fw.actor.recurring",
+      "name": "Skarrow Vane",
+      "baseName": "Cambion",
+      "description": "<p><strong>S11 — The Beans of Pandemonium.</strong> ABI overseer and cambion on a performance bonus. Cruelty is how he hits his numbers; he may be bargained with if the party can make the incentives change.</p>"
+    },
+    {
+      "sourceId": "fw.actor.recurring.collector-grix",
+      "folder": "fw.actor.recurring",
+      "name": "Collector Grix",
+      "baseName": "Barbed Devil",
+      "description": "<p><strong>S13 — Pact of the Bucket.</strong> Accounts Receivable collector who arrives at midnight to collect the original franchise consideration: one soul.</p>"
+    },
+    {
+      "sourceId": "fw.actor.recurring.clerk-first-sale",
+      "folder": "fw.actor.recurring",
+      "name": "Clerk of the First Sale",
+      "baseName": "Lich",
+      "description": "<p><strong>S14 — The Franchise Below.</strong> The ghostly clerk serving the first shop in history. Uses lich actions and spellcasting, weakened to 90 hp for this encounter.</p>",
+      "combatOverrides": {
+        "hp": 90,
+        "legact": 0
+      }
+    },
+    {
+      "sourceId": "fw.actor.recurring.dragon-twin-one",
+      "folder": "fw.actor.recurring",
+      "name": "Dragon Twin One",
+      "baseName": "Young Red Dragon",
+      "description": "<p><strong>S19 — Executive Membership.</strong> One of the two dragon siblings who challenge the party's invitation with a coordinated bluff. The guide gives them no individual name; use this neutral label at the table.</p>"
+    },
+    {
+      "sourceId": "fw.actor.recurring.dragon-twin-two",
+      "folder": "fw.actor.recurring",
+      "name": "Dragon Twin Two",
+      "baseName": "Young Red Dragon",
+      "description": "<p><strong>S19 — Executive Membership.</strong> One of the two dragon siblings who challenge the party's invitation with a coordinated bluff. The guide gives them no individual name; use this neutral label at the table.</p>"
+    }
+  ],
+  "actorAliases": [
+    {
+      "from": "fw.actor.staff.FR-05",
+      "to": "fw.actor.bestiary.mascot-revenant-mortimer-pell"
+    },
+    {
+      "from": "fw.actor.staff.FR-59",
+      "to": "fw.actor.corporate.CO-08.public-face"
+    },
+    {
+      "from": "fw.actor.staff.FR-65",
+      "to": "fw.actor.corporate.CO-06.public-face"
+    },
+    {
+      "from": "fw.actor.staff.FR-67",
+      "to": "fw.actor.recurring.hal-grundy"
     }
   ]
 }

@@ -1,3 +1,7 @@
+## 0.6.0 — 2026-10-28
+
+See [RELEASE-v0.6.0.md](RELEASE-v0.6.0.md).
+
 # v0.5.0 — Mission Guides
 - Rewrote all 24 mission journals (S01–S24) as full DM guides of about 84,000 words in total. Each has a Contract Cover, a DM Overview (synopsis, background, running notes, threads, hook) and five Scene pages. The guide closes with Opposition & Tactics, NPC Dossiers, a Handouts index and Twist, Rewards & Aftermath.
 - Every scene has boxed read-aloud text with a **Send to chat** button. It also has a DM description, area features, NPC play notes and a Checks & Roll Requests table, followed by lines to steal, developments, complications and scaling.

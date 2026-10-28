@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "0.5.0";
+const VERSION = "0.6.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -81,6 +81,34 @@ async function ensureManagedFolders(type, defs){
 
 function managedFlags(sourceId,hash,extra={}){return {[MODULE_ID]:{sourceId,managed:true,importedHash:hash,...extra}};}
 
+function actorSnapshotHash(actor){
+  const data=foundry.utils.deepClone(actor.toObject());
+  const clean=value=>{
+    if(Array.isArray(value))return value.map(clean);
+    if(!value||typeof value!=="object")return value;
+    const out={};
+    for(const [key,item] of Object.entries(value)){
+      if(["_id","id","folder","sort"].includes(key))continue;
+      if(key==="flags"&&item?.[MODULE_ID]){
+        const flags=foundry.utils.deepClone(item);delete flags[MODULE_ID].importedHash;delete flags[MODULE_ID].snapshotHash;
+        out[key]=clean(flags);continue;
+      }
+      out[key]=clean(item);
+    }
+    return out;
+  };
+  return fnv(JSON.stringify(clean(data)));
+}
+
+async function preserveActorRecovery(actor,recoveryFolder,reason="update"){
+  if(!actor||!recoveryFolder)return null;
+  const data=actor.toObject();delete data._id;
+  data.name=`${actor.name} — Recovery ${new Date().toISOString()}`;data.folder=recoveryFolder;
+  data.flags=foundry.utils.deepClone(data.flags??{});
+  data.flags[MODULE_ID]={...(data.flags[MODULE_ID]??{}),managed:false,recoveryOf:actor.getFlag(MODULE_ID,"sourceId")??actor.id,recoveryReason:reason};
+  return Actor.create(data);
+}
+
 async function importItems(){
   const data=await loadJSON("items.json");
   const folders=await ensureManagedFolders("Item",data.folders);
@@ -125,41 +153,65 @@ async function coreActorSource(spec){
   }
   return null;
 }
-async function cloneCoreActor(spec,folder,existing=null){
+async function cloneCoreActor(spec,folder,existing=null,overrides=null,recoveryFolder=null){
   const src=await coreActorSource(spec);
   if(!src){console.warn(`Franchise Wars | Core actor not found: ${spec.baseName} (needed for ${spec.name})`);return null;}
-  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid,img:spec.img??null,artAssetId:spec.artAssetId??null}));
+  const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,source:src.uuid,img:spec.img??null,artAssetId:spec.artAssetId??null,combatOverrides:spec.combatOverrides??null,overrides:overrides??null}));
   if(existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
+  if(existing&&existing.getFlag(MODULE_ID,"importedHash")!==specHash)await preserveActorRecovery(existing,recoveryFolder,"combat-template update");
   const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
   if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.img;}
   data.system??={}; data.system.details??={}; data.system.details.biography??={value:"",public:""}; data.system.details.biography.value=`${spec.description}${data.system.details.biography.value??""}`;
-  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid,artAssetId:spec.artAssetId??null}),{inplace:false});
-  if(!existing)return Actor.create(data);
+  if(overrides?.system?.details?.biography)data.system.details.biography=foundry.utils.deepClone(overrides.system.details.biography);
+  if(overrides?.prototypeToken)data.prototypeToken=foundry.utils.mergeObject(data.prototypeToken??{},overrides.prototypeToken,{inplace:false,overwrite:true});
+  if(Number.isFinite(spec.combatOverrides?.hp)){data.system.attributes??={};data.system.attributes.hp??={};data.system.attributes.hp.value=spec.combatOverrides.hp;data.system.attributes.hp.max=spec.combatOverrides.hp;}
+  if(spec.combatOverrides?.cr!=null)data.system.details.cr=spec.combatOverrides.cr;
+  if(spec.combatOverrides?.ac!=null)data.system.attributes.ac.override=spec.combatOverrides.ac;
+  if(spec.combatOverrides?.legact!=null){data.system.resources??={};data.system.resources.legact={max:spec.combatOverrides.legact,spent:0};}
+  data.flags=foundry.utils.mergeObject(data.flags??{},managedFlags(spec.sourceId,specHash,{baseName:spec.baseName,clonedFrom:src.uuid,artAssetId:spec.artAssetId??null,artStatus:spec.artStatus??null}),{inplace:false});
+  if(overrides?.flags)data.flags=foundry.utils.mergeObject(data.flags??{},overrides.flags,{inplace:false,overwrite:true});
+  if(!existing){const created=await Actor.create(data);await created.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(created));return created;}
   const embedded=data.items??[]; delete data.items; await existing.update(data);
   const ids=existing.items.map(i=>i.id); if(ids.length)await existing.deleteEmbeddedDocuments("Item",ids);
   if(embedded.length)await existing.createEmbeddedDocuments("Item",embedded);
+  await existing.setFlag(MODULE_ID,"importedHash",specHash);await existing.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(existing));
   return existing;
 }
 
 async function applyActorPayload(actor,payload,hash){
+  const recovery=game.folders.find(f=>f.type==="Actor"&&f.getFlag(MODULE_ID,"sourceId")==="fw.actor.recovery");
+  if(actor.getFlag(MODULE_ID,"importedHash")!==hash)await preserveActorRecovery(actor,recovery?.id,"managed actor update");
   const update=foundry.utils.deepClone(payload); const embedded=update.items??[]; delete update.items; delete update._id;
   update.flags=foundry.utils.mergeObject(update.flags??{},managedFlags(actor.getFlag(MODULE_ID,"sourceId"),hash),{inplace:false});
   await actor.update(update);
   const managed=actor.items.filter(i=>i.getFlag(MODULE_ID,"managed")); if(managed.length)await actor.deleteEmbeddedDocuments("Item",managed.map(i=>i.id));
   if(embedded.length)await actor.createEmbeddedDocuments("Item",embedded);
+  await actor.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(actor));
 }
 
 async function importActors(){
   const data=await loadJSON("actors.json");
   const folders=await ensureManagedFolders("Actor",data.folders);
+  const recoveryFolder=folders.get("fw.actor.recovery")?.id??null;
   for(const e of data.entries){
     let actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId); const folder=folders.get(e.folder)?.id??null;
+    if(e.combatBaseName){
+      const spec={sourceId:e.sourceId,name:e.data.name,baseName:e.combatBaseName,fallbackBaseNames:e.fallbackBaseNames??[],description:e.combatDescription??"",img:e.data.img,artAssetId:e.data.flags?.[MODULE_ID]?.artAssetId??null,combatOverrides:e.combatOverrides??{}};
+      await cloneCoreActor(spec,folder,actor,e.data,recoveryFolder);continue;
+    }
     const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
-    if(!actor){await Actor.create(payload);continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash);
+    if(!actor){const created=await Actor.create(payload);await created.setFlag(MODULE_ID,"snapshotHash",actorSnapshotHash(created));continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash);
   }
   for(const spec of data.clones??[]){
     const actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===spec.sourceId);
-    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null);
+    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null,null,recoveryFolder);
+  }
+  for(const alias of data.actorAliases??[]){
+    const old=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===alias.from);
+    const canonical=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===alias.to);
+    if(!old||!canonical)continue;
+    await preserveActorRecovery(old,recoveryFolder,`merged into ${alias.to}`);
+    await old.delete();
   }
 }
 
