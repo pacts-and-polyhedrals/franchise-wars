@@ -155,7 +155,7 @@
      },
      "details": {
       "biography": {
-       "value": "<p><strong>Public Face</strong> — CO-06 — The Adventure Retail Consortium</p><p><td><strong>Doris Plank</strong>, General Manager of Wand-Mart and ARC spokesperson (human, silver hair, killer smile).</td></p>",
+       "value": "<p><strong>Canonical identity: Doris Plank.</strong> General Manager of Wand-Mart and the Adventure Retail Consortium's public face. A silver-haired human with a killer smile, she runs the Supercentre on the city's edge. On Rollback Day she remains unmoved while the Cost Ledger rewrites itself.</p><p><strong>Public Face</strong> — CO-06 — The Adventure Retail Consortium</p><p><td><strong>Doris Plank</strong>, General Manager of Wand-Mart and ARC spokesperson (human, silver hair, killer smile).</td></p>",
        "public": ""
       },
       "alignment": "Lawful Evil",
@@ -1135,7 +1135,7 @@
      }
     }
    },
-   "contentHash": "34f52e54bb6c6f46"
+   "contentHash": "b839972f6f442a59"
   },
   {
    "sourceId": "fw.actor.bestiary.compliance-officer",
@@ -5940,7 +5940,7 @@
    "sourceId": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
    "folder": "fw.actor.bestiary",
    "data": {
-    "name": "Mascot Revenant (Murder King Costume)",
+    "name": "Mortimer Pell (Mascot Revenant)",
     "type": "npc",
     "img": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
     "system": {
@@ -6018,7 +6018,7 @@
      },
      "details": {
       "biography": {
-       "value": "<p>The Murder King costume Mortimer Pell died in, animated by the brand’s egregore: four centuries of a slogan shouted at crowds. It half believes it is King Aldric, it carries Mortimer’s last memories, and it walks the dining room after closing trying to point at the door marked STAFF ONLY. Mortimer himself returns in S05 as a wight at @FWLink[Actor|fw.actor.staff.FR-05]{Wight Castle}.</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Scenes:</strong> @FWLink[JournalEntry|fw.mission.S02]{S02 — The Mascot Murder}. <strong>Friend and witness:</strong> @FWLink[Actor|fw.actor.recurring.gideon-tumble]{Gideon Tumble}. <strong>His killer:</strong> @FWLink[Actor|fw.actor.corporate.CO-03.controlled-by]{Baron Ossian Cleave}, through the cleaners.</p><h4>Slogans (Have It Our Way)</h4><table><thead><tr><th>d12</th><th>Slogan (shouted, arms wide)</th><th>What Mortimer means</th></tr></thead><tbody><tr><td>1</td><td>“HAVE IT OUR WAY!”</td><td>Yes. / Agreed. / Do it.</td></tr><tr><td>2</td><td>“NOT ON THE MENU!”</td><td>No. / That’s wrong.</td></tr><tr><td>3</td><td>“THE KING WILL SEE YOU NOW!”</td><td>Follow me. / This way. (He points at the STAFF ONLY door.)</td></tr><tr><td>4</td><td>“NO SUBSTITUTIONS!”</td><td>That’s the one. / Exactly that person or thing.</td></tr><tr><td>5</td><td>“TWO-FOR-ONE, TODAY ONLY!”</td><td>There were two of them. / It happened twice.</td></tr><tr><td>6</td><td>“THE CROWN IS ON THE HOUSE!”</td><td>It’s about the crown, the king, Aldric.</td></tr><tr><td>7</td><td>“LONG LIVE THE KING!”</td><td>Someone is still alive who shouldn’t be. (Cleave.)</td></tr><tr><td>8</td><td>“ROYAL WAIT TIMES MAY VARY!”</td><td>I don’t know. / Not yet. / Later.</td></tr><tr><td>9</td><td>“KNEEL BEFORE THE FLAME-GRILL!”</td><td>Danger. / Get down. / They’re coming.</td></tr><tr><td>10</td><td>“ASK ABOUT OUR LOYALTY CROWN!”</td><td>Ask Gideon. / My friend knows.</td></tr><tr><td>11</td><td>“FIT FOR A KING, PRICED FOR A PEASANT!”</td><td>Money was paid. / Someone was bought.</td></tr><tr><td>12</td><td>“THANK YOU FOR DINING AT MURDER KING!”</td><td>Goodbye. / Leave me alone. / I’m tired.</td></tr></tbody></table><h4>Roleplay</h4><ul><li>He waves at everyone, constantly, even mid-fight.</li><li>He points at doors marked STAFF ONLY.</li><li>He is gentle with children and the very drunk.</li><li>When frustrated, he shouts slogans faster and faster, then sits down on the floor.</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Scenes:</strong> @FWLink[JournalEntry|fw.mission.S02]{S02 — The King Is Dead}. <strong>Friend and witness:</strong> @FWLink[Actor|fw.actor.recurring.gideon-tumble]{Gideon Tumble}. <strong>His killer:</strong> @FWLink[Actor|fw.actor.corporate.CO-03.controlled-by]{Baron Ossian Cleave}, through the cleaners.</p><h4>Slogans (Have It Our Way)</h4><table><thead><tr><th>d12</th><th>Slogan (shouted, arms wide)</th><th>What Mortimer means</th></tr></thead><tbody><tr><td>1</td><td>“HAVE IT OUR WAY!”</td><td>Yes. / Agreed. / Do it.</td></tr><tr><td>2</td><td>“NOT ON THE MENU!”</td><td>No. / That’s wrong.</td></tr><tr><td>3</td><td>“THE KING WILL SEE YOU NOW!”</td><td>Follow me. / This way. (He points at the STAFF ONLY door.)</td></tr><tr><td>4</td><td>“NO SUBSTITUTIONS!”</td><td>That’s the one. / Exactly that person or thing.</td></tr><tr><td>5</td><td>“TWO-FOR-ONE, TODAY ONLY!”</td><td>There were two of them. / It happened twice.</td></tr><tr><td>6</td><td>“THE CROWN IS ON THE HOUSE!”</td><td>It’s about the crown, the king, Aldric.</td></tr><tr><td>7</td><td>“LONG LIVE THE KING!”</td><td>Someone is still alive who shouldn’t be. (Cleave.)</td></tr><tr><td>8</td><td>“ROYAL WAIT TIMES MAY VARY!”</td><td>I don’t know. / Not yet. / Later.</td></tr><tr><td>9</td><td>“KNEEL BEFORE THE FLAME-GRILL!”</td><td>Danger. / Get down. / They’re coming.</td></tr><tr><td>10</td><td>“ASK ABOUT OUR LOYALTY CROWN!”</td><td>Ask Gideon. / My friend knows.</td></tr><tr><td>11</td><td>“FIT FOR A KING, PRICED FOR A PEASANT!”</td><td>Money was paid. / Someone was bought.</td></tr><tr><td>12</td><td>“THANK YOU FOR DINING AT MURDER KING!”</td><td>Goodbye. / Leave me alone. / I’m tired.</td></tr></tbody></table><h4>Roleplay</h4><ul><li>He waves at everyone, constantly, even mid-fight.</li><li>He points at doors marked STAFF ONLY.</li><li>He is gentle with children and the very drunk.</li><li>When frustrated, he shouts slogans faster and faster, then sits down on the floor.</li></ul></section><!--/fw-ref-->",
+       "value": "<p><strong>Canonical identity: Mortimer Pell.</strong> Night manager of Wight Castle for 143 consecutive years; he wore the Murder King suit for twenty-two years. Someone killed him in it. The mascot now walks the dining room after closing, waving at nobody and trying to point at the door marked STAFF ONLY.</p><p>The Murder King costume Mortimer Pell died in, animated by the brand’s egregore: four centuries of a slogan shouted at crowds. It half believes it is King Aldric, it carries Mortimer’s last memories, and it walks the dining room after closing trying to point at the door marked STAFF ONLY. Mortimer himself returns in S05 as a wight at @FWLink[Actor|fw.actor.staff.FR-05]{Wight Castle}.</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Scenes:</strong> @FWLink[JournalEntry|fw.mission.S02]{S02 — The Mascot Murder}. <strong>Friend and witness:</strong> @FWLink[Actor|fw.actor.recurring.gideon-tumble]{Gideon Tumble}. <strong>His killer:</strong> @FWLink[Actor|fw.actor.corporate.CO-03.controlled-by]{Baron Ossian Cleave}, through the cleaners.</p><h4>Slogans (Have It Our Way)</h4><table><thead><tr><th>d12</th><th>Slogan (shouted, arms wide)</th><th>What Mortimer means</th></tr></thead><tbody><tr><td>1</td><td>“HAVE IT OUR WAY!”</td><td>Yes. / Agreed. / Do it.</td></tr><tr><td>2</td><td>“NOT ON THE MENU!”</td><td>No. / That’s wrong.</td></tr><tr><td>3</td><td>“THE KING WILL SEE YOU NOW!”</td><td>Follow me. / This way. (He points at the STAFF ONLY door.)</td></tr><tr><td>4</td><td>“NO SUBSTITUTIONS!”</td><td>That’s the one. / Exactly that person or thing.</td></tr><tr><td>5</td><td>“TWO-FOR-ONE, TODAY ONLY!”</td><td>There were two of them. / It happened twice.</td></tr><tr><td>6</td><td>“THE CROWN IS ON THE HOUSE!”</td><td>It’s about the crown, the king, Aldric.</td></tr><tr><td>7</td><td>“LONG LIVE THE KING!”</td><td>Someone is still alive who shouldn’t be. (Cleave.)</td></tr><tr><td>8</td><td>“ROYAL WAIT TIMES MAY VARY!”</td><td>I don’t know. / Not yet. / Later.</td></tr><tr><td>9</td><td>“KNEEL BEFORE THE FLAME-GRILL!”</td><td>Danger. / Get down. / They’re coming.</td></tr><tr><td>10</td><td>“ASK ABOUT OUR LOYALTY CROWN!”</td><td>Ask Gideon. / My friend knows.</td></tr><tr><td>11</td><td>“FIT FOR A KING, PRICED FOR A PEASANT!”</td><td>Money was paid. / Someone was bought.</td></tr><tr><td>12</td><td>“THANK YOU FOR DINING AT MURDER KING!”</td><td>Goodbye. / Leave me alone. / I’m tired.</td></tr></tbody></table><h4>Roleplay</h4><ul><li>He waves at everyone, constantly, even mid-fight.</li><li>He points at doors marked STAFF ONLY.</li><li>He is gentle with children and the very drunk.</li><li>When frustrated, he shouts slogans faster and faster, then sits down on the floor.</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Scenes:</strong> @FWLink[JournalEntry|fw.mission.S02]{S02 — The King Is Dead}. <strong>Friend and witness:</strong> @FWLink[Actor|fw.actor.recurring.gideon-tumble]{Gideon Tumble}. <strong>His killer:</strong> @FWLink[Actor|fw.actor.corporate.CO-03.controlled-by]{Baron Ossian Cleave}, through the cleaners.</p><h4>Slogans (Have It Our Way)</h4><table><thead><tr><th>d12</th><th>Slogan (shouted, arms wide)</th><th>What Mortimer means</th></tr></thead><tbody><tr><td>1</td><td>“HAVE IT OUR WAY!”</td><td>Yes. / Agreed. / Do it.</td></tr><tr><td>2</td><td>“NOT ON THE MENU!”</td><td>No. / That’s wrong.</td></tr><tr><td>3</td><td>“THE KING WILL SEE YOU NOW!”</td><td>Follow me. / This way. (He points at the STAFF ONLY door.)</td></tr><tr><td>4</td><td>“NO SUBSTITUTIONS!”</td><td>That’s the one. / Exactly that person or thing.</td></tr><tr><td>5</td><td>“TWO-FOR-ONE, TODAY ONLY!”</td><td>There were two of them. / It happened twice.</td></tr><tr><td>6</td><td>“THE CROWN IS ON THE HOUSE!”</td><td>It’s about the crown, the king, Aldric.</td></tr><tr><td>7</td><td>“LONG LIVE THE KING!”</td><td>Someone is still alive who shouldn’t be. (Cleave.)</td></tr><tr><td>8</td><td>“ROYAL WAIT TIMES MAY VARY!”</td><td>I don’t know. / Not yet. / Later.</td></tr><tr><td>9</td><td>“KNEEL BEFORE THE FLAME-GRILL!”</td><td>Danger. / Get down. / They’re coming.</td></tr><tr><td>10</td><td>“ASK ABOUT OUR LOYALTY CROWN!”</td><td>Ask Gideon. / My friend knows.</td></tr><tr><td>11</td><td>“FIT FOR A KING, PRICED FOR A PEASANT!”</td><td>Money was paid. / Someone was bought.</td></tr><tr><td>12</td><td>“THANK YOU FOR DINING AT MURDER KING!”</td><td>Goodbye. / Leave me alone. / I’m tired.</td></tr></tbody></table><h4>Roleplay</h4><ul><li>He waves at everyone, constantly, even mid-fight.</li><li>He points at doors marked STAFF ONLY.</li><li>He is gentle with children and the very drunk.</li><li>When frustrated, he shouts slogans faster and faster, then sits down on the floor.</li></ul></section><!--/fw-ref-->",
        "public": ""
       },
       "alignment": "Neutral",
@@ -6579,7 +6579,7 @@
     ],
     "effects": [],
     "prototypeToken": {
-     "name": "Murder King Costume",
+     "name": "Mortimer Pell",
      "actorLink": false,
      "displayName": 20,
      "displayBars": 20,
@@ -6609,7 +6609,7 @@
      }
     }
    },
-   "contentHash": "e84497d863e6d1e0"
+   "contentHash": "c0f80cfc5daea379"
   },
   {
    "sourceId": "fw.actor.bestiary.shop-steward-unseen-servant-collective",
@@ -7241,7 +7241,7 @@
        "max": 350,
        "temp": 0,
        "tempmax": 0,
-       "formula": "see Entry 1"
+       "formula": ""
       },
       "movement": {
        "speeds": {
@@ -8486,7 +8486,7 @@
      }
     }
    },
-   "contentHash": "1d615ff162a7d4f7"
+   "contentHash": "aee8eb06505de6f5"
   },
   {
    "sourceId": "fw.actor.recurring.pip-ashworth",
@@ -9525,11 +9525,13 @@
     },
     {
      "name": "Human",
-     "type": "race"
+     "type": "race",
+     "alt": []
     },
     {
      "name": "Soldier",
-     "type": "background"
+     "type": "background",
+     "alt": []
     },
     {
      "name": "Chain Mail",
@@ -9560,7 +9562,7 @@
      "type": "feat"
     }
    ],
-   "contentHash": "8020d506a6213223"
+   "contentHash": "509b62edbe416ce1"
   },
   {
    "sourceId": "fw.actor.pregen.odalie",
@@ -9645,11 +9647,16 @@
     },
     {
      "name": "Elf",
-     "type": "race"
+     "type": "race",
+     "alt": [
+      "Elf, High",
+      "High Elf"
+     ]
     },
     {
      "name": "Sage",
-     "type": "background"
+     "type": "background",
+     "alt": []
     },
     {
      "name": "Quarterstaff",
@@ -9708,7 +9715,7 @@
      "type": "spell"
     }
    ],
-   "contentHash": "2da07c0c63be3318"
+   "contentHash": "80947e6ce5ac4170"
   },
   {
    "sourceId": "fw.actor.pregen.margery",
@@ -9793,11 +9800,15 @@
     },
     {
      "name": "Dwarf",
-     "type": "race"
+     "type": "race",
+     "alt": [
+      "Hill Dwarf"
+     ]
     },
     {
      "name": "Acolyte",
-     "type": "background"
+     "type": "background",
+     "alt": []
     },
     {
      "name": "Scale Mail",
@@ -9848,7 +9859,7 @@
      "type": "spell"
     }
    ],
-   "contentHash": "03a413b6d0b080d5"
+   "contentHash": "07fefd1a387d4cef"
   },
   {
    "sourceId": "fw.actor.pregen.nim",
@@ -9936,11 +9947,15 @@
     },
     {
      "name": "Halfling",
-     "type": "race"
+     "type": "race",
+     "alt": [
+      "Lightfoot Halfling"
+     ]
     },
     {
      "name": "Criminal",
-     "type": "background"
+     "type": "background",
+     "alt": []
     },
     {
      "name": "Leather Armor",
@@ -9979,7 +9994,7 @@
      "type": "feat"
     }
    ],
-   "contentHash": "e5d755a8618b6180"
+   "contentHash": "5add22ec4277b43e"
   },
   {
    "sourceId": "fw.actor.pregen.jingle",
@@ -10067,11 +10082,18 @@
     },
     {
      "name": "Tiefling",
-     "type": "race"
+     "type": "race",
+     "alt": [
+      "Tiefling, Infernal"
+     ]
     },
     {
      "name": "Entertainer",
-     "type": "background"
+     "type": "background",
+     "alt": [
+      "Charlatan",
+      "Criminal"
+     ]
     },
     {
      "name": "Leather Armor",
@@ -10122,7 +10144,7 @@
      "type": "spell"
     }
    ],
-   "contentHash": "104f2ea3d6fd3f43"
+   "contentHash": "281668690454a543"
   }
  ],
  "clones": [
@@ -10158,6 +10180,9 @@
       }
      }
     }
+   ],
+   "fallbackBaseNames": [
+    "Commoner"
    ]
   },
   {
@@ -10192,6 +10217,9 @@
       }
      }
     }
+   ],
+   "fallbackBaseNames": [
+    "Commoner"
    ]
   },
   {
@@ -10226,6 +10254,11 @@
       }
      }
     }
+   ],
+   "fallbackBaseNames": [
+    "Acolyte",
+    "Cultist",
+    "Commoner"
    ]
   },
   {
@@ -10260,6 +10293,9 @@
       }
      }
     }
+   ],
+   "fallbackBaseNames": [
+    "Commoner"
    ]
   },
   {
@@ -10270,7 +10306,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Junior Brand Chaplain</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C001)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Acolyte (hidden from players)</p><p><em>Fresh-faced junior cleric with branded prayer book, lanyard and anxious customer-service smile.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c001_junior-brand-chaplain.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c001_junior-brand-chaplain.webp",
-   "reskin": "TK-C001"
+   "reskin": "TK-C001",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.adult-blue-dragon",
@@ -10280,7 +10319,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Quarterly Storm Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C002)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult Blue Dragon (hidden from players)</p><p><em>Blue dragon executive with lightning crackling around quarterly-report scrolls and a gold lanyard.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c002_quarterly-storm-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c002_quarterly-storm-dragon.webp",
-   "reskin": "TK-C002"
+   "reskin": "TK-C002",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.adult-green-dragon",
@@ -10290,7 +10332,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Sustainability Compliance Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C003)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult Green Dragon (hidden from players)</p><p><em>Green dragon draped in eco-branding, sustainability seals and poisonous green compliance mist.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c003_sustainability-compliance-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c003_sustainability-compliance-dragon.webp",
-   "reskin": "TK-C003"
+   "reskin": "TK-C003",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.animated-armor",
@@ -10300,7 +10345,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Auto-Closing Safety Suit</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C004)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Animated Armor (hidden from players)</p><p><em>Empty corporate safety armour with snapping clasps, warning stickers and self-moving clipboard.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c004_auto-closing-safety-suit.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c004_auto-closing-safety-suit.webp",
-   "reskin": "TK-C004"
+   "reskin": "TK-C004",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.assassin",
@@ -10310,7 +10358,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Contract Termination Specialist</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C005)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Assassin (hidden from players)</p><p><em>Sleek corporate killer in immaculate suit with red termination stamp and concealed blades.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c005_contract-termination-specialist.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c005_contract-termination-specialist.webp",
-   "reskin": "TK-C005"
+   "reskin": "TK-C005",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.awakened-shrub",
@@ -10320,7 +10371,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Compliance Topiary</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C006)</span></p><p><strong>Faction:</strong> ABI / Retail · <strong>Mechanical source:</strong> Awakened Shrub (hidden from players)</p><p><em>Angry branded shrub trimmed into a corporate logo shape with tiny paperwork tags.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c006_compliance-topiary.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c006_compliance-topiary.webp",
-   "reskin": "TK-C006"
+   "reskin": "TK-C006",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.awakened-tree",
@@ -10330,7 +10384,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Legacy Growth Asset</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C007)</span></p><p><strong>Faction:</strong> ABI · <strong>Mechanical source:</strong> Awakened Tree (hidden from players)</p><p><em>Ancient awakened tree wrapped in property deeds, seed contracts and brass inventory plaques.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c007_legacy-growth-asset.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c007_legacy-growth-asset.webp",
-   "reskin": "TK-C007"
+   "reskin": "TK-C007",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.axe-beak",
@@ -10340,7 +10397,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Executive Chicken</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C008)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Axe Beak (hidden from players)</p><p><em>Oversized aggressive chicken bred for a franchise promotion, tiny executive tie and absurd confidence.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c008_executive-chicken.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c008_executive-chicken.webp",
-   "reskin": "TK-C008"
+   "reskin": "TK-C008",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.azer",
@@ -10350,7 +10410,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Brass-Floor Facilities Tech</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C009)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Azer (hidden from players)</p><p><em>Flaming brass dwarf maintenance worker with hotel tools, key ring and service badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c009_brass-floor-facilities-tech.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c009_brass-floor-facilities-tech.webp",
-   "reskin": "TK-C009"
+   "reskin": "TK-C009",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.bandit",
@@ -10360,7 +10423,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Freelance Asset Reclaimer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C010)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Bandit (hidden from players)</p><p><em>Rough gig-economy repossession mercenary carrying tagged stolen inventory and a contract pouch.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c010_freelance-asset-reclaimer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c010_freelance-asset-reclaimer.webp",
-   "reskin": "TK-C010"
+   "reskin": "TK-C010",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.bandit-captain",
@@ -10370,7 +10436,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Senior Recovery Lead</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C011)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Bandit Captain (hidden from players)</p><p><em>Swaggering repossession team leader with ledger, branded coat and confiscation hooks.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c011_senior-recovery-lead.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c011_senior-recovery-lead.webp",
-   "reskin": "TK-C011"
+   "reskin": "TK-C011",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.banshee",
@@ -10380,7 +10449,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Exit Interview Wailer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C012)</span></p><p><strong>Faction:</strong> McGuffin Narrative Holdings · <strong>Mechanical source:</strong> Banshee (hidden from players)</p><p><em>Spectral former performer clutching an exit form, voice tearing paper and air apart.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c012_exit-interview-wailer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c012_exit-interview-wailer.webp",
-   "reskin": "TK-C012"
+   "reskin": "TK-C012",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.barbed-devil",
@@ -10390,7 +10462,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Third-Notice Collector</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C013)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Barbed Devil (hidden from players)</p><p><em>Barbed devil debt collector with invoice satchel, red hotel waistcoat and infernal receipt roll.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c013_third-notice-collector.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c013_third-notice-collector.webp",
-   "reskin": "TK-C013"
+   "reskin": "TK-C013",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.barlgura",
@@ -10400,7 +10475,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Loyalty-Programme Demon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C014)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Barlgura (hidden from players)</p><p><em>Massive ape demon tangled in loyalty cards, coupons and broken convenience-store shelving.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c014_loyalty-programme-demon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c014_loyalty-programme-demon.webp",
-   "reskin": "TK-C014"
+   "reskin": "TK-C014",
+   "fallbackBaseNames": [
+    "Hezrou",
+    "Ogre",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.basilisk",
@@ -10410,7 +10490,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Liability Basilisk</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C015)</span></p><p><strong>Faction:</strong> Retail / Independents · <strong>Mechanical source:</strong> Basilisk (hidden from players)</p><p><em>Basilisk with caution labels, waiver tags and petrified customer-service props.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c015_liability-basilisk.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c015_liability-basilisk.webp",
-   "reskin": "TK-C015"
+   "reskin": "TK-C015",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.bearded-devil",
@@ -10420,7 +10503,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Infernal Guest Services Agent</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C016)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Bearded Devil (hidden from players)</p><p><em>Bearded devil hotel employee with immaculate vest, room keys and weaponised service smile.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c016_infernal-guest-services-agent.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c016_infernal-guest-services-agent.webp",
-   "reskin": "TK-C016"
+   "reskin": "TK-C016",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.black-pudding",
@@ -10430,7 +10516,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Dark-Chocolate Compliance Pudding</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C017)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Black Pudding (hidden from players)</p><p><em>Glossy black dessert ooze in branded serving ware, dissolving spoons and leaking compliance syrup.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c017_dark-chocolate-compliance-pudding.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c017_dark-chocolate-compliance-pudding.webp",
-   "reskin": "TK-C017"
+   "reskin": "TK-C017",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.bone-naga",
@@ -10440,7 +10529,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Legacy Policy Serpent</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C018)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Bone Naga (hidden from players)</p><p><em>Skeletal naga formed from curled legal clauses, contract ribbons and old policy seals.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c018_legacy-policy-serpent.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c018_legacy-policy-serpent.webp",
-   "reskin": "TK-C018"
+   "reskin": "TK-C018",
+   "fallbackBaseNames": [
+    "Spirit Naga",
+    "Wight",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.bugbear",
@@ -10450,7 +10544,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Night-Shift Loss Prevention</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C019)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Bugbear (hidden from players)</p><p><em>Hulking bugbear security worker in undersized polo, radio earpiece and anti-theft tags.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c019_night-shift-loss-prevention.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c019_night-shift-loss-prevention.webp",
-   "reskin": "TK-C019"
+   "reskin": "TK-C019",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.chain-devil",
@@ -10460,7 +10557,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Contract Enforcement Officer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C020)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Chain Devil (hidden from players)</p><p><em>Chain devil in legal-enforcement uniform, chains ending in pens, seals and keycards.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c020_contract-enforcement-officer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c020_contract-enforcement-officer.webp",
-   "reskin": "TK-C020"
+   "reskin": "TK-C020",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.chimera",
@@ -10470,7 +10570,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Cross-Brand Synergy Beast</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C021)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Chimera (hidden from players)</p><p><em>Three-headed merger monster wearing mismatched franchise uniforms and conflicting brand badges.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c021_cross-brand-synergy-beast.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c021_cross-brand-synergy-beast.webp",
-   "reskin": "TK-C021"
+   "reskin": "TK-C021",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.chuul",
@@ -10480,7 +10583,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Reservoir Retention Specialist</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C022)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Chuul (hidden from players)</p><p><em>Armoured aquatic crustacean with ABI reservoir harness, tubes and employee-retention tags.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c022_reservoir-retention-specialist.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c022_reservoir-retention-specialist.webp",
-   "reskin": "TK-C022"
+   "reskin": "TK-C022",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.clay-golem",
@@ -10490,7 +10596,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Policy-Moulded Associate</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C023)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Clay Golem (hidden from players)</p><p><em>Clay worker literally stamped from policy forms, blank face, tie and embossed employee number.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c023_policy-moulded-associate.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c023_policy-moulded-associate.webp",
-   "reskin": "TK-C023"
+   "reskin": "TK-C023",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.cockatrice",
@@ -10500,7 +10609,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Petrification Poultry Unit</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C024)</span></p><p><strong>Faction:</strong> Retail / Independents · <strong>Mechanical source:</strong> Cockatrice (hidden from players)</p><p><em>Mean corporate poultry mascot with safety cone plumage and petrified promotional samples.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c024_petrification-poultry-unit.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c024_petrification-poultry-unit.webp",
-   "reskin": "TK-C024"
+   "reskin": "TK-C024",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.commoner",
@@ -10520,7 +10632,11 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Autonomous Signature Hand</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C026)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Crawling Claw (hidden from players)</p><p><em>Severed bureaucratic hand carrying a fountain pen, stamp and tiny contract cuff.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c026_autonomous-signature-hand.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c026_autonomous-signature-hand.webp",
-   "reskin": "TK-C026"
+   "reskin": "TK-C026",
+   "fallbackBaseNames": [
+    "Rat",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.cult-fanatic",
@@ -10530,7 +10646,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Senior Brand Evangelist</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C027)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Cult Fanatic (hidden from players)</p><p><em>Fervent corporate zealot with motivational sash, branded scripture and ecstatic sales-pitch expression.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c027_senior-brand-evangelist.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c027_senior-brand-evangelist.webp",
-   "reskin": "TK-C027"
+   "reskin": "TK-C027",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.cultist",
@@ -10540,7 +10659,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Loyalty Programme Convert</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C028)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Cultist (hidden from players)</p><p><em>Wide-eyed loyalty cult member covered in stamps, membership pins and referral cards.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c028_loyalty-programme-convert.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c028_loyalty-programme-convert.webp",
-   "reskin": "TK-C028"
+   "reskin": "TK-C028",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.deva",
@@ -10550,7 +10672,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Platinum Service Angel</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C029)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Deva (hidden from players)</p><p><em>Radiant celestial concierge with immaculate uniform, platinum key and six-star service aura.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c029_platinum-service-angel.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c029_platinum-service-angel.webp",
-   "reskin": "TK-C029"
+   "reskin": "TK-C029",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.death-knight",
@@ -10560,7 +10685,13 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Executive Emeritus</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C030)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver / Creation &amp; Company · <strong>Mechanical source:</strong> Death Knight (hidden from players)</p><p><em>Undead former executive in blackened ceremonial armour, crown pin and ancient contract blade.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c030_executive-emeritus.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c030_executive-emeritus.webp",
-   "reskin": "TK-C030"
+   "reskin": "TK-C030",
+   "fallbackBaseNames": [
+    "Mummy Lord",
+    "Vampire",
+    "Knight",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.death-tyrant",
@@ -10570,7 +10701,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Quarterly Review Orb</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C031)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Death Tyrant (hidden from players)</p><p><em>Undead floating eye tyrant surrounded by spectral KPI charts, red arrows and audit beams.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c031_quarterly-review-orb.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c031_quarterly-review-orb.webp",
-   "reskin": "TK-C031"
+   "reskin": "TK-C031",
+   "fallbackBaseNames": [
+    "Lich",
+    "Mummy Lord",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.doppelganger",
@@ -10580,7 +10716,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Brand Identity Consultant</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C032)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Doppelganger (hidden from players)</p><p><em>Shapechanger mid-transformation between several franchise uniforms while holding a rebranding deck.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c032_brand-identity-consultant.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c032_brand-identity-consultant.webp",
-   "reskin": "TK-C032"
+   "reskin": "TK-C032",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.druid",
@@ -10590,7 +10729,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Sustainability Officer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C033)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Druid (hidden from players)</p><p><em>Corporate druid with seed contracts, reusable cup, vine-wrapped clipboard and forced wellness smile.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c033_sustainability-officer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c033_sustainability-officer.webp",
-   "reskin": "TK-C033"
+   "reskin": "TK-C033",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.dust-mephit",
@@ -10600,7 +10742,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Promotional Seasoning Imp</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C034)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Dust Mephit (hidden from players)</p><p><em>Tiny dust imp made of red promotional spice, coupon scraps and unstable elemental sparks.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c034_promotional-seasoning-imp.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c034_promotional-seasoning-imp.webp",
-   "reskin": "TK-C034"
+   "reskin": "TK-C034",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.efreeti",
@@ -10610,7 +10755,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Brass Hospitality Executive</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C035)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Efreeti (hidden from players)</p><p><em>Efreet executive in luxury hotel attire, brass keycards and smoke shaped like contract clauses.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c035_brass-hospitality-executive.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c035_brass-hospitality-executive.webp",
-   "reskin": "TK-C035"
+   "reskin": "TK-C035",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.elephant",
@@ -10620,7 +10768,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Bulk Logistics Elephant</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C036)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Elephant (hidden from players)</p><p><em>Enormous freight elephant with pallet harness, barcode tags and warehouse safety markings.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c036_bulk-logistics-elephant.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c036_bulk-logistics-elephant.webp",
-   "reskin": "TK-C036"
+   "reskin": "TK-C036",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.erinyes",
@@ -10630,7 +10781,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Infernal Senior Counsel</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C037)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Erinyes (hidden from players)</p><p><em>Winged infernal attorney in severe tailored suit, legal folio and flaming contract ribbon.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c037_infernal-senior-counsel.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c037_infernal-senior-counsel.webp",
-   "reskin": "TK-C037"
+   "reskin": "TK-C037",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.fire-elemental",
@@ -10640,7 +10794,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Kitchen Flashover Elemental</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C038)</span></p><p><strong>Faction:</strong> Hospitality / Food · <strong>Mechanical source:</strong> Fire Elemental (hidden from players)</p><p><em>Living kitchen fire wearing a scorched apron silhouette, fryer baskets and warning signage.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c038_kitchen-flashover-elemental.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c038_kitchen-flashover-elemental.webp",
-   "reskin": "TK-C038"
+   "reskin": "TK-C038",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.fire-giant",
@@ -10650,7 +10807,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Industrial Grill Foreman</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C039)</span></p><p><strong>Faction:</strong> Food Franchise · <strong>Mechanical source:</strong> Fire Giant (hidden from players)</p><p><em>Fire giant shift foreman with enormous spatula, heat visor and production quota board.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c039_industrial-grill-foreman.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c039_industrial-grill-foreman.webp",
-   "reskin": "TK-C039"
+   "reskin": "TK-C039",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.flameskull",
@@ -10660,7 +10820,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>After-Hours Compliance Skull</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C040)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Flameskull (hidden from players)</p><p><em>Floating flaming skull with tiny spectacles, checklist and green compliance flame.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c040_after-hours-compliance-skull.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c040_after-hours-compliance-skull.webp",
-   "reskin": "TK-C040"
+   "reskin": "TK-C040",
+   "fallbackBaseNames": [
+    "Will-o’-Wisp",
+    "Specter",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.flesh-golem",
@@ -10670,7 +10835,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Reconstituted Employee Asset</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C041)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Flesh Golem (hidden from players)</p><p><em>Stitched worker assembled from expired uniforms, name badges and kitchen parts.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c041_reconstituted-employee-asset.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c041_reconstituted-employee-asset.webp",
-   "reskin": "TK-C041"
+   "reskin": "TK-C041",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.flying-sword",
@@ -10680,7 +10848,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Automated Cutlery Drone</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C042)</span></p><p><strong>Faction:</strong> Food Franchise · <strong>Mechanical source:</strong> Flying Sword (hidden from players)</p><p><em>Self-flying oversized kitchen blade with inventory barcode, safety guard and red status light.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c042_automated-cutlery-drone.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c042_automated-cutlery-drone.webp",
-   "reskin": "TK-C042"
+   "reskin": "TK-C042",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.gargoyle",
@@ -10690,7 +10861,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Storefront Loss-Prevention Gargoyle</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C043)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Gargoyle (hidden from players)</p><p><em>Stone security gargoyle perched on anti-theft pedestal with camera eyes and branded vest.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c043_storefront-loss-prevention-gargoyle.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c043_storefront-loss-prevention-gargoyle.webp",
-   "reskin": "TK-C043"
+   "reskin": "TK-C043",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.ghast",
@@ -10700,7 +10874,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Overnight Prep Ghast</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C044)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Ghast (hidden from players)</p><p><em>Gaunt undead prep cook with stained apron, chopping board and night-shift badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c044_overnight-prep-ghast.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c044_overnight-prep-ghast.webp",
-   "reskin": "TK-C044"
+   "reskin": "TK-C044",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.ghost",
@@ -10710,7 +10887,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Former Employee, Still on Payroll</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C045)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Ghost (hidden from players)</p><p><em>Transparent worker still wearing badge and apron, clutching pay stub dated centuries ago.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c045_former-employee-still-on-payroll.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c045_former-employee-still-on-payroll.webp",
-   "reskin": "TK-C045"
+   "reskin": "TK-C045",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.ghoul",
@@ -10720,7 +10900,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Breakroom Ghoul</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C046)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Ghoul (hidden from players)</p><p><em>Hungry undead employee raiding a staff fridge, shredded uniform and expired meal voucher.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c046_breakroom-ghoul.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c046_breakroom-ghoul.webp",
-   "reskin": "TK-C046"
+   "reskin": "TK-C046",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-constrictor-snake",
@@ -10730,7 +10913,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Aisle-Nine Inventory Serpent</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C047)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Giant Constrictor Snake (hidden from players)</p><p><em>Huge snake wound through shelving, price labels stuck to scales and stock scanner hanging from neck.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c047_aisle-nine-inventory-serpent.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c047_aisle-nine-inventory-serpent.webp",
-   "reskin": "TK-C047"
+   "reskin": "TK-C047",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-frog",
@@ -10740,7 +10926,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Limbo Patty Tadpole</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C048)</span></p><p><strong>Faction:</strong> Cross-planar Food · <strong>Mechanical source:</strong> Giant Frog (hidden from players)</p><p><em>Oversized unstable frog-like slaad larva half assembled as a promotional burger.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c048_limbo-patty-tadpole.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c048_limbo-patty-tadpole.webp",
-   "reskin": "TK-C048"
+   "reskin": "TK-C048",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-goat",
@@ -10750,7 +10939,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Grand-Opening Rooster</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C049)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Giant Goat (hidden from players)</p><p><em>Ridiculously proud oversized rooster with ribbon, tiny crown and grand-opening bunting.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c049_grand-opening-rooster.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c049_grand-opening-rooster.webp",
-   "reskin": "TK-C049"
+   "reskin": "TK-C049",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-octopus",
@@ -10760,7 +10952,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Sink-Side Procurement Octopus</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C050)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Giant Octopus (hidden from players)</p><p><em>Giant octopus jammed into industrial sink, tentacles holding invoices and imported seafood crates.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c050_sink-side-procurement-octopus.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c050_sink-side-procurement-octopus.webp",
-   "reskin": "TK-C050"
+   "reskin": "TK-C050",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-rat",
@@ -10770,7 +10965,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Gelato-Absorbed Rat</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C051)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Giant Rat (hidden from players)</p><p><em>Huge rat partly fused with colourful living gelato, tiny spoon and stained loyalty card.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c051_gelato-absorbed-rat.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c051_gelato-absorbed-rat.webp",
-   "reskin": "TK-C051"
+   "reskin": "TK-C051",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.giant-spider",
@@ -10780,7 +10978,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Deep Dairy Barn Spider</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C052)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Giant Spider (hidden from players)</p><p><em>Large barn spider with dairy labels, spun employee paperwork and milk-pail web anchors.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c052_deep-dairy-barn-spider.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c052_deep-dairy-barn-spider.webp",
-   "reskin": "TK-C052"
+   "reskin": "TK-C052",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.gladiator",
@@ -10790,7 +10991,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Promotional Chef Champion</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C053)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Gladiator (hidden from players)</p><p><em>Arena-grade chef in sponsor-covered armour wielding cleaver and skillet like tournament weapons.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c053_promotional-chef-champion.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c053_promotional-chef-champion.webp",
-   "reskin": "TK-C053"
+   "reskin": "TK-C053",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.goblin",
@@ -10800,7 +11004,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>GigGoblin Temp</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C054)</span></p><p><strong>Faction:</strong> GigGoblin / Cross-corporate · <strong>Mechanical source:</strong> Goblin (hidden from players)</p><p><em>Frazzled goblin gig worker carrying multiple app badges, delivery satchel and rating stars.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c054_giggoblin-temp.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c054_giggoblin-temp.webp",
-   "reskin": "TK-C054"
+   "reskin": "TK-C054",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.goblin-boss",
@@ -10810,7 +11017,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Goblin Warren Shift Lead</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C055)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Goblin Boss (hidden from players)</p><p><em>Bossy goblin supervisor with paper crown, survey map and staff rota pinned to shield.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c055_goblin-warren-shift-lead.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c055_goblin-warren-shift-lead.webp",
-   "reskin": "TK-C055"
+   "reskin": "TK-C055",
+   "fallbackBaseNames": [
+    "Hobgoblin",
+    "Goblin",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.gray-ooze",
@@ -10820,7 +11032,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Stracciatella Spill</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C056)</span></p><p><strong>Faction:</strong> Sweet Covenant / Retail · <strong>Mechanical source:</strong> Gray Ooze (hidden from players)</p><p><em>Grey dessert ooze streaked with chocolate chips, eating through bowl, floor and stock labels.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c056_stracciatella-spill.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c056_stracciatella-spill.webp",
-   "reskin": "TK-C056"
+   "reskin": "TK-C056",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.gray-slaad",
@@ -10830,7 +11045,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>No. 9 Special</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C057)</span></p><p><strong>Faction:</strong> Food Franchise · <strong>Mechanical source:</strong> Gray Slaad (hidden from players)</p><p><em>Half-assembled slaad burger creature emerging from grill paper, order ticket still attached.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c057_no-9-special.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c057_no-9-special.webp",
-   "reskin": "TK-C057"
+   "reskin": "TK-C057",
+   "fallbackBaseNames": [
+    "Doppelganger",
+    "Rakshasa",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.green-hag",
@@ -10840,7 +11060,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Covenant Shift Witch</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C058)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Green Hag (hidden from players)</p><p><em>Green hag supervisor in dairy uniform, charm bracelet of keys and cheerful corporate apron.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c058_covenant-shift-witch.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c058_covenant-shift-witch.webp",
-   "reskin": "TK-C058"
+   "reskin": "TK-C058",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.guard-drake",
@@ -10850,7 +11073,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Corporate Guard Drake</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C059)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Guard Drake (hidden from players)</p><p><em>Stocky drake with security harness, franchise badge and reinforced anti-theft collar.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c059_corporate-guard-drake.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c059_corporate-guard-drake.webp",
-   "reskin": "TK-C059"
+   "reskin": "TK-C059",
+   "fallbackBaseNames": [
+    "Mastiff",
+    "Wolf",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.hell-hound",
@@ -10860,7 +11088,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Infernal Valet Hound</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C060)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Hell Hound (hidden from players)</p><p><em>Hell hound in hotel valet harness with brass key fobs and burning tyre-track paws.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c060_infernal-valet-hound.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c060_infernal-valet-hound.webp",
-   "reskin": "TK-C060"
+   "reskin": "TK-C060",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.helmed-horror",
@@ -10870,7 +11101,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Executive Security Shell</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C061)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Helmed Horror (hidden from players)</p><p><em>Empty enchanted executive bodyguard armour with black suit styling and glowing access badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c061_executive-security-shell.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c061_executive-security-shell.webp",
-   "reskin": "TK-C061"
+   "reskin": "TK-C061",
+   "fallbackBaseNames": [
+    "Animated Armor",
+    "Shield Guardian",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.hobgoblin",
@@ -10880,7 +11116,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Corporate Operations Sergeant</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C062)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Hobgoblin (hidden from players)</p><p><em>Disciplined hobgoblin operations supervisor with headset, clipboard and formation arrows.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c062_corporate-operations-sergeant.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c062_corporate-operations-sergeant.webp",
-   "reskin": "TK-C062"
+   "reskin": "TK-C062",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.horned-devil",
@@ -10890,7 +11129,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Regional Collections Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C063)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Horned Devil (hidden from players)</p><p><em>Horned devil executive carrying overdue accounts portfolio and infernal collection spear.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c063_regional-collections-director.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c063_regional-collections-director.webp",
-   "reskin": "TK-C063"
+   "reskin": "TK-C063",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.howler",
@@ -10900,7 +11142,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Pandemonium Compliance Hound</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C064)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Howler (hidden from players)</p><p><em>Warped howling planar beast with coffee-bean harness and compliance crop dust on fur.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c064_pandemonium-compliance-hound.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c064_pandemonium-compliance-hound.webp",
-   "reskin": "TK-C064"
+   "reskin": "TK-C064",
+   "fallbackBaseNames": [
+    "Hell Hound",
+    "Winter Wolf",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.ice-mephit",
@@ -10910,7 +11157,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Soft-Serve Freezer Imp</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C065)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Ice Mephit (hidden from players)</p><p><em>Tiny ice imp built from soft-serve swirls, freezer frost and promotional sprinkles.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c065_soft-serve-freezer-imp.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c065_soft-serve-freezer-imp.webp",
-   "reskin": "TK-C065"
+   "reskin": "TK-C065",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.imp",
@@ -10920,7 +11170,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Junior Infernal Administrator</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C066)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Imp (hidden from players)</p><p><em>Tiny winged clerk with miniature tie, keycard, ledger tablet and maliciously polite grin.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c066_junior-infernal-administrator.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c066_junior-infernal-administrator.webp",
-   "reskin": "TK-C066"
+   "reskin": "TK-C066",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.invisible-stalker",
@@ -10930,7 +11183,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Unseen Procurement Agent</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C067)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Invisible Stalker (hidden from players)</p><p><em>Mostly invisible humanoid suggested by floating procurement forms, hotel gloves and brass badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c067_unseen-procurement-agent.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c067_unseen-procurement-agent.webp",
-   "reskin": "TK-C067"
+   "reskin": "TK-C067",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.knight",
@@ -10940,7 +11196,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Franchise Protection Knight</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C068)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Knight (hidden from players)</p><p><em>Armoured corporate protector with shield-shaped brand plaque and contract scroll at belt.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c068_franchise-protection-knight.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c068_franchise-protection-knight.webp",
-   "reskin": "TK-C068"
+   "reskin": "TK-C068",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.kobold",
@@ -10950,7 +11209,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Syndicate Floor Runner</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C069)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Kobold (hidden from players)</p><p><em>Busy kobold warehouse runner with inventory sash, tiny pallet jack and dragon-owner badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c069_hoard-syndicate-floor-runner.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c069_hoard-syndicate-floor-runner.webp",
-   "reskin": "TK-C069"
+   "reskin": "TK-C069",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.kraken",
@@ -10960,7 +11222,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Planar Supply Kraken</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C070)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Kraken (hidden from players)</p><p><em>Colossal sea monster tangled in shipping manifests, portal chains and imported cargo containers.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c070_planar-supply-kraken.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c070_planar-supply-kraken.webp",
-   "reskin": "TK-C070"
+   "reskin": "TK-C070",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.kraken-priest",
@@ -10970,7 +11235,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Drowned Procurement Priest</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C071)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Kraken Priest (hidden from players)</p><p><em>Sea-robed procurement priest with barnacled contract tablet and portal customs seal.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c071_drowned-procurement-priest.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c071_drowned-procurement-priest.webp",
-   "reskin": "TK-C071"
+   "reskin": "TK-C071",
+   "fallbackBaseNames": [
+    "Priest",
+    "Mage",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.lemure",
@@ -10980,7 +11250,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Probationary Soul Associate</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C072)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Lemure (hidden from players)</p><p><em>Miserable blob-devil in trainee badge, probation form stuck to body and tiny service cap.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c072_probationary-soul-associate.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c072_probationary-soul-associate.webp",
-   "reskin": "TK-C072"
+   "reskin": "TK-C072",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.mage",
@@ -10990,7 +11263,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Corporate Research Mage</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C073)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Mage (hidden from players)</p><p><em>Lab-coated corporate mage with arcane clipboard, controlled test spell and sponsor badges.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c073_corporate-research-mage.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c073_corporate-research-mage.webp",
-   "reskin": "TK-C073"
+   "reskin": "TK-C073",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.magma-mephit",
@@ -11000,7 +11276,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Fryer-Vent Gremlin</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C074)</span></p><p><strong>Faction:</strong> Food Franchise · <strong>Mechanical source:</strong> Magma Mephit (hidden from players)</p><p><em>Small magma gremlin living in fryer vents, grease-stained cap and bubbling oil breath.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c074_fryer-vent-gremlin.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c074_fryer-vent-gremlin.webp",
-   "reskin": "TK-C074"
+   "reskin": "TK-C074",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.manes",
@@ -11010,7 +11289,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Loyalty-Card Demonling</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C075)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Manes (hidden from players)</p><p><em>Shambling minor demon covered in punched loyalty cards and promotional stickers.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c075_loyalty-card-demonling.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c075_loyalty-card-demonling.webp",
-   "reskin": "TK-C075"
+   "reskin": "TK-C075",
+   "fallbackBaseNames": [
+    "Lemure",
+    "Zombie",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.marut",
@@ -11020,7 +11304,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Senior Audit Engine</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C076)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Marut (hidden from players)</p><p><em>Towering inevitable auditor of stone and metal, ledger plates, abacus spine and red audit seals.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c076_senior-audit-engine.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c076_senior-audit-engine.webp",
-   "reskin": "TK-C076"
+   "reskin": "TK-C076",
+   "fallbackBaseNames": [
+    "Iron Golem",
+    "Stone Golem",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.mimic",
@@ -11030,7 +11319,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Showroom Inventory Mimic</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C077)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Mimic (hidden from players)</p><p><em>Flat-pack furniture display opening into teeth, price tag tongue and smiling showroom placard.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c077_showroom-inventory-mimic.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c077_showroom-inventory-mimic.webp",
-   "reskin": "TK-C077"
+   "reskin": "TK-C077",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.mummy",
@@ -11040,7 +11332,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>RNG Rights Handler</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C078)</span></p><p><strong>Faction:</strong> McGuffin Narrative Holdings · <strong>Mechanical source:</strong> Mummy (hidden from players)</p><p><em>Bandaged rights-management handler wrapped in licensing contracts, royalty tags and theatre lanyard.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c078_rng-rights-handler.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c078_rng-rights-handler.webp",
-   "reskin": "TK-C078"
+   "reskin": "TK-C078",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.night-hag",
@@ -11050,7 +11345,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Legacy Brand Matriarch</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C079)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Night Hag (hidden from players)</p><p><em>Elder corporate witch in vintage confectionery uniform with antique recipe ledger and predatory smile.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c079_legacy-brand-matriarch.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c079_legacy-brand-matriarch.webp",
-   "reskin": "TK-C079"
+   "reskin": "TK-C079",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.nightmare",
@@ -11060,7 +11358,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Rest-Extension Nightmare</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C080)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Nightmare (hidden from players)</p><p><em>Fiendish horse wearing hotel blanket, room-number bridle and burning late-checkout tags.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c080_rest-extension-nightmare.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c080_rest-extension-nightmare.webp",
-   "reskin": "TK-C080"
+   "reskin": "TK-C080",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.nothic",
@@ -11070,7 +11371,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Loop-Trapped Customer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C081)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Nothic (hidden from players)</p><p><em>One-eyed customer warped by repeating dining-room loop, clutching ancient receipt and cold meal.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c081_loop-trapped-customer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c081_loop-trapped-customer.webp",
-   "reskin": "TK-C081"
+   "reskin": "TK-C081",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Ghast",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.ochre-jelly",
@@ -11080,7 +11386,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Runaway Lemon Scoop</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C082)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Ochre Jelly (hidden from players)</p><p><em>Bright lemon dessert ooze shaped like escaping gelato scoop with spoon marks and tiny eyes.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c082_runaway-lemon-scoop.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c082_runaway-lemon-scoop.webp",
-   "reskin": "TK-C082"
+   "reskin": "TK-C082",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.oni",
@@ -11090,7 +11399,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>After-Hours Store Ogre</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C083)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Oni (hidden from players)</p><p><em>Large oni night manager with store keys, nametag and smile that does not reach the eyes.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c083_after-hours-store-ogre.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c083_after-hours-store-ogre.webp",
-   "reskin": "TK-C083"
+   "reskin": "TK-C083",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.owlbear",
@@ -11100,7 +11412,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Warehouse Owlbear</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C084)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Owlbear (hidden from players)</p><p><em>Owlbear with bulk-stock harness, warehouse barcode ear tag and broken pallet around claws.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c084_warehouse-owlbear.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c084_warehouse-owlbear.webp",
-   "reskin": "TK-C084"
+   "reskin": "TK-C084",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.pit-fiend",
@@ -11110,7 +11425,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Infernal Regional Executive</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C085)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Pit Fiend (hidden from players)</p><p><em>Pit fiend in immaculate executive hotel uniform with gold nameplate and burning merger documents.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c085_infernal-regional-executive.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c085_infernal-regional-executive.webp",
-   "reskin": "TK-C085"
+   "reskin": "TK-C085",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.priest",
@@ -11120,7 +11438,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Benefits Chaplain</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C086)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Priest (hidden from players)</p><p><em>Corporate priest administering wellness benefits with forms, holy badge and employee handbook.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c086_benefits-chaplain.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c086_benefits-chaplain.webp",
-   "reskin": "TK-C086"
+   "reskin": "TK-C086",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.purple-worm",
@@ -11130,7 +11451,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Subterranean Distribution Worm</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C087)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Purple Worm (hidden from players)</p><p><em>Enormous tunnelling worm with swallowed pallets, delivery markers and warehouse route signs.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c087_subterranean-distribution-worm.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c087_subterranean-distribution-worm.webp",
-   "reskin": "TK-C087"
+   "reskin": "TK-C087",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.quaggoth",
@@ -11140,7 +11464,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Lost-Thing Hunter</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C088)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Quaggoth (hidden from players)</p><p><em>Grey-furred hunter from the Third Place carrying abandoned products and broken aisle markers.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c088_lost-thing-hunter.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c088_lost-thing-hunter.webp",
-   "reskin": "TK-C088"
+   "reskin": "TK-C088",
+   "fallbackBaseNames": [
+    "Ogre",
+    "Bugbear",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.quasit",
@@ -11150,7 +11479,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Mascot Familiar</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C089)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Quasit (hidden from players)</p><p><em>Tiny demon mascot wearing cheerful fast-food costume fragments and stolen staff badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c089_mascot-familiar.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c089_mascot-familiar.webp",
-   "reskin": "TK-C089"
+   "reskin": "TK-C089",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.quickling",
@@ -11160,7 +11492,11 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Brass-Key Courier</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C090)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Quickling (hidden from players)</p><p><em>Hyperfast courier in brass-trimmed uniform with impossible stack of room keys and delivery slips.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c090_brass-key-courier.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c090_brass-key-courier.webp",
-   "reskin": "TK-C090"
+   "reskin": "TK-C090",
+   "fallbackBaseNames": [
+    "Sprite",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.rakshasa",
@@ -11170,7 +11506,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Luxury Brand Fixer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C091)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Rakshasa (hidden from players)</p><p><em>Elegant rakshasa consultant in expensive suit, gold rings and confidential crisis folder.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c091_luxury-brand-fixer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c091_luxury-brand-fixer.webp",
-   "reskin": "TK-C091"
+   "reskin": "TK-C091",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.reef-shark",
@@ -11180,7 +11519,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Planar Dock Shark</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C092)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Reef Shark (hidden from players)</p><p><em>Reef shark with customs tags, portal glow and cargo-rope scars from planar docks.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c092_planar-dock-shark.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c092_planar-dock-shark.webp",
-   "reskin": "TK-C092"
+   "reskin": "TK-C092",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.rust-monster",
@@ -11190,7 +11532,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Warranty-Void Rust Bug</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C093)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Rust Monster (hidden from players)</p><p><em>Rust monster covered in returned-appliance tags, warranty stickers and chewed metal shelving.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c093_warranty-void-rust-bug.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c093_warranty-void-rust-bug.webp",
-   "reskin": "TK-C093"
+   "reskin": "TK-C093",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.sahuagin",
@@ -11200,7 +11545,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Drowned Fulfilment Associate</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C094)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Sahuagin (hidden from players)</p><p><em>Sahuagin warehouse worker with waterproof scanner, crate hook and shipping vest.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c094_drowned-fulfilment-associate.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c094_drowned-fulfilment-associate.webp",
-   "reskin": "TK-C094"
+   "reskin": "TK-C094",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.sahuagin-baron",
@@ -11210,7 +11558,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Drowned Fulfilment Manager</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C095)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Sahuagin Baron (hidden from players)</p><p><em>Armoured sahuagin manager with customs ledger, coral epaulettes and oversized scanner.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c095_drowned-fulfilment-manager.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c095_drowned-fulfilment-manager.webp",
-   "reskin": "TK-C095"
+   "reskin": "TK-C095",
+   "fallbackBaseNames": [
+    "Sahuagin",
+    "Veteran",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.sahuagin-priestess",
@@ -11220,7 +11573,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Drowned Fulfilment Oracle</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C096)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Sahuagin Priestess (hidden from players)</p><p><em>Sahuagin priestess reading futures from shipping labels and portal tides.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c096_drowned-fulfilment-oracle.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c096_drowned-fulfilment-oracle.webp",
-   "reskin": "TK-C096"
+   "reskin": "TK-C096",
+   "fallbackBaseNames": [
+    "Sahuagin",
+    "Priest",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.salamander",
@@ -11230,7 +11588,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Brass Kitchen Supervisor</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C097)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Salamander (hidden from players)</p><p><em>Fiery salamander kitchen supervisor with brass toque, grill fork and hotel service badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c097_brass-kitchen-supervisor.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c097_brass-kitchen-supervisor.webp",
-   "reskin": "TK-C097"
+   "reskin": "TK-C097",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.scout",
@@ -11240,7 +11601,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Wand-Mart Trapper</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C098)</span></p><p><strong>Faction:</strong> Retail Consortium · <strong>Mechanical source:</strong> Scout (hidden from players)</p><p><em>Retail hunter in practical green uniform with capture nets, stock tags and price gun.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c098_wand-mart-trapper.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c098_wand-mart-trapper.webp",
-   "reskin": "TK-C098"
+   "reskin": "TK-C098",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.sea-hag",
@@ -11250,7 +11614,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Harbour Returns Witch</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C099)</span></p><p><strong>Faction:</strong> Harbour &amp; Driftwood · <strong>Mechanical source:</strong> Sea Hag (hidden from players)</p><p><em>Sea hag running a miserable returns counter from a damp dock kiosk with rejected goods.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c099_harbour-returns-witch.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c099_harbour-returns-witch.webp",
-   "reskin": "TK-C099"
+   "reskin": "TK-C099",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.shadow",
@@ -11260,7 +11627,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Dining-Loop Seam Shadow</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C100)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Shadow (hidden from players)</p><p><em>Thin black shadow peeling from restaurant walls, holding a receipt that repeats forever.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c100_dining-loop-seam-shadow.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c100_dining-loop-seam-shadow.webp",
-   "reskin": "TK-C100"
+   "reskin": "TK-C100",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.shambling-mound",
@@ -11270,7 +11640,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Seed-Contract Overgrowth</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C101)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Shambling Mound (hidden from players)</p><p><em>Plant mass of stolen seed packets, shredded contracts and coffee vines.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c101_seed-contract-overgrowth.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c101_seed-contract-overgrowth.webp",
-   "reskin": "TK-C101"
+   "reskin": "TK-C101",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.shield-guardian",
@@ -11280,7 +11653,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Executive Personal Security</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C102)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Shield Guardian (hidden from players)</p><p><em>Massive arcane bodyguard with suit-like plating, executive access badge and glowing ward glyphs.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c102_executive-personal-security.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c102_executive-personal-security.webp",
-   "reskin": "TK-C102"
+   "reskin": "TK-C102",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.skeleton",
@@ -11290,7 +11666,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Zero-Hour Kitchen Skeleton</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C103)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Skeleton (hidden from players)</p><p><em>Skeleton line cook in old apron still working an endless shift with knife and order tickets.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c103_zero-hour-kitchen-skeleton.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c103_zero-hour-kitchen-skeleton.webp",
-   "reskin": "TK-C103"
+   "reskin": "TK-C103",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.specter",
@@ -11300,7 +11679,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Night-Shift Specter</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C104)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Specter (hidden from players)</p><p><em>Spectral night employee with dim badge, cleaning cloth and unfinished closing checklist.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c104_night-shift-specter.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c104_night-shift-specter.webp",
-   "reskin": "TK-C104"
+   "reskin": "TK-C104",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.spy",
@@ -11310,7 +11692,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Corporate Mystery Shopper</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C105)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Spy (hidden from players)</p><p><em>Innocent-looking customer secretly recording service notes with concealed badge and coded receipt.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c105_corporate-mystery-shopper.webp",
-   "reskin": "TK-C105"
+   "reskin": "TK-C105",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.swarm-of-insects",
@@ -11320,7 +11705,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Stinging Coffee-Bean Swarm</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C106)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Swarm of Insects (hidden from players)</p><p><em>Cloud of winged coffee beans with tiny stingers, loyalty stamps and caffeinated glow.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c106_stinging-coffee-bean-swarm.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c106_stinging-coffee-bean-swarm.webp",
-   "reskin": "TK-C106"
+   "reskin": "TK-C106",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.swarm-of-quippers",
@@ -11330,7 +11718,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Planar Conveyor Fish</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C107)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Swarm of Quippers (hidden from players)</p><p><em>School of impossible imported fish chewing through conveyor belts and shipping tape.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c107_planar-conveyor-fish.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c107_planar-conveyor-fish.webp",
-   "reskin": "TK-C107"
+   "reskin": "TK-C107",
+   "fallbackBaseNames": [
+    "Quipper",
+    "Swarm of Insects",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.swarm-of-ravens",
@@ -11340,7 +11733,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Enlarged Chicken Swarm</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C108)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Swarm of Ravens (hidden from players)</p><p><em>Chaotic flock of oversized promotional chickens wearing tiny branded bands.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c108_enlarged-chicken-swarm.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c108_enlarged-chicken-swarm.webp",
-   "reskin": "TK-C108"
+   "reskin": "TK-C108",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.thug",
@@ -11350,7 +11746,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Franchise Enforcement Bruiser</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C109)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Thug (hidden from players)</p><p><em>Heavy-set hired enforcer in branded polo, paper crown and corporate-issued club.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c109_franchise-enforcement-bruiser.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c109_franchise-enforcement-bruiser.webp",
-   "reskin": "TK-C109"
+   "reskin": "TK-C109",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.treant",
@@ -11360,7 +11759,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Seed-Contract Witness</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C110)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Treant (hidden from players)</p><p><em>Ancient treant with eaten contracts visible in bark and liberated seed packets sprouting from shoulders.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c110_seed-contract-witness.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c110_seed-contract-witness.webp",
-   "reskin": "TK-C110"
+   "reskin": "TK-C110",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.vampire-spawn",
@@ -11370,7 +11772,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>After-Hours Barista</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C111)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Vampire Spawn (hidden from players)</p><p><em>Pale night barista with stained apron, espresso cup and predatory customer-service grin.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c111_after-hours-barista.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c111_after-hours-barista.webp",
-   "reskin": "TK-C111"
+   "reskin": "TK-C111",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.veteran",
@@ -11380,7 +11785,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Little Caesars Legionnaire</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C112)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Veteran (hidden from players)</p><p><em>Disciplined pizza-legion soldier with red crest, shield, peel-spear and franchise insignia.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c112_little-caesars-legionnaire.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c112_little-caesars-legionnaire.webp",
-   "reskin": "TK-C112"
+   "reskin": "TK-C112",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.war-priest",
@@ -11390,7 +11798,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Senior Benefits War-Chaplain</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C113)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> War Priest (hidden from players)</p><p><em>Battle-ready corporate chaplain with benefits handbook shield and glowing HR sigil.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c113_senior-benefits-war-chaplain.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c113_senior-benefits-war-chaplain.webp",
-   "reskin": "TK-C113"
+   "reskin": "TK-C113",
+   "fallbackBaseNames": [
+    "Priest",
+    "Knight",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.water-elemental",
@@ -11400,7 +11813,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Planar Dishwater Surge</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C114)</span></p><p><strong>Faction:</strong> Planar Hospitality Group · <strong>Mechanical source:</strong> Water Elemental (hidden from players)</p><p><em>Towering water elemental full of dishes, receipts and imported silverware.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c114_planar-dishwater-surge.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c114_planar-dishwater-surge.webp",
-   "reskin": "TK-C114"
+   "reskin": "TK-C114",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.wight",
@@ -11410,7 +11826,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Vault Night Manager</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C115)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Wight (hidden from players)</p><p><em>Undead vault supervisor with old keys, perfect memory ledger and stained formal uniform.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c115_vault-night-manager.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c115_vault-night-manager.webp",
-   "reskin": "TK-C115"
+   "reskin": "TK-C115",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.will-o-wisp",
@@ -11420,7 +11839,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Promotional Neon Wisp</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C116)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Will-o’-Wisp (hidden from players)</p><p><em>Floating advertising light with smiling slogan face flickering into predatory static.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c116_promotional-neon-wisp.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c116_promotional-neon-wisp.webp",
-   "reskin": "TK-C116"
+   "reskin": "TK-C116",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.winter-wolf",
@@ -11430,7 +11852,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Cold-Chain Security Wolf</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C117)</span></p><p><strong>Faction:</strong> Sweet Covenant / Hoard · <strong>Mechanical source:</strong> Winter Wolf (hidden from players)</p><p><em>Huge white wolf with freezer-chain harness, warehouse tag and breath like refrigeration fog.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c117_cold-chain-security-wolf.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c117_cold-chain-security-wolf.webp",
-   "reskin": "TK-C117"
+   "reskin": "TK-C117",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.wolf",
@@ -11440,7 +11865,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Delivery Route Hound</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C118)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Wolf (hidden from players)</p><p><em>Lean working hound with courier satchel, route tag and exhausted but loyal expression.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c118_delivery-route-hound.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c118_delivery-route-hound.webp",
-   "reskin": "TK-C118"
+   "reskin": "TK-C118",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.worg",
@@ -11450,7 +11878,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Happy Quest Pursuit Hound</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C119)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Worg (hidden from players)</p><p><em>Massive pursuit beast wearing cheerful child-meal branding and torn survey ribbons.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c119_happy-quest-pursuit-hound.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c119_happy-quest-pursuit-hound.webp",
-   "reskin": "TK-C119"
+   "reskin": "TK-C119",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.wraith",
@@ -11460,7 +11891,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Unpaid Overtime Wraith</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C120)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Wraith (hidden from players)</p><p><em>Dark spectral worker formed from time sheets, unpaid hours and torn rota pages.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c120_unpaid-overtime-wraith.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c120_unpaid-overtime-wraith.webp",
-   "reskin": "TK-C120"
+   "reskin": "TK-C120",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.young-black-dragon",
@@ -11470,7 +11904,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Acid-Rebate Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C121)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Young Black Dragon (hidden from players)</p><p><em>Young black dragon with rebate tags, corrosive receipts and small executive badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c121_acid-rebate-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c121_acid-rebate-dragon.webp",
-   "reskin": "TK-C121"
+   "reskin": "TK-C121",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.young-brass-dragon",
@@ -11480,7 +11917,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Customer-Experience Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C122)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Young Brass Dragon (hidden from players)</p><p><em>Young brass dragon with hospitality sash, survey cards and overly eager grin.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c122_customer-experience-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c122_customer-experience-dragon.webp",
-   "reskin": "TK-C122"
+   "reskin": "TK-C122",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.young-green-dragon",
@@ -11490,7 +11930,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Sustainability Junior Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C123)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Young Green Dragon (hidden from players)</p><p><em>Young green dragon with eco-certificates, seed packets and poisonous brand mist.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c123_sustainability-junior-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c123_sustainability-junior-dragon.webp",
-   "reskin": "TK-C123"
+   "reskin": "TK-C123",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.young-red-dragon",
@@ -11500,7 +11943,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Junior Hoard Executive</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C124)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Young Red Dragon (hidden from players)</p><p><em>Young red dragon in tiny executive sash, gold paperwork and temper-management brochure.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c124_junior-hoard-executive.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c124_junior-hoard-executive.webp",
-   "reskin": "TK-C124"
+   "reskin": "TK-C124",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.young-white-dragon",
@@ -11510,7 +11956,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Freezer-Aisle Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C125)</span></p><p><strong>Faction:</strong> Sweet Covenant / Hoard · <strong>Mechanical source:</strong> Young White Dragon (hidden from players)</p><p><em>Young white dragon bursting from walk-in freezer with stock labels frozen to scales.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c125_freezer-aisle-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c125_freezer-aisle-dragon.webp",
-   "reskin": "TK-C125"
+   "reskin": "TK-C125",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.zombie",
@@ -11520,7 +11969,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Back-of-House Retained Worker</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C126)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Zombie (hidden from players)</p><p><em>Zombie cook still clocked in, stained apron, paper hat and order ticket pinned to chest.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c126_back-of-house-retained-worker.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c126_back-of-house-retained-worker.webp",
-   "reskin": "TK-C126"
+   "reskin": "TK-C126",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.master-thief",
@@ -11530,7 +11982,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Senior Credit-Recovery Specialist</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C127)</span></p><p><strong>Faction:</strong> GigGoblin / Cross-corporate · <strong>Mechanical source:</strong> Master Thief (hidden from players)</p><p><em>Expert corporate thief with stolen ratings, access cards and immaculate expense account.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c127_senior-credit-recovery-specialist.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c127_senior-credit-recovery-specialist.webp",
-   "reskin": "TK-C127"
+   "reskin": "TK-C127",
+   "fallbackBaseNames": [
+    "Spy",
+    "Assassin",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.champion",
@@ -11540,7 +11997,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Executive Security Champion</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C128)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Champion (hidden from players)</p><p><em>Elite corporate champion in polished armour with security credentials and oversized company shield.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c128_executive-security-champion.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c128_executive-security-champion.webp",
-   "reskin": "TK-C128"
+   "reskin": "TK-C128",
+   "fallbackBaseNames": [
+    "Gladiator",
+    "Knight",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.apprentice-wizard",
@@ -11550,7 +12012,12 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Junior Arcane Analyst</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C129)</span></p><p><strong>Faction:</strong> Probability Brands Group · <strong>Mechanical source:</strong> Apprentice Wizard (hidden from players)</p><p><em>Young corporate wizard with test wand, lab badge and stack of badly controlled spell charts.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c129_junior-arcane-analyst.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c129_junior-arcane-analyst.webp",
-   "reskin": "TK-C129"
+   "reskin": "TK-C129",
+   "fallbackBaseNames": [
+    "Acolyte",
+    "Cultist",
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.core.archmage",
@@ -11560,7 +12027,10 @@
    "description": "<section class=\"fw-reskin\"><p><strong>Chief Arcane Officer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C130)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Archmage (hidden from players)</p><p><em>Top-tier corporate wizard in executive robes with enchanted presentation deck and floating KPI glyphs.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c130_chief-arcane-officer.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c130_chief-arcane-officer.webp",
-   "reskin": "TK-C130"
+   "reskin": "TK-C130",
+   "fallbackBaseNames": [
+    "Commoner"
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.counsel-ixabeth-vorr",
@@ -11569,7 +12039,7 @@
    "baseName": "Erinyes",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Erinyes attorney for Nine Circles Hospitality; becomes an uneasy legal ally after Pact of the Bucket.</p><div class=\"fw-ref\"><h4>Counsel</h4><ul><li>“Oh, that’s good. That’s very good.”</li><li>“I never lie. I simply decline to volunteer.”</li><li>“Mr Chairman, under the Infernal Codex, Article Nine, I move for an audit.”</li></ul><p>Her card gives one free legal representation in any court on any plane. As an ally she can grant advantage on one clause argument in S24.</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
-    "Erinyes"
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/a-dramatic-highly-stylized-comic-cartoon-illustra--cd618970.webp",
    "artAssetId": "raw-064",
@@ -11606,7 +12076,11 @@
    "baseName": "Death Knight",
    "description": "<p><strong>Franchise Wars recurring NPC / opposition.</strong> The original Murder King, crowned revenant and historical ruler, returned four centuries after death. Uses Death Knight combat statistics.</p><div class=\"fw-ref\"><h4>Revenant King</h4><p>Aldric uses Death Knight statistics with the revenant traits below. He wears the @FWLink[Item|fw.item.magic.05]{Promotional Crown}.</p><ul><li>“Kneel, or join the meal.”</li><li>“I was a bad king. I was still the king.”</li><li>“Write it down. All of it. My name, and what was done.”</li></ul></div><!--/fw-ref-->",
    "fallbackBaseNames": [
-    "Death Knight"
+    "Mummy Lord",
+    "Vampire",
+    "Knight",
+    "Wight",
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/undead-king-s-crimson-coronation--b58f076b.webp",
    "artAssetId": "raw-284",
@@ -11666,7 +12140,7 @@
    "baseName": "Green Hag",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Sweet Covenant hag who may side with Granny Quean.</p>",
    "fallbackBaseNames": [
-    "Green Hag"
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-21_auntie-curdle.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-21_auntie-curdle.webp"
@@ -11678,8 +12152,8 @@
    "baseName": "Priest",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Cleric who warns the party that healing itself has been trademarked.</p>",
    "fallbackBaseNames": [
-    "Priest",
-    "Acolyte"
+    "Acolyte",
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-22_brother-allard.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-22_brother-allard.webp"
@@ -11692,7 +12166,7 @@
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Keeper of the shrine and witness to the deed that sold Healing.</p>",
    "fallbackBaseNames": [
     "Priest",
-    "Acolyte"
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-23_sister-wren.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-23_sister-wren.webp"
@@ -11704,8 +12178,11 @@
    "baseName": "Bard",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Bard of the Last Five-Star Party, asleep in Room 303 for ninety-four years.</p><div class=\"fw-ref\"><h4>The Song that Opens Room 303</h4><p><em>Lay down the stars and the lantern light, / sleep through the signing, sleep through the night; / no name on the line and no hand on the pen, / wake us, my love, when the world’s ours again.</em></p><p>Singing it through the keyhole parts the time-stop field (side contract “Authenticity Guaranteed”).</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
+    "Spy",
+    "Noble",
     "Mage",
-    "Veteran"
+    "Veteran",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-24_cadwyn-lark.webp",
@@ -11718,8 +12195,8 @@
    "baseName": "Knight",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Paladin of the Last Five-Star Party, asleep in Room 303 for ninety-four years.</p>",
    "fallbackBaseNames": [
-    "Knight",
-    "Veteran"
+    "Veteran",
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-25_tomas-brand.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-25_tomas-brand.webp"
@@ -11731,7 +12208,7 @@
    "baseName": "Mage",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Wizard of the Last Five-Star Party, asleep in Room 303 for ninety-four years.</p>",
    "fallbackBaseNames": [
-    "Mage"
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-26_ysolde-fenn.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-26_ysolde-fenn.webp"
@@ -11743,8 +12220,8 @@
    "baseName": "Scout",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Ranger of the Last Five-Star Party, asleep in Room 303 for ninety-four years.</p>",
    "fallbackBaseNames": [
-    "Scout",
-    "Veteran"
+    "Veteran",
+    "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-27_hark.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/pt-27_hark.webp"
@@ -11756,8 +12233,8 @@
    "baseName": "Young Red Dragon",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Young dragon behind The Crusty Dragon ovens; sick during Dragon Breath and later a possible ally/proxy.</p><div class=\"fw-ref\"><h4>Proxy Notes</h4><p>He is Auntie Vermillia’s grandson. If the party helped him in “Delivery Territory”, he votes with them at the S19 board meeting. Otherwise he is nervous and votes as his grandmother would.</p><ul><li>“Grandmother says I’m not to speak.” (speaks)</li><li>“I just want to make pizza.”</li></ul></div><!--/fw-ref-->",
    "fallbackBaseNames": [
-    "Young Red Dragon",
-    "Young Brass Dragon"
+    "Young Brass Dragon",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-28_pyrrhax-the-crusty-dragon.webp",
@@ -11770,7 +12247,7 @@
    "baseName": "Ghost",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Former Crown &amp; Cleaver CFO drowned for asking about the Grand Ledger; his ghost guides the party during The Golden Tusks.</p><div class=\"fw-ref\"><h4>Guide to the Drowned Tusks</h4><p>He guides the party through the drowned district and knows the way to the anchor. His waterlogged ledger reads: <em>“Entry 1 has no second witness.”</em> To lay him to rest, record his death properly (Religion DC 16).</p><ul><li>“Cornelius Gaff. Former CFO. I asked about the Ledger.”</li><li>“The numbers never added up. That was the point.”</li></ul></div><!--/fw-ref-->",
    "fallbackBaseNames": [
-    "Ghost"
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-29_cornelius-gaff.webp",
@@ -11783,7 +12260,7 @@
    "baseName": "Assassin",
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> Dominoancy courier compelled by prophecy to deliver the Final Acceptance of Offer; uses assassin statistics with foresight.</p><div class=\"fw-ref\"><h4>Foresight</h4><p>Rook is under a permanent <em>foresight</em> effect. She has advantage on attack rolls, ability checks and saving throws, and attack rolls against her have disadvantage. She cannot be surprised.</p><p><strong>Breaking fate:</strong> Rook is freed from the prophecy by any creature that offers her a delivery she would rather make (Persuasion DC 18). Good options are a letter home or a gift for her mother in the Old Independents’ Quarter.</p><ul><li>“I already saw you try.”</li><li>“Do something I haven’t seen.”</li></ul></div><!--/fw-ref-->",
    "fallbackBaseNames": [
-    "Assassin"
+    "Commoner"
    ],
    "extraItems": [
     {
@@ -11844,7 +12321,8 @@
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> One of the seven ancient dragons on the CostCo-op executive board.</p><div class=\"fw-ref\"><h4>Board Grievance</h4><p>He hates the whole business and attends only to say so. To invite him, the party must answer his riddle (Intelligence DC 17): <em>“What grows when shared and shrinks when sold?”</em> (Answer: trust, or a story.)</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
     "Adult Gold Dragon",
-    "Ancient Red Dragon"
+    "Ancient Red Dragon",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-31_aurum.webp",
@@ -11858,7 +12336,8 @@
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> One of the seven ancient dragons on the CostCo-op executive board; wants her youngest returned from the owlbear farm.</p><div class=\"fw-ref\"><h4>Board Grievance</h4><p>She wants her youngest back. He is chained as the guard of the Summit Tusks (S21) and was once held at the Hoots &amp; Owlbears farm. Proof that he is alive wins her vote.</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
     "Adult White Dragon",
-    "Ancient Red Dragon"
+    "Ancient Red Dragon",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-32_frostmother-ysk.webp",
@@ -11872,7 +12351,8 @@
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> One of the seven ancient dragons on the CostCo-op executive board and a rival of Auntie Vermillia.</p><div class=\"fw-ref\"><h4>Board Grievance</h4><p>He resents Vermillia and loves procedure. A properly served legal notice brings him to the meeting (Investigation DC 16), and points of order delight him.</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
     "Adult Black Dragon",
-    "Ancient Red Dragon"
+    "Ancient Red Dragon",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-33_old-tar.webp",
@@ -11886,7 +12366,8 @@
    "description": "<p><strong>Franchise Wars NPC / opposition.</strong> One of the seven ancient dragons on the CostCo-op executive board; respects visible reputation and stars.</p><div class=\"fw-ref\"><h4>Board Grievance</h4><p>She respects stars. She attends only if the party shows a Rabbit Rating of four stars or more, and she votes with the party if the vote is fair.</p></div><!--/fw-ref-->",
    "fallbackBaseNames": [
     "Adult Silver Dragon",
-    "Ancient Red Dragon"
+    "Ancient Red Dragon",
+    "Commoner"
    ],
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-34_grandmother-slate.webp",
@@ -11897,7 +12378,9 @@
    "folder": "fw.actor.core",
    "name": "Reservoir Compliance Mind",
    "baseName": "Aboleth",
-   "fallbackBaseNames": [],
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
    "description": "<section class=\"fw-reskin\"><p><strong>Reservoir Compliance Mind</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C131)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Aboleth (hidden from players)</p><p><em>Ancient psychic reservoir creature surrounded by coffee-dark water, compliance tubes and memory bubbles.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c131_reservoir-compliance-mind.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c131_reservoir-compliance-mind.webp",
@@ -11908,7 +12391,9 @@
    "folder": "fw.actor.core",
    "name": "Pandemonium Harvest Gale",
    "baseName": "Air Elemental",
-   "fallbackBaseNames": [],
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
    "description": "<section class=\"fw-reskin\"><p><strong>Pandemonium Harvest Gale</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C132)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Air Elemental (hidden from players)</p><p><em>Violent wind elemental carrying coffee beans, broken harvest tools and compliance dust.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c132_pandemonium-harvest-gale.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c132_pandemonium-harvest-gale.webp",
@@ -11919,7 +12404,9 @@
    "folder": "fw.actor.core",
    "name": "Compressed-Concept Earthwork",
    "baseName": "Earth Elemental",
-   "fallbackBaseNames": [],
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
    "description": "<section class=\"fw-reskin\"><p><strong>Compressed-Concept Earthwork</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C133)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Earth Elemental (hidden from players)</p><p><em>Earth elemental built from grey office masonry, compressed ideas and stamped construction blocks.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c133_compressed-concept-earthwork.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c133_compressed-concept-earthwork.webp",
@@ -11931,7 +12418,8 @@
    "name": "Hoard Board Red Director",
    "baseName": "Ancient Red Dragon",
    "fallbackBaseNames": [
-    "Adult Red Dragon"
+    "Adult Red Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Board Red Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C134)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Ancient Red Dragon (hidden from players)</p><p><em>Ancient red dragon board member with executive chain, gold proxy cards and volcanic board papers.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c134_hoard-board-red-director.webp",
@@ -11944,7 +12432,8 @@
    "name": "Hoard Board Frost Director",
    "baseName": "Ancient White Dragon",
    "fallbackBaseNames": [
-    "Adult White Dragon"
+    "Adult White Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Board Frost Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C135)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Ancient White Dragon (hidden from players)</p><p><em>Ancient white dragon board member with ice-carved voting plaque and frozen corporate seals.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c135_hoard-board-frost-director.webp",
@@ -11957,7 +12446,8 @@
    "name": "Hoard Board Mire Director",
    "baseName": "Ancient Black Dragon",
    "fallbackBaseNames": [
-    "Adult Black Dragon"
+    "Adult Black Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Board Mire Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C136)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Ancient Black Dragon (hidden from players)</p><p><em>Ancient black dragon board member with acid-eaten contracts and swamp-black executive regalia.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c136_hoard-board-mire-director.webp",
@@ -11970,7 +12460,8 @@
    "name": "Hoard Board Gold Director",
    "baseName": "Ancient Gold Dragon",
    "fallbackBaseNames": [
-    "Adult Gold Dragon"
+    "Adult Gold Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Board Gold Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C137)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Ancient Gold Dragon (hidden from players)</p><p><em>Ancient gold dragon board member with immaculate proxy ledger and ceremonial shareholder sash.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c137_hoard-board-gold-director.webp",
@@ -11983,7 +12474,8 @@
    "name": "Hoard Board Silver Director",
    "baseName": "Ancient Silver Dragon",
    "fallbackBaseNames": [
-    "Adult Silver Dragon"
+    "Adult Silver Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Board Silver Director</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C138)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Ancient Silver Dragon (hidden from players)</p><p><em>Ancient silver dragon board member with polished voting bell, proxy seals and cloud-white suit accents.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c138_hoard-board-silver-director.webp",
@@ -11996,7 +12488,8 @@
    "name": "Gold-Tier Proxy Dragon",
    "baseName": "Adult Gold Dragon",
    "fallbackBaseNames": [
-    "Adult Red Dragon"
+    "Adult Red Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Gold-Tier Proxy Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C139)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult Gold Dragon (hidden from players)</p><p><em>Adult gold dragon acting as corporate proxy, carrying signed vote scrolls and gold-tier badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c139_gold-tier-proxy-dragon.webp",
@@ -12009,7 +12502,8 @@
    "name": "Cold-Chain Proxy Dragon",
    "baseName": "Adult White Dragon",
    "fallbackBaseNames": [
-    "Adult Red Dragon"
+    "Adult Red Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Cold-Chain Proxy Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C140)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult White Dragon (hidden from players)</p><p><em>Adult white dragon proxy with refrigerated cargo seals and frost-covered voting documents.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c140_cold-chain-proxy-dragon.webp",
@@ -12022,7 +12516,8 @@
    "name": "Acquisition-Mire Proxy Dragon",
    "baseName": "Adult Black Dragon",
    "fallbackBaseNames": [
-    "Adult Red Dragon"
+    "Adult Red Dragon",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Acquisition-Mire Proxy Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C141)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult Black Dragon (hidden from players)</p><p><em>Adult black dragon proxy with hostile-acquisition folders floating in acidic mire.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c141_acquisition-mire-proxy-dragon.webp",
@@ -12034,7 +12529,9 @@
    "folder": "fw.actor.core",
    "name": "Expansion-Fire Proxy Dragon",
    "baseName": "Adult Red Dragon",
-   "fallbackBaseNames": [],
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
    "description": "<section class=\"fw-reskin\"><p><strong>Expansion-Fire Proxy Dragon</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C142)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Adult Red Dragon (hidden from players)</p><p><em>Adult red dragon proxy surrounded by burning expansion maps and aggressive growth charts.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c142_expansion-fire-proxy-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c142_expansion-fire-proxy-dragon.webp",
@@ -12046,8 +12543,11 @@
    "name": "Corporate Jingle Specialist",
    "baseName": "Bard",
    "fallbackBaseNames": [
+    "Spy",
+    "Noble",
     "Mage",
-    "Veteran"
+    "Veteran",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Corporate Jingle Specialist</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C143)</span></p><p><strong>Faction:</strong> McGuffin Narrative Holdings · <strong>Mechanical source:</strong> Bard (hidden from players)</p><p><em>Performer in branded stagewear carrying enchanted focus-group lute and slogan cue cards.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c143_corporate-jingle-specialist.webp",
@@ -12060,7 +12560,11 @@
    "name": "All-Seeing Quality Controller",
    "baseName": "Beholder",
    "fallbackBaseNames": [
-    "Death Tyrant"
+    "Mummy Lord",
+    "Stone Golem",
+    "Death Tyrant",
+    "Lich",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>All-Seeing Quality Controller</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C144)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Beholder (hidden from players)</p><p><em>Beholder wearing tiny QA visor, eyestalks scanning barcodes, food, forms and staff simultaneously.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c144_all-seeing-quality-controller.webp",
@@ -12073,7 +12577,12 @@
    "name": "Decommissioned Quality Controller",
    "baseName": "Beholder Zombie",
    "fallbackBaseNames": [
-    "Death Tyrant"
+    "Ogre Zombie",
+    "Zombie",
+    "Death Tyrant",
+    "Lich",
+    "Mummy Lord",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Decommissioned Quality Controller</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C145)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Beholder Zombie (hidden from players)</p><p><em>Undead beholder QA unit with expired inspection stickers and flickering dead scanner eyes.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c145_decommissioned-quality-controller.webp",
@@ -12086,7 +12595,9 @@
    "name": "Seasonal Promotion Witch",
    "baseName": "Bheur Hag",
    "fallbackBaseNames": [
-    "Green Hag"
+    "Night Hag",
+    "Green Hag",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Seasonal Promotion Witch</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C146)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Bheur Hag (hidden from players)</p><p><em>Icy hag in holiday promotion uniform with coupon icicles and frozen limited-edition menu board.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c146_seasonal-promotion-witch.webp",
@@ -12099,7 +12610,8 @@
    "name": "Rush-Hour Line Cook",
    "baseName": "Berserker",
    "fallbackBaseNames": [
-    "Veteran"
+    "Veteran",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Rush-Hour Line Cook</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C147)</span></p><p><strong>Faction:</strong> Food Franchise · <strong>Mechanical source:</strong> Berserker (hidden from players)</p><p><em>Wild-eyed line cook in battered apron, dual cleavers and order tickets flying everywhere.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c147_rush-hour-line-cook.webp",
@@ -12112,7 +12624,10 @@
    "name": "Pandemonium Plantation Overseer",
    "baseName": "Cambion",
    "fallbackBaseNames": [
-    "Erinyes"
+    "Succubus/Incubus",
+    "Bearded Devil",
+    "Erinyes",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Pandemonium Plantation Overseer</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C148)</span></p><p><strong>Faction:</strong> Arcane Beverage International · <strong>Mechanical source:</strong> Cambion (hidden from players)</p><p><em>Cambion plantation supervisor with crop ledger, compliance whip and branded coffee satchel.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c148_pandemonium-plantation-overseer.webp",
@@ -12125,7 +12640,8 @@
    "name": "Regional Delivery Cavalry",
    "baseName": "Centaur",
    "fallbackBaseNames": [
-    "Scout"
+    "Scout",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Regional Delivery Cavalry</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C149)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Centaur (hidden from players)</p><p><em>Centaur courier in regional logistics uniform carrying parcel panniers and route maps.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c149_regional-delivery-cavalry.webp",
@@ -12139,7 +12655,8 @@
    "baseName": "Iron Golem",
    "fallbackBaseNames": [
     "Stone Golem",
-    "Clay Golem"
+    "Clay Golem",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Notarial Heavy Construct</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C150)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Iron Golem (hidden from players)</p><p><em>Massive iron corporate construct covered in legal seals, signing plates and notarial chains.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c150_notarial-heavy-construct.webp",
@@ -12152,7 +12669,9 @@
    "name": "Hoard Syndicate Shield Runner",
    "baseName": "Kobold Dragonshield",
    "fallbackBaseNames": [
-    "Kobold"
+    "Kobold",
+    "Guard",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Syndicate Shield Runner</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C151)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Kobold Dragonshield (hidden from players)</p><p><em>Armoured kobold loyalist with oversized dragon-logo shield, inventory belt and voting badge.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c151_hoard-syndicate-shield-runner.webp",
@@ -12165,7 +12684,9 @@
    "name": "Hoard Syndicate Spice Caster",
    "baseName": "Kobold Scale Sorcerer",
    "fallbackBaseNames": [
-    "Kobold"
+    "Kobold",
+    "Acolyte",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hoard Syndicate Spice Caster</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C152)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Kobold Scale Sorcerer (hidden from players)</p><p><em>Kobold spellcaster in kitchen-mystic uniform with dragon scales, spice jars and arcane order tickets.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c152_hoard-syndicate-spice-caster.webp",
@@ -12178,7 +12699,8 @@
    "name": "Aerial Stockroom Runner",
    "baseName": "Winged Kobold",
    "fallbackBaseNames": [
-    "Kobold"
+    "Kobold",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Aerial Stockroom Runner</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C153)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Winged Kobold (hidden from players)</p><p><em>Winged kobold warehouse runner carrying airborne stock basket, scanner and tiny safety vest.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c153_aerial-stockroom-runner.webp",
@@ -12191,7 +12713,9 @@
    "name": "Legacy Franchise Founder",
    "baseName": "Lich",
    "fallbackBaseNames": [
-    "Death Knight"
+    "Archmage",
+    "Mage",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Legacy Franchise Founder</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C154)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Lich (hidden from players)</p><p><em>Ancient undead founder in obsolete corporate regalia, founder certificate and phylactery shaped like share ledger.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c154_legacy-franchise-founder.webp",
@@ -12204,7 +12728,9 @@
    "name": "Outsourced Infernal Security",
    "baseName": "Mezzoloth",
    "fallbackBaseNames": [
-    "Barbed Devil"
+    "Barbed Devil",
+    "Bearded Devil",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Outsourced Infernal Security</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C155)</span></p><p><strong>Faction:</strong> Nine Circles Hospitality · <strong>Mechanical source:</strong> Mezzoloth (hidden from players)</p><p><em>Armoured yugoloth contractor with temporary badge, outsourced security vest and infernal invoice.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c155_outsourced-infernal-security.webp",
@@ -12217,7 +12743,9 @@
    "name": "Unresolved Customer Complaint",
    "baseName": "Poltergeist",
    "fallbackBaseNames": [
-    "Ghost"
+    "Specter",
+    "Ghost",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Unresolved Customer Complaint</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C156)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Poltergeist (hidden from players)</p><p><em>Violent invisible complaint expressed through flying chairs, receipts, broken mugs and one hovering complaint form.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c156_unresolved-customer-complaint.webp",
@@ -12230,7 +12758,8 @@
    "name": "Compressed-Concept Construction Golem",
    "baseName": "Stone Golem",
    "fallbackBaseNames": [
-    "Clay Golem"
+    "Clay Golem",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Compressed-Concept Construction Golem</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C157)</span></p><p><strong>Faction:</strong> Creation &amp; Company · <strong>Mechanical source:</strong> Stone Golem (hidden from players)</p><p><em>Grey stone construction golem built from blocks labelled with stolen concepts and planning approvals.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c157_compressed-concept-construction-golem.webp",
@@ -12243,7 +12772,8 @@
    "name": "Hostile Feedback Swarm",
    "baseName": "Swarm of Wasps",
    "fallbackBaseNames": [
-    "Swarm of Insects"
+    "Swarm of Insects",
+    "Commoner"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Hostile Feedback Swarm</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C158)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Swarm of Wasps (hidden from players)</p><p><em>Angry wasps carrying tiny survey cards, one-star review icons and complaint-ticket fragments.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c158_hostile-feedback-swarm.webp",
@@ -12255,7 +12785,9 @@
    "folder": "fw.actor.core",
    "name": "CostCo-op Mature Owlbear",
    "baseName": "Owlbear",
-   "fallbackBaseNames": [],
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
    "description": "<section class=\"fw-reskin\"><p><strong>CostCo-op Mature Owlbear</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C159)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Owlbear (hidden from players)</p><p><em>Fully grown warehouse-bred owlbear with bulk-price tag, stock harness and dragon-owned farm brand.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c159_costco-op-mature-owlbear.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c159_costco-op-mature-owlbear.webp",
@@ -12267,6 +12799,8 @@
    "name": "Employee-Wellness Flumph",
    "baseName": "Flumph",
    "fallbackBaseNames": [
+    "Giant Owl",
+    "Commoner",
     "Dust Mephit"
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Employee-Wellness Flumph</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C160)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Flumph (hidden from players)</p><p><em>Floating flumph wellness mascot with motivational badge, stress survey and slightly desperate smile.</em></p></section>",
@@ -12287,7 +12821,8 @@
    "overrides": {
     "system.attributes.hp.max": 150,
     "system.attributes.hp.value": 150,
-    "system.attributes.hp.formula": ""
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 9
    },
    "extraItems": [
     {
@@ -12438,6 +12973,10 @@
    "name": "Baron Ossian Cleave",
    "baseName": "Death Knight",
    "fallbackBaseNames": [
+    "Mummy Lord",
+    "Vampire",
+    "Knight",
+    "Veteran",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/undead-aristocrat-with-ceremonial-cleaver--1afab502.webp",
@@ -13479,9 +14018,7 @@
    "folder": "fw.actor.staff",
    "name": "Hollis Quench",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Brandmere flagship on Drive-Thru Row, managed by <strong>Hollis Quench</strong> (gnome, night-shift manager, eleven years without a day off). The cellar has two doors. Only one is on the floor plan.</td></p><p>Source dossier: FR-01 — THAC0 Spell</p>",
    "overrides": {},
@@ -13494,9 +14031,7 @@
    "folder": "fw.actor.staff",
    "name": "Duckworth Pym",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-stylized-high-contrast-comic-illustration-scene--0cee7fd5.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Grand Throne Restaurant on Coronation Square, with a drive-thru moat. Shift lead <strong>Duckworth Pym</strong> (halfling) keeps a crossbow under the register and a smile on at all times, per policy.</td></p><p>Source dossier: FR-02 — Murder King</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Policy says he smiles at all times on shift, so he never stops smiling, even while terrified. He keeps a crossbow under the register.</p><h4>Lines to use</h4><ul><li>“Welcome to Murder King, where you’re the king!” (through clenched teeth)</li><li>“Policy, I’m afraid.” (smiling)</li><li>“Those weren’t our cleaners.” (whispered, somewhere private, S02)</li><li>“Have it our way. Sorry. Your way. Whichever.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Policy says he smiles at all times on shift, so he never stops smiling, even while terrified. He keeps a crossbow under the register.</p><h4>Lines to use</h4><ul><li>“Welcome to Murder King, where you’re the king!” (through clenched teeth)</li><li>“Policy, I’m afraid.” (smiling)</li><li>“Those weren’t our cleaners.” (whispered, somewhere private, S02)</li><li>“Have it our way. Sorry. Your way. Whichever.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -13509,9 +14044,7 @@
    "folder": "fw.actor.staff",
    "name": "Saffron Mellow",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-richly-detailed-comic-illustration-style-high--7cb5348d.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>Corporate Row Reserve Roastery, run by <strong>Saffron Mellow</strong> (half-elf, speaks entirely in affirmations). Staff are three baristas and forty unseen servants.</td></p><p>Source dossier: FR-03 — Starkfucks</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> She speaks entirely in affirmations. Bad news comes out as positive thinking, and she never says “no”.</p><h4>Lines to use</h4><ul><li>“Every bean is a blessing.”</li><li>“I am open to the abundance of the morning rush.”</li><li>“Your order is valid and so are you.”</li><li>“I choose to see this strike as an opportunity for growth.”</li><li>“I release my attachment to the stockroom key.” (meaning: take it)</li><li>“We do not say ‘Compliance’ here. We say ‘harmony’.”</li></ul><p>To get a straight answer, ask her for an affirmation about it: Insight DC 13 to decode what she means.</p></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> She speaks entirely in affirmations. Bad news comes out as positive thinking, and she never says “no”.</p><h4>Lines to use</h4><ul><li>“Every bean is a blessing.”</li><li>“I am open to the abundance of the morning rush.”</li><li>“Your order is valid and so are you.”</li><li>“I choose to see this strike as an opportunity for growth.”</li><li>“I release my attachment to the stockroom key.” (meaning: take it)</li><li>“We do not say ‘Compliance’ here. We say ‘harmony’.”</li></ul><p>To get a straight answer, ask her for an affirmation about it: Insight DC 13 to decode what she means.</p></section><!--/fw-ref-->",
    "overrides": {},
@@ -13524,9 +14057,7 @@
    "folder": "fw.actor.staff",
    "name": "Bettina Soft",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/creepy-cute-gelato-counter-attendant--cef27f77.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Canal Street Creamery, managed by <strong>Bettina Soft</strong> (human, relentlessly positive, has not blinked in a disturbing while). The walk-in freezer hums a lullaby.</td></p><p>Source dossier: FR-04 — Gelatinous Cube</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> She is relentlessly positive and has not blinked in a disturbing while. The walk-in freezer hums a lullaby.</p><h4>Lines to use</h4><ul><li>“Everything’s fine! Everything is so fine!”</li><li>“Gelli is just shy!”</li><li>“Don’t mind the humming. It’s the freezer. It’s always the freezer.”</li><li>(S18) “They’re all humming! The gelato’s going HOME!”</li></ul><h4>The freezer lullaby</h4><p><em>Hush now, little scoop, be sweet, be still; / the cold will keep you and the Mother will. / Down, down, under the farm, / home to the vat where it’s never warm.</em></p></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> She is relentlessly positive and has not blinked in a disturbing while. The walk-in freezer hums a lullaby.</p><h4>Lines to use</h4><ul><li>“Everything’s fine! Everything is so fine!”</li><li>“Gelli is just shy!”</li><li>“Don’t mind the humming. It’s the freezer. It’s always the freezer.”</li><li>(S18) “They’re all humming! The gelato’s going HOME!”</li></ul><h4>The freezer lullaby</h4><p><em>Hush now, little scoop, be sweet, be still; / the cold will keep you and the Mother will. / Down, down, under the farm, / home to the vat where it’s never warm.</em></p></section><!--/fw-ref-->",
    "overrides": {},
@@ -13615,6 +14146,8 @@
    "name": "Xoribble",
    "baseName": "Beholder",
    "fallbackBaseNames": [
+    "Mummy Lord",
+    "Stone Golem",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/grotesque-pastry-monster-bakery-counter--52bbef2a.webp",
@@ -13644,9 +14177,7 @@
    "folder": "fw.actor.staff",
    "name": "Serena Foreshaw",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/quest-meal-at-the-fast-food-counter--43f9d553.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Plotline Plaza McGuffin's, run by <strong>Serena Foreshaw</strong>, whose job title is Narrative Integration Manager.</td></p><p>Source dossier: FR-17 — McGuffin&#x27;s</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Her job title is Narrative Integration Manager. She talks about customers as “protagonists” and meals as “story beats”.</p><h4>Lines to use</h4><ul><li>“Every Happy Plot comes with a toy and a twist.”</li><li>“Your arc is really coming along.”</li><li>“We don’t do refunds. We do sequels.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Her job title is Narrative Integration Manager. She talks about customers as “protagonists” and meals as “story beats”.</p><h4>Lines to use</h4><ul><li>“Every Happy Plot comes with a toy and a twist.”</li><li>“Your arc is really coming along.”</li><li>“We don’t do refunds. We do sequels.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -13659,9 +14190,7 @@
    "folder": "fw.actor.staff",
    "name": "Maxim Knell",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/demon-manager-serves-a-towering-burger--e40b62a9.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Midnight Plotline, run by <strong>Maxim Knell</strong>, a tiefling who narrates his own actions under his breath.</td></p><p>Source dossier: FR-18 — Big McGuffin&#x27;s</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> He narrates his own actions under his breath, in the third person, like a novel.</p><h4>Lines to use</h4><ul><li>“…he said, wiping the counter with a weary hand.”</li><li>“Maxim regarded the customers with the look of a man who had seen too much.”</li><li>“…and that, he thought, was when everything changed.”</li><li>“He did not know it yet, but he was about to be stabbed.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> He narrates his own actions under his breath, in the third person, like a novel.</p><h4>Lines to use</h4><ul><li>“…he said, wiping the counter with a weary hand.”</li><li>“Maxim regarded the customers with the look of a man who had seen too much.”</li><li>“…and that, he thought, was when everything changed.”</li><li>“He did not know it yet, but he was about to be stabbed.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -13705,6 +14234,8 @@
    "name": "Jin Stagecraft",
    "baseName": "Bard",
    "fallbackBaseNames": [
+    "Spy",
+    "Noble",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-book-cell-shaded-illu--7ed6eb0f.webp",
@@ -13719,9 +14250,7 @@
    "folder": "fw.actor.staff",
    "name": "Lucky Oyelaran",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-dynamic-stylized-comic-illustration-scene-close--53740c7f.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Arena Street branch, with <strong>Lucky Oyelaran</strong> behind the counter. Lucky has never rolled below a 15.</td></p><p>Source dossier: FR-22 — Critical Wok</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Lucky has never rolled below a 15. Any d20 he rolls is treated as at least 15. He doesn’t know why, and it terrifies him.</p><h4>Lines to use</h4><ul><li>“Lucky, I guess?”</li><li>“Please don’t make me roll for it.”</li><li>“It’s not luck. It’s something worse.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Lucky has never rolled below a 15. Any d20 he rolls is treated as at least 15. He doesn’t know why, and it terrifies him.</p><h4>Lines to use</h4><ul><li>“Lucky, I guess?”</li><li>“Please don’t make me roll for it.”</li><li>“It’s not luck. It’s something worse.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -13758,9 +14287,7 @@
    "folder": "fw.actor.staff",
    "name": "Deacon Hobb",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-cl--e6cc21dd.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Temple Ward shop, run by <strong>Deacon Hobb</strong> (Marda Hobb's cousin, sold his tavern to PBG and regrets it).</td></p><p>Source dossier: FR-23 — Saving Throw Subs</p>",
    "overrides": {},
@@ -13788,9 +14315,7 @@
    "folder": "fw.actor.staff",
    "name": "Dicey Jen",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-vibrant-detailed-comic-illustration-scene-with--fd1b43c1.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Gamblers' Row stall, run by <strong>Dicey Jen</strong>, halfling, lucky.</td></p><p>Source dossier: FR-25 — Roll for Sandwich</p>",
    "overrides": {},
@@ -13803,9 +14328,7 @@
    "folder": "fw.actor.staff",
    "name": "Anselm Grue",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-in-a--dd2dddd4.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Silver Arcade, with head chef <strong>Anselm Grue</strong>, who once cried over a pickle.</td></p><p>Source dossier: FR-26 — Sub-Class</p>",
    "overrides": {},
@@ -13818,9 +14341,7 @@
    "folder": "fw.actor.staff",
    "name": "Mother Hessa",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/sleepy-orc-sandwich-shopkeeper--6a210dd6.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Waystation on the Great Road, run by <strong>Mother Hessa</strong> (half-orc), who tucks everyone in.</td></p><p>Source dossier: FR-27 — The Footlong Rest</p>",
    "overrides": {},
@@ -13833,9 +14354,7 @@
    "folder": "fw.actor.staff",
    "name": "Kaito Rain",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/critical-rolls-sushi-showdown--98875f21.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Sushi manager; precision knife work, dice-themed plating, Critical Rolls uniform.</p><p>Source dossier: FR-28 — Critical Rolls</p>",
    "overrides": {},
@@ -13908,9 +14427,7 @@
    "folder": "fw.actor.staff",
    "name": "Bramble Sunwhistle",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-stylized-high-detail-comic-cartoon-illustration--6b0a0655.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Greenmarket flagship, run by <strong>Bramble Sunwhistle</strong> (firbolg), who is genuinely lovely and deeply underpaid.</td></p><p>Source dossier: FR-34 — Goodberry&#x27;s</p>",
    "overrides": {},
@@ -13923,9 +14440,7 @@
    "folder": "fw.actor.staff",
    "name": "Tansy Oakes-Whitlow",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-fantasy-illustration-scene-a--e9551753.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Heights Market, run by <strong>Tansy Oakes-Whitlow</strong>, who will tell you where every egg was born.</td></p><p>Source dossier: FR-35 — Whole Foods &amp; Components</p>",
    "overrides": {},
@@ -13938,9 +14453,7 @@
    "folder": "fw.actor.staff",
    "name": "Mister Hamza Bright",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-colorful-detailed-fantasy-comic-cartoon-style-i--a598dcdd.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Portside market, managed by <strong>Mister Hamza Bright</strong>, a genasi.</td></p><p>Source dossier: FR-36 — Trader Djinn&#x27;s</p>",
    "overrides": {},
@@ -14008,6 +14521,7 @@
    "name": "Zip-Zip Nettleblur",
    "baseName": "Quickling",
    "fallbackBaseNames": [
+    "Sprite",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/frenzied-quickling-pastry-rush--dbbe4747.webp",
@@ -14076,9 +14590,7 @@
    "folder": "fw.actor.staff",
    "name": "Grubbo",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/grotesque-pizza-hutt-manager-serving-pizza--e55dc8fb.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Career franchise manager; Hutt-themed pizza counter and Carbonite Crust service.</p><p>Source dossier: FR-44 — Pizza the Hutt</p>",
    "overrides": {},
@@ -14091,9 +14603,7 @@
    "folder": "fw.actor.staff",
    "name": "Matteo Scorch",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-scene-a-c--66773d27.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Hillside oven, run by <strong>Matteo Scorch</strong>, a human with no eyebrows.</td></p><p>Source dossier: FR-45 — The Crusty Dragon</p>",
    "overrides": {},
@@ -14166,9 +14676,7 @@
    "folder": "fw.actor.staff",
    "name": "Tamsin Blaze",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-bold-high-energy-comic-cartoon-illustration-sce--e6c341b8.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Market Ward grill, run by <strong>Tamsin Blaze</strong>, tiefling, who has sung happy birthday 40,000 times.</td></p><p>Source dossier: FR-50 — T.G.I. Fireballs</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Tamsin has sung happy birthday 40,000 times. She sings it to anyone, at any moment, in perfect harmony with herself.</p><h4>Lines to use</h4><ul><li>“Is it your birthday? It is now.”</li><li>“Forty thousand and one.”</li></ul><h4>The T.G.I. Fireballs birthday song</h4><p><em>Happy fireball day to you, / we’ve singed your eyebrows too, / blow out the candles quickly / or the candles will blow you!</em> (clap, clap, small explosion)</p></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Tamsin has sung happy birthday 40,000 times. She sings it to anyone, at any moment, in perfect harmony with herself.</p><h4>Lines to use</h4><ul><li>“Is it your birthday? It is now.”</li><li>“Forty thousand and one.”</li></ul><h4>The T.G.I. Fireballs birthday song</h4><p><em>Happy fireball day to you, / we’ve singed your eyebrows too, / blow out the candles quickly / or the candles will blow you!</em> (clap, clap, small explosion)</p></section><!--/fw-ref-->",
    "overrides": {},
@@ -14181,9 +14689,7 @@
    "folder": "fw.actor.staff",
    "name": "Candy Plume",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-vibrant-high-contrast-cartoon-comic-illustratio--1f546765.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Great Road grill, run by <strong>Candy Plume</strong>, who runs the ‘ethical mascot initiative’.</td></p><p>Source dossier: FR-51 — Hoots &amp; Owlbears</p>",
    "overrides": {},
@@ -14197,6 +14703,8 @@
    "name": "Tony Riffs",
    "baseName": "Bard",
    "fallbackBaseNames": [
+    "Spy",
+    "Noble",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/stylized-high-contrast-comic-illustration-scene--4efa922f.webp",
@@ -14241,9 +14749,7 @@
    "folder": "fw.actor.staff",
    "name": "Madam Evangeline Coin",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/madam-evangeline-s-enchanted-cappuccino--0468463f.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Exchange Street café, run by <strong>Madam Evangeline Coin</strong>, who can tell your income from your shoes.</td></p><p>Source dossier: FR-55 — Costa Fortune</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Madam Coin can tell your income from your shoes and quotes prices accordingly.</p><h4>Lines to use</h4><ul><li>“Those boots say forty gold a month. That’ll be a medium.”</li><li>“Darling, adventurers always overpay.”</li><li>“Your fortune? Oh, it’s mostly spent.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Madam Coin can tell your income from your shoes and quotes prices accordingly.</p><h4>Lines to use</h4><ul><li>“Those boots say forty gold a month. That’ll be a medium.”</li><li>“Darling, adventurers always overpay.”</li><li>“Your fortune? Oh, it’s mostly spent.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -14256,9 +14762,7 @@
    "folder": "fw.actor.staff",
    "name": "Fen Oilyhand",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Factory Gate stall, run by <strong>Fen Oilyhand</strong>, who never sleeps.</td></p><p>Source dossier: FR-56 — The Daily Grindstone</p>",
    "overrides": {},
@@ -14286,9 +14790,7 @@
    "folder": "fw.actor.staff",
    "name": "Bea Hollowleaf",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-vibrant-stylized-cartoon-comic-illust--906c3fe3.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The College Ward café, run by <strong>Bea Hollowleaf</strong>, a halfling who remembers every student's name.</td></p><p>Source dossier: FR-58 — Espresso Patronum</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Bea remembers every student’s name, and every customer’s.</p><h4>Lines to use</h4><ul><li>“Back again, [character’s name]? The usual?”</li><li>“You look like you need a Patronum Shot.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Bea remembers every student’s name, and every customer’s.</p><h4>Lines to use</h4><ul><li>“Back again, [character’s name]? The usual?”</li><li>“You look like you need a Patronum Shot.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -14301,9 +14803,7 @@
    "folder": "fw.actor.staff",
    "name": "Innkeeper Nod Bramblewick",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Great Road Inn, run by <strong>Innkeeper Nod Bramblewick</strong>, cheerful and sleepless.</td></p><p>Source dossier: FR-59 — Long Rest Inn</p>",
    "overrides": {},
@@ -14347,6 +14847,8 @@
    "name": "Madam Ossifer",
    "baseName": "Beholder",
    "fallbackBaseNames": [
+    "Mummy Lord",
+    "Stone Golem",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/beholder-innkeeper-s-breakfast-rush--d3afea9f.webp",
@@ -14361,9 +14863,7 @@
    "folder": "fw.actor.staff",
    "name": "Bellamy Quill",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/chibi-fantasy-receptionist-at-work--79f98963.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p>Superhost Relations Manager; branded reception desk and five-star dungeon review card.</p><p>Source dossier: FR-63 — Air B&B&E</p>",
    "overrides": {},
@@ -14376,9 +14876,7 @@
    "folder": "fw.actor.staff",
    "name": "Store Manager Blix",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/gnome-manager-s-chaotic-checkout--a5922a55.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Market Ward megastore, run by <strong>Store Manager Blix</strong>, gnome.</td></p><p>Source dossier: FR-64 — Quest Buy</p>",
    "overrides": {},
@@ -14391,9 +14889,7 @@
    "folder": "fw.actor.staff",
    "name": "Department Head Vera Bullock",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-stylized-comic-cartoon-illus--69569862.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Heights store, run by <strong>Department Head Vera Bullock</strong>.</td></p><p>Source dossier: FR-66 — Target Acquired</p>",
    "overrides": {},
@@ -14406,11 +14902,9 @@
    "folder": "fw.actor.staff",
    "name": "Membership Manager Hal Grundy",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-colorful-comic-cartoon-illustration-scene-of-a-w--4b82af4f.webp",
-   "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Warehouse District depot, run by <strong>Membership Manager Hal Grundy</strong>.</td></p><p>Source dossier: FR-67 — CostCo-op</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Hal is sweating, apologetic and procedural. His membership lanyard has grown into his neck.</p><h4>Lines to use</h4><ul><li>“Membership card, please. Sorry. Policy.”</li><li>“Please don’t be eaten. I’d have to do the paperwork.”</li><li>“Bylaws, section forty.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Hal is sweating, apologetic and procedural. His membership lanyard has grown into his neck.</p><h4>Lines to use</h4><ul><li>“Membership card, please. Sorry. Policy.”</li><li>“Please don’t be eaten. I’d have to do the paperwork.”</li><li>“Bylaws, section forty.”</li></ul></section><!--/fw-ref-->",
+   "description": "<p><strong>Canonical identity: Hal Grundy.</strong> Membership Manager at the CostCo-op warehouse depot. He calls the extraordinary dragon board meeting, keeps a careful count of votes, and can still be persuaded by evidence that the membership system has hurt the people it claims to serve.</p><p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Warehouse District depot, run by <strong>Membership Manager Hal Grundy</strong>.</td></p><p>Source dossier: FR-67 — CostCo-op</p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Hal is sweating, apologetic and procedural. His membership lanyard has grown into his neck.</p><h4>Lines to use</h4><ul><li>“Membership card, please. Sorry. Policy.”</li><li>“Please don’t be eaten. I’d have to do the paperwork.”</li><li>“Bylaws, section forty.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Hal is sweating, apologetic and procedural. His membership lanyard has grown into his neck.</p><h4>Lines to use</h4><ul><li>“Membership card, please. Sorry. Policy.”</li><li>“Please don’t be eaten. I’d have to do the paperwork.”</li><li>“Bylaws, section forty.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
    "extraItems": [],
    "extraSpells": [],
@@ -14421,9 +14915,7 @@
    "folder": "fw.actor.staff",
    "name": "Store Manager Björn Flatt",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-scene-a-close-dyna--79b26cbc.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Warehouse District superstore, run by <strong>Store Manager Björn Flatt</strong>, who has never been seen leaving.</td></p><p>Source dossier: FR-68 — IKEA Mimic</p>",
    "overrides": {},
@@ -14436,9 +14928,7 @@
    "folder": "fw.actor.corporate",
    "name": "Harriet Hopwell",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
    "description": "<p><strong>Public Face</strong> — CO-02 — QuestRabbit Adventuring Solutions</p><p><td><strong>Harriet Hopwell</strong>, founder and CEO, a harengon who believes—truly—that she is helping adventurers find honest work.</td></p><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Harriet sincerely believes she is helping adventurers find honest work, and is devastated to learn about Clause 77-B.</p><h4>Lines to use</h4><ul><li>“Every hero deserves a fair job and a five-star review!”</li><li>“I didn’t write that clause. I swear I didn’t write it.”</li></ul></section><!--/fw-ref--><section class=\"fw-ref fw-ref-notes\"><h3>GM Quick Reference</h3><p><strong>Signature quirk:</strong> Harriet sincerely believes she is helping adventurers find honest work, and is devastated to learn about Clause 77-B.</p><h4>Lines to use</h4><ul><li>“Every hero deserves a fair job and a five-star review!”</li><li>“I didn’t write that clause. I swear I didn’t write it.”</li></ul></section><!--/fw-ref-->",
    "overrides": {},
@@ -14451,9 +14941,7 @@
    "folder": "fw.actor.corporate",
    "name": "Sebastian Brew-Hartley",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/pt-19_sebastian-brew-hartley.webp",
    "description": "<p><strong>Public Face</strong> — CO-04 — Arcane Beverage International</p><p><td><strong>Sebastian Brew-Hartley</strong>, Chief Refreshment Officer (human, always holding a cup).</td></p>",
    "overrides": {},
@@ -14467,9 +14955,7 @@
    "folder": "fw.actor.corporate",
    "name": "Mr. Gregory Latch",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
    "description": "<p><strong>Public Face</strong> — CO-08 — Nine Circles Hospitality</p><p><td><strong>Mr. Gregory Latch</strong>, Managing Director (tiefling, doorman's gloves, perfectly polite).</td></p>",
    "overrides": {},
@@ -14482,9 +14968,7 @@
    "folder": "fw.actor.recurring",
    "name": "Lettice Quayle",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Reporter for the <em>Brandmere Crier</em> (S02). Ink-stained, fearless, always one deadline from the truth.</p>",
    "overrides": {},
    "extraItems": [
@@ -14520,9 +15004,7 @@
    "folder": "fw.actor.recurring",
    "name": "Mrs Agatha Brindle",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Landlady of Gideon and Mortimer’s flat (S02). Nosy, kind, terrifying about rent.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14534,9 +15016,7 @@
    "folder": "fw.actor.recurring",
    "name": "Mags Turnwell, Ollie Pask & Fen Sorrel",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Gelatinous Cube night scoopers (S03). Mags is the senior scooper who knows the walk-in freezer’s secret.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14548,9 +15028,7 @@
    "folder": "fw.actor.recurring",
    "name": "Old Gil",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Ancient canal boatman (S03). Knows every lock and drain in Brandmere.</p>",
    "overrides": {},
    "extraItems": [
@@ -14628,9 +15106,7 @@
    "folder": "fw.actor.recurring",
    "name": "Hettie Gourd",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Former owner of the Gilded Gourd (S08), rewritten out of her own tavern by a franchise agreement. She cannot remember where she lives.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14656,9 +15132,7 @@
    "folder": "fw.actor.recurring",
    "name": "Old Nan Pertwee",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Ninety-year-old owner of the Hobbled Goat (S08). Deaf in one ear; hands out frying pans at the siege.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14670,9 +15144,7 @@
    "folder": "fw.actor.recurring",
    "name": "Benny Abacus",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Gnome stock clerk at Wand-Mart (S10). Ink to the elbows; knows about “time payments”.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14684,9 +15156,7 @@
    "folder": "fw.actor.recurring",
    "name": "Ada Fairweather",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Lost harvester in Pandemonium (S11); Agnes Fairweather’s sister; mother of Molly. Remembers only her daughter’s name, until she is reminded.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14713,6 +15183,8 @@
    "name": "Skarrow Vane",
    "baseName": "Cambion",
    "fallbackBaseNames": [
+    "Succubus/Incubus",
+    "Bearded Devil",
     "Commoner"
    ],
    "description": "<p><strong>Mission-guide NPC.</strong> ABI overseer of the Pandemonium plantations (S11). Smooth, mocking, on a 4% bonus. Rides a howler.</p>",
@@ -14777,6 +15249,7 @@
    "baseName": "Apprentice Wizard",
    "fallbackBaseNames": [
     "Acolyte",
+    "Cultist",
     "Commoner"
    ],
    "description": "<p><strong>Mission-guide NPC.</strong> Tired tiefling barista-summoner who maintains the Bean There portal (S11).</p>",
@@ -14804,9 +15277,7 @@
    "folder": "fw.actor.recurring",
    "name": "Tobin",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Mission-guide NPC.</strong> Sister Wren’s son, now a Goodberry’s juice-bar attendant (S12). Knows nothing about his mother’s bargain.</p>",
    "overrides": {},
    "extraItems": [],
@@ -14819,7 +15290,6 @@
    "name": "Arbiter Maud Penhallow",
    "baseName": "Noble",
    "fallbackBaseNames": [
-    "Commoner",
     "Commoner"
    ],
    "description": "<p><strong>Mission-guide NPC.</strong> Dwarf arbiter of the Guild Arbitration Court (S12). Spectacles, a gavel the size of a hammer, a love of proper argument.</p>",
@@ -15116,9 +15586,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Nib Marsh, the Courier",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A terrified halfling courier who “lost” the Codfather’s protection money after a Murder King manager paid him to.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
@@ -15130,6 +15598,8 @@
    "name": "Baroness Ishrae of the Reef",
    "baseName": "Sahuagin Baron",
    "fallbackBaseNames": [
+    "Sahuagin",
+    "Veteran",
     "Commoner"
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Sahuagin baroness who will take whichever deal feeds more of her young.</p>",
@@ -15233,9 +15703,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "King Dunstan I",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A kind, useless baker made rightful monarch of Brandmere by a promotional paper crown. He can pardon anyone.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
@@ -15247,6 +15715,8 @@
    "name": "Order No. 9 (Gray Slaad)",
    "baseName": "Gray Slaad",
    "fallbackBaseNames": [
+    "Doppelganger",
+    "Rakshasa",
     "Commoner"
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A gray slaad being assembled, burger-style, out of Limbo through the Inn-N-Out grill.</p>",
@@ -15285,9 +15755,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Odo Fennick",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A Last Independents organiser asleep for seventeen years in the Footlong Rest; his rest has been sold and resold as collateral.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c081_loop-trapped-customer.webp",
@@ -15337,9 +15805,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Priya Magnus",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A legal clerk with a magnifying glass, leading a class action over microscopic soul-harvesting terms.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
@@ -15351,6 +15817,7 @@
    "name": "Flit",
    "baseName": "Quickling",
    "fallbackBaseNames": [
+    "Sprite",
     "Commoner"
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A Quickling Mart employee framed for espionage because she read a Board document and understood it.</p>",
@@ -15363,9 +15830,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Del’s Replacement (if any)",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> Whoever signs on to relieve Del at the Seven-Eleven Hells counter.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
@@ -15389,9 +15854,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Silas Vane, Undertaker",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> Papa Lich’s corpse supplier. Vanished after refusing to take bodies from Crown & Cleaver’s “retirements”; keeps a list of names.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c046_breakroom-ghoul.webp",
@@ -15441,9 +15904,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Petronella Fizzwick (lost in the keg)",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> Ale & Error’s head brewer, lost in Pandemonium’s winds inside her own keg.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/library/chaotic-gnome-brewer-s-foam-frenzy--cdefab04.webp",
@@ -15520,6 +15981,8 @@
    "name": "Ember, Apprentice Evoker",
    "baseName": "Apprentice Wizard",
    "fallbackBaseNames": [
+    "Acolyte",
+    "Cultist",
     "Commoner"
    ],
    "description": "<p><strong>Side-contract NPC.</strong> T.G.I. Fireballs apprentice whose wages are paid in “birthday years”.</p>",
@@ -15559,6 +16022,8 @@
    "name": "Madam Ossifer",
    "baseName": "Beholder",
    "fallbackBaseNames": [
+    "Mummy Lord",
+    "Stone Golem",
     "Commoner"
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Beholder proprietor of Bed, Breakfast & Beholders, whose dreaming eyes petrify guests.</p>",
@@ -15610,9 +16075,7 @@
    "folder": "fw.actor.contractnpc",
    "name": "Bran Holloway, Organiser",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A Last Independents organiser hiding from Crown & Cleaver in an Air B&B&E rental.</p>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
@@ -15623,9 +16086,7 @@
    "folder": "fw.actor.core",
    "name": "Legion Siege Ballista (crew)",
    "baseName": "Commoner",
-   "fallbackBaseNames": [
-    "Commoner"
-   ],
+   "fallbackBaseNames": [],
    "description": "<section class=\"fw-reskin\"><p><strong>Legion Siege Ballista (crew)</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C112)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Commoner (hidden from players)</p><p><em>A Little Caesars Legion ballista and its crew. Use the stat block for the crew; the ballista deals 3d10 piercing (+6 to hit, 120/480 ft.).</em></p></section>",
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c112_little-caesars-legionnaire.webp",
@@ -15682,6 +16143,101 @@
    "extraItems": [],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c002_quarterly-storm-dragon.webp",
    "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c002_quarterly-storm-dragon.webp"
+  },
+  {
+   "sourceId": "fw.actor.harrow.one",
+   "folder": "fw.actor.staff",
+   "name": "One Harrow",
+   "baseName": "Wight",
+   "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the Wight stat block (60 hp, as the collective sheet). The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+   "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+   "artAssetId": "FR-06",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Zombie",
+    "Commoner"
+   ],
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60
+   },
+   "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
+  },
+  {
+   "sourceId": "fw.actor.harrow.two",
+   "folder": "fw.actor.staff",
+   "name": "Two Harrow",
+   "baseName": "Wight",
+   "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the Wight stat block (60 hp, as the collective sheet). The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+   "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+   "artAssetId": "FR-06",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Zombie",
+    "Commoner"
+   ],
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60
+   },
+   "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
+  },
+  {
+   "sourceId": "fw.actor.harrow.three",
+   "folder": "fw.actor.staff",
+   "name": "Three Harrow",
+   "baseName": "Wight",
+   "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the Wight stat block (60 hp, as the collective sheet). The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+   "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+   "artAssetId": "FR-06",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Zombie",
+    "Commoner"
+   ],
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60
+   },
+   "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
+  },
+  {
+   "sourceId": "fw.actor.harrow.four",
+   "folder": "fw.actor.staff",
+   "name": "Four Harrow",
+   "baseName": "Wight",
+   "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the Wight stat block (60 hp, as the collective sheet). The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+   "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+   "artAssetId": "FR-06",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Zombie",
+    "Commoner"
+   ],
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60
+   },
+   "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
+  },
+  {
+   "sourceId": "fw.actor.harrow.five",
+   "folder": "fw.actor.staff",
+   "name": "Five Harrow",
+   "baseName": "Wight",
+   "description": "<p><strong>One of the Five Harrow brothers.</strong> This Wight uses the Wight stat block (60 hp, as the collective sheet). The brothers remember every order and fight as a coordinated kitchen crew.</p>",
+   "img": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp",
+   "artAssetId": "FR-06",
+   "fallbackBaseNames": [
+    "Ghoul",
+    "Zombie",
+    "Commoner"
+   ],
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60
+   },
+   "token": "modules/franchise-wars/assets/art/library/five-wights-undead-burger-crew--a9bebf11.webp"
   }
  ],
  "retired": [
@@ -15704,6 +16260,11 @@
    "sourceId": "fw.actor.corporate.CO-01.controlled-by",
    "replacedBy": "fw.actor.bestiary.tallis-vend-chairman",
    "name": "Tallis Vend, Chairman (Bespoke Bestiary)"
+  },
+  {
+   "sourceId": "fw.actor.staff.FR-05",
+   "replacedBy": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
+   "name": "Mortimer Pell (Mascot Revenant)"
   }
  ]
 }

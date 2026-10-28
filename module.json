@@ -2,7 +2,7 @@
   "id": "franchise-wars",
   "title": "The Franchise Wars",
   "description": "A complete corporate fantasy campaign for levels 1–20: 24 mission guides, 146 side contracts, 131 battlemaps with staged encounters, reskinned opposition with full art, ambience, roll tables, pregens and live GM tools for Leverage, the Board Vote and the Clause Debate.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Pacts & Polyhedrals"
@@ -33,8 +33,118 @@
   ],
   "url": "https://github.com/pacts-and-polyhedrals/franchise-wars",
   "manifest": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/module.json",
-  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v1.0.0/franchise-wars-v1.0.0.zip",
+  "download": "https://github.com/pacts-and-polyhedrals/franchise-wars/releases/download/v1.1.0/franchise-wars-v1.1.0.zip",
   "readme": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/README.md",
   "changelog": "https://raw.githubusercontent.com/pacts-and-polyhedrals/franchise-wars/main/CHANGELOG.md",
-  "bugs": "https://github.com/pacts-and-polyhedrals/franchise-wars/issues"
+  "bugs": "https://github.com/pacts-and-polyhedrals/franchise-wars/issues",
+  "packs": [
+    {
+      "name": "fw-journals",
+      "label": "Franchise Wars — Campaign Journals (GM)",
+      "path": "packs/fw-journals",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-player",
+      "label": "Franchise Wars — Player Handbook & Session 0",
+      "path": "packs/fw-player",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-actors",
+      "label": "Franchise Wars — Actors, Bosses & Pregens",
+      "path": "packs/fw-actors",
+      "type": "Actor",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-items",
+      "label": "Franchise Wars — Menus, Merchandise & Receipts",
+      "path": "packs/fw-items",
+      "type": "Item",
+      "system": "dnd5e",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-scenes",
+      "label": "Franchise Wars — Battlemaps",
+      "path": "packs/fw-scenes",
+      "type": "Scene",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-tables",
+      "label": "Franchise Wars — Roll Tables",
+      "path": "packs/fw-tables",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-audio",
+      "label": "Franchise Wars — Ambience",
+      "path": "packs/fw-audio",
+      "type": "Playlist",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "fw-macros",
+      "label": "Franchise Wars — GM Macros",
+      "path": "packs/fw-macros",
+      "type": "Macro",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "The Franchise Wars",
+      "sorting": "m",
+      "color": "#7a1f2b",
+      "packs": [
+        "fw-journals",
+        "fw-player",
+        "fw-actors",
+        "fw-items",
+        "fw-scenes",
+        "fw-tables",
+        "fw-audio",
+        "fw-macros"
+      ],
+      "folders": []
+    }
+  ]
 }

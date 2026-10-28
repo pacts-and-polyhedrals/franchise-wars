@@ -1,4 +1,4 @@
-# The Franchise Wars v1.0.0
+# The Franchise Wars v1.1.0
 
 Foundry VTT v14 / dnd5e v6 module.
 
@@ -54,3 +54,7 @@ This release replaces franchise-logo/storefront Actor substitutions with audited
 
 ## v1.0.0 GM tools
 Open the Journals sidebar: **Tracker**, **Clauses** and **Board** buttons sit at the top. The same windows are available as macros and as `game.franchiseWars.openTracker()`, `openClauseDebate()` and `openBoardVote()`. `game.franchiseWars.exportToCompendiums()` copies everything into world compendiums. See `RELEASE-v1.0.0.md`.
+
+
+## v1.1.0 Compendiums and Content Manager
+The module ships 8 compendiums in a *The Franchise Wars* folder. **Game Settings → Configure Settings → The Franchise Wars → Open Content Manager** re-imports everything into the world (forced), re-imports maps, or resets campaign progress. Turn off *Import campaign into this world automatically* to work from the compendiums only.

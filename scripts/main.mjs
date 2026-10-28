@@ -1,11 +1,12 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "1.0.0";
+const VERSION = "1.1.0";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
 
 Hooks.once("init",()=>{
   game.settings.register(MODULE_ID,STATE_KEY,{name:"Franchise Wars Campaign State",scope:"world",config:false,type:Object,default:foundry.utils.deepClone(DEFAULT_STATE)});
+  game.settings.register(MODULE_ID,"autoImport",{name:"Import campaign into this world automatically",hint:"On (default): the first GM load of each new version builds and updates all Franchise Wars documents in the world. Off: nothing is imported automatically; use the compendiums in the Compendium sidebar, or the Content Manager above.",scope:"world",config:true,type:Boolean,default:true});
   game.settings.register(MODULE_ID,IMPORT_KEY,{name:"Franchise Wars Import Version",scope:"world",config:false,type:String,default:""});
   game.franchiseWars={getState,patchState,importContent,importMaps,requestCheck,requestSave,postContractBrief,awardReceipt,addLeverage,addCommonsAlly,setBoardSeat,setMissionState,voidClause,openCommandCentre,openSessionZero};
 });
@@ -18,7 +19,7 @@ Hooks.once("ready",async()=>{
   const sysMajor=Number(String(game.system.version??"0").split(".")[0]);
   if(coreMajor!==14||sysMajor!==6) ui.notifications.warn(`Franchise Wars is tested for Foundry v14 / dnd5e v6. Current: ${game.version} / ${game.system.version}.`,{permanent:true});
   const imported=game.settings.get(MODULE_ID,IMPORT_KEY);
-  if(imported!==VERSION){
+  if(imported!==VERSION&&game.settings.get(MODULE_ID,"autoImport")){
     try{await importContent(); ui.notifications.info("Franchise Wars campaign files imported/updated.");}
     catch(err){console.error("Franchise Wars | import failed",err);ui.notifications.error("Franchise Wars import failed. See console.",{permanent:true});}
   }
@@ -60,9 +61,9 @@ async function importContent({force=false}={}){
     const ids=j.pages.map(p=>p.id); if(ids.length)await j.deleteEmbeddedDocuments("JournalEntryPage",ids);
     await j.createEmbeddedDocuments("JournalEntryPage",pageData);
   }
-  await importItems();
-  await importActors();
-  await importScenes();
+  await importItems({force});
+  await importActors({force});
+  await importScenes({force});
   await importPlaylists();
   await importRollTables();
   await importMacros();
@@ -84,7 +85,7 @@ async function ensureManagedFolders(type, defs){
 
 function managedFlags(sourceId,hash,extra={}){return {[MODULE_ID]:{sourceId,managed:true,importedHash:hash,...extra}};}
 
-async function importItems(){
+async function importItems({force=false}={}){
   const data=await loadJSON("items.json");
   const folders=await ensureManagedFolders("Item",data.folders);
   for(const e of data.entries){
@@ -92,7 +93,7 @@ async function importItems(){
     const folder=folders.get(e.folder)?.id??null;
     const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
     if(!item){await Item.create(payload);continue;}
-    if(item.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue;
+    if(!force&&item.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue;
     const update=foundry.utils.deepClone(payload); delete update._id; await item.update(update);
   }
 }
@@ -128,11 +129,12 @@ async function coreActorSource(spec){
   }
   return null;
 }
-async function cloneCoreActor(spec,folder,existing=null){
+async function cloneCoreActor(spec,folder,existing=null,force=false){
   const src=await coreActorSource(spec);
-  if(!src){console.warn(`Franchise Wars | Core actor not found: ${spec.baseName} (needed for ${spec.name})`);return null;}
+  if(!src){console.warn(`Franchise Wars | No compendium actor found for ${spec.name} (tried ${[spec.baseName,...(spec.fallbackBaseNames??[])].join(", ")})`);return null;}
+  if(src.name.toLowerCase()!==String(spec.baseName).toLowerCase())console.info(`Franchise Wars | ${spec.name}: ${spec.baseName} not installed, using ${src.name} from ${src.pack}`);
   const specHash=fnv(JSON.stringify({base:spec.baseName,fallback:spec.fallbackBaseNames??[],name:spec.name,description:spec.description,extraItems:spec.extraItems??[],extraSpells:spec.extraSpells??[],overrides:spec.overrides??{},removeItems:spec.removeItems??[],source:src.uuid,img:spec.img??null,token:spec.token??null,artAssetId:spec.artAssetId??null,v:2}));
-  if(existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
+  if(!force&&existing?.getFlag(MODULE_ID,"importedHash")===specHash)return existing;
   const data=src.toObject(); delete data._id; delete data.folder; data.name=spec.name; data.folder=folder;
   if(spec.img){data.img=spec.img;data.prototypeToken??={};data.prototypeToken.texture??={};data.prototypeToken.texture.src=spec.token??spec.img;}
   if(spec.name){data.prototypeToken??={};data.prototypeToken.name=spec.name;}
@@ -164,8 +166,9 @@ let _itemIndex=null;
 async function grantItems(actor,grants){
   const add=[];const missing=[];
   for(const g of grants){
-    if(actor.items.some(i=>i.type===g.type&&i.name.toLowerCase()===g.name.toLowerCase()))continue;
-    const src=await coreItemSource(g.name,g.type);if(!src){missing.push(`${g.type}: ${g.name}`);continue;}
+    const names=[g.name,...(g.alt??[])];
+    if(actor.items.some(i=>i.type===g.type&&names.some(n=>i.name.toLowerCase()===n.toLowerCase())))continue;
+    let src=null;for(const n of names){src=await coreItemSource(n,g.type);if(src)break;}if(!src){missing.push(`${g.type}: ${g.name}`);continue;}
     const o=src.toObject();delete o._id;if(g.levels)o.system.levels=g.levels;
     if(["weapon","equipment"].includes(o.type))foundry.utils.setProperty(o,"system.equipped",true);
     if(o.type==="spell")foundry.utils.setProperty(o,"system.prepared",o.system.level===0?0:1);
@@ -191,18 +194,20 @@ async function applyActorPayload(actor,payload,hash){
   await stampActorState(actor);
 }
 
-async function importActors(){
-  const data=await loadJSON("actors.json");
+async function importActors({force=false}={}){
+  const data=await loadJSON("actors.json");const fwFailed=[];
   const folders=await ensureManagedFolders("Actor",data.folders);
-  for(const e of data.entries){
+  for(const e of data.entries){try{
     let actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===e.sourceId); const folder=folders.get(e.folder)?.id??null;
     const payload=foundry.utils.deepClone(e.data); payload.folder=folder; payload.flags=foundry.utils.mergeObject(payload.flags??{},managedFlags(e.sourceId,e.contentHash),{inplace:false});
-    if(!actor){const made=await Actor.create(payload);if(e.grants)await grantItems(made,e.grants);await stampActorState(made);continue;} if(actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash); if(e.grants)await grantItems(actor,e.grants);
-  }
-  for(const spec of data.clones??[]){
+    if(!actor){const made=await Actor.create(payload);if(!made)throw new Error("Actor.create returned nothing");if(e.grants)await grantItems(made,e.grants);await stampActorState(made);continue;} if(!force&&actor.getFlag(MODULE_ID,"importedHash")===e.contentHash)continue; await applyActorPayload(actor,payload,e.contentHash); if(e.grants)await grantItems(actor,e.grants);
+  }catch(err){fwFailed.push(`${e.data?.name??e.sourceId}: ${err.message}`);console.error("Franchise Wars | actor import failed",e.sourceId,err);}}
+  for(const spec of data.clones??[]){try{
     const actor=game.actors.find(x=>x.getFlag(MODULE_ID,"sourceId")===spec.sourceId);
-    await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null);
-  }
+    const r=await cloneCoreActor(spec,folders.get(spec.folder)?.id??null,actor??null,force);if(!r&&!actor)fwFailed.push(`${spec.name}: no compendium base found`);
+  }catch(err){fwFailed.push(`${spec.name}: ${err.message}`);console.error("Franchise Wars | clone failed",spec.sourceId,err);}}
+  if(fwFailed.length)ui.notifications.warn(`Franchise Wars | ${fwFailed.length} actor(s) could not be imported; the rest of the campaign imported normally. See console for the list.`,{permanent:true});
+  if(fwFailed.length)console.warn("Franchise Wars | actors not imported:",fwFailed);
   if(data.retired?.length){
     let rf=game.folders.find(f=>f.type==="Actor"&&f.getFlag(MODULE_ID,"sourceId")==="fw.actor.retired");
     if(!rf)rf=await Folder.create({name:"Retired Duplicates (safe to delete)",type:"Actor",folder:folders.get("fw.actor.root")?.id??null,flags:{[MODULE_ID]:{sourceId:"fw.actor.retired",managed:true}}});
@@ -325,7 +330,7 @@ function fwButton(action,label,data){const a=document.createElement("a");a.class
 Hooks.once("init",()=>{
   const enrichers=CONFIG.TextEditor.enrichers;
   enrichers.push({pattern:/@FWLink\[(Actor|Item|Scene|JournalEntry)\|([^\]|]+)(?:\|([^\]]+))?\]\{([^}]+)\}/g,enricher:async(m)=>{
-    const [,type,src,page,label]=m;const doc=fwFind(type,src);
+    const [,type,src,page,label]=m;const doc=await fwFindAny(type,src);
     if(!doc)return fwMissing(label,`Not imported yet: ${src}`);
     let target=doc;
     if(page&&type==="JournalEntry"){target=fwPage(doc,page)??doc;}
@@ -523,7 +528,8 @@ async function importMacros(){
     ["fw.macro.vote","FW: Board Vote","game.franchiseWars.openBoardVote();","icons/svg/hanging-sign.svg"],
     ["fw.macro.command","FW: Command Centre","game.franchiseWars.openCommandCentre();","icons/svg/castle.svg"],
     ["fw.macro.maps","FW: Re-import Battlemaps (force)","game.franchiseWars.importMaps({force:true});","icons/svg/village.svg"],
-    ["fw.macro.export","FW: Export to Compendiums","game.franchiseWars.exportToCompendiums();","icons/svg/chest.svg"]];
+    ["fw.macro.export","FW: Export to Compendiums","game.franchiseWars.exportToCompendiums();","icons/svg/chest.svg"],
+    ["fw.macro.reimport","FW: Re-import Everything (force)","game.franchiseWars.reimportAll();","icons/svg/upgrade.svg"]];
   let folder=game.folders.find(f=>f.type==="Macro"&&f.getFlag(MODULE_ID,"sourceId")==="fw.folder.macros");
   if(!folder)folder=await Folder.create({name:"The Franchise Wars",type:"Macro",color:"#7a1f2b",flags:{[MODULE_ID]:{sourceId:"fw.folder.macros"}}});
   for(const[sid,name,command,img]of list){
@@ -550,3 +556,77 @@ async function exportToCompendiums(){
   }
 }
 Hooks.once("init",()=>{game.franchiseWars.exportToCompendiums=exportToCompendiums;});
+
+/* ---------------------------------------------------------------- v1.0.1 Game Settings menu + compendium support */
+async function reimportAll({confirm=true}={}){
+  if(!game.user.isGM)throw new Error("GM only");
+  if(confirm){const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Re-import The Franchise Wars"},content:"<p>Rebuild every Franchise Wars journal, actor, item, battlemap, table, playlist and macro in this world from the module, including documents that look unchanged.</p><p>Anything you edited is copied to the <b>Recovery</b> folders first. Campaign progress (Leverage, Receipts, Board, clauses) is not touched.</p>"});if(!ok)return;}
+  ui.notifications.info("Franchise Wars | full re-import started. This can take a few minutes.");
+  _actorIndex=null;_itemIndex=null;
+  await importContent({force:true});
+  ui.notifications.info("Franchise Wars | full re-import complete.");
+}
+async function resetCampaignState(){
+  const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Reset campaign tracker"},content:"<p>Reset Rabbit Rating, Leverage, Receipts, Board seats, clauses and the Commons Tally to a new campaign? Documents are not changed. This cannot be undone.</p>"});
+  if(!ok)return;await game.settings.set(MODULE_ID,STATE_KEY,foundry.utils.deepClone(DEFAULT_STATE));Hooks.callAll("franchiseWarsStateChanged",await getState(),{});ui.notifications.info("Franchise Wars | campaign tracker reset.");
+}
+class FWSettingsMenu extends FWWindow{
+  static DEFAULT_OPTIONS={id:"fw-settings-menu",window:{title:"The Franchise Wars — Content Manager",icon:"fa-solid fa-briefcase"},position:{width:520}};
+  async html(){
+    const imported=game.settings.get(MODULE_ID,IMPORT_KEY)||"never";
+    const packs=game.packs.filter(p=>p.metadata.packageName===MODULE_ID);
+    return `<div class="fw-settings">
+      <p>Module version <b>${VERSION}</b> · last world import <b>${esc(imported)}</b></p>
+      <h3>World content</h3>
+      <div class="fw-row"><button data-act="all"><i class="fa-solid fa-rotate"></i> Re-import everything</button></div>
+      <p class="fw-note">Rebuilds every journal, actor, item, battlemap, table, playlist and macro from the module. Your edits are copied to the Recovery folders first.</p>
+      <div class="fw-row"><button data-act="maps"><i class="fa-solid fa-map"></i> Re-import battlemaps only</button><button data-act="update"><i class="fa-solid fa-download"></i> Import changes only</button></div>
+      <h3>Compendiums</h3>
+      <p class="fw-note">The module ships ${packs.length} compendiums in the <b>The Franchise Wars</b> folder of the Compendium sidebar. Drag single documents out, or use a pack's <i>Import All Content</i> (tick <b>Keep Document IDs</b> so map pins and tokens stay linked).</p>
+      <div class="fw-row"><button data-act="export"><i class="fa-solid fa-box-archive"></i> Copy this world's versions into world compendiums</button></div>
+      <h3>Campaign tracker</h3>
+      <div class="fw-row"><button data-act="tracker"><i class="fa-solid fa-chart-line"></i> Open tracker</button><button data-act="reset"><i class="fa-solid fa-eraser"></i> Reset campaign progress</button></div>
+    </div>`;
+  }
+  async act(a){
+    try{
+      if(a==="all")await reimportAll();
+      else if(a==="maps")await importMaps({force:true});
+      else if(a==="update"){await importContent();ui.notifications.info("Franchise Wars | changes imported.");}
+      else if(a==="export")await exportToCompendiums();
+      else if(a==="tracker")new FWTracker().render(true);
+      else if(a==="reset")await resetCampaignState();
+    }catch(err){console.error("Franchise Wars |",err);ui.notifications.error(err.message);}
+    this.render();
+  }
+}
+Hooks.once("init",()=>{
+  game.settings.registerMenu(MODULE_ID,"contentManager",{name:"Campaign content",label:"Open Content Manager",hint:"Re-import every Franchise Wars journal, actor, battlemap, table and playlist into this world, re-import only the maps, or reset campaign progress.",icon:"fa-solid fa-briefcase",type:FWSettingsMenu,restricted:true});
+  Object.assign(game.franchiseWars,{reimportAll,resetCampaignState,openContentManager:()=>new FWSettingsMenu().render(true)});
+});
+
+/* Links inside compendium journals: if a document is not in the world, link to the module compendium copy instead. */
+let FW_PACK_INDEX=null;
+async function fwPackIndex(){
+  if(FW_PACK_INDEX)return FW_PACK_INDEX;FW_PACK_INDEX=new Map();
+  for(const pack of game.packs.filter(p=>p.metadata.packageName===MODULE_ID)){
+    try{const idx=await pack.getIndex({fields:[`flags.${MODULE_ID}.sourceId`]});for(const r of idx){const sid=foundry.utils.getProperty(r,`flags.${MODULE_ID}.sourceId`);if(sid)FW_PACK_INDEX.set(`${pack.documentName}|${sid}`,{pack,id:r._id});}}catch(e){}
+  }
+  return FW_PACK_INDEX;
+}
+async function fwFindAny(type,sourceId){
+  const w=fwFind(type,sourceId);if(w)return w;
+  const hit=(await fwPackIndex()).get(`${type}|${sourceId}`);if(!hit)return null;
+  try{return await hit.pack.getDocument(hit.id);}catch(e){return null;}
+}
+/* Scenes brought in from the compendium keep their map image on a flag; put it on the v14 Level. */
+Hooks.on("createScene",async(scene,options,userId)=>{
+  if(userId!==game.user.id)return;const bg=scene.getFlag(MODULE_ID,"background");if(!bg)return;
+  try{await ensureLevelBackground(scene,bg,scene.backgroundColor);}catch(err){console.warn("Franchise Wars | scene background",err);}
+});
+Hooks.once("ready",async()=>{
+  if(!game.user.isGM)return;
+  for(const scene of game.scenes.filter(s=>s.getFlag(MODULE_ID,"fromPack")&&s.getFlag(MODULE_ID,"background"))){
+    const lvl=scene.levels?.contents?.[0];if(!lvl||!lvl.background?.src){try{await ensureLevelBackground(scene,scene.getFlag(MODULE_ID,"background"),scene.backgroundColor);}catch(e){}}
+  }
+});
