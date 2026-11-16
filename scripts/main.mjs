@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "1.1.1";
+const VERSION = "1.1.4";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
@@ -325,7 +325,7 @@ function openSessionZero(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sou
    @FWLink[Type|sourceId(|pageName)]{label}  -> live link to the managed document (found by flag)
    @FWCheck[S01|skill=inv dc=20|flavor]{label} / @FWSave[S01|ability=wis dc=13|flavor]{label}
    @FWChat[narrate|cover]{label}  -> sends the surrounding read-aloud box / contract slip to chat
-   @FWShow[handoutSourceId|pageName]{label} -> reveals one handout page to all players
+   @FWShow[handoutSourceId|pageName]{label} -> posts one handout page to chat (no journal permissions change)
    @FWReceipt[S01|itemSourceId]{label} -> records the Receipt and announces it */
 const FW_COLLECTIONS={Actor:()=>game.actors,Item:()=>game.items,Scene:()=>game.scenes,JournalEntry:()=>game.journal};
 const fwUnesc=t=>{const d=document.createElement("textarea");d.innerHTML=String(t??"");return d.value.trim();};
@@ -351,14 +351,18 @@ Hooks.once("init",()=>{
 });
 function fwParseSpec(spec){const o={};for(const t of String(spec).trim().split(/\s+/)){const[k,v]=t.split("=");o[k]=v;}return o;}
 async function fwShowPage(src,pageName){
+  // Handouts go to chat as a card: players see only this page, and no journal permissions change.
   const entry=fwFind("JournalEntry",src);if(!entry)return ui.notifications.warn(`Handout journal not found: ${src}`);
   const page=fwPage(entry,pageName);if(!page)return ui.notifications.warn(`Handout page not found: ${pageName}`);
-  const LIMITED=CONST.DOCUMENT_OWNERSHIP_LEVELS.LIMITED,OBSERVER=CONST.DOCUMENT_OWNERSHIP_LEVELS.OBSERVER;
-  if((entry.ownership.default??0)<LIMITED)await entry.update({"ownership.default":LIMITED});
-  if((page.ownership?.default??-1)<OBSERVER)await page.update({"ownership.default":OBSERVER});
-  const J=foundry.documents?.collections?.Journal??globalThis.Journal;
-  try{await J.show(page,{force:true});}catch(err){console.warn("Franchise Wars | show",err);await J.show(entry,{force:true});}
-  ui.notifications.info(`Shown to players: ${pageName}`);
+  return fwPostHandout(page);
+}
+async function fwPostHandout(page){
+  const TE=foundry.applications?.ux?.TextEditor?.implementation??TextEditor;
+  const html=await TE.enrichHTML(page.text?.content??"",{secrets:false,relativeTo:page});
+  const div=document.createElement("div");div.innerHTML=html;
+  div.querySelectorAll("a.fw-action,.fw-handout-tools,section.secret,.fw-gm-only").forEach(n=>n.remove());
+  await ChatMessage.create({speaker:{alias:"Handout"},content:`<div class="fw-chat-handout">${div.innerHTML}</div>`,flags:{[MODULE_ID]:{handout:page.uuid}}});
+  ui.notifications.info(`Sent to chat: ${page.name}`);
 }
 document.addEventListener("click",async ev=>{
   const a=ev.target.closest?.("a.fw-action[data-fw-action]");if(!a)return;
@@ -372,7 +376,8 @@ document.addEventListener("click",async ev=>{
       const root=a.closest(".fw-readaloud")??a.closest(".journal-entry-page,.journal-page-content,article")?.querySelector(".fw-contract-slip")??null;
       if(!root)return ui.notifications.warn("Nothing to send.");
       const clone=root.cloneNode(true);clone.querySelectorAll("a.fw-action,header").forEach(n=>n.remove());
-      await ChatMessage.create({speaker:{alias:root.classList.contains("fw-readaloud")?"Narrator":"QuestRabbit Job Board"},content:`<div class="fw-chat-narration">${clone.innerHTML}</div>`});
+      const isSlip=!root.classList.contains("fw-readaloud");
+      await ChatMessage.create({speaker:{alias:isSlip?"QuestRabbit Job Board":"Narrator"},content:isSlip?`<div class="fw-chat-handout"><div class="fw-contract-slip">${clone.innerHTML}</div></div>`:`<div class="fw-chat-narration">${clone.innerHTML}</div>`});
     }
     else if(d.fwAction==="show")await fwShowPage(d.src,d.page);
     else if(d.fwAction==="receipt"){
@@ -635,4 +640,21 @@ Hooks.once("ready",async()=>{
   for(const scene of game.scenes.filter(s=>s.getFlag(MODULE_ID,"fromPack")&&s.getFlag(MODULE_ID,"background"))){
     const lvl=scene.levels?.contents?.[0];if(!lvl||!lvl.background?.src){try{await ensureLevelBackground(scene,scene.getFlag(MODULE_ID,"background"),scene.backgroundColor);}catch(e){}}
   }
+});
+
+/* v1.1.4: handouts now go to chat. Undo the journal permissions older versions opened when showing a handout. */
+Hooks.once("init",()=>{game.settings.register(MODULE_ID,"handoutPrivacyV1",{scope:"world",config:false,type:Boolean,default:false});});
+Hooks.once("ready",async()=>{
+  if(!game.user.isGM||game.settings.get(MODULE_ID,"handoutPrivacyV1"))return;
+  const NONE=CONST.DOCUMENT_OWNERSHIP_LEVELS.NONE,INHERIT=CONST.DOCUMENT_OWNERSHIP_LEVELS.INHERIT;let n=0;
+  for(const j of game.journal){
+    const sid=j.getFlag(MODULE_ID,"sourceId")??"";if(!/^fw\.handouts?\./.test(sid))continue;
+    try{
+      if((j.ownership.default??0)>NONE){await j.update({"ownership.default":NONE});n++;}
+      const pages=j.pages.filter(p=>(p.ownership?.default??INHERIT)!==INHERIT).map(p=>({_id:p.id,"ownership.default":INHERIT}));
+      if(pages.length){await j.updateEmbeddedDocuments("JournalEntryPage",pages);n++;}
+    }catch(err){console.warn("Franchise Wars | handout privacy",sid,err);}
+  }
+  await game.settings.set(MODULE_ID,"handoutPrivacyV1",true);
+  if(n)ui.notifications.info(`Franchise Wars | ${n} handout journal(s) made GM-only again; handouts now go to chat.`);
 });

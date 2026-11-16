@@ -1,4 +1,4 @@
-# The Franchise Wars v1.1.1
+# The Franchise Wars v1.1.4
 
 Foundry VTT v14 / dnd5e v6 module.
 

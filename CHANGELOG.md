@@ -1,3 +1,52 @@
+# v1.1.4 — Handouts to Chat, Readable Cards
+**Readable chat cards**
+- Contract slips, read-aloud boxes, briefs and handouts sent to chat are now dark ink on paper. Foundry's dark chat theme was painting table cells dark under dark text.
+- Table labels no longer break mid-word ("Cont / ract / grad / e"), and wide tables shrink to fit the chat panel.
+- "Send contract to chat" now posts the job slip as a styled slip, not italic narration.
+
+**Handouts go to chat, not to the journal**
+- Every handout button in the guides (377 of them, now labelled "Send handout to chat") posts just that page to chat, keeping its paper, memo, parchment, note or infernal style.
+- No journal permissions change, so players never get access to the rest of the handout journal.
+- Every handout page (262) has its own **Send to chat** button at the top, so you can push one straight from the handout journals.
+- One-time cleanup on first load: handout journals that older versions opened up (Limited for everyone, pages set to Observer) are made GM-only again.
+- Tip: avoid Foundry's own "Show Players" button on handout journals, because it shares the whole journal. Use Send to chat instead.
+
+# v1.1.3 — Every Character Has a Face
+**Art**
+- Added the 63 new portraits (FW_PT-45 to PT-107), each as a portrait and a token, and updated 86 NPC cards in the mission and contract guides to show them.
+- Every actor in the campaign now has its own portrait (345 actors). The only shared image is Petronella Fizzwick's, used by her two sheets for the same character.
+- Gregory Latch (PT-107) and Innkeeper Nod Bramblewick (PT-49) no longer share a picture. Azhure (PT-50) now has his own blue portrait.
+
+**Duplicates merged**
+- Madam Ossifer: the contract copy is merged into the FR-62 franchise sheet. Her library portrait is kept and PT-85 becomes her token.
+- Hrothga the Mild: merged into FR-49 with the PT-78 portrait (FR-49 previously showed a tavern scene).
+- Old sheets move to *Retired Duplicates (safe to delete)*, and every link and map token points to the merged sheet.
+
+**Stat blocks matched to the level they're met at**
+- Old Mister Kessik: Mummy at 130 hp, CR 9 (was a CR 21 Lich), with Eleven Herbs, Royalty of Spite and Unpaid Rejuvenation.
+- Madam Ossifer: a sleepy beholder at CR 4 (Basilisk mechanics, flying) with Dreaming Eyes and Waking Eye Ray. She was a CR 15 Mummy Lord without the Monster Manual.
+- The House Croupier: a lesser rakshasa at 60 hp, CR 5, as its contract specifies. Sallow & Tine: two junior-partner rakshasas at 110 hp, CR 8 each. Their top-tier spells are removed.
+- HOT NOW: CR 1 (Magma Mephit mechanics) with Brand Flare and the DC 14 Arcana fryer binding (was a CR 5 Fire Elemental at level 2).
+- Thaddeus Quell: CR 2 for S04 (Cult Fanatic mechanics) with Order for Inventory Reduction; use the Corporate Research Mage stats in S11.
+- Order No. 9: a CR 4 half-assembled slaad with Still Assembling and Special Sauce (was a CR 9 Gray Slaad).
+- Mother Rime & Sister Brine: two Night Hags (CR 5 each) sharing Coven Magic (was one CR 2 Sea Hag).
+- Baroness Ishrae: CR 5 with a 50 ft swim speed, Blood Frenzy and Shark Court. Without the Monster Manual she is built on a Veteran rather than a CR ½ Sahuagin.
+- Evander Keen falls back to a Ghost rather than a Commoner, and gains The Saddest Song.
+- The Runaway Scoop: 30 hp, CR 1 for level 1.
+- New signature features: Lucky Twenty's Stolen Luck (20/day), King Dunstan's Royal Pardon, the Legion Ballista crew's ballista attack, and Gregory Latch's infernal traits (built on a Noble).
+- Ember knows Fire Bolt and Burning Hands; Jory knows Mage Hand and Unseen Servant.
+- Each rebuilt sheet says what changed in a stat note at the end of its biography. All new features have dnd5e roll activities.
+
+# v1.1.2 — Full Art Audit
+- Matched all 688 images of the full art audit against the 352 actors.
+- New portraits and tokens: Ada Fairweather (PT-35), Skarrow Vane (PT-36), Collector Grix (PT-37), the Clerk of the First Sale (PT-38), Foreman Gerrit Hask (PT-39), Arbiter Maud Penhallow (PT-40), Fennel (PT-41), Tobin (PT-42) and Verdigris (PT-44, the blue-green twin).
+- Brewmaster Hilde Stonecask now uses the unused dwarf-brewer library portrait. Store Security Guard now uses unregistered output 03.
+- Compliance Officer, Former Employee Still on Payroll and Zero-Hour Kitchen Skeleton now have two token faces each (unregistered outputs 01, 02 and 04), so groups of them don't look identical. Each pre-placed token alternates between the faces.
+- 17 NPC cards in the mission and contract guides now show the new portraits.
+- PT-43 (orange-red dragonborn) is not assigned: Azhure is blue throughout the guides. Azhure keeps the shared Quarterly Storm Dragon art until there is a blue portrait.
+- Fixed: the act-map renumbering in v1.1.1 stopped patrons appearing on seven act franchise maps. They're back (680 patrons on 64 maps).
+- 289 of 352 actors now have a unique portrait; the 63 still needing one are listed in Franchise-Wars-Portrait-Audit-v2.csv.
+
 # v1.1.1 — Map Staging
 - **No duplicate named characters.** A named NPC is placed once per map, even when several scenes share that map. Extra copies from a foe count (for example "×3") become that character's generic counterpart. Team Deliverables ×4 now places Brixley, Thorne, Luma and Oggo. Generic creatures such as Compliance Officers still appear in numbers.
 - **Token art fits the token.** Some SRD 5.2 stat blocks set the token image to 2× scale. Every Franchise Wars token now uses 1× scale with the image fitted to the frame, so Large creatures fill their own 2×2 space and no more.

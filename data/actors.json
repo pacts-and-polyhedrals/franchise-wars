@@ -1948,11 +1948,12 @@
       "attribute": null
      },
      "texture": {
-      "src": "modules/franchise-wars/assets/art/actors/tokens/tk-01_compliance-officer.webp",
+      "src": "modules/franchise-wars/assets/art/actors/variants/compliance-officer-*.webp",
       "scaleX": 1,
       "scaleY": 1,
       "tint": "#ffffff"
-     }
+     },
+     "randomImg": true
     },
     "ownership": {
      "default": 0
@@ -1967,7 +1968,7 @@
      }
     }
    },
-   "contentHash": "3d49a3a71b9ad91f"
+   "contentHash": "fc36355c1dc0a2ab"
   },
   {
    "sourceId": "fw.actor.bestiary.senior-auditor",
@@ -10886,11 +10887,14 @@
    "baseName": "Ghost",
    "description": "<section class=\"fw-reskin\"><p><strong>Former Employee, Still on Payroll</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C045)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Ghost (hidden from players)</p><p><em>Transparent worker still wearing badge and apron, clutching pay stub dated centuries ago.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c045_former-employee-still-on-payroll.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c045_former-employee-still-on-payroll.webp",
+   "token": "modules/franchise-wars/assets/art/actors/variants/former-employee-still-on-payroll-*.webp",
    "reskin": "TK-C045",
    "fallbackBaseNames": [
     "Commoner"
-   ]
+   ],
+   "overrides": {
+    "prototypeToken.randomImg": true
+   }
   },
   {
    "sourceId": "fw.actor.core.ghoul",
@@ -11665,11 +11669,14 @@
    "baseName": "Skeleton",
    "description": "<section class=\"fw-reskin\"><p><strong>Zero-Hour Kitchen Skeleton</strong> — Franchise Wars reskin <span class=\"fw-fine\">(TK-C103)</span></p><p><strong>Faction:</strong> Restaurant Necromancy Group · <strong>Mechanical source:</strong> Skeleton (hidden from players)</p><p><em>Skeleton line cook in old apron still working an endless shift with knife and order tickets.</em></p></section>",
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c103_zero-hour-kitchen-skeleton.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c103_zero-hour-kitchen-skeleton.webp",
+   "token": "modules/franchise-wars/assets/art/actors/variants/zero-hour-kitchen-skeleton-*.webp",
    "reskin": "TK-C103",
    "fallbackBaseNames": [
     "Commoner"
-   ]
+   ],
+   "overrides": {
+    "prototypeToken.randomImg": true
+   }
   },
   {
    "sourceId": "fw.actor.core.specter",
@@ -14664,12 +14671,13 @@
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "img": "modules/franchise-wars/assets/art/library/a-detailed-fantasy-tavern-bar-scene-illustration-i--b2c7b115.webp",
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-78_hrothga-the-mild.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Northgate Barrel, run by <strong>Hrothga the Mild</strong>, founder, who has renounced violence.</td></p><p>Source dossier: FR-49 — Barbarian&#x27;s Barrel</p>",
    "overrides": {},
    "extraItems": [],
    "extraSpells": [],
-   "removeItems": []
+   "removeItems": [],
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-78_hrothga-the-mild.webp"
   },
   {
    "sourceId": "fw.actor.staff.FR-50",
@@ -14804,12 +14812,13 @@
    "name": "Innkeeper Nod Bramblewick",
    "baseName": "Commoner",
    "fallbackBaseNames": [],
-   "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-49_innkeeper-nod-bramblewick.webp",
    "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The Great Road Inn, run by <strong>Innkeeper Nod Bramblewick</strong>, cheerful and sleepless.</td></p><p>Source dossier: FR-59 — Long Rest Inn</p>",
    "overrides": {},
    "extraItems": [],
    "extraSpells": [],
-   "removeItems": []
+   "removeItems": [],
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-49_innkeeper-nod-bramblewick.webp"
   },
   {
    "sourceId": "fw.actor.staff.FR-60",
@@ -14845,18 +14854,145 @@
    "sourceId": "fw.actor.staff.FR-62",
    "folder": "fw.actor.staff",
    "name": "Madam Ossifer",
-   "baseName": "Beholder",
+   "baseName": "Basilisk",
    "fallbackBaseNames": [
-    "Mummy Lord",
-    "Stone Golem",
     "Commoner"
    ],
    "img": "modules/franchise-wars/assets/art/library/beholder-innkeeper-s-breakfast-rush--d3afea9f.webp",
-   "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The only B&amp;B&amp;B, in the Heights, run by <strong>Madam Ossifer</strong>, a beholder.</td></p><p>Source dossier: FR-62 — Bed, Breakfast &amp; Beholders</p>",
-   "overrides": {},
-   "extraItems": [],
+   "description": "<p><strong>Franchise staff / recurring NPC.</strong></p><p><td>The only B&amp;B&amp;B, in the Heights, run by <strong>Madam Ossifer</strong>, a beholder.</td></p><p>Source dossier: FR-62 — Bed, Breakfast &amp; Beholders</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> A sleepy beholder at CR 4 (Basilisk mechanics, flying) so the level 4 mystery stays survivable. The guide says not to fight her at level 4; use a full Beholder only above level 10.</p>",
+   "overrides": {
+    "system.attributes.hp.max": 85,
+    "system.attributes.hp.value": 85,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 4,
+    "system.attributes.ac.calc": "flat",
+    "system.attributes.ac.flat": 15,
+    "system.attributes.movement.fly": 20,
+    "system.attributes.movement.hover": true,
+    "system.attributes.movement.walk": 0,
+    "system.details.type.value": "aberration"
+   },
+   "extraItems": [
+    {
+     "name": "Dreaming Eyes",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>While Madam Ossifer sleeps, one random creature she can see at the end of each of her turns must make a DC 13 Constitution saving throw. On a failure it begins to turn to stone and is restrained; it repeats the save at the end of its next turn, becoming petrified on a second failure or ending the effect on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "dreaming-eyes",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "ecbb84b50c36f6d9": {
+        "_id": "ecbb84b50c36f6d9",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "special",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "con"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Waking Eye Ray",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Ranged Spell Attack: +5 to hit, range 120 ft., one target. Hit: 13 (3d8) force damage.</p>",
+       "chat": ""
+      },
+      "identifier": "waking-eye-ray",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "bec114cb894105f3": {
+        "_id": "bec114cb894105f3",
+        "type": "attack",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "attack": {
+         "ability": "none",
+         "bonus": "5",
+         "flat": true,
+         "type": {
+          "value": "ranged",
+          "classification": "weapon"
+         },
+         "critical": {
+          "threshold": null
+         }
+        },
+        "damage": {
+         "includeBase": false,
+         "parts": [
+          {
+           "number": 3,
+           "denomination": 8,
+           "bonus": "",
+           "types": [
+            "force"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
    "extraSpells": [],
-   "removeItems": []
+   "removeItems": [
+    "Bite"
+   ],
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-85_madam-ossifer.webp"
   },
   {
    "sourceId": "fw.actor.staff.FR-63",
@@ -14954,14 +15090,96 @@
    "sourceId": "fw.actor.corporate.CO-08.public-face",
    "folder": "fw.actor.corporate",
    "name": "Mr. Gregory Latch",
-   "baseName": "Commoner",
-   "fallbackBaseNames": [],
-   "img": "modules/franchise-wars/assets/art/library/a-detailed-high-contrast-comic-illustration-styl--fa3a1fd6.webp",
-   "description": "<p><strong>Public Face</strong> — CO-08 — Nine Circles Hospitality</p><p><td><strong>Mr. Gregory Latch</strong>, Managing Director (tiefling, doorman's gloves, perfectly polite).</td></p>",
-   "overrides": {},
-   "extraItems": [],
+   "baseName": "Noble",
+   "fallbackBaseNames": [
+    "Commoner"
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-107_mr-gregory-latch.webp",
+   "description": "<p><strong>Public Face</strong> — CO-08 — Nine Circles Hospitality</p><p><td><strong>Mr. Gregory Latch</strong>, Managing Director (tiefling, doorman's gloves, perfectly polite).</td></p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Nine Circles’ Managing Director, built on a Noble with infernal traits rather than a Commoner.</p>",
+   "overrides": {
+    "system.traits.dr.value": [
+     "fire"
+    ],
+    "system.details.type.value": "humanoid",
+    "system.details.type.subtype": "tiefling"
+   },
+   "extraItems": [
+    {
+     "name": "Infernal Hospitality",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>Latch has resistance to fire damage and speaks Infernal. Any creature who accepts his hospitality (a key, a drink, a room) has disadvantage on saving throws against Nine Circles contracts until it leaves the premises.</p>",
+       "chat": ""
+      },
+      "identifier": "infernal-hospitality",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Perfectly Polite",
+     "type": "feat",
+     "img": "icons/svg/shield.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Reaction</strong></p><p>When a creature within 30 feet is rude to Latch, it makes a DC 13 Charisma saving throw or is charmed by him until the end of its next turn.</p>",
+       "chat": ""
+      },
+      "identifier": "perfectly-polite",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "8815476a84166bd3": {
+        "_id": "8815476a84166bd3",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "reaction",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "cha"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      },
+      "activation": {
+       "type": "reaction"
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
    "extraSpells": [],
-   "removeItems": []
+   "removeItems": [],
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-107_mr-gregory-latch.webp"
   },
   {
    "sourceId": "fw.actor.recurring.lettice-quayle",
@@ -14996,8 +15214,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c105_corporate-mystery-shopper.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-56_lettice-quayle.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-56_lettice-quayle.webp"
   },
   {
    "sourceId": "fw.actor.recurring.agatha-brindle",
@@ -15008,8 +15226,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Landlady of Gideon and Mortimer’s flat (S02). Nosy, kind, terrifying about rent.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-59_mrs-agatha-brindle.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-59_mrs-agatha-brindle.webp"
   },
   {
    "sourceId": "fw.actor.recurring.mags-ollie-fen",
@@ -15020,8 +15238,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Gelatinous Cube night scoopers (S03). Mags is the senior scooper who knows the walk-in freezer’s secret.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c126_back-of-house-retained-worker.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c126_back-of-house-retained-worker.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-57_mags-turnwell-ollie-pask-fen-sorrel.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-57_mags-turnwell-ollie-pask-fen-sorrel.webp"
   },
   {
    "sourceId": "fw.actor.recurring.old-gil",
@@ -15056,8 +15274,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-60_old-gil.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-60_old-gil.webp"
   },
   {
    "sourceId": "fw.actor.recurring.gelli",
@@ -15098,8 +15316,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c056_stracciatella-spill.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c056_stracciatella-spill.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-53_gelli.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-53_gelli.webp"
   },
   {
    "sourceId": "fw.actor.recurring.hettie-gourd",
@@ -15110,8 +15328,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Former owner of the Gilded Gourd (S08), rewritten out of her own tavern by a franchise agreement. She cannot remember where she lives.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-54_hettie-gourd.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-54_hettie-gourd.webp"
   },
   {
    "sourceId": "fw.actor.recurring.silas-crook",
@@ -15124,8 +15342,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Ex-mercenary proprietor of the Bent Spoon (S08). He will fight anyone who asks him to sign.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c112_little-caesars-legionnaire.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c112_little-caesars-legionnaire.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-62_silas-crook.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-62_silas-crook.webp"
   },
   {
    "sourceId": "fw.actor.recurring.old-nan-pertwee",
@@ -15136,8 +15354,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Ninety-year-old owner of the Hobbled Goat (S08). Deaf in one ear; hands out frying pans at the siege.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-61_old-nan-pertwee.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-61_old-nan-pertwee.webp"
   },
   {
    "sourceId": "fw.actor.recurring.benny-abacus",
@@ -15148,8 +15366,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Gnome stock clerk at Wand-Mart (S10). Ink to the elbows; knows about “time payments”.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
-   "token": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-51_benny-abacus.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-51_benny-abacus.webp"
   },
   {
    "sourceId": "fw.actor.recurring.ada-fairweather",
@@ -15160,22 +15378,71 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Lost harvester in Pandemonium (S11); Agnes Fairweather’s sister; mother of Molly. Remembers only her daughter’s name, until she is reminded.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c126_back-of-house-retained-worker.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c126_back-of-house-retained-worker.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-35_ada-fairweather.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-35_ada-fairweather.webp"
   },
   {
    "sourceId": "fw.actor.recurring.thaddeus-quell",
    "folder": "fw.actor.recurring",
    "name": "Thaddeus Quell",
-   "baseName": "Mage",
+   "baseName": "Cult Fanatic",
    "fallbackBaseNames": [
+    "Mage",
     "Commoner"
    ],
-   "description": "<p><strong>Mission-guide NPC.</strong> ABI procurement manager and union-breaker (S04, S11). Earmuffs, clipboard, a lanyard.</p>",
+   "description": "<p><strong>Mission-guide NPC.</strong> ABI procurement manager and union-breaker (S04, S11). Earmuffs, clipboard, a lanyard.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> CR 2 for S04 (level 3). In S11 (level 9) use the Corporate Research Mage stat block instead.</p>",
    "overrides": {},
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c073_corporate-research-mage.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c073_corporate-research-mage.webp"
+   "extraItems": [
+    {
+     "name": "Order for Inventory Reduction",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Quell reads from his clipboard at one unseen servant or construct within 60 feet. It makes a DC 13 Charisma saving throw or is dismissed until the next dawn.</p>",
+       "chat": ""
+      },
+      "identifier": "order-for-inventory-reduction",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "7140baf391d5c31d": {
+        "_id": "7140baf391d5c31d",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "cha"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-63_thaddeus-quell.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-63_thaddeus-quell.webp"
   },
   {
    "sourceId": "fw.actor.recurring.skarrow-vane",
@@ -15239,8 +15506,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c148_pandemonium-plantation-overseer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c148_pandemonium-plantation-overseer.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-36_skarrow-vane.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-36_skarrow-vane.webp"
   },
   {
    "sourceId": "fw.actor.recurring.jory",
@@ -15252,11 +15519,19 @@
     "Cultist",
     "Commoner"
    ],
-   "description": "<p><strong>Mission-guide NPC.</strong> Tired tiefling barista-summoner who maintains the Bean There portal (S11).</p>",
+   "description": "<p><strong>Mission-guide NPC.</strong> Tired tiefling barista-summoner who maintains the Bean There portal (S11).</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Now knows Mage Hand and Unseen Servant for the portal.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c129_junior-arcane-analyst.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c129_junior-arcane-analyst.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-55_jory.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-55_jory.webp",
+   "extraSpells": [
+    {
+     "name": "Mage Hand"
+    },
+    {
+     "name": "Unseen Servant"
+    }
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.fennel",
@@ -15269,8 +15544,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Sunny Goodberry’s licensing druid (S12). Sincere, misguided, quits if shown the dying.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c033_sustainability-officer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c033_sustainability-officer.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-41_fennel.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-41_fennel.webp"
   },
   {
    "sourceId": "fw.actor.recurring.tobin",
@@ -15281,8 +15556,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Sister Wren’s son, now a Goodberry’s juice-bar attendant (S12). Knows nothing about his mother’s bargain.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp",
-   "token": "modules/franchise-wars/assets/art/library/gritty-chibi-barista-serving-espresso--60e77b83.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-42_tobin.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-42_tobin.webp"
   },
   {
    "sourceId": "fw.actor.recurring.maud-penhallow",
@@ -15295,8 +15570,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Dwarf arbiter of the Guild Arbitration Court (S12). Spectacles, a gavel the size of a hammer, a love of proper argument.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c086_benefits-chaplain.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c086_benefits-chaplain.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-40_arbiter-penhallow.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-40_arbiter-penhallow.webp"
   },
   {
    "sourceId": "fw.actor.recurring.sallow-and-tine",
@@ -15306,11 +15581,12 @@
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "description": "<p><strong>Mission-guide NPC.</strong> ABI’s legal team (S12): two rakshasas in charcoal suits and gloves. Use two tokens.</p>",
+   "description": "<p><strong>Mission-guide NPC.</strong> ABI’s legal team (S12): two rakshasas in charcoal suits and gloves. Use two tokens.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Two junior-partner rakshasas at 110 hp and CR 8 each (place two tokens), for S12 at levels 9–10. Previously two CR 13 Rakshasas.</p>",
    "overrides": {
-    "system.attributes.hp.max": 80,
-    "system.attributes.hp.value": 80,
-    "system.attributes.hp.formula": ""
+    "system.attributes.hp.max": 110,
+    "system.attributes.hp.value": 110,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 8
    },
    "extraItems": [
     {
@@ -15335,10 +15611,38 @@
        "sourceId": "fw.actor.recurring.sallow-and-tine.reversed-hands"
       }
      }
+    },
+    {
+     "name": "Objection, Sustained",
+     "type": "feat",
+     "img": "icons/svg/shield.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Reaction</strong></p><p>When a creature within 60 feet that one of the partners can hear makes an ability check, the partner objects. The creature subtracts 1d6 from the check.</p>",
+       "chat": ""
+      },
+      "identifier": "objection,-sustained",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c091_luxury-brand-fixer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c091_luxury-brand-fixer.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-58_messrs-sallow-tine-abi-legal.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-58_messrs-sallow-tine-abi-legal.webp",
+   "removeItems": [
+    "Dominate Person",
+    "Fiendish Restoration",
+    "Plane Shift",
+    "True Seeing"
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.collector-grix",
@@ -15375,8 +15679,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c013_third-notice-collector.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c013_third-notice-collector.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-37_collector-grix.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-37_collector-grix.webp"
   },
   {
    "sourceId": "fw.actor.recurring.chickadee",
@@ -15389,8 +15693,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> Chick’n Familiar’s mascot (S13): an actual quasit in a fuzzy chicken suit. Loyal to nobody; does whatever is funniest.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c089_mascot-familiar.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c089_mascot-familiar.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-52_chickadee.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-52_chickadee.webp"
   },
   {
    "sourceId": "fw.actor.recurring.clerk-of-the-first-sale",
@@ -15432,8 +15736,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c154_legacy-franchise-founder.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c154_legacy-franchise-founder.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-38_clerk-of-the-first-sale.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-38_clerk-of-the-first-sale.webp"
   },
   {
    "sourceId": "fw.actor.recurring.gerrit-hask",
@@ -15470,8 +15774,8 @@
      }
     }
    ],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c068_franchise-protection-knight.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c068_franchise-protection-knight.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-39_foreman-hask.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-39_foreman-hask.webp"
   },
   {
    "sourceId": "fw.actor.recurring.verdigris",
@@ -15485,8 +15789,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> One of the Twins on the CostCo-op board (S19). Wants whatever Azhure doesn’t.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c003_sustainability-compliance-dragon.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c003_sustainability-compliance-dragon.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-44_verdigris.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-44_verdigris.webp"
   },
   {
    "sourceId": "fw.actor.recurring.azhure",
@@ -15500,8 +15804,8 @@
    "description": "<p><strong>Mission-guide NPC.</strong> One of the Twins on the CostCo-op board (S19). Wants whatever Verdigris doesn’t.</p>",
    "overrides": {},
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c002_quarterly-storm-dragon.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c002_quarterly-storm-dragon.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-50_azhure-the-twins.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-50_azhure-the-twins.webp"
   },
   {
    "sourceId": "fw.actor.recurring.four-and-a-half",
@@ -15513,8 +15817,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A Harrow simulacrum who grew a soul and runs the first simulacrum picket line (Infinite Franchise Theory).</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c115_vault-night-manager.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c115_vault-night-manager.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-73_four-and-a-half.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-73_four-and-a-half.webp"
   },
   {
    "sourceId": "fw.actor.recurring.farmgirl-chosen-one",
@@ -15526,21 +15830,46 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A farmgirl marked “Chosen One” by McGuffin Narrative Holdings to control her; secretly the Last Independents’ best scout.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c098_wand-mart-trapper.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c098_wand-mart-trapper.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-98_tamsin-reed-the-chosen-one.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-98_tamsin-reed-the-chosen-one.webp"
   },
   {
    "sourceId": "fw.actor.recurring.coven-sisters",
    "folder": "fw.actor.contractnpc",
    "name": "Mother Rime & Sister Brine",
-   "baseName": "Sea Hag",
+   "baseName": "Night Hag",
    "fallbackBaseNames": [
+    "Green Hag",
+    "Sea Hag",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> Granny Quean’s coven-sisters: a bheur-cold night hag and a sea hag who want her deposed (Coven Politics).</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c099_harbour-returns-witch.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c099_harbour-returns-witch.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> Granny Quean’s coven-sisters: a bheur-cold night hag and a sea hag who want her deposed (Coven Politics).</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Two Night Hags (CR 5 each) for the level 12 contract; previously a single CR 2 Sea Hag.</p>",
+   "extraItems": [
+    {
+     "name": "Two Sisters",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>This sheet represents each sister: place two tokens, Mother Rime (frost) and Sister Brine (sea). While both are within 30 feet of each other they share Coven Magic, and each has advantage on saving throws against being charmed or frightened.</p>",
+       "chat": ""
+      },
+      "identifier": "two-sisters",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-88_mother-rime-sister-brine.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-88_mother-rime-sister-brine.webp"
   },
   {
    "sourceId": "fw.actor.recurring.the-grind",
@@ -15552,8 +15881,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A coffee grinder at the Silent Roastery that woke up, joined the union in spirit, and wants dental cover for teeth it does not have.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c004_auto-closing-safety-suit.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c004_auto-closing-safety-suit.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-100_the-grind-enchanted-grinder.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-100_the-grind-enchanted-grinder.webp"
   },
   {
    "sourceId": "fw.actor.recurring.runaway-scoop",
@@ -15563,10 +15892,16 @@
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> A batch of gelato made with too much Mother Culture. Terrified, rat-flavoured, and full of other creatures’ memories.</p>",
+   "description": "<p><strong>Side-contract NPC.</strong> A batch of gelato made with too much Mother Culture. Terrified, rat-flavoured, and full of other creatures’ memories.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Ochre Jelly at 30 hp and CR 1 for the level 1 contract.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c082_runaway-lemon-scoop.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c082_runaway-lemon-scoop.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-104_the-runaway-scoop.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-104_the-runaway-scoop.webp",
+   "overrides": {
+    "system.attributes.hp.max": 30,
+    "system.attributes.hp.value": 30,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 1
+   }
   },
   {
    "sourceId": "fw.actor.recurring.plant-manager",
@@ -15578,8 +15913,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> The stitched-cattle thing that runs the Wight Castle meat plant with a clipboard.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c041_reconstituted-employee-asset.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c041_reconstituted-employee-asset.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-103_the-plant-manager-stitched-herd.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-103_the-plant-manager-stitched-herd.webp"
   },
   {
    "sourceId": "fw.actor.recurring.codfather-courier",
@@ -15589,8 +15924,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A terrified halfling courier who “lost” the Codfather’s protection money after a Murder King manager paid him to.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-89_nib-marsh-the-courier.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-89_nib-marsh-the-courier.webp"
   },
   {
    "sourceId": "fw.actor.recurring.sahuagin-baron-ishrae",
@@ -15598,27 +15933,226 @@
    "name": "Baroness Ishrae of the Reef",
    "baseName": "Sahuagin Baron",
    "fallbackBaseNames": [
-    "Sahuagin",
     "Veteran",
+    "Sahuagin",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> Sahuagin baroness who will take whichever deal feeds more of her young.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c095_drowned-fulfilment-manager.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c095_drowned-fulfilment-manager.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> Sahuagin baroness who will take whichever deal feeds more of her young.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> A CR 5 baroness (76 hp, swim 50 ft); without the Monster Manual she is built on a Veteran rather than a basic CR ½ Sahuagin.</p>",
+   "extraItems": [
+    {
+     "name": "Blood Frenzy",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>The Baroness has advantage on attack rolls against any creature that doesn’t have all its hit points.</p>",
+       "chat": ""
+      },
+      "identifier": "blood-frenzy",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Shark Court",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>The Baroness can magically command any shark within 120 feet of her, using a limited telepathy.</p>",
+       "chat": ""
+      },
+      "identifier": "shark-court",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-65_baroness-ishrae-of-the-reef.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-65_baroness-ishrae-of-the-reef.webp",
+   "overrides": {
+    "system.attributes.hp.max": 76,
+    "system.attributes.hp.value": 76,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 5,
+    "system.attributes.movement.swim": 50
+   }
   },
   {
    "sourceId": "fw.actor.recurring.kessik",
    "folder": "fw.actor.contractnpc",
    "name": "Old Mister Kessik",
-   "baseName": "Lich",
+   "baseName": "Mummy",
    "fallbackBaseNames": [
+    "Wight",
+    "Zombie",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> The kobold who actually invented the Eleven Herbs. Died unpaid; rose as a revenant of spite who wants 11% of every bucket ever sold.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c154_legacy-franchise-founder.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c154_legacy-franchise-founder.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> The kobold who actually invented the Eleven Herbs. Died unpaid; rose as a revenant of spite who wants 11% of every bucket ever sold.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Built on a Mummy (CR 9 with 130 hp) for the level 9 contract; previously a CR 21 Lich.</p>",
+   "extraItems": [
+    {
+     "name": "Eleven Herbs",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>Kessik is wreathed in the smell of his own recipe. A creature that starts its turn within 10 feet of him must succeed on a DC 15 Constitution saving throw or be poisoned until the start of its next turn.</p>",
+       "chat": ""
+      },
+      "identifier": "eleven-herbs",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "828c7afff0a61232": {
+        "_id": "828c7afff0a61232",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "special",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "con"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "15"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Royalty of Spite",
+     "type": "feat",
+     "img": "icons/svg/shield.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Reaction</strong></p><p>When a creature within 30 feet of Kessik eats, drinks or spends coin, he demands his cut. The creature makes a DC 15 Charisma saving throw, taking 11 (2d10) necrotic damage on a failed save, or half as much on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "royalty-of-spite",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "15c812e970abd454": {
+        "_id": "15c812e970abd454",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "reaction",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "cha"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "15"
+         }
+        },
+        "damage": {
+         "onSave": "half",
+         "parts": [
+          {
+           "number": 2,
+           "denomination": 10,
+           "bonus": "",
+           "types": [
+            "necrotic"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      },
+      "activation": {
+       "type": "reaction"
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Unpaid Rejuvenation",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>If Kessik is destroyed before his claim is heard, he re-forms in the warrens 1d10 days later. A ruling on the 11% (for or against) ends this trait.</p>",
+       "chat": ""
+      },
+      "identifier": "unpaid-rejuvenation",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-91_old-mister-kessik.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-91_old-mister-kessik.webp",
+   "overrides": {
+    "system.attributes.hp.max": 130,
+    "system.attributes.hp.value": 130,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 9,
+    "system.attributes.ac.calc": "flat",
+    "system.attributes.ac.flat": 15
+   }
   },
   {
    "sourceId": "fw.actor.recurring.major-pecksworth",
@@ -15630,8 +16164,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> The Colonel’s familiar: a very large, very military chicken who lectures everyone about duty.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c008_executive-chicken.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c008_executive-chicken.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-86_major-pecksworth.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-86_major-pecksworth.webp"
   },
   {
    "sourceId": "fw.actor.recurring.mabel-treacle",
@@ -15643,8 +16177,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Poor-ward wizard who invented the Infinite Donut so nobody in her street would go hungry.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c073_corporate-research-mage.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c073_corporate-research-mage.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-84_mabel-treacle.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-84_mabel-treacle.webp"
   },
   {
    "sourceId": "fw.actor.recurring.hootsworth",
@@ -15656,8 +16190,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Owlbear Express’s mascot, raised from an egg by Ma Lin Tsao. Gentle, enormous, homesick.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c084_warehouse-owlbear.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c084_warehouse-owlbear.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-77_hootsworth.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-77_hootsworth.webp"
   },
   {
    "sourceId": "fw.actor.recurring.evicted-kobold-apprentice",
@@ -15669,21 +16203,114 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Skritch’s apprentice, who enlarged the chickens in protest and keeps a notebook of grievances.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c069_hoard-syndicate-floor-runner.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c069_hoard-syndicate-floor-runner.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-94_pip-squeak-kobold-apprentice.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-94_pip-squeak-kobold-apprentice.webp"
   },
   {
    "sourceId": "fw.actor.recurring.hot-now-elemental",
    "folder": "fw.actor.contractnpc",
    "name": "HOT NOW (Sign Elemental)",
-   "baseName": "Fire Elemental",
+   "baseName": "Magma Mephit",
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> A fire elemental summoned by hungry belief in the HOT NOW rune. It considers itself the brand.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c038_kitchen-flashover-elemental.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c038_kitchen-flashover-elemental.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> A fire elemental summoned by hungry belief in the HOT NOW rune. It considers itself the brand.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> CR 1 for the level 2 contract (Magma Mephit mechanics); previously a CR 5 Fire Elemental.</p>",
+   "extraItems": [
+    {
+     "name": "Brand Flare",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>HOT NOW flashes. Each creature within 10 feet of it makes a DC 11 Dexterity saving throw, taking 7 (2d6) fire damage on a failed save, or half as much on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "brand-flare",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "81e5b5046624bb65": {
+        "_id": "81e5b5046624bb65",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "dex"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "11"
+         }
+        },
+        "damage": {
+         "onSave": "half",
+         "parts": [
+          {
+           "number": 2,
+           "denomination": 6,
+           "bonus": "",
+           "types": [
+            "fire"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Bind into the Fryer",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>A creature adjacent to the fryer can use an action to bind HOT NOW into it with a DC 14 Intelligence (Arcana) check. Bound, it becomes the best heat source in Brandmere and stops fighting.</p>",
+       "chat": ""
+      },
+      "identifier": "bind-into-the-fryer",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-76_hot-now-sign-elemental.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-76_hot-now-sign-elemental.webp",
+   "overrides": {
+    "system.attributes.hp.max": 32,
+    "system.attributes.hp.value": 32,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 1
+   }
   },
   {
    "sourceId": "fw.actor.recurring.wren-hobb",
@@ -15695,8 +16322,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Last Independents travelling inspector and Marda Hobb’s niece, trapped for a year in a looping Inn-N-Out.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c098_wand-mart-trapper.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c098_wand-mart-trapper.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-106_wren-hobb.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-106_wren-hobb.webp"
   },
   {
    "sourceId": "fw.actor.recurring.king-dunstan",
@@ -15704,25 +16331,142 @@
    "name": "King Dunstan I",
    "baseName": "Commoner",
    "fallbackBaseNames": [],
-   "description": "<p><strong>Side-contract NPC.</strong> A kind, useless baker made rightful monarch of Brandmere by a promotional paper crown. He can pardon anyone.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> A kind, useless baker made rightful monarch of Brandmere by a promotional paper crown. He can pardon anyone.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> His pardon is now on the sheet.</p>",
+   "extraItems": [
+    {
+     "name": "Royal Pardon",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>King Dunstan pardons one creature he can see for one crime. The Grand Ledger records it. The pardon cannot be revoked while the paper crown is intact.</p>",
+       "chat": ""
+      },
+      "identifier": "royal-pardon",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-81_king-dunstan-i.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-81_king-dunstan-i.webp"
   },
   {
    "sourceId": "fw.actor.recurring.gray-slaad-order-nine",
    "folder": "fw.actor.contractnpc",
    "name": "Order No. 9 (Gray Slaad)",
-   "baseName": "Gray Slaad",
+   "baseName": "Giant Toad",
    "fallbackBaseNames": [
-    "Doppelganger",
-    "Rakshasa",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> A gray slaad being assembled, burger-style, out of Limbo through the Inn-N-Out grill.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c057_no-9-special.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c057_no-9-special.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> A gray slaad being assembled, burger-style, out of Limbo through the Inn-N-Out grill.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> A half-assembled slaad at CR 4 for the level 4 contract (Giant Toad mechanics, which can swallow). Previously a CR 9 Gray Slaad, or a Doppelganger without the Monster Manual.</p>",
+   "extraItems": [
+    {
+     "name": "Still Assembling",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>At the start of each round the order is not yet served, Order No. 9 gains 10 temporary hit points and its Bite deals an extra 1d6 damage (cumulative). Serving the finished burger to the slaad itself closes the rift and ends the encounter.</p>",
+       "chat": ""
+      },
+      "identifier": "still-assembling",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Special Sauce (Recharge 5–6)",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Order No. 9 sprays sauce in a 15-foot cone. Each creature in that area makes a DC 13 Dexterity saving throw, taking 10 (3d6) acid damage on a failed save, or half as much on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "special-sauce-(recharge-5–6)",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "3fc0f5869e651f00": {
+        "_id": "3fc0f5869e651f00",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "dex"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "half",
+         "parts": [
+          {
+           "number": 3,
+           "denomination": 6,
+           "bonus": "",
+           "types": [
+            "acid"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-93_order-no-9-gray-slaad.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-93_order-no-9-gray-slaad.webp",
+   "overrides": {
+    "system.attributes.hp.max": 68,
+    "system.attributes.hp.value": 68,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 4,
+    "system.attributes.ac.calc": "flat",
+    "system.attributes.ac.flat": 13,
+    "system.details.type.value": "aberration"
+   }
   },
   {
    "sourceId": "fw.actor.recurring.lady-crit-croupier",
@@ -15732,10 +16476,79 @@
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> Lady Crit’s croupier beneath the Roll for Sandwich stall. Collects what the House is owed.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c091_luxury-brand-fixer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c091_luxury-brand-fixer.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> Lady Crit’s croupier beneath the Roll for Sandwich stall. Collects what the House is owed.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> A lesser rakshasa (60 hp, CR 5), as the contract specifies \"lower HP, level 5 appropriate\".</p>",
+   "extraItems": [
+    {
+     "name": "The House Always Collects",
+     "type": "feat",
+     "img": "icons/svg/shield.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Reaction</strong></p><p>When a creature within 30 feet of the croupier rolls a 1 on a d20, the croupier calls the debt. The creature makes a DC 13 Wisdom saving throw; on a failure, the next damage it would deal to the croupier is reduced to 0.</p>",
+       "chat": ""
+      },
+      "identifier": "the-house-always-collects",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "2bd7ede3e09408bb": {
+        "_id": "2bd7ede3e09408bb",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "reaction",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "wis"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      },
+      "activation": {
+       "type": "reaction"
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-101_the-house-croupier.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-101_the-house-croupier.webp",
+   "overrides": {
+    "system.attributes.hp.max": 60,
+    "system.attributes.hp.value": 60,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 5
+   },
+   "removeItems": [
+    "Baleful Command",
+    "Dominate Person",
+    "Fiendish Restoration",
+    "Fly",
+    "Greater Magic Resistance",
+    "Limited Magic Immunity",
+    "Major Image",
+    "Plane Shift",
+    "Suggestion",
+    "True Seeing"
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.tiamat-avatar",
@@ -15747,8 +16560,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> An aspect of Tiamat summoned through the Dragon Express menu. Five heads, five breath options.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c124_junior-hoard-executive.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c124_junior-hoard-executive.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-99_the-five-headed-feast-aspect.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-99_the-five-headed-feast-aspect.webp"
   },
   {
    "sourceId": "fw.actor.recurring.odo-fennick",
@@ -15758,8 +16571,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A Last Independents organiser asleep for seventeen years in the Footlong Rest; his rest has been sold and resold as collateral.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c081_loop-trapped-customer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c081_loop-trapped-customer.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-90_odo-fennick.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-90_odo-fennick.webp"
   },
   {
    "sourceId": "fw.actor.recurring.the-kraken-of-records",
@@ -15771,8 +16584,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> An ancient kraken that has read every contract that ever sank. Owes nothing to anyone. Do not fight.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c070_planar-supply-kraken.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c070_planar-supply-kraken.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-102_the-kraken-of-records.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-102_the-kraken-of-records.webp"
   },
   {
    "sourceId": "fw.actor.recurring.lucky-twenty",
@@ -15782,10 +16595,33 @@
    "fallbackBaseNames": [
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> A chicken that has absorbed the luck of half the city and cannot roll low.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c024_petrification-poultry-unit.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c024_petrification-poultry-unit.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> A chicken that has absorbed the luck of half the city and cannot roll low.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Stolen Luck makes the contract’s trick work: force it to roll a lot until the luck runs out.</p>",
+   "extraItems": [
+    {
+     "name": "Stolen Luck (20/Day)",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>When Lucky Twenty rolls a d20, it can spend one use to treat the roll as a 20. Each use visibly dims its golden glow. With no uses left, it is an ordinary cockatrice and the stolen luck returns to the city.</p>",
+       "chat": ""
+      },
+      "identifier": "stolen-luck-(20/day)",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {}
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-83_lucky-twenty.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-83_lucky-twenty.webp"
   },
   {
    "sourceId": "fw.actor.recurring.kasim-the-djinni",
@@ -15797,8 +16633,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A djinni imprisoned in a bottle by Zafirah for refusing to sign; will grant one wish to whoever frees him.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c035_brass-hospitality-executive.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c035_brass-hospitality-executive.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-80_kasim.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-80_kasim.webp"
   },
   {
    "sourceId": "fw.actor.recurring.priya-magnus",
@@ -15808,8 +16644,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A legal clerk with a magnifying glass, leading a class action over microscopic soul-harvesting terms.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c105_corporate-mystery-shopper.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-95_priya-magnus.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-95_priya-magnus.webp"
   },
   {
    "sourceId": "fw.actor.recurring.flit",
@@ -15822,8 +16658,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A Quickling Mart employee framed for espionage because she read a Board document and understood it.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c090_brass-key-courier.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c090_brass-key-courier.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-72_flit.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-72_flit.webp"
   },
   {
    "sourceId": "fw.actor.recurring.evander-and-del-relief",
@@ -15833,8 +16669,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> Whoever signs on to relieve Del at the Seven-Eleven Hells counter.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c025_hourly-associate.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c025_hourly-associate.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-68_del-s-replacement-if-any.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-68_del-s-replacement-if-any.webp"
   },
   {
    "sourceId": "fw.actor.recurring.vellichor-rival",
@@ -15846,8 +16682,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Duke Vellichor’s rival, leading the devils’ riot when Nine Circles is liquidated.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c085_infernal-regional-executive.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c085_infernal-regional-executive.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-69_duke-azgareth.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-69_duke-azgareth.webp"
   },
   {
    "sourceId": "fw.actor.recurring.silas-vane",
@@ -15857,8 +16693,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> Papa Lich’s corpse supplier. Vanished after refusing to take bodies from Crown & Cleaver’s “retirements”; keeps a list of names.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c046_breakroom-ghoul.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c046_breakroom-ghoul.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-96_silas-vane-undertaker.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-96_silas-vane-undertaker.webp"
   },
   {
    "sourceId": "fw.actor.recurring.dominoancy-driver",
@@ -15870,8 +16706,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A Dominoancy driver who saw a vision of burning golden tusks and has twenty-seven minutes to live.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c118_delivery-route-hound.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c118_delivery-route-hound.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-97_tam-quickfoot-delivery-driver.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-97_tam-quickfoot-delivery-driver.webp"
   },
   {
    "sourceId": "fw.actor.recurring.grubbos-mother",
@@ -15883,8 +16719,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> An enormous, ancient worm asleep beneath Pizza the Hutt. Not for sale. Do not fight.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c087_subterranean-distribution-worm.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c087_subterranean-distribution-worm.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-75_grubbo-s-mother.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-75_grubbo-s-mother.webp"
   },
   {
    "sourceId": "fw.actor.recurring.brass-dragon-accountant",
@@ -15896,8 +16732,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Auntie Vermillia’s local agent; keeps the dragon contracts in an enormous ring binder.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c122_customer-experience-dragon.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c122_customer-experience-dragon.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-82_ledgerwing-brass-dragon-accountant.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-82_ledgerwing-brass-dragon-accountant.webp"
   },
   {
    "sourceId": "fw.actor.recurring.petronella-lost",
@@ -15920,8 +16756,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Keeper of the hidden dwarven brewery that refused to sell to Creation & Company.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c112_little-caesars-legionnaire.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c112_little-caesars-legionnaire.webp"
+   "img": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-portrait-sc--519a90f2.webp",
+   "token": "modules/franchise-wars/assets/art/library/a-detailed-stylized-comic-illustration-portrait-sc--519a90f2.webp"
   },
   {
    "sourceId": "fw.actor.recurring.johnny-blackstrings",
@@ -15933,8 +16769,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A dead bard whose contract claimed his songs forever. He wants them back.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c045_former-employee-still-on-payroll.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c045_former-employee-still-on-payroll.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-79_johnny-blackstrings.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-79_johnny-blackstrings.webp"
   },
   {
    "sourceId": "fw.actor.recurring.evander-keen",
@@ -15942,12 +16778,79 @@
    "name": "Evander Keen",
    "baseName": "Banshee",
    "fallbackBaseNames": [
+    "Ghost",
+    "Specter",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> Cadwyn Lark’s partner, bound by RNG to play the saddest song in the world forever.</p>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c012_exit-interview-wailer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c012_exit-interview-wailer.webp"
+   "description": "<p><strong>Side-contract NPC.</strong> Cadwyn Lark’s partner, bound by RNG to play the saddest song in the world forever.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Uses a Banshee when the Monster Manual is installed, otherwise a Ghost; no longer falls back to a Commoner.</p>",
+   "extraItems": [
+    {
+     "name": "The Saddest Song",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Evander plays. Each creature within 60 feet that can hear him makes a DC 15 Wisdom saving throw, taking 13 (3d8) psychic damage and becoming incapacitated until the end of its next turn on a failed save, or half as much damage on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "the-saddest-song",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "d14fbf27a0e0d8a3": {
+        "_id": "d14fbf27a0e0d8a3",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "wis"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "15"
+         }
+        },
+        "damage": {
+         "onSave": "half",
+         "parts": [
+          {
+           "number": 3,
+           "denomination": 8,
+           "bonus": "",
+           "types": [
+            "psychic"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-71_evander-keen.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-71_evander-keen.webp"
   },
   {
    "sourceId": "fw.actor.recurring.master-coriander",
@@ -15959,8 +16862,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> The last independent magic-shop owner in the district.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c130_chief-arcane-officer.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c130_chief-arcane-officer.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-87_master-coriander.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-87_master-coriander.webp"
   },
   {
    "sourceId": "fw.actor.recurring.hrothga",
@@ -15985,10 +16888,18 @@
     "Cultist",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> T.G.I. Fireballs apprentice whose wages are paid in “birthday years”.</p>",
+   "description": "<p><strong>Side-contract NPC.</strong> T.G.I. Fireballs apprentice whose wages are paid in “birthday years”.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> Now knows Fire Bolt and Burning Hands.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c129_junior-arcane-analyst.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c129_junior-arcane-analyst.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-70_ember-apprentice-evoker.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-70_ember-apprentice-evoker.webp",
+   "extraSpells": [
+    {
+     "name": "Fire Bolt"
+    },
+    {
+     "name": "Burning Hands"
+    }
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.burning-manager",
@@ -16000,8 +16911,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> A Daily Grindstone shift manager whose soul ignited from overwork and Compliance.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c038_kitchen-flashover-elemental.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c038_kitchen-flashover-elemental.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-74_gordwin-haste-burnt-out-manager.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-74_gordwin-haste-burnt-out-manager.webp"
   },
   {
    "sourceId": "fw.actor.recurring.the-sleeper",
@@ -16013,23 +16924,151 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> The world-spirit of the Material Plane, resting in Plane Inn Room 13 to avoid “an insistent salesman”. Its rightful owner. Speaks in weather.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c029_platinum-service-angel.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c029_platinum-service-angel.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-105_the-sleeper.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-105_the-sleeper.webp"
   },
   {
    "sourceId": "fw.actor.recurring.madam-ossifer",
    "folder": "fw.actor.contractnpc",
    "name": "Madam Ossifer",
-   "baseName": "Beholder",
+   "baseName": "Basilisk",
    "fallbackBaseNames": [
-    "Mummy Lord",
-    "Stone Golem",
     "Commoner"
    ],
-   "description": "<p><strong>Side-contract NPC.</strong> Beholder proprietor of Bed, Breakfast & Beholders, whose dreaming eyes petrify guests.</p>",
-   "extraItems": [],
+   "description": "<p><strong>Side-contract NPC.</strong> Beholder proprietor of Bed, Breakfast & Beholders, whose dreaming eyes petrify guests.</p><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> A sleepy beholder at CR 4 (Basilisk mechanics, flying) so the level 4 mystery stays survivable. The guide says not to fight her at level 4; use a full Beholder only above level 10.</p>",
+   "extraItems": [
+    {
+     "name": "Dreaming Eyes",
+     "type": "feat",
+     "img": "icons/svg/aura.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Trait</strong></p><p>While Madam Ossifer sleeps, one random creature she can see at the end of each of her turns must make a DC 13 Constitution saving throw. On a failure it begins to turn to stone and is restrained; it repeats the save at the end of its next turn, becoming petrified on a second failure or ending the effect on a success.</p>",
+       "chat": ""
+      },
+      "identifier": "dreaming-eyes",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "ecbb84b50c36f6d9": {
+        "_id": "ecbb84b50c36f6d9",
+        "type": "save",
+        "name": "",
+        "activation": {
+         "type": "special",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "save": {
+         "ability": [
+          "con"
+         ],
+         "dc": {
+          "calculation": "",
+          "formula": "13"
+         }
+        },
+        "damage": {
+         "onSave": "none",
+         "parts": []
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    },
+    {
+     "name": "Waking Eye Ray",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Ranged Spell Attack: +5 to hit, range 120 ft., one target. Hit: 13 (3d8) force damage.</p>",
+       "chat": ""
+      },
+      "identifier": "waking-eye-ray",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "bec114cb894105f3": {
+        "_id": "bec114cb894105f3",
+        "type": "attack",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "attack": {
+         "ability": "none",
+         "bonus": "5",
+         "flat": true,
+         "type": {
+          "value": "ranged",
+          "classification": "weapon"
+         },
+         "critical": {
+          "threshold": null
+         }
+        },
+        "damage": {
+         "includeBase": false,
+         "parts": [
+          {
+           "number": 3,
+           "denomination": 8,
+           "bonus": "",
+           "types": [
+            "force"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
    "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c144_all-seeing-quality-controller.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c144_all-seeing-quality-controller.webp"
+   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c144_all-seeing-quality-controller.webp",
+   "overrides": {
+    "system.attributes.hp.max": 85,
+    "system.attributes.hp.value": 85,
+    "system.attributes.hp.formula": "",
+    "system.details.cr": 4,
+    "system.attributes.ac.calc": "flat",
+    "system.attributes.ac.flat": 15,
+    "system.attributes.movement.fly": 20,
+    "system.attributes.movement.hover": true,
+    "system.attributes.movement.walk": 0,
+    "system.details.type.value": "aberration"
+   },
+   "removeItems": [
+    "Bite"
+   ]
   },
   {
    "sourceId": "fw.actor.recurring.runaway-diviner",
@@ -16041,8 +17080,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> An ARC diviner who scried too far and ran; every bullseye in Target Acquired is locked on him.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c073_corporate-research-mage.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c073_corporate-research-mage.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-64_augustin-marrow-runaway-diviner.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-64_augustin-marrow-runaway-diviner.webp"
   },
   {
    "sourceId": "fw.actor.recurring.centaur-chief",
@@ -16054,8 +17093,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> Leader of the centaur tribe whose land Best Western Marches means to survey and evict.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c149_regional-delivery-cavalry.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c149_regional-delivery-cavalry.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-67_chief-brightmane.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-67_chief-brightmane.webp"
   },
   {
    "sourceId": "fw.actor.recurring.ancient-treant",
@@ -16067,8 +17106,8 @@
    ],
    "description": "<p><strong>Side-contract NPC.</strong> An ancient treant whose forest is the “site” of an unbuilt PHG hotel.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c110_seed-contract-witness.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c110_seed-contract-witness.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-92_oldbark.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-92_oldbark.webp"
   },
   {
    "sourceId": "fw.actor.recurring.one-star-organiser",
@@ -16078,8 +17117,8 @@
    "fallbackBaseNames": [],
    "description": "<p><strong>Side-contract NPC.</strong> A Last Independents organiser hiding from Crown & Cleaver in an Air B&B&E rental.</p>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c105_corporate-mystery-shopper.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c105_corporate-mystery-shopper.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-66_bran-holloway-organiser.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-66_bran-holloway-organiser.webp"
   },
   {
    "sourceId": "fw.actor.core.ballista",
@@ -16087,10 +17126,78 @@
    "name": "Legion Siege Ballista (crew)",
    "baseName": "Commoner",
    "fallbackBaseNames": [],
-   "description": "<section class=\"fw-reskin\"><p><strong>Legion Siege Ballista (crew)</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C112)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Commoner (hidden from players)</p><p><em>A Little Caesars Legion ballista and its crew. Use the stat block for the crew; the ballista deals 3d10 piercing (+6 to hit, 120/480 ft.).</em></p></section>",
-   "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c112_little-caesars-legionnaire.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c112_little-caesars-legionnaire.webp"
+   "description": "<section class=\"fw-reskin\"><p><strong>Legion Siege Ballista (crew)</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C112)</span></p><p><strong>Faction:</strong> Crown &amp; Cleaver · <strong>Mechanical source:</strong> Commoner (hidden from players)</p><p><em>A Little Caesars Legion ballista and its crew. Use the stat block for the crew; the ballista deals 3d10 piercing (+6 to hit, 120/480 ft.).</em></p></section><p class=\"fw-stat-note\"><strong>Stat note (v1.1.3):</strong> The crew sheet now carries the ballista attack.</p>",
+   "extraItems": [
+    {
+     "name": "Fire the Ballista",
+     "type": "feat",
+     "img": "icons/svg/lightning.svg",
+     "system": {
+      "description": {
+       "value": "<p><strong>Action</strong></p><p>Ranged Weapon Attack: +6 to hit, range 120/480 ft., one target. Hit: 16 (3d10) piercing damage. The ballista needs three crew to reload and can fire once every other round.</p>",
+       "chat": ""
+      },
+      "identifier": "fire-the-ballista",
+      "type": {
+       "value": "monster",
+       "subtype": ""
+      },
+      "activities": {
+       "5deea842956b887d": {
+        "_id": "5deea842956b887d",
+        "type": "attack",
+        "name": "",
+        "activation": {
+         "type": "action",
+         "value": 1,
+         "condition": "",
+         "override": false
+        },
+        "attack": {
+         "ability": "none",
+         "bonus": "6",
+         "flat": true,
+         "type": {
+          "value": "ranged",
+          "classification": "weapon"
+         },
+         "critical": {
+          "threshold": null
+         }
+        },
+        "damage": {
+         "includeBase": false,
+         "parts": [
+          {
+           "number": 3,
+           "denomination": 10,
+           "bonus": "",
+           "types": [
+            "piercing"
+           ],
+           "custom": {
+            "enabled": false,
+            "formula": ""
+           },
+           "scaling": {
+            "mode": "",
+            "number": 1
+           }
+          }
+         ]
+        }
+       }
+      }
+     },
+     "flags": {
+      "franchise-wars": {
+       "managed": true
+      }
+     }
+    }
+   ],
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-47_legion-siege-ballista-crew.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-47_legion-siege-ballista-crew.webp"
   },
   {
    "sourceId": "fw.actor.core.gelatinous-cube",
@@ -16102,8 +17209,8 @@
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Display-Case Cube</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C056)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Gelatinous Cube (hidden from players)</p><p><em>A wobbling cube of living dessert, flavoured, with the last customer still inside.</em></p></section>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c056_stracciatella-spill.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c056_stracciatella-spill.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-45_display-case-cube.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-45_display-case-cube.webp"
   },
   {
    "sourceId": "fw.actor.core.guard",
@@ -16115,8 +17222,8 @@
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Store Security Guard</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C109)</span></p><p><strong>Faction:</strong> Cross-corporate · <strong>Mechanical source:</strong> Guard (hidden from players)</p><p><em>A franchise security guard in a branded tabard with a whistle, a truncheon and a lanyard.</em></p></section>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c109_franchise-enforcement-bruiser.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c109_franchise-enforcement-bruiser.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/ux-03_store-security-guard.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/ux-03_store-security-guard.webp"
   },
   {
    "sourceId": "fw.actor.core.swarm-of-rats",
@@ -16128,8 +17235,8 @@
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Gelato-Soaked Rat Swarm</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C051)</span></p><p><strong>Faction:</strong> Sweet Covenant · <strong>Mechanical source:</strong> Swarm of Rats (hidden from players)</p><p><em>A squeaking tide of sticky, gelato-smeared rats from under the Creamery.</em></p></section>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c051_gelato-absorbed-rat.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c051_gelato-absorbed-rat.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-46_gelato-soaked-rat-swarm.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-46_gelato-soaked-rat-swarm.webp"
   },
   {
    "sourceId": "fw.actor.core.young-blue-dragon",
@@ -16141,8 +17248,8 @@
    ],
    "description": "<section class=\"fw-reskin\"><p><strong>Quarterly Storm Hatchling</strong> — Franchise Wars reskin <span class=\"fw-fine\">(shared art TK-C002)</span></p><p><strong>Faction:</strong> Hoard Syndicate · <strong>Mechanical source:</strong> Young Blue Dragon (hidden from players)</p><p><em>A junior storm dragon executive crackling with ambition and static.</em></p></section>",
    "extraItems": [],
-   "img": "modules/franchise-wars/assets/art/actors/portraits/tk-c002_quarterly-storm-dragon.webp",
-   "token": "modules/franchise-wars/assets/art/actors/tokens/tk-c002_quarterly-storm-dragon.webp"
+   "img": "modules/franchise-wars/assets/art/actors/portraits/pt-48_quarterly-storm-hatchling.webp",
+   "token": "modules/franchise-wars/assets/art/actors/tokens/pt-48_quarterly-storm-hatchling.webp"
   },
   {
    "sourceId": "fw.actor.harrow.one",
@@ -16281,6 +17388,16 @@
    "sourceId": "fw.actor.staff.FR-05",
    "replacedBy": "fw.actor.bestiary.mascot-revenant-mortimer-pell",
    "name": "Mortimer Pell (Mascot Revenant)"
+  },
+  {
+   "sourceId": "fw.actor.recurring.madam-ossifer",
+   "replacedBy": "fw.actor.staff.FR-62",
+   "name": "Madam Ossifer (Franchise Staff)"
+  },
+  {
+   "sourceId": "fw.actor.recurring.hrothga",
+   "replacedBy": "fw.actor.staff.FR-49",
+   "name": "Hrothga the Mild (Franchise Staff)"
   }
  ]
 }
