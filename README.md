@@ -1,4 +1,4 @@
-# The Franchise Wars v1.1.4
+# The Franchise Wars v1.2.1
 
 Foundry VTT v14 / dnd5e v6 module.
 
@@ -7,7 +7,7 @@ Imported content:
 - 146 side-contract guides with handouts
 - 165 reskinned core-opposition actors plus bespoke bosses and NPCs, all with portraits and tokens
 - 8 roll tables, an ambience playlist (9 original loops) and GM macros
-- Campaign Tracker, Clause Debate and Board Vote windows (buttons in the Journals sidebar)
+- The GM Dashboard: one tabbed panel for the Rabbit Rating, missions, Leverage, Board Vote, Final Contract, Receipts, Commons Tally and an activity log (button at the top of the Journals sidebar)
 - Professional Session 0 contractor-orientation suite
 - 24 spine missions
 - 13 corporate dossiers
@@ -53,7 +53,7 @@ This release replaces franchise-logo/storefront Actor substitutions with audited
 
 
 ## v1.0.0 GM tools
-Open the Journals sidebar: **Tracker**, **Clauses** and **Board** buttons sit at the top. The same windows are available as macros and as `game.franchiseWars.openTracker()`, `openClauseDebate()` and `openBoardVote()`. `game.franchiseWars.exportToCompendiums()` copies everything into world compendiums. See `RELEASE-v1.0.0.md`.
+Open the Journals sidebar and click **Franchise Wars GM Dashboard**, or run `game.franchiseWars.openDashboard()` (optionally with a tab name such as `"board"` or `"contract"`). `game.franchiseWars.exportToCompendiums()` copies everything into world compendiums. See `RELEASE-v1.0.0.md`.
 
 
 ## v1.1.0 Compendiums and Content Manager

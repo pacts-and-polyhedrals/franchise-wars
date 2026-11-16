@@ -1,8 +1,8 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "1.1.4";
+const VERSION = "1.2.1";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
-const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,greyCreep:0,questRabbitCut:30};
+const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,questRabbitCut:30,cutRule:false,log:[],starsAwarded:[]};
 
 Hooks.once("init",()=>{
   game.settings.register(MODULE_ID,STATE_KEY,{name:"Franchise Wars Campaign State",scope:"world",config:false,type:Object,default:foundry.utils.deepClone(DEFAULT_STATE)});
@@ -311,12 +311,12 @@ function shell({title,missionId,checkpointId,body,grade="Contract"}){const sourc
 async function requestCheck({missionId,checkpointId,skill,ability,dc,flavor="Corporate requests verification.",audience="all",grade="Contract"}={}){if(!game.user.isGM)throw new Error("GM only");const terms=[];if(skill)terms.push(`skill=${skill}`);else if(ability)terms.push(`ability=${ability}`);else throw new Error("skill or ability required");if(Number.isFinite(Number(dc)))terms.push(`dc=${Number(dc)}`);const body=await enrich(`<p>${flavor}</p><p class="fw-roll-request">[[/check ${terms.join(" ")}]]</p>`);return ChatMessage.create({speaker:ChatMessage.getSpeaker({user:game.user}),content:shell({title:"ACTION REQUIRED",missionId,checkpointId,body,grade}),whisper:audience==="gm"?ChatMessage.getWhisperRecipients("GM").map(u=>u.id):[]});}
 async function requestSave({missionId,checkpointId,ability,dc,flavor="Compliance requires a saving throw.",audience="all",grade="Contract"}={}){if(!game.user.isGM)throw new Error("GM only");if(!ability)throw new Error("ability required");const terms=[ability];if(Number.isFinite(Number(dc)))terms.push(`dc=${Number(dc)}`);const body=await enrich(`<p>${flavor}</p><p class="fw-roll-request">[[/save ${terms.join(" ")}]]</p>`);return ChatMessage.create({speaker:ChatMessage.getSpeaker({user:game.user}),content:shell({title:"COMPLIANCE CHECK",missionId,checkpointId,body,grade}),whisper:audience==="gm"?ChatMessage.getWhisperRecipients("GM").map(u=>u.id):[]});}
 async function postContractBrief({missionId,title="CONTRACT BRIEF",html="",grade="Contract"}={}){if(!game.user.isGM)throw new Error("GM only");return ChatMessage.create({speaker:ChatMessage.getSpeaker({user:game.user}),content:shell({title,missionId,body:html,grade})});}
-async function awardReceipt(id,data={}){const s=await getState(),receipts=foundry.utils.deepClone(s.receipts??{});if(receipts[id]?.status==="acquired")return s;receipts[id]={status:"acquired",acquiredAt:Date.now(),...data};return patchState({receipts});}
-async function addLeverage(id,amount=1){const s=await getState(),leverage=foundry.utils.deepClone(s.leverage??{});leverage[id]=Number(leverage[id]??0)+Number(amount??0);return patchState({leverage});}
-async function addCommonsAlly(name,data={}){const s=await getState(),a=[...(s.commonsTally??[])];if(!a.some(x=>(typeof x==="string"?x:x.name)===name))a.push({name,...data});return patchState({commonsTally:a});}
-async function setBoardSeat(id,state){const s=await getState(),board=foundry.utils.deepClone(s.board??{});board[id]=state;return patchState({board});}
+async function awardReceipt(id,data={}){const s=await getState(),receipts=foundry.utils.deepClone(s.receipts??{});if(receipts[id]?.status==="acquired")return s;receipts[id]={status:"acquired",acquiredAt:Date.now(),...data};const r=await patchState({receipts});await fwLog(`Receipt acquired: ${data.name??id} (${id})${data.holder?`, given to ${data.holder}`:""}`,"receipt");if(/^S\d\d$/.test(id)&&(await getState()).missions?.[id]?.status!=="done")await fwSetMission(id,"done");return r;}
+async function addLeverage(id,amount=1){const s=await getState(),leverage=foundry.utils.deepClone(s.leverage??{});leverage[id]=Number(leverage[id]??0)+Number(amount??0);const r=await patchState({leverage});const n=(await fwCorps())[id]??id;await fwLog(`Leverage ${Number(amount)>0?"+":""}${amount} vs ${n} (now ${leverage[id]})`,"leverage");return r;}
+async function addCommonsAlly(name,data={}){const s=await getState(),a=[...(s.commonsTally??[])];if(a.some(x=>(typeof x==="string"?x:x.name)===name))return s;a.push({name,at:Date.now(),...data});const r=await patchState({commonsTally:a});await fwLog(`Commons Tally ally added: ${name}${data.note?` (${data.note})`:""}`,"commons");return r;}
+async function setBoardSeat(id,state){const s=await getState(),board=foundry.utils.deepClone(s.board??{});board[id]=state;const r=await patchState({board});const n=(await fwCorps())[id]??id;await fwLog(`Board seat ${n}: ${SEAT_LABEL[state?.state??state]??state?.state??state}${state?.proxyDemanded?" (proxy demanded)":""}`,"board");return r;}
 async function setMissionState(id,state){const s=await getState(),missions=foundry.utils.deepClone(s.missions??{});missions[id]=state;return patchState({missions});}
-async function voidClause(code,method="receipt"){const s=await getState(),clauses=foundry.utils.deepClone(s.clauses??{});if(clauses[code]?.status==="voided")return s;clauses[code]={status:"voided",method,voidedAt:Date.now()};return patchState({clauses});}
+async function voidClause(code,method="receipt"){const s=await getState(),clauses=foundry.utils.deepClone(s.clauses??{});if(clauses[code]?.status==="voided")return s;clauses[code]={status:"voided",method,voidedAt:Date.now()};const r=await patchState({clauses});await fwLog(`Clause ${code} voided (${method})`,"contract");return r;}
 function openCommandCentre(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sourceId")==="fw.command");return j?.sheet?.render(true);}
 
 function openSessionZero(){const j=game.journal.find(x=>x.getFlag(MODULE_ID,"sourceId")==="fw.session0.gm");return j?.sheet?.render(true);}
@@ -336,7 +336,9 @@ function fwButton(action,label,data){const a=document.createElement("a");a.class
 Hooks.once("init",()=>{
   const enrichers=CONFIG.TextEditor.enrichers;
   enrichers.push({pattern:/@FWLink\[(Actor|Item|Scene|JournalEntry)\|([^\]|]+)(?:\|([^\]]+))?\]\{([^}]+)\}/g,enricher:async(m)=>{
-    const [,type,src,page,label]=m;const doc=await fwFindAny(type,src);
+    const [,type,src,page,label]=m;
+    if(type==="Scene"){const a=fwButton("scene",label,{src});a.classList.add("fw-map-link");a.querySelector("i").className="fa-solid fa-map";a.title="Click: view this battlemap · Shift-click: activate it for everyone";return a;}
+    const doc=await fwFindAny(type,src);
     if(!doc)return fwMissing(label,`Not imported yet: ${src}`);
     let target=doc;
     if(page&&type==="JournalEntry"){target=fwPage(doc,page)??doc;}
@@ -363,6 +365,7 @@ async function fwPostHandout(page){
   div.querySelectorAll("a.fw-action,.fw-handout-tools,section.secret,.fw-gm-only").forEach(n=>n.remove());
   await ChatMessage.create({speaker:{alias:"Handout"},content:`<div class="fw-chat-handout">${div.innerHTML}</div>`,flags:{[MODULE_ID]:{handout:page.uuid}}});
   ui.notifications.info(`Sent to chat: ${page.name}`);
+  await fwLog(`Handout sent to chat: ${page.parent?.name??""} · ${page.name}`,"handout");
 }
 document.addEventListener("click",async ev=>{
   const a=ev.target.closest?.("a.fw-action[data-fw-action]");if(!a)return;
@@ -380,6 +383,7 @@ document.addEventListener("click",async ev=>{
       await ChatMessage.create({speaker:{alias:isSlip?"QuestRabbit Job Board":"Narrator"},content:isSlip?`<div class="fw-chat-handout"><div class="fw-contract-slip">${clone.innerHTML}</div></div>`:`<div class="fw-chat-narration">${clone.innerHTML}</div>`});
     }
     else if(d.fwAction==="show")await fwShowPage(d.src,d.page);
+    else if(d.fwAction==="scene")await fwOpenScene(d.src,{activate:ev.shiftKey});
     else if(d.fwAction==="receipt"){
       const item=fwFind("Item",d.item);await awardReceipt(d.code,{item:d.item,name:item?.name});
       await postContractBrief({missionId:d.code,title:"RECEIPT ACQUIRED",html:`<p>The party has secured <strong>${item?item.link:d.item}</strong>.</p><p><em>Every Receipt can void a clause of the Final Contract.</em></p>`});
@@ -392,7 +396,7 @@ document.addEventListener("click",async ev=>{
    Roll tables, and three GM windows: Campaign Tracker, Clause Debate, Board Vote. */
 Hooks.once("init",()=>{
   CONFIG.TextEditor.enrichers.push({pattern:/@FWLev\[([^\]|]+)\|(-?\d+)\|?([^\]]*)\]\{([^}]+)\}/g,enricher:async(m)=>fwButton("lev",m[4],{corp:m[1],amount:m[2],source:m[3]??""})});
-  game.franchiseWars=Object.assign(game.franchiseWars??{}, {openTracker:()=>new FWTracker().render(true),openClauseDebate:()=>new FWClauseDebate().render(true),openBoardVote:()=>new FWBoardVote().render(true)});
+  game.franchiseWars=Object.assign(game.franchiseWars??{}, {openDashboard:t=>fwOpenDashboard(t),openTracker:()=>fwOpenDashboard("overview"),openClauseDebate:()=>fwOpenDashboard("contract"),openBoardVote:()=>fwOpenDashboard("board")});
 });
 let FW_CORPS=null,FW_CLAUSES=null;
 async function fwCorps(){return FW_CORPS??=await loadJSON("corporations.json").catch(()=>({}));}
@@ -429,114 +433,212 @@ class FWWindow extends FWAppBase{
 }
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
-class FWTracker extends FWWindow{
-  static DEFAULT_OPTIONS={id:"fw-tracker",window:{title:"Franchise Wars — Campaign Tracker",icon:"fa-solid fa-chart-line"},position:{width:640,height:720}};
-  constructor(...a){super(...a);this._hook=Hooks.on("franchiseWarsStateChanged",()=>this.rendered&&this.render());}
-  async close(o){Hooks.off("franchiseWarsStateChanged",this._hook);return super.close(o);}
-  async html(){
-    const s=await getState(),corps=await fwCorps(),clauses=await fwClauses();
-    const stat=(k,label)=>`<div class="fw-stat"><span>${label}</span><a data-act="dec" data-k="${k}">−</a><b>${esc(s[k])}</b><a data-act="inc" data-k="${k}">+</a></div>`;
-    const corpRows=Object.entries(corps).map(([id,n])=>`<tr><td>${id}</td><td>${esc(n)}</td><td class="c"><a data-act="lev" data-id="${id}" data-n="-1">−</a> <b>${s.leverage?.[id]??0}</b> <a data-act="lev" data-id="${id}" data-n="1">+</a></td><td>${["CO-01","CO-02","CO-13"].includes(id)?"—":`<select data-act="seat" data-id="${id}">${Object.entries(SEAT_LABEL).map(([k,l])=>`<option value="${k}" ${((s.board?.[id]?.state??s.board?.[id])||"active")===k?"selected":""}>${l}</option>`).join("")}</select>`}</td></tr>`).join("");
-    const voided=clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;
-    const clauseRows=clauses.map(c=>{const v=s.clauses?.[c.code]?.status==="voided",r=s.receipts?.[c.mission]?.status==="acquired";return `<tr class="${v?"fw-voided":""}"><td>${esc(c.code)}</td><td>${esc(c.title)}</td><td>${esc(c.receipt)} <small>(${c.mission})</small> ${r?"✔":""}</td><td class="c">${v?"VOID":`<a data-act="void" data-code="${esc(c.code)}">void</a>`}</td></tr>`;}).join("");
-    const tally=(s.commonsTally??[]).map(x=>`<li>${esc(typeof x==="string"?x:x.name)} <a data-act="untally" data-name="${esc(typeof x==="string"?x:x.name)}">×</a></li>`).join("");
-    return `<div class="fw-tracker">
-      <div class="fw-stats">${stat("currentAct","Act")}${stat("rabbitRating",esc(s.mandateName||"Rabbit Rating"))}${stat("questRabbitCut","QuestRabbit cut %")}${stat("greyCreep","Grey Creep")}</div>
-      <h3>Leverage & Board</h3><table class="fw-table"><thead><tr><th>ID</th><th>Corporation</th><th>Leverage</th><th>Seat</th></tr></thead><tbody>${corpRows}</tbody></table>
-      <h3>Final Contract — ${voided}/${clauses.length} clauses voided</h3><table class="fw-table"><thead><tr><th>Clause</th><th>Title</th><th>Receipt</th><th></th></tr></thead><tbody>${clauseRows}</tbody></table>
-      <h3>Commons Tally (${(s.commonsTally??[]).length})</h3><ul class="fw-tally">${tally}</ul>
-      <div class="fw-row"><input type="text" placeholder="New ally…" class="fw-new-ally"><button data-act="tally">Add ally</button></div>
-      <div class="fw-row"><button data-act="debate"><i class="fa-solid fa-scale-balanced"></i> Clause Debate</button><button data-act="vote"><i class="fa-solid fa-check-to-slot"></i> Board Vote</button><button data-act="post"><i class="fa-solid fa-comment"></i> Post summary to chat</button></div>
-    </div>`;
-  }
-  async act(a,el){
-    const s=await getState(),d=el.dataset;
-    if(a==="inc"||a==="dec"){const v=Number(s[d.k]??0)+(a==="inc"?1:-1);await patchState({[d.k]:Math.max(0,v)});}
-    else if(a==="lev")await addLeverage(d.id,Number(d.n));
-    else if(a==="seat")await setBoardSeat(d.id,{state:el.value,changedAt:Date.now()});
-    else if(a==="void"){await voidClause(d.code,"tracker");}
-    else if(a==="tally"){const v=el.closest(".fw-tracker").querySelector(".fw-new-ally").value.trim();if(v)await addCommonsAlly(v);}
-    else if(a==="untally"){await game.settings.set(MODULE_ID,STATE_KEY,{...s,commonsTally:(s.commonsTally??[]).filter(x=>(typeof x==="string"?x:x.name)!==d.name)});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});}
-    else if(a==="debate")new FWClauseDebate().render(true);
-    else if(a==="vote")new FWBoardVote().render(true);
-    else if(a==="post"){const clauses=await fwClauses();const v=clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;await postContractBrief({title:"CAMPAIGN STATUS",html:`<p>Act <b>${s.currentAct}</b> · ${esc(s.mandateName)} <b>${s.rabbitRating}</b> · QuestRabbit cut <b>${s.questRabbitCut}%</b></p><p>Final Contract: <b>${v}/${clauses.length}</b> clauses voided · Commons allies: <b>${(s.commonsTally??[]).length}</b></p>`});}
-  }
+/* ----------------------------------------------------------------- v1.2 GM Dashboard
+   One tabbed, scrollable panel for every campaign tracker. Auto-tracks Receipts given to characters,
+   Leverage and Receipt buttons, handouts sent to chat, milestone stars, and keeps an activity log. */
+let FW_DASH=null;
+async function fwDash(){return FW_DASH??=await loadJSON("dashboard.json").catch(()=>({missions:[],corps:[],rules:{},rabbit:[],clauses:[]}));}
+async function fwLog(text,kind="note"){
+  if(!game.user.isGM)return;const s=await getState();const log=[{t:Date.now(),kind,text},...(s.log??[])].slice(0,300);
+  await game.settings.set(MODULE_ID,STATE_KEY,{...s,log});Hooks.callAll("franchiseWarsStateChanged",await getState(),{log:true});
 }
-
-/* Clause Debate (S24): Vend reads one clause per round (77-B, then 1–12). A character presents the Receipt and argues:
-   DC 18 (Persuasion, Insight, History, Religion or Investigation). No Receipt: DC 25, or three Commons Tally witnesses.
-   Success burns the clause; failure lets Vend make a Ledger Entry. When six clauses are void, Vend stands. */
-const DEBATE_SKILLS=[["per","Persuasion"],["ins","Insight"],["his","History"],["rel","Religion"],["inv","Investigation"]];
-class FWClauseDebate extends FWWindow{
-  static DEFAULT_OPTIONS={id:"fw-clause-debate",window:{title:"Franchise Wars — Clause Debate",icon:"fa-solid fa-scale-balanced"},position:{width:560}};
-  code=null;
-  async html(){
-    const s=await getState(),all=await fwClauses(),open=all.filter(c=>s.clauses?.[c.code]?.status!=="voided"),voided=all.length-open.length;
-    if(!open.length)return `<p class="fw-note">All ${all.length} clauses are void. The Final Contract is blank paper.</p>`;
-    const c=open.find(x=>x.code===this.code)??open[0];this.code=c.code;
-    const has=s.receipts?.[c.mission]?.status==="acquired",dc=has?18:25,tally=(s.commonsTally??[]).length;
-    return `<div class="fw-debate">
-      <p><b>${voided}/${all.length}</b> clauses void${voided>=6?` — <span class="fw-bad">Vend stands (Scene 3)</span>`:` — Vend stands at six`}.</p>
-      <label>Clause being read <select data-act="pick">${open.map(x=>`<option value="${esc(x.code)}" ${x.code===c.code?"selected":""}>${esc(x.code)} — ${esc(x.title)}</option>`).join("")}</select></label>
-      <p>Receipt: <b>${esc(c.receipt)}</b> (${c.mission}) — ${has?`<span class="fw-ok">recorded as acquired</span>`:`<span class="fw-bad">not recorded</span>`} · Argument DC <b>${dc}</b></p>
-      <p class="fw-note">Advantage: Leverage against the umbrella involved, an allied witness, or a relevant boon. Each flipped director grants an advantage die.</p>
-      <div class="fw-row">${DEBATE_SKILLS.map(([k,n])=>`<button data-act="ask" data-skill="${k}" data-dc="${dc}">${n}</button>`).join("")}</div>
-      <div class="fw-row"><button data-act="win"><i class="fa-solid fa-fire"></i> Argument succeeds — burn clause</button><button data-act="witness" ${tally<3?"disabled":""}><i class="fa-solid fa-people-group"></i> Three Tally witnesses (${tally} allies)</button><button data-act="lose"><i class="fa-solid fa-feather"></i> Fails — Ledger Entry</button></div>
-      <div class="fw-row"><label><input type="checkbox" data-act="rcpt" ${has?"checked":""}> Party holds this Receipt</label></div>
-    </div>`;
-  }
-  async act(a,el){
-    const all=await fwClauses(),c=all.find(x=>x.code===this.code);
-    if(a==="pick")this.code=el.value;
-    else if(a==="rcpt"){if(el.checked)await awardReceipt(c.mission,{name:c.receipt});else{const s=await getState(),r=foundry.utils.deepClone(s.receipts??{});delete r[c.mission];await game.settings.set(MODULE_ID,STATE_KEY,{...s,receipts:r});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});}}
-    else if(a==="ask"){await requestCheck({missionId:`S24 · Clause ${this.code}`,skill:el.dataset.skill,dc:Number(el.dataset.dc),flavor:`Vend reads Clause ${esc(this.code)}, ${esc(c?.title)}. Make your case, then roll.`,grade:"Clause Debate"});return;}
-    else if(a==="win"||a==="witness"){await voidClause(this.code,a==="witness"?"witnesses":"debate");await postContractBrief({title:"CLAUSE VOIDED",grade:"Final Contract",html:`<p>Clause <b>${esc(this.code)} — ${esc(c?.title)}</b> burns off the page${a==="witness"?", witnessed by three members of the Commons":""}.</p>`});this.code=null;}
-    else if(a==="lose"){await ChatMessage.create({speaker:{alias:"Tallis Vend"},content:shell({title:"LEDGER ENTRY",grade:"Final Contract",body:`<p>The clause holds. Vend dips the Quill and writes one sentence that becomes true (see his stat block: Ledger Entry).</p>`}),whisper:ChatMessage.getWhisperRecipients("GM").map(u=>u.id)});}
-    this.render();
-  }
-}
-
-/* Board Vote (S23): ten directors, one per umbrella. Vend holds 51% through their proxies.
-   The motion to remove him carries when six seats are flipped (voting against him) or removed (proxy void).
-   2 Leverage against an umbrella lets the party demand its director's proxy. */
+const fwShort=t=>String(t??"").split(/ ,|, | \(| :|\. | who | again/)[0].trim();
 const SEAT_LABEL={active:"with Vend",leaning:"wavering",allied:"flipped",removed:"removed"};
-class FWBoardVote extends FWWindow{
-  static DEFAULT_OPTIONS={id:"fw-board-vote",window:{title:"Franchise Wars — Board Vote",icon:"fa-solid fa-check-to-slot"},position:{width:600}};
-  async html(){
-    const s=await getState(),corps=await fwCorps(),tally=(s.commonsTally??[]).length;
-    const seats=Object.entries(corps).filter(([id])=>!["CO-01","CO-02","CO-13"].includes(id));
-    const st=id=>(s.board?.[id]?.state??s.board?.[id])||"active";
-    const against=seats.filter(([id])=>["allied","removed"].includes(st(id))).length;
-    const rows=seats.map(([id,n])=>{const lev=s.leverage?.[id]??0,cur=st(id);return `<tr><td>${esc(n)}</td><td class="c">${lev}</td><td><select data-act="seat" data-id="${id}">${Object.entries(SEAT_LABEL).map(([k,l])=>`<option value="${k}" ${cur===k?"selected":""}>${l}</option>`).join("")}</select></td><td>${lev>=2&&cur!=="allied"&&cur!=="removed"?`<a data-act="proxy" data-id="${id}" title="Spend 2 Leverage to demand this director's proxy">demand proxy (−2)</a>`:""}</td></tr>`;}).join("");
-    return `<div class="fw-vote"><p><b>Motion:</b> that Tallis Vend be removed as Chairman of Creation &amp; Company.</p>
-      <table class="fw-table"><thead><tr><th>Director’s umbrella</th><th>Leverage</th><th>Seat</th><th></th></tr></thead><tbody>${rows}</tbody></table>
-      <p class="fw-result">Flipped or removed: <b>${against}</b>/6 needed → <b class="${against>=6?"fw-ok":"fw-bad"}">${against>=6?"MOTION CARRIES":"VEND HOLDS THE BOARD"}</b></p>
-      <p class="fw-note">Commons Tally: ${tally} allies observing — ${Math.floor(tally/5)} wavering director(s) have disadvantage to refuse the party.</p>
-      <div class="fw-row"><button data-act="post"><i class="fa-solid fa-gavel"></i> Announce result</button></div></div>`;
-  }
-  async act(a,el){
-    const d=el.dataset,corps=await fwCorps();
-    if(a==="seat")await setBoardSeat(d.id,{state:el.value,changedAt:Date.now()});
-    else if(a==="proxy"){const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Demand proxy"},content:`<p>Spend 2 Leverage against ${esc(corps[d.id])}? If the director refuses, they must be dealt with in person.</p>`});if(!ok)return;await addLeverage(d.id,-2);await setBoardSeat(d.id,{state:"leaning",proxyDemanded:true,changedAt:Date.now()});}
-    else if(a==="post"){const s=await getState();const g={};for(const id of Object.keys(corps).filter(i=>!["CO-01","CO-02","CO-13"].includes(i))){const k=(s.board?.[id]?.state??s.board?.[id])||"active";(g[k]??=[]).push(corps[id]);}const n=(g.allied?.length??0)+(g.removed?.length??0);
-      await postContractBrief({title:n>=6?"MOTION CARRIES":"MOTION FAILS",grade:"Board Vote",html:`<p><em>That Tallis Vend be removed as Chairman.</em></p>${Object.entries(SEAT_LABEL).map(([k,l])=>`<p><b>${l[0].toUpperCase()+l.slice(1)} (${g[k]?.length??0}):</b> ${g[k]?.join(", ")||"—"}</p>`).join("")}`});return;}
-    this.render();
-  }
+const SEAT_HELP={active:"Votes with Vend (his proxy holds).",leaning:"Wavering: proxy demanded or persuadable.",allied:"Flipped: votes against Vend.",removed:"Removed: proxy voided."};
+const DEBATE_SKILLS=[["per","Persuasion"],["ins","Insight"],["his","History"],["rel","Religion"],["inv","Investigation"]];
+const MISSION_STATUS={"":"not started",active:"in progress",done:"complete"};
+const CUT_BY_STARS={1:30,2:25,3:20,4:15,5:10};  // optional "falling commission" schedule (house rule, not in the book)
+const TABS=[["overview","Overview","fa-gauge"],["missions","Missions","fa-list-check"],["leverage","Leverage","fa-hand-holding-dollar"],["board","Board Vote","fa-check-to-slot"],["contract","Final Contract","fa-scale-balanced"],["receipts","Receipts","fa-file-signature"],["commons","Commons Tally","fa-people-group"],["log","Activity Log","fa-clock-rotate-left"]];
+
+async function fwSetMission(code,status){
+  const s=await getState(),missions=foundry.utils.deepClone(s.missions??{}),was=missions[code]?.status??"";
+  if(was===status)return;missions[code]={status,at:Date.now()};
+  const patch={missions};const D=await fwDash();const m=D.missions.find(x=>x.code===code);
+  if(status==="done"&&was!=="done"&&m?.star&&!(s.starsAwarded??[]).includes(code)){patch.rabbitRating=Math.min(5,Number(s.rabbitRating??1)+1);patch.starsAwarded=[...(s.starsAwarded??[]),code];}
+  if(status==="done"&&m)patch.currentAct=Math.max(Number(s.currentAct??1),m.act);
+  if(patch.rabbitRating&&s.cutRule){const c=CUT_BY_STARS[patch.rabbitRating];if(c<Number(s.questRabbitCut??30))patch.questRabbitCut=c;}
+  await patchState(patch);
+  await fwLog(`${code} ${m?.title??""}: ${MISSION_STATUS[status]}${patch.rabbitRating?` · Rabbit Rating now ${"★".repeat(patch.rabbitRating)} (milestone)`:""}${patch.questRabbitCut!=null?` · QuestRabbit cut now ${patch.questRabbitCut}%`:""}`,"mission");
 }
 
-/* GM buttons in the Journal sidebar */
+class FWDashboard extends FWWindow{
+  static DEFAULT_OPTIONS={id:"fw-dashboard",classes:["fw-dash-window"],window:{title:"The Franchise Wars — GM Dashboard",icon:"fa-solid fa-briefcase",resizable:true},position:{width:960,height:780}};
+  tab="overview";clause=null;actFilter=0;
+  constructor(opts={}){super(opts);if(opts.tab)this.tab=opts.tab;this._hook=Hooks.on("franchiseWarsStateChanged",()=>{if(this.rendered)this.render();});}
+  async close(o){Hooks.off("franchiseWarsStateChanged",this._hook);FW_DASH_APP=null;return super.close(o);}
+  _replaceHTML(result,content){const y=content.querySelector(".fw-dash-body")?.scrollTop??0;super._replaceHTML(result,content);const b=content.querySelector(".fw-dash-body");if(b&&this._keepScroll!==false)b.scrollTop=y;this._keepScroll=true;}
+  async html(){
+    const s=await getState(),D=await fwDash();this._s=s;this._D=D;
+    const done=D.missions.filter(m=>s.missions?.[m.code]?.status==="done").length;
+    const held=D.clauses.filter(c=>s.receipts?.[c.mission]?.status==="acquired").length;
+    const voided=D.clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;
+    const turned=D.corps.filter(c=>c.board&&["allied","removed"].includes(this.seat(c.id))).length;
+    const tally=(s.commonsTally??[]).length;
+    const stat=(label,val,sub)=>`<div class="fw-kpi"><span>${label}</span><b>${val}</b>${sub?`<small>${sub}</small>`:""}</div>`;
+    const head=`<header class="fw-dash-head">
+      ${stat("Act",["","I","II","III","IV","V"][s.currentAct]??s.currentAct,"current act")}
+      ${stat(esc(s.mandateName||"Rabbit Rating"),`<span class="fw-stars">${"★".repeat(s.rabbitRating)}<i>${"★".repeat(5-s.rabbitRating)}</i></span>`,D.rabbit[s.rabbitRating-1]?.unlocks?.split(";")[0]??"")}
+      ${stat("QuestRabbit cut",`${s.questRabbitCut??30}%`,s.cutRule?"falling commission on":"standard rate")}
+      ${stat("Missions",`${done}/24`,"complete")}
+      ${stat("Receipts",`${held}/${D.clauses.length}`,"clause Receipts held")}
+      ${stat("Clauses void",`${voided}/${D.clauses.length}`,voided>=6?"Vend stands":"Vend stands at 6")}
+      ${stat("Board",`${turned}/6`,"seats turned")}
+      ${stat("Commons",tally,`${Math.floor(tally/5)} director(s) disadvantaged`)}
+      <div class="fw-dash-actions"><button data-act="post" title="Post a campaign status card to chat"><i class="fa-solid fa-comment"></i></button><button data-act="manager" title="Content Manager"><i class="fa-solid fa-gear"></i></button></div>
+    </header>
+    <nav class="fw-dash-tabs">${TABS.map(([k,l,i])=>`<a data-act="tab" data-tab="${k}" class="${this.tab===k?"active":""}"><i class="fa-solid ${i}"></i> ${l}</a>`).join("")}</nav>`;
+    const body=await this[`tab_${this.tab}`]?.(s,D)??"";
+    return `<div class="fw-dash">${head}<section class="fw-dash-body">${body}</section></div>`;
+  }
+  seat(id){const b=this._s.board?.[id];return (b?.state??b)||"active";}
+  rules(title,...texts){return `<details class="fw-rules" ${this.tab==="overview"?"":"open"}><summary><i class="fa-solid fa-book-open"></i> ${title}</summary>${texts.filter(Boolean).map(t=>`<p>${esc(t)}</p>`).join("")}</details>`;}
+
+  async tab_overview(s,D){
+    const next=D.missions.find(m=>s.missions?.[m.code]?.status!=="done");
+    const rows=D.rabbit.map(r=>`<tr class="${r.stars===s.rabbitRating?"fw-current":""}"><td class="fw-stars">${"★".repeat(r.stars)}</td><td>${esc(r.unlocks)}</td><td class="fw-dm">${esc(r.hidden)}</td></tr>`).join("");
+    return `<div class="fw-grid2">
+      <div class="fw-panel"><h3>${esc(s.mandateName||"Rabbit Rating")}</h3>
+        <div class="fw-row"><button data-act="star" data-n="-1">−</button><span class="fw-stars fw-big">${"★".repeat(s.rabbitRating)}<i>${"★".repeat(5-s.rabbitRating)}</i></span><button data-act="star" data-n="1">+</button>
+        <label class="fw-inline"><input type="checkbox" data-act="mandate" ${s.mandateName==="Mandate"?"checked":""}> Party has left QuestRabbit (call it the Mandate)</label></div>
+        <table class="fw-table"><thead><tr><th>Stars</th><th>Unlocks</th><th>Hidden meaning (GM)</th></tr></thead><tbody>${rows}</tbody></table>
+        ${this.rules("How the rating works",D.rules.rabbit,D.rules.rabbitEarn,D.rules.mandate)}
+        <p class="fw-note">Stars are added automatically when S02, S05, S10, S15 or S20 is marked complete. The rating never goes above five stars.</p>
+        <h3>QuestRabbit’s cut</h3>
+        <div class="fw-row"><button data-act="cut" data-n="-5">−5%</button><b class="fw-big-num">${s.questRabbitCut??30}%</b><button data-act="cut" data-n="5">+5%</button>
+          <span class="fw-note">taken from every contract fee (party keeps ${100-(s.questRabbitCut??30)}%)</span></div>
+        <label class="fw-inline fw-block"><input type="checkbox" data-act="cutrule" ${s.cutRule?"checked":""}> <b>Optional rule: falling commission.</b> As the party’s rating rises, QuestRabbit takes less.</label>
+        <table class="fw-table fw-cut"><thead><tr><th>Rating</th>${[1,2,3,4,5].map(n=>`<th class="${n===s.rabbitRating?"fw-current":""}">${"★".repeat(n)}</th>`).join("")}</tr></thead><tbody><tr><td>Suggested cut</td>${[1,2,3,4,5].map(n=>`<td class="c ${n===s.rabbitRating?"fw-current":""}">${CUT_BY_STARS[n]}%</td>`).join("")}</tr></tbody></table>
+        <div class="fw-row"><button data-act="cutsugg" ${s.cutRule?"":"disabled"}>Apply suggested cut for ${"★".repeat(s.rabbitRating)} (${CUT_BY_STARS[s.rabbitRating]}%)</button></div>
+        <p class="fw-note">House rule, not in the book: the standard rate is 30% throughout. With falling commission on, the cut drops to the suggested rate automatically when a milestone star is earned; you can still set any rate by hand.</p>
+      </div>
+      <div class="fw-panel"><h3>Where the party is</h3>
+        <div class="fw-row">Current act ${[1,2,3,4,5].map(a=>`<button data-act="setact" data-a="${a}" class="${s.currentAct===a?"fw-on":""}">${["","I","II","III","IV","V"][a]}</button>`).join("")}</div>
+        ${next?`<div class="fw-next"><small>Next mission</small><b>${next.code} — ${esc(next.title)}</b><span>${esc(next.grade)} · Level ${esc(next.level)} · ${esc(next.client)}</span><p>${esc(next.synopsis)}</p><div class="fw-row"><button data-act="openj" data-j="${next.journal}"><i class="fa-solid fa-book"></i> Open guide</button><button data-act="mstat" data-code="${next.code}" data-v="active">Mark in progress</button><button data-act="mstat" data-code="${next.code}" data-v="done">Mark complete</button></div></div>`:`<p>All 24 missions complete.</p>`}
+        <h3>Recent activity</h3><ul class="fw-log fw-log-short">${(s.log??[]).slice(0,8).map(l=>`<li><time>${new Date(l.t).toLocaleString()}</time> ${esc(l.text)}</li>`).join("")||"<li class='fw-note'>Nothing recorded yet. Receipts, Leverage, handouts and mission progress are logged automatically.</li>"}</ul>
+      </div></div>`;
+  }
+  async tab_missions(s,D){
+    const acts=[1,2,3,4,5].filter(a=>!this.actFilter||a===this.actFilter);
+    const filt=`<div class="fw-row">Show: <button data-act="actf" data-a="0" class="${!this.actFilter?"fw-on":""}">All</button>${[1,2,3,4,5].map(a=>`<button data-act="actf" data-a="${a}" class="${this.actFilter===a?"fw-on":""}">Act ${["","I","II","III","IV","V"][a]}</button>`).join("")}</div>`;
+    return filt+acts.map(a=>`<h3>Act ${["","I","II","III","IV","V"][a]}</h3>`+D.missions.filter(m=>m.act===a).map(m=>{
+      const st=s.missions?.[m.code]?.status??"",r=m.receipt?s.receipts?.[m.code]?.status==="acquired":null;
+      return `<div class="fw-mission fw-ms-${st||"none"}"><div class="fw-mhead"><b>${m.code}</b><span class="fw-mtitle">${esc(m.title)}</span>${m.star?`<span class="fw-badge" title="Completing this mission adds a star">★ milestone</span>`:""}
+        <span class="fw-meta">${esc(m.grade)} · Level ${esc(m.level)} · ${esc(m.client)}</span>
+        <select data-act="mstat" data-code="${m.code}">${Object.entries(MISSION_STATUS).map(([k,l])=>`<option value="${k}" ${st===k?"selected":""}>${l}</option>`).join("")}</select>
+        <button data-act="openj" data-j="${m.journal}" title="Open the mission guide"><i class="fa-solid fa-book"></i></button></div>
+        <details><summary>Synopsis${m.receiptName?` · Receipt: <i>${esc(m.receiptName)}</i> ${r?"<span class='fw-ok'>✔ held</span>":"<span class='fw-muted'>not yet</span>"}`:""}</summary><p>${esc(m.synopsis)}</p></details></div>`;}).join("")).join("");
+  }
+  async tab_leverage(s,D){
+    return this.rules("How Leverage works",D.rules.leverage,D.rules.leverageSpend,D.rules.leverageLose)+`<div class="fw-cards">`+D.corps.map(c=>{const lev=s.leverage?.[c.id]??0;return `<div class="fw-corp">
+      <div class="fw-corp-head"><b>${esc(c.name)}</b><small>${c.id}${c.board?" · Board umbrella":""}</small><button data-act="openj" data-j="${c.journal}" title="Open dossier"><i class="fa-solid fa-book"></i></button></div>
+      ${c.slogan?`<i class="fw-slogan">“${esc(c.slogan)}”</i>`:""}<p>${esc(c.goal)}</p>
+      <dl><dt>Public face</dt><dd>${esc(c.face)}</dd><dt>Controlled by</dt><dd>${esc(c.controlledBy)}</dd></dl>
+      <div class="fw-row fw-lev"><span>Leverage</span><button data-act="lev" data-id="${c.id}" data-n="-1">−</button><b>${lev}</b><button data-act="lev" data-id="${c.id}" data-n="1">+</button>
+      ${lev>0?`<span class="fw-spend">Spend:</span>${["Advantage","Access","Cover"].map(k=>`<button data-act="spend" data-id="${c.id}" data-k="${k}" title="Spend 1 Leverage for ${k}">${k}</button>`).join("")}`:""}</div></div>`;}).join("")+`</div>`;
+  }
+  async tab_board(s,D){
+    const seats=D.corps.filter(c=>c.board);const turned=seats.filter(c=>["allied","removed"].includes(this.seat(c.id))).length,tally=(s.commonsTally??[]).length;
+    return this.rules("How the Board Vote works (S23)",D.rules.board)+`<table class="fw-table"><thead><tr><th>Umbrella</th><th>Director</th><th>Leverage</th><th>Seat</th><th></th></tr></thead><tbody>${seats.map(c=>{const lev=s.leverage?.[c.id]??0,st=this.seat(c.id);return `<tr class="fw-seat-${st}"><td><b>${esc(c.name)}</b></td><td>${esc(fwShort(c.controlledBy))}</td><td class="c">${lev}</td>
+      <td><select data-act="seat" data-id="${c.id}" title="${esc(SEAT_HELP[st])}">${Object.entries(SEAT_LABEL).map(([k,l])=>`<option value="${k}" ${st===k?"selected":""}>${l}</option>`).join("")}</select></td>
+      <td>${lev>=2&&!["allied","removed"].includes(st)?`<button data-act="proxy" data-id="${c.id}">Demand proxy (−2)</button>`:""}</td></tr>`;}).join("")}</tbody></table>
+      <p class="fw-result">Seats turned against Vend: <b>${turned}</b> of 6 needed → <b class="${turned>=6?"fw-ok":"fw-bad"}">${turned>=6?"MOTION CARRIES":"VEND HOLDS THE BOARD"}</b></p>
+      <p class="fw-note">Commons Tally: ${tally} allies observing, so ${Math.floor(tally/5)} wavering director(s) have disadvantage to refuse the party.</p>
+      <div class="fw-row"><button data-act="vote"><i class="fa-solid fa-gavel"></i> Announce the vote in chat</button></div>`;
+  }
+  async tab_contract(s,D){
+    const open=D.clauses.filter(c=>s.clauses?.[c.code]?.status!=="voided"),voided=D.clauses.length-open.length,tally=(s.commonsTally??[]).length;
+    const sel=open.find(c=>c.code===this.clause)??open[0];if(sel)this.clause=sel.code;
+    const list=`<table class="fw-table"><thead><tr><th>Clause</th><th>Issue</th><th>Receipt that voids it</th><th>From</th><th>Status</th></tr></thead><tbody>${D.clauses.map(c=>{const v=s.clauses?.[c.code]?.status==="voided",h=s.receipts?.[c.mission]?.status==="acquired";
+      return `<tr class="${v?"fw-voided":""} ${sel?.code===c.code?"fw-current":""}"><td><b>${esc(c.code)}</b></td><td>${esc(c.title)}</td><td>${esc(c.receipt)} ${h?"<span class='fw-ok'>✔</span>":""}</td><td>${c.mission}</td>
+      <td>${v?`VOID <a data-act="unvoid" data-code="${esc(c.code)}" title="Restore this clause">↺</a>`:`<a data-act="pickc" data-code="${esc(c.code)}">debate</a>`}</td></tr>`;}).join("")}</tbody></table>`;
+    let debate=`<p class="fw-note">Every clause is void. The Final Contract is blank paper.</p>`;
+    if(sel){const has=s.receipts?.[sel.mission]?.status==="acquired",dc=has?18:25;
+      debate=`<div class="fw-panel fw-debate"><h3>Clause ${esc(sel.code)}: ${esc(sel.title)}</h3>
+      <p>Receipt: <b>${esc(sel.receipt)}</b> (${sel.mission}) — ${has?"<span class='fw-ok'>held</span>":"<span class='fw-bad'>not held</span>"} · Argument DC <b>${dc}</b></p>
+      <div class="fw-row">Request a check: ${DEBATE_SKILLS.map(([k,n])=>`<button data-act="ask" data-skill="${k}" data-dc="${dc}">${n}</button>`).join("")}</div>
+      <div class="fw-row"><button data-act="win"><i class="fa-solid fa-fire"></i> Argument succeeds: burn the clause</button><button data-act="witness" ${tally<3?"disabled":""}><i class="fa-solid fa-people-group"></i> Three Tally witnesses (${tally})</button><button data-act="lose"><i class="fa-solid fa-feather"></i> Fails: Ledger Entry</button></div></div>`;}
+    return this.rules("How the Clause Debate works (S24)",D.rules.debate)+`<p class="fw-result">Clauses void: <b>${voided}</b> of ${D.clauses.length}${voided>=6?" · <span class='fw-bad'>Vend stands</span>":""}</p>`+debate+list;
+  }
+  async tab_receipts(s,D){
+    const items=game.items.filter(i=>(i.getFlag(MODULE_ID,"sourceId")??"").startsWith("fw.item.receipt.")).sort((a,b)=>a.getFlag(MODULE_ID,"sourceId").localeCompare(b.getFlag(MODULE_ID,"sourceId")));
+    const holders={};for(const a of game.actors)for(const i of a.items){const sid=i.getFlag(MODULE_ID,"sourceId")??i._stats?.compendiumSource??"";const m=/fw\.item\.receipt\.(S\d\d)/.exec(sid)||/receipt\.(S\d\d)/.exec(i.getFlag(MODULE_ID,"receipt")??"");if(m)(holders[m[1]]??=[]).push(a.name);}
+    const clauseFor=Object.fromEntries(D.clauses.map(c=>[c.mission,c.code]));
+    return this.rules("How Receipts work",D.rules.receipts,D.rules.receiptsPhys)+`<p class="fw-note">Receipts are marked held automatically when a Receipt item is given to any character, or when a guide's Award Receipt button is used.</p>
+    <table class="fw-table"><thead><tr><th>Mission</th><th>Receipt</th><th>Voids</th><th>Held by</th><th>Status</th><th></th></tr></thead><tbody>${items.map(i=>{const code=i.getFlag(MODULE_ID,"sourceId").split(".").pop(),h=s.receipts?.[code]?.status==="acquired";
+      return `<tr class="${h?"fw-held":""}"><td>${code}</td><td>${i.link?`<a data-act="openitem" data-id="${i.id}">${esc(i.name)}</a>`:esc(i.name)}</td><td>${clauseFor[code]?`Clause ${clauseFor[code]}`:"—"}</td><td>${esc((holders[code]??[]).join(", "))||"—"}</td>
+      <td>${h?"<span class='fw-ok'>held</span>":"<span class='fw-muted'>not yet</span>"}</td><td>${h?`<a data-act="unreceipt" data-code="${code}">↺</a>`:`<button data-act="receipt" data-code="${code}" data-item="${i.getFlag(MODULE_ID,"sourceId")}">Award</button>`}</td></tr>`;}).join("")}</tbody></table>`;
+  }
+  async tab_commons(s,D){
+    const a=s.commonsTally??[];
+    return this.rules("How the Commons Tally works",D.rules.tally,D.rules.tallyPlay)+`<div class="fw-row"><input type="text" class="fw-ally-name" placeholder="Ally: a person, union, neighbourhood or guild"><input type="text" class="fw-ally-note" placeholder="How they were won (optional)"><button data-act="ally"><i class="fa-solid fa-plus"></i> Add ally</button></div>
+    <p class="fw-result">${a.length} allies · S23: ${Math.floor(a.length/5)} wavering director(s) disadvantaged · S24: up to ${Math.floor(a.length/3)} clause(s) voidable by witnesses${a.length>=20?" · <span class='fw-ok'>Held in Common ending available</span>":` · Held in Common ending needs 20`}</p>
+    <table class="fw-table"><thead><tr><th>Ally</th><th>How they were won</th><th>Added</th><th></th></tr></thead><tbody>${a.map(x=>{const o=typeof x==="string"?{name:x}:x;return `<tr><td><b>${esc(o.name)}</b></td><td>${esc(o.note??"")}</td><td>${o.at?new Date(o.at).toLocaleDateString():""}</td><td><a data-act="unally" data-name="${esc(o.name)}" title="Remove">×</a></td></tr>`;}).join("")}</tbody></table>`;
+  }
+  async tab_log(s){
+    return `<div class="fw-row"><button data-act="clearlog"><i class="fa-solid fa-eraser"></i> Clear log</button></div><ul class="fw-log">${(s.log??[]).map(l=>`<li class="fw-log-${l.kind}"><time>${new Date(l.t).toLocaleString()}</time> ${esc(l.text)}</li>`).join("")||"<li class='fw-note'>Nothing recorded yet.</li>"}</ul>`;
+  }
+
+  async act(a,el,ev){
+    const d=el.dataset,s=await getState(),D=await fwDash();this._keepScroll=true;
+    try{
+    if(a==="tab"){this.tab=d.tab;this._keepScroll=false;return this.render();}
+    if(a==="actf"){this.actFilter=Number(d.a);return this.render();}
+    if(a==="pickc"){this.clause=d.code;return this.render();}
+    if(a==="openj"){const j=fwFind("JournalEntry",d.j)??await fwFindAny("JournalEntry",d.j);return j?j.sheet.render(true):ui.notifications.warn("Journal not found.");}
+    if(a==="openitem"){return game.items.get(d.id)?.sheet.render(true);}
+    if(a==="manager")return new FWSettingsMenu().render(true);
+    if(a==="star"){const v=Math.max(1,Math.min(5,Number(s.rabbitRating)+Number(d.n)));await patchState({rabbitRating:v});return fwLog(`${s.mandateName||"Rabbit Rating"} set to ${"★".repeat(v)}`,"rating");}
+    if(a==="mandate"){await patchState({mandateName:el.checked?"Mandate":"Rabbit Rating"});return fwLog(el.checked?"The rating continues as the Mandate":"Rating renamed back to Rabbit Rating","rating");}
+    if(a==="cut"){const v=Math.max(0,Math.min(30,Number(s.questRabbitCut??30)+Number(d.n)));await patchState({questRabbitCut:v});return fwLog(`QuestRabbit cut set to ${v}% (party keeps ${100-v}%)`,"rating");}
+    if(a==="cutrule"){await patchState({cutRule:el.checked});return fwLog(el.checked?"Optional rule on: falling commission":"Optional rule off: falling commission","rating");}
+    if(a==="cutsugg"){const v=CUT_BY_STARS[s.rabbitRating];await patchState({questRabbitCut:v});return fwLog(`QuestRabbit cut set to the suggested ${v}% for ${"★".repeat(s.rabbitRating)}`,"rating");}
+    if(a==="setact"){await patchState({currentAct:Number(d.a)});return fwLog(`Current act set to ${["","I","II","III","IV","V"][d.a]}`,"mission");}
+    if(a==="mstat")return fwSetMission(d.code,el.tagName==="SELECT"?el.value:d.v);
+    if(a==="lev"){await addLeverage(d.id,Number(d.n));return;}
+    if(a==="spend"){await addLeverage(d.id,-1);const c=D.corps.find(x=>x.id===d.id);await fwLog(`Spent 1 Leverage vs ${c?.name} for ${d.k}`,"leverage");
+      return ChatMessage.create({content:shell({title:"LEVERAGE SPENT",grade:d.k,body:`<p>The party leans on <b>${esc(c?.name)}</b>: <b>${d.k}</b>.</p>`}),whisper:ChatMessage.getWhisperRecipients("GM").map(u=>u.id)});}
+    if(a==="seat"){await setBoardSeat(d.id,{state:el.value,changedAt:Date.now()});return;}
+    if(a==="proxy"){const c=D.corps.find(x=>x.id===d.id);const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Demand proxy"},content:`<p>Spend 2 Leverage against ${esc(c?.name)} to demand ${esc(fwShort(c?.controlledBy))}’s proxy? If the director refuses, they must be dealt with in person.</p>`});if(!ok)return;
+      await addLeverage(d.id,-2);await setBoardSeat(d.id,{state:"leaning",proxyDemanded:true,changedAt:Date.now()});return;}
+    if(a==="vote"){const g={};for(const c of D.corps.filter(x=>x.board))(g[this.seat(c.id)]??=[]).push(c.name);const n=(g.allied?.length??0)+(g.removed?.length??0);
+      await postContractBrief({title:n>=6?"MOTION CARRIES":"MOTION FAILS",grade:"Board Vote",html:`<p><em>That Tallis Vend be removed as Chairman of Creation &amp; Company.</em></p>${Object.entries(SEAT_LABEL).map(([k,l])=>`<p><b>${l[0].toUpperCase()+l.slice(1)} (${g[k]?.length??0}):</b> ${g[k]?.join(", ")||"—"}</p>`).join("")}`});return fwLog(`Board vote announced: ${n>=6?"motion carries":"motion fails"} (${n}/6)`,"board");}
+    const sel=D.clauses.find(c=>c.code===this.clause);
+    if(a==="ask"){await requestCheck({missionId:`S24 · Clause ${sel.code}`,skill:d.skill,dc:Number(d.dc),flavor:`Vend reads Clause ${esc(sel.code)}, ${esc(sel.title)}. Make your case, then roll.`,grade:"Clause Debate"});return;}
+    if(a==="win"||a==="witness"){await voidClause(sel.code,a==="witness"?"witnesses":"debate");await postContractBrief({title:"CLAUSE VOIDED",grade:"Final Contract",html:`<p>Clause <b>${esc(sel.code)} — ${esc(sel.title)}</b> burns off the page${a==="witness"?", witnessed by three members of the Commons":""}.</p>`});this.clause=null;return;}
+    if(a==="lose"){await ChatMessage.create({speaker:{alias:"Tallis Vend"},content:shell({title:"LEDGER ENTRY",grade:"Final Contract",body:`<p>Clause ${esc(sel.code)} holds. Vend dips the Quill and writes one sentence that becomes true (see his stat block: Ledger Entry).</p>`}),whisper:ChatMessage.getWhisperRecipients("GM").map(u=>u.id)});return fwLog(`Clause ${sel.code} holds: Vend makes a Ledger Entry`,"contract");}
+    if(a==="unvoid"){const c=foundry.utils.deepClone(s.clauses??{});delete c[d.code];await game.settings.set(MODULE_ID,STATE_KEY,{...s,clauses:c});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});return fwLog(`Clause ${d.code} restored`,"contract");}
+    if(a==="receipt"){const it=fwFind("Item",d.item);await awardReceipt(d.code,{item:d.item,name:it?.name});return;}
+    if(a==="unreceipt"){const r=foundry.utils.deepClone(s.receipts??{});delete r[d.code];await game.settings.set(MODULE_ID,STATE_KEY,{...s,receipts:r});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});return fwLog(`Receipt for ${d.code} marked as not held`,"receipt");}
+    if(a==="ally"){const root=el.closest(".fw-dash");const n=root.querySelector(".fw-ally-name").value.trim(),note=root.querySelector(".fw-ally-note").value.trim();if(!n)return ui.notifications.warn("Enter the ally's name.");await addCommonsAlly(n,{note,at:Date.now()});return;}
+    if(a==="unally"){await game.settings.set(MODULE_ID,STATE_KEY,{...s,commonsTally:(s.commonsTally??[]).filter(x=>(typeof x==="string"?x:x.name)!==d.name)});Hooks.callAll("franchiseWarsStateChanged",await getState(),{});return fwLog(`Removed from the Commons Tally: ${d.name}`,"commons");}
+    if(a==="clearlog"){const ok=await foundry.applications.api.DialogV2.confirm({window:{title:"Clear activity log"},content:"<p>Clear the whole activity log? Campaign progress is not affected.</p>"});if(ok){await game.settings.set(MODULE_ID,STATE_KEY,{...s,log:[]});this.render();}return;}
+    if(a==="post"){const done=D.missions.filter(m=>s.missions?.[m.code]?.status==="done").length,v=D.clauses.filter(c=>s.clauses?.[c.code]?.status==="voided").length;
+      return postContractBrief({title:"CAMPAIGN STATUS",html:`<p>Act <b>${["","I","II","III","IV","V"][s.currentAct]}</b> · ${esc(s.mandateName)} <b>${"★".repeat(s.rabbitRating)}</b> · QuestRabbit cut <b>${s.questRabbitCut??30}%</b></p><p>Missions complete: <b>${done}/24</b></p><p>Final Contract: <b>${v}/${D.clauses.length}</b> clauses void · Commons allies: <b>${(s.commonsTally??[]).length}</b></p>`});}
+    }catch(err){console.error("Franchise Wars | dashboard",err);ui.notifications.error(err.message);}
+  }
+}
+let FW_DASH_APP=null;
+function fwOpenDashboard(tab){if(FW_DASH_APP?.rendered){if(tab)FW_DASH_APP.tab=tab;FW_DASH_APP.render({force:true});FW_DASH_APP.bringToFront?.();return FW_DASH_APP;}FW_DASH_APP=new FWDashboard({tab});FW_DASH_APP.render(true);return FW_DASH_APP;}
+
+/* One GM Dashboard button in the Journals sidebar (and the scene controls notes layer) */
 Hooks.on("renderJournalDirectory",(app,html)=>{
   if(!game.user.isGM)return;const root=html instanceof HTMLElement?html:html[0];if(!root||root.querySelector(".fw-gm-tools"))return;
   const bar=document.createElement("div");bar.className="fw-gm-tools";
-  bar.innerHTML=`<button type="button" data-t="tracker"><i class="fa-solid fa-chart-line"></i> Tracker</button><button type="button" data-t="debate"><i class="fa-solid fa-scale-balanced"></i> Clauses</button><button type="button" data-t="vote"><i class="fa-solid fa-check-to-slot"></i> Board</button>`;
-  bar.addEventListener("click",ev=>{const b=ev.target.closest("button");if(!b)return;({tracker:()=>new FWTracker().render(true),debate:()=>new FWClauseDebate().render(true),vote:()=>new FWBoardVote().render(true)})[b.dataset.t]?.();});
+  bar.innerHTML=`<button type="button"><i class="fa-solid fa-briefcase"></i> Franchise Wars GM Dashboard</button>`;
+  bar.querySelector("button").addEventListener("click",()=>fwOpenDashboard());
   (root.querySelector(".directory-header")??root).prepend(bar);
 });
 
+/* Auto-tracking */
+Hooks.on("createItem",async(item,opts,userId)=>{
+  if(!game.user.isGM||(game.users.activeGM&&game.users.activeGM.id!==game.user.id)||!(item.parent instanceof Actor))return;
+  const sid=item.getFlag(MODULE_ID,"sourceId")??"";const m=/^fw\.item\.receipt\.(S\d\d)$/.exec(sid);if(!m)return;
+  await awardReceipt(m[1],{item:sid,name:item.name,holder:item.parent.name});
+});
+
 async function importMacros(){
-  const list=[["fw.macro.tracker","FW: Campaign Tracker","game.franchiseWars.openTracker();","icons/svg/book.svg"],
-    ["fw.macro.debate","FW: Clause Debate","game.franchiseWars.openClauseDebate();","icons/svg/combat.svg"],
-    ["fw.macro.vote","FW: Board Vote","game.franchiseWars.openBoardVote();","icons/svg/hanging-sign.svg"],
+  for(const old of ["fw.macro.tracker","fw.macro.debate","fw.macro.vote"]){const m=game.macros.find(x=>x.getFlag(MODULE_ID,"sourceId")===old);if(m)await m.delete();}
+  const list=[["fw.macro.dashboard","FW: GM Dashboard","game.franchiseWars.openDashboard();","icons/svg/book.svg"],
     ["fw.macro.command","FW: Command Centre","game.franchiseWars.openCommandCentre();","icons/svg/castle.svg"],
     ["fw.macro.maps","FW: Re-import Battlemaps (force)","game.franchiseWars.importMaps({force:true});","icons/svg/village.svg"],
     ["fw.macro.export","FW: Export to Compendiums","game.franchiseWars.exportToCompendiums();","icons/svg/chest.svg"],
@@ -596,7 +698,7 @@ class FWSettingsMenu extends FWWindow{
       <p class="fw-note">The module ships ${packs.length} compendiums in the <b>The Franchise Wars</b> folder of the Compendium sidebar. Drag single documents out, or use a pack's <i>Import All Content</i> (tick <b>Keep Document IDs</b> so map pins and tokens stay linked).</p>
       <div class="fw-row"><button data-act="export"><i class="fa-solid fa-box-archive"></i> Copy this world's versions into world compendiums</button></div>
       <h3>Campaign tracker</h3>
-      <div class="fw-row"><button data-act="tracker"><i class="fa-solid fa-chart-line"></i> Open tracker</button><button data-act="reset"><i class="fa-solid fa-eraser"></i> Reset campaign progress</button></div>
+      <div class="fw-row"><button data-act="tracker"><i class="fa-solid fa-briefcase"></i> Open GM Dashboard</button><button data-act="reset"><i class="fa-solid fa-eraser"></i> Reset campaign progress</button></div>
     </div>`;
   }
   async act(a){
@@ -605,7 +707,7 @@ class FWSettingsMenu extends FWWindow{
       else if(a==="maps")await importMaps({force:true});
       else if(a==="update"){await importContent();ui.notifications.info("Franchise Wars | changes imported.");}
       else if(a==="export")await exportToCompendiums();
-      else if(a==="tracker")new FWTracker().render(true);
+      else if(a==="tracker")fwOpenDashboard();
       else if(a==="reset")await resetCampaignState();
     }catch(err){console.error("Franchise Wars |",err);ui.notifications.error(err.message);}
     this.render();
@@ -658,3 +760,20 @@ Hooks.once("ready",async()=>{
   await game.settings.set(MODULE_ID,"handoutPrivacyV1",true);
   if(n)ui.notifications.info(`Franchise Wars | ${n} handout journal(s) made GM-only again; handouts now go to chat.`);
 });
+
+/* Map links: view (or Shift = activate) a Franchise Wars battlemap; import it from the compendium if it is not in the world yet. */
+async function fwOpenScene(src,{activate=false}={}){
+  let scene=fwFind("Scene",src);
+  if(!scene){
+    const hit=(await fwPackIndex()).get(`Scene|${src}`);
+    if(hit){
+      ui.notifications.info("Franchise Wars | importing battlemap from the compendium…");
+      scene=await game.scenes.importFromCompendium(hit.pack,hit.id,{},{keepId:true});
+    }
+  }
+  if(!scene)return ui.notifications.warn(`Battlemap not found: ${src}. Run Content Manager → Re-import battlemaps only.`);
+  try{
+    if(activate)await scene.activate();else await scene.view();
+    ui.notifications.info(`${activate?"Activated":"Viewing"}: ${scene.name}`);
+  }catch(err){console.error("Franchise Wars | open scene",err);ui.notifications.error(`Could not open ${scene.name}: ${err.message}`);}
+}

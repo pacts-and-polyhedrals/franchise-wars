@@ -1,5 +1,5 @@
-2026/11/16-13:09:49.957866 7f71af3fe6c0 Delete type=3 #1
-2026/11/16-13:09:49.958906 7f71adbfb6c0 Level-0 table #5: started
-2026/11/16-13:09:49.959558 7f71adbfb6c0 Level-0 table #5: 1120 bytes OK
-2026/11/16-13:09:49.959798 7f71adbfb6c0 Delete type=0 #3
-2026/11/16-13:09:49.959876 7f71adbfb6c0 Manual compaction at level-0 from '!playlists!5G0hvh6j9uXej8v0' @ 72057594037927935 : 1 .. '!playlists.sounds!5G0hvh6j9uXej8v0.roMtvOyDuUgnchmB' @ 0 : 0; will stop at (end)
+2026/11/16-14:06:30.484624 7f9154dff6c0 Delete type=3 #1
+2026/11/16-14:06:30.486169 7f911e7fc6c0 Level-0 table #5: started
+2026/11/16-14:06:30.486930 7f911e7fc6c0 Level-0 table #5: 1120 bytes OK
+2026/11/16-14:06:30.487305 7f911e7fc6c0 Delete type=0 #3
+2026/11/16-14:06:30.487372 7f911e7fc6c0 Manual compaction at level-0 from '!playlists!5G0hvh6j9uXej8v0' @ 72057594037927935 : 1 .. '!playlists.sounds!5G0hvh6j9uXej8v0.roMtvOyDuUgnchmB' @ 0 : 0; will stop at (end)

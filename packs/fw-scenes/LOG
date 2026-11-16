@@ -1,5 +1,5 @@
-2026/11/16-13:09:49.695235 7f71ae3fc6c0 Delete type=3 #1
-2026/11/16-13:09:49.931547 7f71adbfb6c0 Level-0 table #5: started
-2026/11/16-13:09:49.945464 7f71adbfb6c0 Level-0 table #5: 1337357 bytes OK
-2026/11/16-13:09:49.945997 7f71adbfb6c0 Delete type=0 #3
-2026/11/16-13:09:49.946587 7f71adbfb6c0 Manual compaction at level-0 from '!folders!9tCXYi7VrFPtryQr' @ 72057594037927935 : 1 .. '!scenes.walls!zkWEuHH1tRx4qsCK.xjFAHuVxDYGRSpOF' @ 0 : 0; will stop at (end)
+2026/11/16-14:06:30.185528 7f911ffff6c0 Delete type=3 #1
+2026/11/16-14:06:30.452968 7f911e7fc6c0 Level-0 table #5: started
+2026/11/16-14:06:30.470472 7f911e7fc6c0 Level-0 table #5: 1337357 bytes OK
+2026/11/16-14:06:30.471049 7f911e7fc6c0 Delete type=0 #3
+2026/11/16-14:06:30.471752 7f911e7fc6c0 Manual compaction at level-0 from '!folders!9tCXYi7VrFPtryQr' @ 72057594037927935 : 1 .. '!scenes.walls!zkWEuHH1tRx4qsCK.xjFAHuVxDYGRSpOF' @ 0 : 0; will stop at (end)

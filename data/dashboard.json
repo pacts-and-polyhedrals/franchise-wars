@@ -1,0 +1,582 @@
+{
+ "missions": [
+  {
+   "code": "S01",
+   "title": "The Wild Magic Burrito",
+   "act": 1,
+   "level": "1",
+   "grade": "Copper",
+   "client": "THAC0 Spell",
+   "journal": "fw.mission.S01",
+   "receipt": "fw.item.receipt.S01",
+   "receiptName": "Incident Report 77-B (original)",
+   "synopsis": "The characters sign their QuestRabbit Contractor Agreements at the Warren—including a shimmering clause, 77-B, that appoints them \"Representatives of the Commons for purposes of future transactions.\" Pip Ashworth, their cheerful harengon handler, sends them to their first Copper job: THAC0 Spell's Drive-Thru Row flagship, where the limited-time Wild Burrito is turning one customer in six into a minor magical disaster…",
+   "star": false
+  },
+  {
+   "code": "S02",
+   "title": "The King Is Dead",
+   "act": 1,
+   "level": "1–2",
+   "grade": "Copper",
+   "client": "Murder King",
+   "journal": "fw.mission.S02",
+   "receipt": "fw.item.receipt.S02",
+   "receiptName": "Gideon Tumble's Notebook",
+   "synopsis": "Mortimer Pell wore the Murder King costume for twenty-two years—waving at children, posing for portraits, shouting the slogan Have It Our Way! from the drive-thru moat. Two weeks ago he died inside it. The costume was hung up in storage, and now it isn’t: every night it walks out of the Grand Throne Restaurant and wanders Coronation Square, waving at nobody. The party is hired to restore “brand quietude” before the C…",
+   "star": true
+  },
+  {
+   "code": "S03",
+   "title": "Gelli Goes Missing",
+   "act": 1,
+   "level": "2",
+   "grade": "Silver",
+   "client": "Gelatinous Cube",
+   "journal": "fw.mission.S03",
+   "receipt": "fw.item.receipt.S03",
+   "receiptName": "The Retention Clauses",
+   "synopsis": "Gelli is the beloved living mascot of the Gelatinous Cube franchise: a real, docile gelatinous cube that spends its days in a chilled display at the Canal Street Creamery, wobbling for children. Three night-shift workers have stopped coming home—and so has Gelli. Manager Bettina Soft insists everything is fine, very fine, extremely fine. The party finds the staff lockers, three employment contracts with a Retention C…",
+   "star": false
+  },
+  {
+   "code": "S04",
+   "title": "Union of Unseen Servants",
+   "act": 1,
+   "level": "3",
+   "grade": "Silver",
+   "client": "Starkfucks",
+   "journal": "fw.mission.S04",
+   "receipt": "fw.item.receipt.S04",
+   "receiptName": "The Loyalty Contracts",
+   "synopsis": "At the Starkfucks Reserve Roastery on Corporate Row, three human baristas and forty unseen servants make the finest coffee in Brandmere. Tonight the cups have stopped moving. Mugs float, pause and lower themselves to the counter. On the chalk menu board, in neat capitals, someone invisible has written: WE ARE PEOPLE . Manager Saffron Mellow calls it a spell malfunction. The party meets the strikers’ shop steward, Agn…",
+   "star": false
+  },
+  {
+   "code": "S05",
+   "title": "The Crown Jewels",
+   "act": 1,
+   "level": "4",
+   "grade": "Silver",
+   "client": "Murder King",
+   "journal": "fw.mission.S05",
+   "receipt": "fw.item.receipt.S05",
+   "receiptName": "The Vault Inventory",
+   "synopsis": "Veronique Salt hires the party personally “as a thank-you for your discretion”, paying upfront: the Coronation Day promotional crown has been “relocated” to Wight Castle, the undead slider chain on the Old Gate. She wants it back—quietly. By day Wight Castle is a squat white keep of pale staff and too-bright lights. After midnight its staff become ghosts reconciling the day’s receipts. Its night manager is Mortimer P…",
+   "star": true
+  },
+  {
+   "code": "S06",
+   "title": "The Missing Spice",
+   "act": 2,
+   "level": "5",
+   "grade": "Silver",
+   "client": "THAC0 Spell",
+   "journal": "fw.mission.S06",
+   "receipt": "fw.item.receipt.S06",
+   "receiptName": "The Marchetti Memo",
+   "synopsis": "Act II opens with the franchises at open war. THAC0 Spell’s secret seventh spice has been stolen, and the flagship’s regulars are in withdrawal—twitchy, angry and fixated. Hollis Quench asks for the party by name. The trail leads to Critical Wok on Arena Street, a competitive noodle bar where every customer rolls a d20 to order and the manager, Lucky Oyelaran, has never rolled below a 15. The stolen spice is being co…",
+   "star": false
+  },
+  {
+   "code": "S07",
+   "title": "Executive Plot Device",
+   "act": 2,
+   "level": "5–6",
+   "grade": "Silver",
+   "client": "Big McGuffin’s",
+   "journal": "fw.mission.S07",
+   "receipt": "fw.item.receipt.S07",
+   "receiptName": "Delivery Receipt",
+   "synopsis": "At the Midnight Plotline—the flagship of Big McGuffin’s, where the jukebox plays ominous strings—manager Maxim Knell hands the party a locked black briefcase and a delivery address, murmuring, “And so the heroes take the burden…” Three other parties watch the handover. What follows is a city-wide chase: Crown & Cleaver cleaners on the rooftops, Planar Hospitality Group invisible stalkers in the alleys, a Hoard Syndic…",
+   "star": false
+  },
+  {
+   "code": "S08",
+   "title": "Hostile Takeover",
+   "act": 2,
+   "level": "6",
+   "grade": "Silver",
+   "client": "Murder King",
+   "journal": "fw.mission.S08",
+   "receipt": "fw.item.receipt.S08",
+   "receiptName": "The Unsigned Deeds",
+   "synopsis": "Veronique Salt activates the party’s Crown & Cleaver retainer (or offers triple pay through QuestRabbit): fourteen independent taverns in the Old Independents’ Quarter must sign franchise agreements. Three already have—and they no longer exist. Where they stood are Murder Kings, and nobody remembers they were ever anything else. The party works the Quarter as a sandbox, tavern by tavern: charm, threat, bribery or con…",
+   "star": false
+  },
+  {
+   "code": "S09",
+   "title": "Where’s Number Four?",
+   "act": 2,
+   "level": "7",
+   "grade": "Silver",
+   "client": "Five Wights",
+   "journal": "fw.mission.S09",
+   "receipt": "fw.item.receipt.S09",
+   "receiptName": "Four's Collateral Tag",
+   "synopsis": "The five Harrow brothers swore an oath—in life, and again in death—to be in every Five Wights kitchen at once. Now Four is gone, and the oath is failing: fries flicker, customers repeat sentences, and the brothers finish each other’s sentences with Four’s missing words. The brothers feel where Four is: “north, cold, stacked.” They lead the party to the CostCo-op warehouse depot, where membership is required to enter …",
+   "star": false
+  },
+  {
+   "code": "S10",
+   "title": "Always Low Prices",
+   "act": 2,
+   "level": "8",
+   "grade": "Silver",
+   "client": "Wand-Mart",
+   "journal": "fw.mission.S10",
+   "receipt": "fw.item.receipt.S10",
+   "receiptName": "The Wand-Mart Cost Ledger",
+   "synopsis": "Wand-Mart, the vast supercentre on the city’s edge, sells everything for less than it costs: healing potions, spell scrolls, rations, torches—all rolled back. An anonymous shareholder wants to know how. The party arrives on Rollback Day, the biggest sale of the year, and watches customers grow a few days older with every purchase. In the stockroom, invoices show every item costs more than it sells for; a clerk mentio…",
+   "star": true
+  },
+  {
+   "code": "S11",
+   "title": "The Beans of Pandemonium",
+   "act": 3,
+   "level": "9",
+   "grade": "Gold",
+   "client": "Starkfucks",
+   "journal": "fw.mission.S11",
+   "receipt": "fw.item.receipt.S11",
+   "receiptName": "The Harvesters' Testimony",
+   "synopsis": "Arcane Beverage International—unaware the party has turned, or hoping they haven’t—hires them through QuestRabbit for the Seasonal Premium harvest. Pip calls it “a big step up!” The portal is in the back room of Bean There, Summoned That, and the wind starts before anyone opens it. Pandemonium is a plane of endless wind-carved tunnels. In them grow glowing beans tended by harvesters who remember nothing but their shi…",
+   "star": false
+  },
+  {
+   "code": "S12",
+   "title": "All Rights Reserved",
+   "act": 3,
+   "level": "9–10",
+   "grade": "Gold",
+   "client": "Goodberry’s",
+   "journal": "fw.mission.S12",
+   "receipt": "fw.item.receipt.S12",
+   "receiptName": "The Healing Deed",
+   "synopsis": "Brother Allard of Death Save Delivery sends word: clerics across Brandmere cannot heal. Cure wounds fizzles; potions taste of chalk; prayers get a polite refusal. Outside every temple stands a Goodberry’s licensing booth selling HEALING™ by the prayer. People are dying on temple floors. At the oldest shrine, Sister Wren confesses: years ago she signed away Healing’s deed to save her dying son. It was a Goodberry’s we…",
+   "star": false
+  },
+  {
+   "code": "S13",
+   "title": "Pact of the Bucket",
+   "act": 3,
+   "level": "10",
+   "grade": "Gold",
+   "client": "Chick’n Familiar",
+   "journal": "fw.mission.S13",
+   "receipt": "fw.item.receipt.S13",
+   "receiptName": "Infernal Due-Diligence Report",
+   "synopsis": "Wendel Clasp, a human wizard who swears he read the franchise agreement, runs the Magus Ward Chick’n Familiar. Ten years ago he signed with Nine Circles Hospitality. The consideration was “one soul, payable on maturity”. Maturity is midnight tonight. He begs the party for help. At midnight a barbed devil collector arrives with a contract and a bucket. The contract has a loophole—the payment is “the first soul that en…",
+   "star": false
+  },
+  {
+   "code": "S14",
+   "title": "The Franchise Below",
+   "act": 3,
+   "level": "11",
+   "grade": "Gold",
+   "client": "THAC0 Spell",
+   "journal": "fw.mission.S14",
+   "receipt": "fw.item.receipt.S14",
+   "receiptName": "The First Entry",
+   "synopsis": "Hollis Quench calls the party: the iron door in THAC0 Spell’s cellar—sealed since before the party’s first job, the one Dobbs went missing near—is open. Beyond it, stairs go down for too long. And at the bottom, behind a counter, stands Dobbs, the missing line cook, calm and blank, serving customers. The First Shop is every shop: a counter, a scale, a till, a bell. Customers who have waited centuries queue patiently.…",
+   "star": false
+  },
+  {
+   "code": "S15",
+   "title": "Long Live the King",
+   "act": 3,
+   "level": "12",
+   "grade": "Platinum",
+   "client": "Murder King",
+   "journal": "fw.mission.S15",
+   "receipt": "fw.item.receipt.S15",
+   "receiptName": "Aldric's Testimony",
+   "synopsis": "Veronique Salt calls in a panic: “He’s in the Throne Tower. He’s eating everyone.” King Aldric the Unkind—the original Murder King, murdered four centuries ago by his steward, Ossian Cleave—has risen as a revenant, wearing the Promotional Crown from S05. He has fought his way to the top floor of Crown & Cleaver headquarters and is eating executives. Aldric is proud, cruel and correct: his kingdom was stolen, his face…",
+   "star": true
+  },
+  {
+   "code": "S16",
+   "title": "Do Not Disturb",
+   "act": 4,
+   "level": "13",
+   "grade": "Platinum",
+   "client": "Long Rest Inn",
+   "journal": "fw.mission.S16",
+   "receipt": "fw.item.receipt.S16",
+   "receiptName": "The Five-Star Testimony",
+   "synopsis": "Pip, nervous, hands over a contract printed on black card: “They said you’re the only ones qualified.” Room 303 of the Long Rest Inn has displayed DO NOT DISTURB for ninety-four years. Corporate wants it cleaned and the guests checked out. Behind the door is a time-stop field, a century of dust, and four legendary heroes asleep: Cadwyn Lark, Tomas Brand, Ysolde Fenn and Hark—the Last Five-Star Party, the only adventu…",
+   "star": false
+  },
+  {
+   "code": "S17",
+   "title": "The Third Place",
+   "act": 4,
+   "level": "14",
+   "grade": "Platinum",
+   "client": "Starkfucks",
+   "journal": "fw.mission.S17",
+   "receipt": "fw.item.receipt.S17",
+   "receiptName": "The Third Place Folio",
+   "synopsis": "ABI, reeling from S11 and S12, still needs contractors, and QuestRabbit hires the party on autopilot. Or Healing itself leaves a donut hole on the party’s pillow with a note: “Help.” Starkfucks is building a branch in the Third Place. The Third Place is grey: a café that goes on forever, with tables of lost things arranged by acquisition date. The party finds items from their own past—taken by the Ledger as “onboardi…",
+   "star": false
+  },
+  {
+   "code": "S18",
+   "title": "The Mother Culture",
+   "act": 4,
+   "level": "14–15",
+   "grade": "Platinum",
+   "client": "Gelatinous Cube",
+   "journal": "fw.mission.S18",
+   "receipt": "fw.item.receipt.S18",
+   "receiptName": "Sample Zero",
+   "synopsis": "Bettina Soft calls in hysterics: every cube in the Canal Street Creamery is humming the freezer’s lullaby, and the gelato is crawling out of the display. Across Brandmere, every Sweet Covenant shop is leaking. Desserts are going home. Home is the Deep Dairy, beneath the Dairy Quean farm, where the Mother Culture—a primordial ooze, the starter of every dessert the Sweet Covenant ever sold—has woken. Granny Quean, the …",
+   "star": false
+  },
+  {
+   "code": "S19",
+   "title": "Executive Membership",
+   "act": 4,
+   "level": "15",
+   "grade": "Platinum",
+   "client": "CostCo-op",
+   "journal": "fw.mission.S19",
+   "receipt": "fw.item.receipt.S19",
+   "receiptName": "The Board Minutes",
+   "synopsis": "Hal Grundy, sweating, explains: the Counting House requires a quorum of the Hoard Syndicate’s owners to ratify its vote in the Final Acquisition. If the dragons don’t show, the Hoard’s vote defaults to Tallis Vend. If they do, the party gets a chance to speak. The party delivers seven invitations—each a short scene: a riddle with Aurum, a bluff with the Twins, a gift for Frostmother Ysk, a legal notice for Old Tar. G…",
+   "star": false
+  },
+  {
+   "code": "S20",
+   "title": "The Annual General Meeting",
+   "act": 4,
+   "level": "16",
+   "grade": "Platinum",
+   "client": "Creation & Company",
+   "journal": "fw.mission.S20",
+   "receipt": "fw.item.receipt.S20",
+   "receiptName": "The Final Contract (Courtesy Copy)",
+   "synopsis": "An embossed invitation arrives, addressed to each character by full name, with the Rabbit Rating printed beside it. The Franchise Below’s grey door now has a handle. Beyond it is the Counting House. A receptionist who is Pip Ashworth—except it isn’t; it is a Pip from a Ledger-page, a copy made when Pip signed—gives directions. The lift stops at floors the party didn’t press: Acquisitions, Collateral, Human Resources.…",
+   "star": true
+  },
+  {
+   "code": "S21",
+   "title": "The Golden Tusks",
+   "act": 5,
+   "level": "17",
+   "grade": "Black Card",
+   "client": "The Golden Orcs",
+   "journal": "fw.mission.S21",
+   "receipt": "fw.item.receipt.S21",
+   "receiptName": "The Broken Seal",
+   "synopsis": "Grukka Sweetfang—the Golden Orcs manager who is honestly great with kids—finds the party at the Tankard & Tallow. She has the survey maps. She’s been noticing for years: the golden tusk signs outside every branch are aligned, ley-line perfect, across the whole continent. They are a seal. On Acquisition Eve, at midnight, every tusk will light, and whatever is signed in the Counting House will be notarised for all real…",
+   "star": false
+  },
+  {
+   "code": "S22",
+   "title": "The Last Slice",
+   "act": 5,
+   "level": "18",
+   "grade": "Black Card",
+   "client": "Dominoancy",
+   "journal": "fw.mission.S22",
+   "receipt": "fw.item.receipt.S22",
+   "receiptName": "The Undelivered Order",
+   "synopsis": "Madame Olive Aspire bursts into the Tankard & Tallow with her hair on end. “It’s you. You ordered it. You haven’t yet, but you will have. You did.” Every diviner in Dominoancy has foreseen one pizza order ending the world. It printed at every branch at once. It is the Final Acceptance of Offer, in the party’s names. With the seal broken, Tallis Vend needs the party’s acceptance delivered before the signing—and Clause…",
+   "star": false
+  },
+  {
+   "code": "S23",
+   "title": "The Shareholder Revolt",
+   "act": 5,
+   "level": "19",
+   "grade": "Black Card",
+   "client": "Creation & Company",
+   "journal": "fw.mission.S23",
+   "receipt": "fw.item.receipt.S23",
+   "receiptName": "The Minutes of Removal",
+   "synopsis": "Veronique’s card arrives: “Six votes. Bring them. I’ll bring the room.” She has requisitioned an Extraordinary General Meeting of Creation & Company to remove Tallis Vend as Chairman. Proxies must be lodged in person. The party tallies what they have: directors turned, destroyed or bargained with across the whole campaign. Then they choose the director they have not yet dealt with and run a compressed version of that…",
+   "star": false
+  },
+  {
+   "code": "S24",
+   "title": "Awaiting Signature",
+   "act": 5,
+   "level": "20",
+   "grade": "Black Card",
+   "client": "Creation & Company",
+   "journal": "fw.mission.S24",
+   "receipt": null,
+   "receiptName": null,
+   "synopsis": "There is no hook. The door is open. There is a table, a contract, a quill and a small grey man who has been waiting four hundred years. Tallis Vend offers tea and explains, calmly and persuasively, that he will be a very good owner—no war, no hunger, everything managed. Then the Clause Debate: each round he reads a clause aloud, and a character presents the matching Receipt and argues. Success burns the clause off th…",
+   "star": false
+  }
+ ],
+ "corps": [
+  {
+   "id": "CO-01",
+   "name": "Creation & Company",
+   "slogan": "Everything Is For Sale. Eventually.",
+   "goal": "",
+   "hq": "The Counting House, a skyscraper-sized office outside reality, reachable through the Franchise Below.",
+   "face": "None. Creation & Company has no public face. Its name appears only in fine print, on survey stones, and at the bottom of the Final Contract.",
+   "controlledBy": "Tallis Vend , Chairman. Four hundred years ago a mortal clerk wrote himself into the Grand Ledger as the owner of himself, in perpetuity, and the Ledger agreed. He has been buying since.",
+   "journal": "fw.corp.CO-01",
+   "board": false
+  },
+  {
+   "id": "CO-02",
+   "name": "QuestRabbit Adventuring Solutions",
+   "slogan": "Adventure Is Dangerous. Employment Is Mandatory.",
+   "goal": "Publicly: connect heroes with clients. Secretly: raise a party to five-star Rabbit Rating, the metaphysical threshold of public trust at which they qualify to sign for the commons.",
+   "hq": "The Warren, a cheerful burrow-office tower on Guild Row in Brandmere, with job boards that glow when a contract is posted.",
+   "face": "Harriet Hopwell , founder and CEO, a harengon who believes—truly—that she is helping adventurers find honest work.",
+   "controlledBy": "Creation & Company's Human Resources division. Hopwell sold QuestRabbit ninety-five years ago in a merger she was told was ‘friendly.’ She does not know what the Rabbit Rating measures.",
+   "journal": "fw.corp.CO-02",
+   "board": false
+  },
+  {
+   "id": "CO-03",
+   "name": "Crown & Cleaver Holdings",
+   "slogan": "Every Mouth. Every Meal. Ours.",
+   "goal": "That every creature in the world will eventually eat something Crown & Cleaver owns.",
+   "hq": "The Throne Tower on Coronation Square: a gilded skyscraper with a burger on top.",
+   "face": "Veronique Salt , Vice President of Hostile Acquisitions (tiefling, immaculate suits, never the same pen twice).",
+   "controlledBy": "Baron Ossian Cleave , a death knight who murdered King Aldric the Unkind four hundred years ago and trademarked the killing. Tallis Vend's first employee.",
+   "journal": "fw.corp.CO-03",
+   "board": true
+  },
+  {
+   "id": "CO-04",
+   "name": "Arcane Beverage International",
+   "slogan": "Refresh Your Priorities.",
+   "goal": "To make every customer agreeable by the day of the Final Acquisition.",
+   "hq": "The Roastery Spire, a glass tower on Corporate Row with a reservoir at its peak.",
+   "face": "Sebastian Brew-Hartley , Chief Refreshment Officer (human, always holding a cup).",
+   "controlledBy": "Ulth'Arabica , an aboleth living in the reservoir at the Roastery Spire's peak. It flavours every ABI drink with a trace of its mucus and a lot of Compliance.",
+   "journal": "fw.corp.CO-04",
+   "board": true
+  },
+  {
+   "id": "CO-05",
+   "name": "The Restaurant Necromancy Group",
+   "slogan": "Our Staff Are Dying to Serve You.",
+   "goal": "Provide undead labour to the whole Creation & Company portfolio.",
+   "hq": "The Charnel Kitchen, a mausoleum-restaurant on Necropolis Parade.",
+   "face": "Papa Morvhal , the grandfatherly lich on every Papa Lich's box.",
+   "controlledBy": "Papa Morvhal again. The Restaurant Necromancy Group is the only umbrella whose face and director are the same person. He is tired, sentimental, and loves his staff.",
+   "journal": "fw.corp.CO-05",
+   "board": true
+  },
+  {
+   "id": "CO-06",
+   "name": "The Adventure Retail Consortium",
+   "slogan": "Equip. Adventure. Repeat.",
+   "goal": "Own the supply of weapons, armour and goods for every adventurer hired to fix problems ARC caused.",
+   "hq": "The Distribution Centre, a warehouse the size of a town, in the Warehouse District.",
+   "face": "Doris Plank , General Manager of Wand-Mart and ARC spokesperson (human, silver hair, killer smile).",
+   "controlledBy": "SKÜ, the Warehouse Mind : a colony of mimics grown through IKEA Mimic's furniture into a single intelligence.",
+   "journal": "fw.corp.CO-06",
+   "board": true
+  },
+  {
+   "id": "CO-07",
+   "name": "Probability Brands Group",
+   "slogan": "The House Always Rolls.",
+   "goal": "Harvest luck from the population, so that on the day of the Final Acquisition nobody can roll well enough to refuse.",
+   "hq": "The Casino of Chances, a floating gambling hall above Gamblers' Row.",
+   "face": "Deuce Marchetti , CEO (human, gold teeth, loaded dice in every pocket).",
+   "controlledBy": "Lady Crit , an archfey of luck who has been bound to Creation & Company by a wager she lost to Tallis Vend. She hates him.",
+   "journal": "fw.corp.CO-07",
+   "board": true
+  },
+  {
+   "id": "CO-08",
+   "name": "Nine Circles Hospitality",
+   "slogan": "Stay Forever. You Signed.",
+   "goal": "Publicly: hospitality. Secretly: harvest fractional souls and rest hours for Creation & Company.",
+   "hq": "The Gatehouse, a hotel in Brandmere whose lower floors descend all the way to Avernus.",
+   "face": "Mr. Gregory Latch , Managing Director (tiefling, doorman's gloves, perfectly polite).",
+   "controlledBy": "Duke Malphas Vellichor , a pit fiend of the Nine Hells who signed a partnership with Creation & Company and is only now realising Hell is the thing being acquired.",
+   "journal": "fw.corp.CO-08",
+   "board": true
+  },
+  {
+   "id": "CO-09",
+   "name": "The Planar Hospitality Group",
+   "slogan": "Welcome Everywhere.",
+   "goal": "Control every doorway in the multiverse, so that on the day of the Final Acquisition nobody can leave.",
+   "hq": "The Brass Concierge, a hotel in the City of Brass with a lobby door in every PHG property.",
+   "face": "Mister Hamza Bright , PHG Regional Manager (genasi, very tanned).",
+   "controlledBy": "Zafirah of the Brass Keys , an efreeti who controls the portals of the elemental planes and runs the Counting House's supply chain.",
+   "journal": "fw.corp.CO-09",
+   "board": true
+  },
+  {
+   "id": "CO-10",
+   "name": "The Hoard Syndicate",
+   "slogan": "We Keep What We Take.",
+   "goal": "Hoard food. Hoard gold. Hoard employees. Ensure dragons are on the right side of the Final Acquisition.",
+   "hq": "The Crucible, an extinct volcano an hour's flight from Brandmere.",
+   "face": "Vessk , dragonborn chef of Dragon Express and Syndicate spokesperson.",
+   "controlledBy": "Auntie Vermillia , an ancient red dragon, speaking for the seven ancient dragons of the CostCo-op executive board.",
+   "journal": "fw.corp.CO-10",
+   "board": true
+  },
+  {
+   "id": "CO-11",
+   "name": "McGuffin Narrative Holdings",
+   "slogan": "Your Story. Our Rights.",
+   "goal": "Own destiny. Every prophecy, every chosen one, every McGuffin.",
+   "hq": "The Plotline, a theatre with no exits that is always at intermission.",
+   "face": "Serena Foreshaw , Narrative Integration Manager of McGuffin's.",
+   "controlledBy": "Deus Maxwell , a fallen deva who delivered prophecies for free until he learned he could charge.",
+   "journal": "fw.corp.CO-11",
+   "board": true
+  },
+  {
+   "id": "CO-12",
+   "name": "Sweet Covenant Confectionery",
+   "slogan": "Life Is Sweet. Life Is Ours.",
+   "goal": "Own every sweet thing in the world, and through the Mother Culture, the raw material of all products.",
+   "hq": "The Deep Dairy, a cavern of vats beneath a glamoured farm.",
+   "face": "Granny Quean , the smiling hag of Dairy Quean.",
+   "controlledBy": "Granny Quean, with the Mother",
+   "journal": "fw.corp.CO-12",
+   "board": true
+  },
+  {
+   "id": "CO-13",
+   "name": "The Last Independents",
+   "slogan": "Owned by Nobody.",
+   "goal": "Survive. Then win.",
+   "hq": "The Tankard & Tallow, the last independent tavern on Tallow Lane, Brandmere.",
+   "face": "Marda Hobb , proprietor (dwarf, sixty years behind the bar, has never signed a contract she didn't write herself).",
+   "controlledBy": "None. The Last Independents have no director. They are a network of taverns, bakers, farmers and families who agree to help each other and write nothing down.",
+   "journal": "fw.corp.CO-13",
+   "board": false
+  }
+ ],
+ "rules": {
+  "rabbit": "The Rabbit Rating The party shares a single rating from one to five stars. It begins at one star when they sign the Contractor Agreement in S1. Publicly, it's a customer-satisfaction score that unlocks better contracts. Secretly, it measures how much ordinary people trust the party—and it is the metaphysical threshold that makes their signatures valid for the Material Plane.",
+  "rabbitEarn": "Earning Stars. The rating is not XP. It rises at the milestones shown in the spine (S2, S5, S10, S15 and S20 each add a star if the party completed the act's missions) and it can rise early if the party does something that makes the public love them. It never falls below the star count the spine requires—the Ledger won't allow it. Players who try to tank their rating deliberately (rudeness, sabotage, refusing jobs) discover that one-star reviews simply don't post. This is the first clue, around Act III, that the rating isn't what it seems.",
+  "mandate": "The Mandate (optional). If the party cuts ties with QuestRabbit, the rating continues under a new name: the Mandate , tracked in the Folio page Wand-Mart opens for them in S10. Nothing changes except the font.",
+  "leverage": "Leverage represents dirt, debts, favours and secrets the party holds over a specific corporation. Track Leverage separately for each of the ten Board umbrellas plus Creation & Company. Every contract in this book lists a Leverage target; completing it with the truth exposed (not buried) grants 1 Leverage against that target. Spine missions grant the amounts they list.",
+  "leverageSpend": "Spending Leverage. A point can be spent at any time to gain one of the following against the target corporation, its staff or its directors: Advantage. Advantage on one Charisma check, or on one argument in the Clause Debate (S24). Access. A door opens: a meeting, a warehouse, a file, a board member's private dining room. Cover. The corporation's security looks the other way for one scene. Proxy. In S23, 2 Leverage against an umbrella lets the party demand its director's proxy. The director may refuse, but must then be dealt with in person.",
+  "leverageLose": "Losing Leverage. Leverage is lost when the party is bought off (accepting a “bonus” from the target), when their evidence is destroyed, or when they use it and the target retaliates—at your discretion, one point spent in a heavy-handed way costs one more.",
+  "tally": "The Grand Ledger records only written agreements. Handshakes, favours done for free, gifts, promises made in a tavern and kept—these are invisible to it. Creation & Company can't see them, can't buy them and can't cancel them. Whenever the party helps someone and refuses payment, or makes an unwritten promise and keeps it, record that person or group on the Commons Tally . Named NPCs count as one; a union, a neighbourhood or a guild counts as one. Most side contracts note where a Tally ally can be won instead of gold.",
+  "tallyPlay": "In play. Tally allies show up. Call on one per session for a small favour—no roll. In S23. Tally allies attend the Extraordinary General Meeting as observers. For every five, one wavering director has disadvantage to refuse the party. In S24. Each Tally ally present can act as a witness . Clauses with no Receipt can be voided by three witnesses in place of a DC 25 argument. The Held in Common ending requires at least twenty.",
+  "receipts": "A Receipt is proof. Twelve spine missions each produce one specific Receipt that voids one clause of the Final Contract; a thirteenth (Incident Report 77-B) is found in the first hour of the campaign and voids the clause that makes the party signatories. Other missions produce Receipts that weaken Tallis Vend or open the way forward.",
+  "receiptsPhys": "Receipts are physical. Put them on index cards and hand them to the players. Lose track of one and it's gone; destroyed Receipts can be reconstructed only by a DC 25 argument or three Tally witnesses.",
+  "debate": "S24, the Clause Debate. Vend reads one clause per round, Clause 77-B first and then 1 to 12. A character presents that clause’s Receipt and argues it void: DC 18 Persuasion, Insight, History, Religion or Investigation. Without the Receipt the argument is DC 25, or three Commons Tally witnesses can void it instead. Advantage comes from Leverage against the umbrella involved, an allied witness, a relevant boon, or a flipped director. A failed argument lets Vend make a Ledger Entry. When six clauses are void, Vend stands.",
+  "board": "S23, the Shareholder Revolt. Ten directors sit on the Board, one for each umbrella corporation, and Tallis Vend holds 51% through their proxies. The motion to remove him carries when six seats are turned against him: flipped (the director votes with the party) or removed (the proxy is voided). 2 Leverage against an umbrella lets the party demand its director’s proxy; the director may refuse, but must then be dealt with in person. For every five Commons Tally allies watching, one wavering director has disadvantage to refuse the party."
+ },
+ "rabbit": [
+  {
+   "stars": 1,
+   "unlocks": "Copper contracts; a badge",
+   "hidden": "Known to one neighbourhood"
+  },
+  {
+   "stars": 2,
+   "unlocks": "Silver contracts; QuestRabbit expense account (50 gp/month)",
+   "hidden": "Trusted by a district"
+  },
+  {
+   "stars": 3,
+   "unlocks": "Gold contracts; a Folio page is opened in the party's name (S10)",
+   "hidden": "Trusted by a city"
+  },
+  {
+   "stars": 4,
+   "unlocks": "Platinum contracts; a private office at the Warren",
+   "hidden": "Trusted by a nation"
+  },
+  {
+   "stars": 5,
+   "unlocks": "Black Card; an invitation to the AGM (S20)",
+   "hidden": "Representatives of the Commons: signature valid for the Material Plane"
+  }
+ ],
+ "clauses": [
+  {
+   "code": "77-B",
+   "title": "Signature Authority",
+   "receipt": "Incident Report 77-B (original)",
+   "mission": "S01"
+  },
+  {
+   "code": "1",
+   "title": "Identity of Purchaser",
+   "receipt": "The First Entry",
+   "mission": "S14"
+  },
+  {
+   "code": "2",
+   "title": "Consideration",
+   "receipt": "The Wand-Mart Cost Ledger",
+   "mission": "S10"
+  },
+  {
+   "code": "3",
+   "title": "Free Consent",
+   "receipt": "The Loyalty Contracts",
+   "mission": "S04"
+  },
+  {
+   "code": "4",
+   "title": "Capacity of Signatories",
+   "receipt": "The Five-Star Testimony",
+   "mission": "S16"
+  },
+  {
+   "code": "5",
+   "title": "Title to Subsidiaries",
+   "receipt": "The Unsigned Deeds",
+   "mission": "S08"
+  },
+  {
+   "code": "6",
+   "title": "Notarisation",
+   "receipt": "The Broken Seal",
+   "mission": "S21"
+  },
+  {
+   "code": "7",
+   "title": "Delivery",
+   "receipt": "The Undelivered Order",
+   "mission": "S22"
+  },
+  {
+   "code": "8",
+   "title": "Collateral",
+   "receipt": "Four's Collateral Tag",
+   "mission": "S09"
+  },
+  {
+   "code": "9",
+   "title": "Non-Infringement",
+   "receipt": "The Healing Deed",
+   "mission": "S12"
+  },
+  {
+   "code": "10",
+   "title": "Governing Law",
+   "receipt": "Infernal Due-Diligence Report",
+   "mission": "S13"
+  },
+  {
+   "code": "11",
+   "title": "Disclosure",
+   "receipt": "Gideon Tumble's Notebook",
+   "mission": "S02"
+  },
+  {
+   "code": "12",
+   "title": "Perpetuity",
+   "receipt": "Sample Zero",
+   "mission": "S18"
+  }
+ ]
+}
