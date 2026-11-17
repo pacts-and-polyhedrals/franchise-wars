@@ -1,5 +1,5 @@
 const MODULE_ID = "franchise-wars";
-const VERSION = "1.2.1";
+const VERSION = "1.2.2";
 const STATE_KEY = "campaignState";
 const IMPORT_KEY = "importVersion";
 const DEFAULT_STATE = {rabbitRating:1,mandateName:"Rabbit Rating",commonsTally:[],leverage:{},receipts:{},board:{},missions:{},clauses:{},currentAct:1,questRabbitCut:30,cutRule:false,log:[],starsAwarded:[]};
