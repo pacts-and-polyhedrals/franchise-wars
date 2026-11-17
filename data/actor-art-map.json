@@ -9,13 +9,12 @@
       "actorSourceId": "fw.actor.staff.FR-01",
       "franchiseId": "FR-01",
       "rawAsset": "raw-191",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-03_hollis-quench.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Verified against manager production brief and image content.",
       "canonicalSource": "grumpy_gnome_night_shift_worker.png",
-      "sha256": "265d74da688a0c163dd5c01115e5063aa9b7d281f96c2ad3486bdabab6f1df52",
-      "portraitTransparent": true
+      "sha256": "265d74da688a0c163dd5c01115e5063aa9b7d281f96c2ad3486bdabab6f1df52"
     },
     {
       "artId": "PM-02",
@@ -62,13 +61,12 @@
       "actorSourceId": "fw.actor.staff.FR-05",
       "franchiseId": "FR-05",
       "rawAsset": "raw-288",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-06_mortimer-pell.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
       "status": "VERIFIED_WITH_SOURCE_CONFLICT",
       "confidence": "name-verified-role-ambiguous",
       "notes": "Name verified, but source bible assigns Mortimer Pell to both Wight Castle manager and Murder King performer; no separate Wight Castle portrait binary was found in the 300-file runtime library.",
       "canonicalSource": "weary_murder_king_mascot_portrait.png",
-      "sha256": "620e9d7547c5d723c084c8f6eb5f30d1c8b8722bce5d657e78cd66b55215d7ab",
-      "portraitTransparent": true
+      "sha256": "620e9d7547c5d723c084c8f6eb5f30d1c8b8722bce5d657e78cd66b55215d7ab"
     },
     {
       "artId": "PM-06",
@@ -544,13 +542,12 @@
       "actorSourceId": "fw.actor.staff.FR-42",
       "franchiseId": "FR-42",
       "rawAsset": "raw-214",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-17_madame-olive-aspire.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/madame-olive-aspire--07e66f2c.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Verified against manager production brief and image content.",
       "canonicalSource": "Madame Olive Aspire.png",
-      "sha256": "07e66f2cd912f77527062164a0ccdc68b63036ac77a490a53455eadef2d43f72",
-      "portraitTransparent": true
+      "sha256": "07e66f2cd912f77527062164a0ccdc68b63036ac77a490a53455eadef2d43f72"
     },
     {
       "artId": "PM-41",
@@ -897,13 +894,12 @@
         "fw.actor.recurring.pip-ashworth"
       ],
       "rawAsset": "raw-070",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-01_pip-ashworth.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-high-quality-stylized-digital-illustration-char--bf12c0d0.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_high_quality_stylized_digital_illustration_char.png",
-      "sha256": "bf12c0d0e67eaf8adb2b3ea6ffae74acc8cdfc137f6d5f176aa92ce22e984774",
-      "portraitTransparent": true
+      "sha256": "bf12c0d0e67eaf8adb2b3ea6ffae74acc8cdfc137f6d5f176aa92ce22e984774"
     },
     {
       "artId": "PT-02",
@@ -912,13 +908,12 @@
         "fw.actor.corporate.CO-02.public-face"
       ],
       "rawAsset": "raw-174",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-02_harriet-hopwell.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "five_star_rabbit_founder.png",
-      "sha256": "237a78ba4a0de7b8235777362c832d7d7a763a975b25243ea96b0e138bbe9b68",
-      "portraitTransparent": true
+      "sha256": "237a78ba4a0de7b8235777362c832d7d7a763a975b25243ea96b0e138bbe9b68"
     },
     {
       "artId": "PT-03",
@@ -927,13 +922,12 @@
         "fw.actor.staff.FR-01"
       ],
       "rawAsset": "raw-191",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-03_hollis-quench.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/grumpy-gnome-night-shift-worker--265d74da.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "grumpy_gnome_night_shift_worker.png",
-      "sha256": "265d74da688a0c163dd5c01115e5063aa9b7d281f96c2ad3486bdabab6f1df52",
-      "portraitTransparent": true
+      "sha256": "265d74da688a0c163dd5c01115e5063aa9b7d281f96c2ad3486bdabab6f1df52"
     },
     {
       "artId": "PT-04",
@@ -942,13 +936,12 @@
         "fw.actor.recurring.dobbs"
       ],
       "rawAsset": "raw-195",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-04_dobbs.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/haunted-diner-cook-taking-orders--2793a586.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "haunted_diner_cook_taking_orders.png",
-      "sha256": "2793a5862ae6d0f9ee95c4f5bfc500fb4b513984abdd89d55ef7cdc5319dee1e",
-      "portraitTransparent": true
+      "sha256": "2793a5862ae6d0f9ee95c4f5bfc500fb4b513984abdd89d55ef7cdc5319dee1e"
     },
     {
       "artId": "PT-05",
@@ -957,13 +950,12 @@
         "fw.actor.bestiary.veronique-salt"
       ],
       "rawAsset": "raw-280",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-05_veronique-salt.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/tiefling-executive-with-pen-and-dossier--0dd777c0.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "tiefling_executive_with_pen_and_dossier.png",
-      "sha256": "0dd777c0b540e6e964b77929e9cb1d0bb42ad56f691eb9953df50429e2eddc34",
-      "portraitTransparent": true
+      "sha256": "0dd777c0b540e6e964b77929e9cb1d0bb42ad56f691eb9953df50429e2eddc34"
     },
     {
       "artId": "PT-06",
@@ -973,13 +965,12 @@
         "fw.actor.staff.FR-05"
       ],
       "rawAsset": "raw-288",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-06_mortimer-pell.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/weary-murder-king-mascot-portrait--620e9d75.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "weary_murder_king_mascot_portrait.png",
-      "sha256": "620e9d7547c5d723c084c8f6eb5f30d1c8b8722bce5d657e78cd66b55215d7ab",
-      "portraitTransparent": true
+      "sha256": "620e9d7547c5d723c084c8f6eb5f30d1c8b8722bce5d657e78cd66b55215d7ab"
     },
     {
       "artId": "PT-07",
@@ -988,13 +979,12 @@
         "fw.actor.recurring.gideon-tumble"
       ],
       "rawAsset": "raw-178",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-07_gideon-tumble.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/frightened-murder-king-worker--0760027d.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "frightened_murder_king_worker.png",
-      "sha256": "0760027d6919edc817605bd8dfd6ad32326967541489dc34c6bf100e787401bd",
-      "portraitTransparent": true
+      "sha256": "0760027d6919edc817605bd8dfd6ad32326967541489dc34c6bf100e787401bd"
     },
     {
       "artId": "PT-08",
@@ -1003,13 +993,12 @@
         "fw.actor.corporate.CO-13.public-face"
       ],
       "rawAsset": "raw-192",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-08_marda-hobb.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/grumpy-tavern-baker-at-the-bar--5355e3d2.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "grumpy_tavern_baker_at_the_bar.png",
-      "sha256": "5355e3d2192a67695a72748030880cb9acd808207ab20f4e37778ac7cd06edf3",
-      "portraitTransparent": true
+      "sha256": "5355e3d2192a67695a72748030880cb9acd808207ab20f4e37778ac7cd06edf3"
     },
     {
       "artId": "PT-09",
@@ -1018,13 +1007,12 @@
         "fw.actor.recurring.counsel-ixabeth-vorr"
       ],
       "rawAsset": "raw-064",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-09_counsel-ixabeth-vorr.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-dramatic-highly-stylized-comic-cartoon-illustra--cd618970.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_dramatic_highly_stylized_comic_cartoon_illustra.png",
-      "sha256": "cd618970a3a60549e98ad2ca3b6326795007c2b94a2cdcde08b86d7b77bd1fd3",
-      "portraitTransparent": true
+      "sha256": "cd618970a3a60549e98ad2ca3b6326795007c2b94a2cdcde08b86d7b77bd1fd3"
     },
     {
       "artId": "PT-10",
@@ -1033,13 +1021,12 @@
         "fw.actor.recurring.aldric-the-unkind"
       ],
       "rawAsset": "raw-284",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-10_king-aldric-the-unkind-revenant.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/undead-king-s-crimson-coronation--b58f076b.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "undead_king_s_crimson_coronation.png",
-      "sha256": "b58f076b063ffce0ad89729ff1df4bdea44fdb94df0b68ed6c35980aed6e22ac",
-      "portraitTransparent": true
+      "sha256": "b58f076b063ffce0ad89729ff1df4bdea44fdb94df0b68ed6c35980aed6e22ac"
     },
     {
       "artId": "PT-11",
@@ -1048,13 +1035,12 @@
         "fw.actor.recurring.last-five-star-party"
       ],
       "rawAsset": "raw-258",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-11_the-last-five-star-party.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/sleeping-adventurers-in-room-303--6eb7d531.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "sleeping_adventurers_in_room_303.png",
-      "sha256": "6eb7d5315a5e7a166712e9ad429e86044900315f98133338baf261805c2cd596",
-      "portraitTransparent": true
+      "sha256": "6eb7d5315a5e7a166712e9ad429e86044900315f98133338baf261805c2cd596"
     },
     {
       "artId": "PT-12",
@@ -1064,13 +1050,12 @@
         "fw.actor.bestiary.tallis-vend-chairman"
       ],
       "rawAsset": "raw-133",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-12_tallis-vend.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "chibi_chairman_with_tea_and_ledger.png",
-      "sha256": "b620f2fe795ad6198230305601d3ea1ba5b0e14dff915795ed788f101c8d4258",
-      "portraitTransparent": true
+      "sha256": "b620f2fe795ad6198230305601d3ea1ba5b0e14dff915795ed788f101c8d4258"
     },
     {
       "artId": "PT-13",
@@ -1079,13 +1064,12 @@
         "fw.actor.rival.brixley-synergy"
       ],
       "rawAsset": "raw-010",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-13_brixley-synergy.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-bold-high-contrast-comic-illustration-style-po--59a9f307.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_bold_high_contrast_comic_illustration_style_po.png",
-      "sha256": "59a9f307b6118220779d48954c97a2fd19c318df514e7b691ff0850fcfec340b",
-      "portraitTransparent": true
+      "sha256": "59a9f307b6118220779d48954c97a2fd19c318df514e7b691ff0850fcfec340b"
     },
     {
       "artId": "PT-14",
@@ -1094,13 +1078,12 @@
         "fw.actor.rival.thorne-actionable"
       ],
       "rawAsset": "raw-263",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-14_thorne-actionable.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/stylized-comic-illustration-scene-a-bold-high-co--2b00c3a6.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "stylized_comic_illustration_scene_a_bold_high_co.png",
-      "sha256": "2b00c3a62ae507a910126c47ffb100e4a6d43193b0ce57dd6de143e8f85b1251",
-      "portraitTransparent": true
+      "sha256": "2b00c3a62ae507a910126c47ffb100e4a6d43193b0ce57dd6de143e8f85b1251"
     },
     {
       "artId": "PT-15",
@@ -1109,13 +1092,12 @@
         "fw.actor.rival.luma-brightstack"
       ],
       "rawAsset": "raw-082",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-15_luma-brightstack.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-portrait-scene-a-co--1fc7c7d5.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_stylized_comic_illustration_portrait_scene_a_co.png",
-      "sha256": "1fc7c7d53f6d7e2d7c23838332aa3f1f0a7aca89e1f8c7add4599a2a83aa8430",
-      "portraitTransparent": true
+      "sha256": "1fc7c7d53f6d7e2d7c23838332aa3f1f0a7aca89e1f8c7add4599a2a83aa8430"
     },
     {
       "artId": "PT-16",
@@ -1124,13 +1106,12 @@
         "fw.actor.rival.oggo"
       ],
       "rawAsset": "raw-081",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-16_oggo.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-stylized-comic-illustration-portrait-scene-a-cl--a7494b13.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_stylized_comic_illustration_portrait_scene_a_cl.png",
-      "sha256": "a7494b13c61646c7f036bd3ab31453872fb401271acb4a3e4e638ff25537c7c9",
-      "portraitTransparent": true
+      "sha256": "a7494b13c61646c7f036bd3ab31453872fb401271acb4a3e4e638ff25537c7c9"
     },
     {
       "artId": "PT-17",
@@ -1139,13 +1120,12 @@
         "fw.actor.staff.FR-42"
       ],
       "rawAsset": "raw-214",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-17_madame-olive-aspire.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/madame-olive-aspire--07e66f2c.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "Madame Olive Aspire.png",
-      "sha256": "07e66f2cd912f77527062164a0ccdc68b63036ac77a490a53455eadef2d43f72",
-      "portraitTransparent": true
+      "sha256": "07e66f2cd912f77527062164a0ccdc68b63036ac77a490a53455eadef2d43f72"
     },
     {
       "artId": "PT-18",
@@ -1154,13 +1134,12 @@
         "fw.actor.recurring.esmond-tallow-pryce"
       ],
       "rawAsset": "raw-061",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-18_esmond-tallow-pryce.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/a-detailed-stylized-illustration-character-portrai--3a76f11b.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Recurring-cast portrait matched to Art Asset Bible / production brief.",
       "canonicalSource": "a_detailed_stylized_illustration_character_portrai.png",
-      "sha256": "3a76f11b4785883a479151e188480b829cb97b223e97e1ca327c4a512e6d449f",
-      "portraitTransparent": true
+      "sha256": "3a76f11b4785883a479151e188480b829cb97b223e97e1ca327c4a512e6d449f"
     },
     {
       "artId": "TK-01",
@@ -1191,13 +1170,12 @@
       "subject": "Veronique Salt",
       "actorSourceId": "fw.actor.bestiary.veronique-salt",
       "rawAsset": "raw-280",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-05_veronique-salt.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/tiefling-executive-with-pen-and-dossier--0dd777c0.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Exact custom binary matched.",
       "canonicalSource": "tiefling_executive_with_pen_and_dossier.png",
-      "sha256": "0dd777c0b540e6e964b77929e9cb1d0bb42ad56f691eb9953df50429e2eddc34",
-      "portraitTransparent": true
+      "sha256": "0dd777c0b540e6e964b77929e9cb1d0bb42ad56f691eb9953df50429e2eddc34"
     },
     {
       "artId": "TK-04",
@@ -1252,26 +1230,24 @@
       "subject": "Tallis Vend",
       "actorSourceId": "fw.actor.bestiary.tallis-vend-chairman",
       "rawAsset": "raw-133",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-12_tallis-vend.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/chibi-chairman-with-tea-and-ledger--b620f2fe.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Verified custom portrait.",
       "canonicalSource": "chibi_chairman_with_tea_and_ledger.png",
-      "sha256": "b620f2fe795ad6198230305601d3ea1ba5b0e14dff915795ed788f101c8d4258",
-      "portraitTransparent": true
+      "sha256": "b620f2fe795ad6198230305601d3ea1ba5b0e14dff915795ed788f101c8d4258"
     },
     {
       "artId": "CO-ACTOR",
       "subject": "Harriet Hopwell",
       "actorSourceId": "fw.actor.corporate.CO-02.public-face",
       "rawAsset": "raw-174",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-02_harriet-hopwell.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/five-star-rabbit-founder--237a78ba.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Verified custom portrait.",
       "canonicalSource": "five_star_rabbit_founder.png",
-      "sha256": "237a78ba4a0de7b8235777362c832d7d7a763a975b25243ea96b0e138bbe9b68",
-      "portraitTransparent": true
+      "sha256": "237a78ba4a0de7b8235777362c832d7d7a763a975b25243ea96b0e138bbe9b68"
     },
     {
       "artId": "CO-ACTOR",
@@ -1450,13 +1426,12 @@
       "subject": "Marda Hobb",
       "actorSourceId": "fw.actor.corporate.CO-13.public-face",
       "rawAsset": "raw-192",
-      "runtimePath": "modules/franchise-wars/assets/art/actors/portraits/pt-08_marda-hobb.webp",
+      "runtimePath": "modules/franchise-wars/assets/art/library/grumpy-tavern-baker-at-the-bar--5355e3d2.webp",
       "status": "VERIFIED",
       "confidence": "verified",
       "notes": "Verified custom portrait.",
       "canonicalSource": "grumpy_tavern_baker_at_the_bar.png",
-      "sha256": "5355e3d2192a67695a72748030880cb9acd808207ab20f4e37778ac7cd06edf3",
-      "portraitTransparent": true
+      "sha256": "5355e3d2192a67695a72748030880cb9acd808207ab20f4e37778ac7cd06edf3"
     },
     {
       "artId": "TK-09",
